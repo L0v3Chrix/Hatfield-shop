@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "purpose": "Commerce-first navigation source for Hatfield McCoy DTF prototype, modeled after competitor-style product mega-menu UX without copying competitor branding.",
+    "last_updated": "2026-05-18"
+  },
+  "announcement": [
+    "Same-day pickup when schedule allows",
+    "Fast shipping available",
+    "Free shipping over $300",
+    "Local pickup in Logan, WV"
+  ],
+  "quick_links": [
+    { "label": "DTF Gang Sheets", "href": "#pdp-dtf-22", "status": "order" },
+    { "label": "Custom Builder", "href": "#builder", "status": "builder" },
+    { "label": "Glitter DTF", "href": "#pdp-glitter-22", "status": "order" },
+    { "label": "Glow DTF", "href": "#pdp-glow-22", "status": "order" },
+    { "label": "Sublimation", "href": "#pdp-sublimation-24", "status": "order" },
+    { "label": "3D Printing", "href": "#pdp-3d-print", "status": "order" },
+    { "label": "UV DTF Quote", "href": "catalog-intake.html?service=uv-dtf", "status": "quote" },
+    { "label": "Shipping & Pickup", "href": "#shipping", "status": "info" }
+  ],
+  "menus": [
+    { "label": "DTF Transfers", "groups": [
+      { "heading": "Order by sheet width", "links": [
+        { "label": "22\" DTF Gang Sheets", "href": "#pdp-dtf-22", "status": "order" },
+        { "label": "46\" DTF Gang Sheets", "href": "#pdp-dtf-46", "status": "order" },
+        { "label": "Browse all transfers", "href": "#shop", "status": "shop" }
+      ]},
+      { "heading": "Builder & upload", "links": [
+        { "label": "Custom Gang Sheet Builder", "href": "#builder", "status": "builder" },
+        { "label": "Upload artwork / quote", "href": "#builder", "status": "quote" },
+        { "label": "File requirements", "href": "#file-requirements", "status": "help" }
+      ]}
+    ]},
+    { "label": "Specialty DTF", "groups": [
+      { "heading": "Specialty sheets", "links": [
+        { "label": "Glitter DTF", "href": "#pdp-glitter-22", "status": "order" },
+        { "label": "Glow DTF", "href": "#pdp-glow-22", "status": "order" },
+        { "label": "Reflective DTF", "href": "catalog-intake.html?service=reflective-dtf", "status": "quote" }
+      ]},
+      { "heading": "UV DTF", "links": [
+        { "label": "UV DTF quote", "href": "catalog-intake.html?service=uv-dtf", "status": "quote" },
+        { "label": "UV stickers", "href": "catalog-intake.html?service=uv-stickers", "status": "quote" }
+      ]}
+    ]},
+    { "label": "Sublimation & 3D", "groups": [
+      { "heading": "Sublimation", "links": [
+        { "label": "24\" Sublimation Gang Sheets", "href": "#pdp-sublimation-24", "status": "order" }
+      ]},
+      { "heading": "3D printing", "links": [
+        { "label": "3D Printing size tiers", "href": "#pdp-3d-print", "status": "order" },
+        { "label": "Quote a custom 3D print", "href": "catalog-intake.html?service=3d-printing", "status": "quote" }
+      ]}
+    ]},
+    { "label": "Services", "groups": [
+      { "heading": "Quote-based services", "links": [
+        { "label": "Embroidery", "href": "catalog-intake.html?service=embroidery", "status": "quote" },
+        { "label": "Banners", "href": "catalog-intake.html?service=banners", "status": "quote" },
+        { "label": "Die cut stickers", "href": "catalog-intake.html?service=stickers", "status": "quote" }
+      ]},
+      { "heading": "Artwork & bulk", "links": [
+        { "label": "Artwork help", "href": "catalog-intake.html?service=artwork-help", "status": "quote" },
+        { "label": "Bulk / wholesale", "href": "catalog-intake.html?service=wholesale", "status": "apply" }
+      ]}
+    ]},
+    { "label": "Help", "groups": [
+      { "heading": "Before you order", "links": [
+        { "label": "File Requirements", "href": "#file-requirements", "status": "guide" },
+        { "label": "Shipping & Pickup", "href": "#shipping", "status": "info" },
+        { "label": "FAQ", "href": "#faq", "status": "help" }
+      ]},
+      { "heading": "Company", "links": [
+        { "label": "Our Feud", "href": "#story", "status": "story" },
+        { "label": "About", "href": "#about", "status": "shop" },
+        { "label": "Contact", "href": "#contact", "status": "help" }
+      ]}
+    ]}
+  ]
+}

@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Catalog Intake — Hatfield McCoy DTF</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --magenta: #E91E8C; --cyan: #00E5FF; --lime: #39FF14;
+    --bg: #0E0E12; --bg-2: #17171E; --ink: #FFFFFF; --muted: #A0A0B0;
+    --line: rgba(255,255,255,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  /* T-C09: explicit root font-size to prevent iOS zoom risk when user overrides */
+  html { font-size: 16px; }
+  html, body { background: var(--bg); color: var(--ink); font-family: 'Space Grotesk', system-ui, sans-serif; line-height: 1.5; }
+  body::before {
+    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(233,30,140,0.18), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(0,229,255,0.12), transparent 60%);
+  }
+  main { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 40px 24px 120px; }
+
+  h1, h2 { font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.95; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 12px; }
+  h2 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 8px; color: var(--cyan); }
+
+  .header {
+    text-align: center; padding: 30px 0 40px; border-bottom: 1px solid var(--line); margin-bottom: 40px;
+  }
+  .logo-row { display: inline-flex; align-items: center; gap: 10px; font-family: 'Anton'; font-size: 1.2rem; margin-bottom: 20px; }
+  .logo-mark {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: conic-gradient(from 210deg, var(--magenta), var(--cyan), var(--lime), var(--magenta));
+    box-shadow: 0 0 18px rgba(233,30,140,0.55), inset 0 0 0 2px #0E0E12;
+  }
+  .header p { color: var(--muted); max-width: 520px; margin: 0 auto; }
+  .time-hint { color: var(--lime); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 12px; }
+
+  /* Progress bar (T-C09: single padding declaration, no shadowed value) */
+  .progress {
+    position: sticky; top: 0; z-index: 10; background: var(--bg);
+    margin: -40px -24px 40px; padding: 14px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .progress-bar { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--magenta), var(--cyan)); width: 0%; transition: width 200ms ease; }
+  .progress-text { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 6px; text-align: center; }
+
+  /* Card styling (T-C09: absolute positioning for checkmark instead of ::before reflow hack) */
+  .card {
+    position: relative;
+    border: 1px solid var(--line); border-radius: 10px; background: var(--bg-2);
+    padding: 28px; margin-bottom: 20px;
+    transition: border-color 180ms ease;
+  }
+  .card.answered { border-color: rgba(57,255,20,0.3); }
+  .card.answered::before {
+    content: '✓';
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    color: var(--lime);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  .step { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 10px; }
+  .question { font-family: 'Anton'; font-size: 1.5rem; text-transform: uppercase; margin-bottom: 8px; line-height: 1.1; }
+  .helper { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+
+  /* Big yes/no buttons */
+  .yn {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .yn button {
+    padding: 18px; border: 2px solid var(--line); background: transparent; color: var(--ink);
+    font-family: 'Anton'; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.04em;
+    border-radius: 6px; cursor: pointer;
+    min-height: 44px;
+    transition: all 150ms ease;
+  }
+  .yn button:hover { border-color: var(--cyan); }
+  .yn button.on[data-val="yes"] { border-color: var(--lime); background: rgba(57,255,20,0.1); color: var(--lime); }
+  .yn button.on[data-val="no"] { border-color: var(--magenta); background: rgba(233,30,140,0.1); color: var(--magenta); }
+
+  /* Chip list (T-C12: 44px min-height for tap targets) */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .chip {
+    padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px;
+    background: transparent; color: var(--ink); cursor: pointer;
+    font-family: 'Space Grotesk'; font-weight: 500; font-size: 0.95rem;
+    min-height: 44px;
+    display: inline-flex; align-items: center;
+    transition: all 150ms ease;
+  }
+  .chip:hover { border-color: var(--cyan); }
+  .chip.on { border-color: var(--lime); background: rgba(57,255,20,0.12); color: var(--lime); }
+  .chip.on::before { content: '✓ '; }
+
+  /* T-C09: :focus-visible styles on all interactive controls */
+  .yn button:focus-visible,
+  .chip:focus-visible,
+  .btn-submit:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  .mini-yn button:focus-visible,
+  .btn-retry:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
+  }
+
+  /* Text/number inputs */
+  label.field { display: block; margin-bottom: 16px; }
+  label.field span { display: block; color: var(--muted); font-size: 0.85rem; margin-bottom: 6px; letter-spacing: 0.05em; }
+  input[type="text"], input[type="email"], input[type="number"], textarea {
+    width: 100%; padding: 14px; background: #0A0A0E; border: 1px solid var(--line);
+    color: var(--ink); border-radius: 6px; font-family: 'Space Grotesk'; font-size: 1rem;
+    transition: border-color 150ms ease;
+  }
+  input:focus, textarea:focus { outline: none; border-color: var(--cyan); }
+  textarea { resize: vertical; min-height: 80px; }
+
+  /* T-C07: character counter */
+  .char-counter {
+    color: var(--muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-align: right;
+    margin-top: 4px;
+  }
+  .char-counter.near-limit { color: var(--magenta); }
+
+  /* Conditional reveal blocks */
+  .reveal { margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--line); display: none; }
+  .reveal.show { display: block; animation: fadeIn 220ms ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Pre-filled grid showing what we already have */
+  .confirm-grid { display: grid; gap: 10px; }
+  .confirm-row {
+    display: grid; grid-template-columns: 1fr auto; align-items: center;
+    padding: 12px 14px; background: #0A0A0E; border: 1px solid var(--line); border-radius: 6px;
+  }
+  .confirm-row strong { font-family: 'Anton'; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .confirm-row small { color: var(--muted); display: block; margin-top: 2px; font-family: 'Space Grotesk'; }
+  .mini-yn { display: flex; gap: 6px; }
+  .mini-yn button {
+    width: 44px; height: 36px; border: 1px solid var(--line); background: transparent; color: var(--muted);
+    font-family: 'Anton'; font-size: 0.95rem; border-radius: 4px; cursor: pointer;
+  }
+  .mini-yn button.on[data-val="yes"] { border-color: var(--lime); background: rgba(57,255,20,0.12); color: var(--lime); }
+  .mini-yn button.on[data-val="no"] { border-color: var(--magenta); background: rgba(233,30,140,0.12); color: var(--magenta); }
+
+  /* Submit area */
+  .submit-card {
+    border: 1px solid var(--magenta); background: linear-gradient(180deg, rgba(233,30,140,0.08), rgba(14,14,18,0.95));
+    box-shadow: 0 0 40px rgba(233,30,140,0.15);
+  }
+  .btn-submit {
+    width: 100%; padding: 20px; background: var(--magenta); color: #fff;
+    font-family: 'Anton'; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.08em;
+    border: none; border-radius: 6px; cursor: pointer;
+    box-shadow: 0 0 30px rgba(233,30,140,0.4);
+    min-height: 44px;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+  .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 0 50px rgba(233,30,140,0.7); }
+  .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  /* T-C02: spinner inside submit button */
+  .spinner {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: -2px;
+    margin-right: 8px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* T-C02: retry button inside error banner */
+  .btn-retry {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: transparent;
+    border: 1px solid var(--magenta);
+    color: var(--magenta);
+    font-family: 'Anton';
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    min-height: 44px;
+    transition: all 150ms ease;
+  }
+  .btn-retry:hover { background: rgba(233,30,140,0.1); }
+
+  /* Thank you state */
+  .thanks {
+    display: none; text-align: center; padding: 60px 20px;
+  }
+  .thanks.show { display: block; animation: fadeIn 400ms ease; }
+  .thanks .check {
+    width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--lime);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'Anton'; font-size: 3rem; color: var(--lime);
+    margin-bottom: 24px; box-shadow: 0 0 40px rgba(57,255,20,0.3);
+  }
+  .thanks h1 { color: var(--lime); margin-bottom: 14px; }
+  .thanks p { color: var(--muted); max-width: 440px; margin: 0 auto 8px; }
+
+  /* Error state */
+  .error-banner {
+    display: none; padding: 14px; background: rgba(233,30,140,0.12); border: 1px solid var(--magenta);
+    border-radius: 6px; color: var(--magenta); margin-bottom: 20px; font-size: 0.95rem;
+  }
+  .error-banner.show { display: block; }
+  .error-banner strong { display: block; font-family: 'Anton'; letter-spacing: 0.04em; margin-bottom: 6px; }
+
+  /* T-C15: cooldown countdown note */
+  .cooldown-note {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+  }
+  .cooldown-note.show { display: block; }
+
+  /* Honeypot — hidden from humans */
+  .hp { position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none; }
+
+  /* Small screen tweaks */
+  @media (max-width: 600px) {
+    main { padding: 24px 16px 80px; }
+    .card { padding: 22px 18px; }
+    .question { font-size: 1.25rem; }
+    .yn button { font-size: 1.1rem; padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-text" id="progressText">0 of 12 answered</div>
+  </div>
+
+  <div class="header">
+    <div class="logo-row"><span class="logo-mark"></span><span>Hatfield McCoy DTF</span></div>
+    <h1>Let's Build Your Catalog</h1>
+    <p>Short answers, big buttons. No jargon, no logins. Just tap through and we'll have your store loaded up. If something doesn't apply, skip it — we'll circle back.</p>
+    <div class="time-hint">~5 minutes · Saves as you go</div>
+  </div>
+
+  <form id="intakeForm" novalidate>
+    <!-- T-C14: Honeypot wrapper aria-hidden so screen readers skip it; renamed from 'website' to 'url_referrer' to look more plausible to bots -->
+    <div class="hp" aria-hidden="true">
+      <label>Leave this empty <input type="text" name="url_referrer" tabindex="-1" autocomplete="off"></label>
+    </div>
+
+    <!-- T-C08: role=alert + aria-live so screen readers announce errors immediately -->
+    <div class="error-banner" id="errorBanner" role="alert" aria-live="polite" hidden></div>
+
+    <!-- Q1: Unit confirmation -->
+    <div class="card" data-q="units">
+      <div class="step">Question 1 of 12</div>
+      <div class="question" id="q-units-label">Are your sheet sizes in inches?</div>
+      <div class="helper">Your price sheet shows sizes like "22' x 300'". We're reading those as <strong>22 inches × 300 inches</strong>. Is that right?</div>
+      <div class="yn" data-name="units" role="radiogroup" aria-labelledby="q-units-label">
+        <button type="button" role="radio" aria-checked="false" data-val="yes">Yes — inches</button>
+        <button type="button" role="radio" aria-checked="false" data-val="no">No — something else</button>
+      </div>
+      <div class="reveal">
+        <label class="field">
+          <span>What unit are they in?</span>
+          <input type="text" name="units_other" maxlength="200" placeholder="e.g., centimeters, or explain" />
+        </label>
+      </div>
+    </div>
+
+    <!-- Q2: Glow pricing typo -->
+    <div class="card" data-q="glow">
+      <div class="step">Question 2 of 12</div>
+      <div class="question" id="q-glow-label">Fix a pricing typo?</div>
+      <div class="helper">Your glow sheet lists <strong>22″ × 300″ at $153</strong>. Based on the rest of the ladder it should be closer to <strong>$225</strong>. Which is right?</div>
+      <div class="yn" data-name="glow_price" role="radiogroup" aria-labelledby="q-glow-label">
+        <button type="button" role="radio" aria-checked="false" data-val="yes">$225 is correct — fix it</button>
+        <button type="button" role="radio" aria-checked="false" data-val="no">$153 is correct — leave it</button>
+      </div>
+    </div>
+
+    <!-- Q3: 3D printing confirmation -->
+    <div class="card" data-q="threeDD">
+      <div class="step">Question 3 of 12</div>
+      <div class="question" id="q-threed-label">Do you actually offer 3D printing?</div>
+      <div class="helper">Your PDF lists "3D Printer X1" and "3D Printer H2S" pricing. Those weren't in our original plan. Are you selling 3D prints as a service?</div>
+      <div class="yn" data-name="threeD" role="radiogroup" aria-labelledby="q-threed-label">
+        <button type="button" role="radio" aria-checked="false" data-val="yes">Yes — list it</button>
+        <button type="button" role="radio" aria-checked="false" data-val="no">No — remove it</button>
+      </div>
+    </div>
+
+    <!-- Q4: Fill size ladder gaps -->
+    <div class="card" data-q="gaps">
+      <div class="step">Question 4 of 12</div>
+      <div class="question" id="q-gaps-label">Fill in the missing sizes?</div>
+      <div class="helper">A few sizes are skipped in your ladders. Want us to fill them in at the same per-inch pricing, or leave them out?</div>
+      <div class="chips" data-name="gaps" role="group" aria-labelledby="q-gaps-label">
+        <button type="button" class="chip" aria-pressed="false" data-val="dtf46">46″ DTF: 88, 92</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="dtf22">22″ DTF: 204–288</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="sub24">Sublim 24″: 108–144</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="none">Leave all as-is</button>
+      </div>
+      <div class="helper" style="font-size: 0.85rem; margin: 0;">Tap the ones you want us to fill in.</div>
+    </div>
+
+    <!-- Q5: Which categories you offer -->
+    <div class="card" data-q="categories">
+      <div class="step">Question 5 of 12</div>
+      <div class="question" id="q-categories-label">Which of these do you offer?</div>
+      <div class="helper">Tap every service you provide. You can add pricing below. Leave untapped what you don't do.</div>
+      <div class="chips" data-name="categories" role="group" aria-labelledby="q-categories-label">
+        <button type="button" class="chip" aria-pressed="false" data-val="uv_dtf">UV DTF</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="reflective">Reflective DTF</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="embroidery">Embroidery</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="3d_puff">3D Puff Transfers</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="spangle">Spangle / Sequin</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="banners">Banners</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="die_cut">Die Cut Stickers</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="laser">Laser Engraving</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="personalized">Tumblers / Pens / Golf Balls</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="sample_packs">Sample Packs</button>
+        <button type="button" class="chip" aria-pressed="false" data-val="custom_gang">Custom Gang Sheet</button>
+      </div>
+      <div class="reveal" id="categoryPricing">
+        <label class="field">
+          <span>Quick pricing notes for the ones you tapped (free-form, we'll clean up)</span>
+          <textarea name="category_pricing" maxlength="1000" placeholder="e.g., Embroidery $5 up to 5k stitches, +$1 per 1k after. Banners $12/sq ft. Sample pack $10 flat."></textarea>
+          <div class="char-counter" aria-live="polite" data-counter-for="category_pricing">0 / 1000</div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Q6: Silver spelling -->
+    <div class="card" data-q="silver">
+      <div class="step">Question 6 of 12</div>
+      <div class="question" id="q-silver-label">Fix the "Sliver" typo?</div>
+      <div class="helper">Your glitter page reads "Sliver" — we're guessing you meant "Silver." Confirm?</div>
+      <div class="yn" data-name="silver" role="radiogroup" aria-labelledby="q-silver-label">
+        <button type="button" role="radio" aria-checked="false" data-val="yes">Yes — Silver</button>
+        <button type="button" role="radio" aria-checked="false" data-val="no">No — Sliver is correct</button>
+      </div>
+    </div>
+
+    <!-- Q7: Turnaround times -->
+    <div class="card" data-q="turnaround">
+      <div class="step">Question 7 of 12</div>
+      <div class="question">How fast do you ship?</div>
+      <div class="helper">Give us a rough turnaround window. This goes on the FAQ and product pages.</div>
+      <label class="field">
+        <span>Turnaround time (one line is fine)</span>
+        <input type="text" name="turnaround" maxlength="500" placeholder="e.g., Ships in 24–48 hours, same-day if ordered by 2pm" />
+      </label>
+    </div>
+
+    <!-- Q8: Local pickup -->
+    <div class="card" data-q="pickup">
+      <div class="step">Question 8 of 12</div>
+      <div class="question" id="q-pickup-label">Offer local pickup?</div>
+      <div class="helper">If yes, we'll add it as a free shipping option at checkout.</div>
+      <div class="yn" data-name="pickup" role="radiogroup" aria-labelledby="q-pickup-label">
+        <button type="button" role="radio" aria-checked="false" data-val="yes">Yes — offer pickup</button>
+        <button type="button" role="radio" aria-checked="false" data-val="no">No — shipping only</button>
+      </div>
+      <div class="reveal">
+        <label class="field">
+          <span>Shop address (for pickup instructions)</span>
+          <input type="text" name="pickup_address" maxlength="200" placeholder="Street, City, WV Zip" />
+        </label>
+      </div>
+    </div>
+
+    <!-- Q9: Brand story -->
+    <div class="card" data-q="story">
+      <div class="step">Question 9 of 12</div>
+      <div class="question">Tell us your story.</div>
+      <div class="helper">Two or three sentences. How did H&amp;M DTF start, and what makes you different? Don't overthink it — talk how you talk.</div>
+      <label class="field">
+        <span>Your story, in your words</span>
+        <textarea name="story" maxlength="1000" placeholder="e.g., We started H&M in a garage in 2024 after fixing a broken press for a church fundraiser..."></textarea>
+        <div class="char-counter" aria-live="polite" data-counter-for="story">0 / 1000</div>
+      </label>
+    </div>
+
+    <!-- Q10: Shopify admin -->
+    <div class="card" data-q="shopify">
+      <div class="step">Question 10 of 12</div>
+      <div class="question" id="q-shopify-label">Is your Shopify store set up?</div>
+      <div class="yn" data-name="shopify" role="radiogroup" aria-labelledby="q-shopify-label">
+        <button type="button" role="radio" aria-checked="false" data-val="yes">Yes — it's ready</button>
+        <button type="button" role="radio" aria-checked="false" data-val="no">No — need help setting it up</button>
+      </div>
+      <div class="reveal">
+        <label class="field">
+          <span>Your Shopify store URL (yourstore.myshopify.com)</span>
+          <input type="text" name="shopify_url" maxlength="200" placeholder="hatfieldmccoydtf.myshopify.com" />
+        </label>
+        <p style="color: var(--muted); font-size: 0.85rem; margin-top: 8px;">Next step: add <strong style="color: var(--cyan);" data-collaborator-email>Harold@rmmarketing.ca</strong> as a Collaborator in Settings → Users and permissions.</p>
+      </div>
+    </div>
+
+    <!-- Q11: Anything else -->
+    <div class="card" data-q="notes">
+      <div class="step">Question 11 of 12</div>
+      <div class="question">Anything we missed?</div>
+      <div class="helper">Optional. Wide open.</div>
+      <label class="field">
+        <span>Notes, questions, files to send separately, etc.</span>
+        <textarea name="notes" maxlength="1000" placeholder="Anything at all."></textarea>
+        <div class="char-counter" aria-live="polite" data-counter-for="notes">0 / 1000</div>
+      </label>
+    </div>
+
+    <!-- Q12: Contact -->
+    <div class="card submit-card" data-q="contact">
+      <div class="step">Question 12 of 12 · Last one</div>
+      <div class="question">Who are we talking to?</div>
+      <div class="helper">So we know who sent this when it hits our inbox.</div>
+      <label class="field">
+        <span>Your name</span>
+        <input type="text" name="name" required autocomplete="name" maxlength="100" placeholder="Nicole" />
+      </label>
+      <label class="field">
+        <span>Email (in case we have a follow-up question)</span>
+        <input type="email" name="email" required autocomplete="email" maxlength="200" placeholder="nicole@hatfieldmccoydtf.com" />
+      </label>
+      <button type="submit" class="btn-submit" id="submitBtn">Send It →</button>
+      <div class="cooldown-note" id="cooldownNote" aria-live="polite"></div>
+      <p style="color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 14px;">Your answers go directly to the Hatfield McCoy DTF build team.</p>
+    </div>
+  </form>
+
+  <div class="thanks" id="thanks">
+    <div class="check">✓</div>
+    <h1 id="thanksHeading">Got it, friend.</h1>
+    <p>Your answers landed in our inbox. We'll pick this up and have the next draft of your store ready within a few days.</p>
+    <p style="margin-top: 20px;"><a href="/" style="color: var(--cyan);">← Back to the store preview</a></p>
+  </div>
+</main>
+
+<script>
+  // ============================================================
+  // Hatfield McCoy DTF — Catalog Intake Form
+  // Hardened by Stream C (elegant-spinning-bear plan)
+  // ============================================================
+
+  // T-C01: webhook is server-side — form posts to a proxy that forwards to Discord.
+  // Note: depends on /api/intake deploy (T-D02). Local runs without the endpoint will 404 — acceptable during dev.
+  const WEBHOOK_URL = '/api/intake';
+  const STORAGE_KEY = 'hm_intake_v1';
+  const COOLDOWN_KEY = 'hmdtf_intake_last_submit';
+
+  // Defaults are overwritten by data/config.json and data/content.json when available.
+  let CONFIG = {
+    webhook_endpoint: WEBHOOK_URL,
+    timeout_ms: 15000,
+    cooldown_seconds: 15,
+    brand_email: 'HatfieldandMcCoydtf@gmail.com',
+    collaborator_email: 'Harold@rmmarketing.ca',
+    min_answers: 4
+  };
+
+  // Error copy may be overwritten by data/content.json -> form_errors.
+  let ERROR_COPY = {
+    timeout: {
+      title: 'Your answers are saved, but sending timed out.',
+      body: 'Check your connection and try again. Your draft is safe in this browser.'
+    },
+    network: {
+      title: 'Something went wrong sending your answers.',
+      body: 'Try again in a moment. If it keeps failing, email us directly at '
+    },
+    validation_email: 'Please enter a valid email address so we can reply to you.',
+    validation_contact: 'Name and email are required before we can send this.',
+    validation_min_answers: 'Answer at least 4 of the 11 questions above before submitting.',
+    cooldown: 'Please wait {seconds} seconds before submitting again.'
+  };
+
+  // Chip labels are also available from data/chip-labels.json.
+  // Until then, we inline the code→label mapping so the form always sends human-readable values to Discord.
+  const CHIP_LABELS = {
+    // Q4: gaps
+    dtf46: '46″ DTF: 88, 92',
+    dtf22: '22″ DTF: 204–288',
+    sub24: 'Sublim 24″: 108–144',
+    none: 'Leave all as-is',
+    // Q5: categories
+    uv_dtf: 'UV DTF',
+    reflective: 'Reflective DTF',
+    embroidery: 'Embroidery',
+    '3d_puff': '3D Puff Transfers',
+    spangle: 'Spangle / Sequin',
+    banners: 'Banners',
+    die_cut: 'Die Cut Stickers',
+    laser: 'Laser Engraving',
+    personalized: 'Tumblers / Pens / Golf Balls',
+    sample_packs: 'Sample Packs',
+    custom_gang: 'Custom Gang Sheet'
+  };
+
+  // Attempt to fetch external data files in parallel (non-blocking; falls back to inline defaults if missing)
+  (async function loadExternalData() {
+    const [cfgRes, contentRes, labelsRes] = await Promise.all([
+      fetch('data/config.json').catch(() => null),
+      fetch('data/content.json').catch(() => null),
+      fetch('data/chip-labels.json').catch(() => null)
+    ]);
+
+    if (cfgRes && cfgRes.ok) {
+      try {
+        const cfg = await cfgRes.json();
+        if (cfg && typeof cfg === 'object') {
+          CONFIG = {
+            webhook_endpoint: (cfg.webhook && cfg.webhook.endpoint) || cfg.webhook_endpoint || CONFIG.webhook_endpoint,
+            timeout_ms: (cfg.webhook && cfg.webhook.timeout_ms) || cfg.timeout_ms || CONFIG.timeout_ms,
+            cooldown_seconds: (cfg.webhook && cfg.webhook.cooldown_seconds) || cfg.cooldown_seconds || CONFIG.cooldown_seconds,
+            brand_email: cfg.brand_email || CONFIG.brand_email,
+            collaborator_email: cfg.collaborator_email || CONFIG.collaborator_email,
+            min_answers: cfg.min_answers || CONFIG.min_answers
+          };
+          document.querySelectorAll('[data-brand-email]').forEach(el => {
+            el.textContent = CONFIG.brand_email;
+          });
+          document.querySelectorAll('[data-collaborator-email]').forEach(el => {
+            el.textContent = CONFIG.collaborator_email;
+          });
+        }
+      } catch (e) { /* fallback to defaults */ }
+    }
+
+    if (contentRes && contentRes.ok) {
+      try {
+        const content = await contentRes.json();
+        if (content && content.form_errors) {
+          ERROR_COPY = Object.assign(ERROR_COPY, content.form_errors);
+        }
+      } catch (e) { /* fallback to defaults */ }
+    }
+
+    if (labelsRes && labelsRes.ok) {
+      try {
+        const labels = await labelsRes.json();
+        if (labels && typeof labels === 'object') Object.assign(CHIP_LABELS, labels);
+      } catch (e) { /* fallback to defaults */ }
+    }
+  })();
+
+  // ————— state —————
+  const state = {
+    units: null, units_other: '',
+    glow_price: null,
+    threeD: null,
+    gaps: [],
+    categories: [], category_pricing: '',
+    silver: null,
+    turnaround: '',
+    pickup: null, pickup_address: '',
+    story: '',
+    shopify: null, shopify_url: '',
+    notes: '',
+    name: '', email: ''
+  };
+
+  // ————— restore draft —————
+  function restoreFromStorage() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        Object.assign(state, JSON.parse(saved));
+        applyStateToDOM();
+      }
+    } catch (e) {}
+  }
+
+  function applyStateToDOM() {
+    document.querySelectorAll('.yn').forEach(group => {
+      const name = group.dataset.name;
+      group.querySelectorAll('button').forEach(b => {
+        const isOn = state[name] === b.dataset.val;
+        b.classList.toggle('on', isOn);
+        b.setAttribute('aria-checked', isOn ? 'true' : 'false');
+      });
+      const card = group.closest('.card');
+      const reveal = card.querySelector('.reveal');
+      if (state[name]) {
+        card.classList.add('answered');
+        if (reveal && shouldReveal(name, state[name])) reveal.classList.add('show');
+        else if (reveal) reveal.classList.remove('show');
+      }
+    });
+    document.querySelectorAll('.chips').forEach(group => {
+      const name = group.dataset.name;
+      const card = group.closest('.card');
+      const reveal = card.querySelector('.reveal');
+      if (Array.isArray(state[name])) {
+        group.querySelectorAll('.chip').forEach(chip => {
+          const isOn = state[name].includes(chip.dataset.val);
+          chip.classList.toggle('on', isOn);
+          chip.setAttribute('aria-pressed', isOn ? 'true' : 'false');
+        });
+        card.classList.toggle('answered', state[name].length > 0);
+        if (reveal) reveal.classList.toggle('show', state[name].length > 0);
+      }
+    });
+    document.querySelectorAll('input, textarea').forEach(input => {
+      if (input.name && state[input.name] !== undefined && typeof state[input.name] === 'string') {
+        input.value = state[input.name];
+        const counter = document.querySelector(`[data-counter-for="${input.name}"]`);
+        if (counter && input.maxLength > 0) updateCounter(input, counter);
+        const card = input.closest('.card');
+        if (card && !card.classList.contains('submit-card')) {
+          card.classList.toggle('answered', !!input.value.trim());
+        }
+      }
+    });
+    // T-C03: recalculate Q12 answered status based on contact fields
+    updateContactCard();
+    updateProgress();
+  }
+
+  restoreFromStorage();
+
+  // ————— yes/no buttons —————
+  document.querySelectorAll('.yn').forEach(group => {
+    const name = group.dataset.name;
+    const card = group.closest('.card');
+    const reveal = card.querySelector('.reveal');
+
+    group.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('button').forEach(b => {
+          b.classList.remove('on');
+          b.setAttribute('aria-checked', 'false');
+        });
+        btn.classList.add('on');
+        btn.setAttribute('aria-checked', 'true');
+        state[name] = btn.dataset.val;
+        card.classList.add('answered');
+        if (reveal) {
+          if (shouldReveal(name, btn.dataset.val)) {
+            reveal.classList.add('show');
+          } else {
+            reveal.classList.remove('show');
+            // T-C03 / D-074: clear stale reveal-input data when state flips away
+            const hiddenInputs = reveal.querySelectorAll('input, textarea');
+            hiddenInputs.forEach(inp => {
+              if (inp.name && state[inp.name] !== undefined && typeof state[inp.name] === 'string' && state[inp.name]) {
+                state[inp.name] = '';
+                inp.value = '';
+              }
+            });
+          }
+        }
+        persist(); updateProgress();
+      });
+    });
+  });
+
+  function shouldReveal(name, val) {
+    if (name === 'units') return val === 'no';
+    if (name === 'pickup') return val === 'yes';
+    if (name === 'shopify') return val === 'yes';
+    return false;
+  }
+
+  // ————— chips —————
+  document.querySelectorAll('.chips').forEach(group => {
+    const name = group.dataset.name;
+    const card = group.closest('.card');
+    const reveal = card.querySelector('.reveal');
+
+    group.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const v = chip.dataset.val;
+
+        if (name === 'gaps' && v === 'none') {
+          group.querySelectorAll('.chip').forEach(c => {
+            c.classList.remove('on');
+            c.setAttribute('aria-pressed', 'false');
+          });
+          chip.classList.add('on');
+          chip.setAttribute('aria-pressed', 'true');
+          state[name] = ['none'];
+        } else {
+          if (name === 'gaps') {
+            const noneChip = group.querySelector('.chip[data-val="none"]');
+            if (noneChip) {
+              noneChip.classList.remove('on');
+              noneChip.setAttribute('aria-pressed', 'false');
+            }
+          }
+          chip.classList.toggle('on');
+          chip.setAttribute('aria-pressed', chip.classList.contains('on') ? 'true' : 'false');
+          state[name] = Array.from(group.querySelectorAll('.chip.on')).map(c => c.dataset.val);
+          if (name !== 'gaps') {
+            state[name] = state[name].filter(x => x !== 'none');
+          }
+        }
+        card.classList.toggle('answered', state[name].length > 0);
+        if (reveal) {
+          if (state[name].length) reveal.classList.add('show');
+          else reveal.classList.remove('show');
+        }
+        persist(); updateProgress();
+      });
+    });
+  });
+
+  // ————— text inputs + T-C07 character counter —————
+  function updateCounter(input, counter) {
+    const len = input.value.length;
+    const max = input.maxLength;
+    counter.textContent = `${len} / ${max}`;
+    counter.classList.toggle('near-limit', len >= max * 0.9);
+  }
+
+  document.querySelectorAll('input, textarea').forEach(input => {
+    if (!input.name || input.name === 'url_referrer') return;
+
+    const counter = document.querySelector(`[data-counter-for="${input.name}"]`);
+    if (counter && input.maxLength > 0) updateCounter(input, counter);
+
+    input.addEventListener('input', () => {
+      state[input.name] = input.value;
+      if (counter && input.maxLength > 0) updateCounter(input, counter);
+
+      const card = input.closest('.card');
+      if (card) {
+        if (card.classList.contains('submit-card')) {
+          // T-C03: Q12 counts as answered when BOTH name and email have values
+          updateContactCard();
+        } else {
+          card.classList.toggle('answered', !!input.value.trim());
+        }
+      }
+      persist(); updateProgress();
+    });
+  });
+
+  function updateContactCard() {
+    const card = document.querySelector('.submit-card');
+    if (!card) return;
+    const hasName = !!(state.name && state.name.trim());
+    const hasEmail = !!(state.email && state.email.trim());
+    card.classList.toggle('answered', hasName && hasEmail);
+  }
+
+  // ————— progress —————
+  const totalQuestions = 12;
+  function updateProgress() {
+    const answered = document.querySelectorAll('.card.answered').length;
+    const pct = Math.round((answered / totalQuestions) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressText').textContent = `${answered} of ${totalQuestions} answered`;
+  }
+
+  // ————— T-C13: persist (debounced 250ms) —————
+  let persistTimer = null;
+  function persist() {
+    if (persistTimer) clearTimeout(persistTimer);
+    persistTimer = setTimeout(() => {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    }, 250);
+  }
+
+  updateProgress();
+
+  // ————— T-C16: cross-tab sync via storage events —————
+  window.addEventListener('storage', (e) => {
+    if (e.key === STORAGE_KEY && e.newValue) {
+      try {
+        const incoming = JSON.parse(e.newValue);
+        Object.assign(state, incoming);
+        applyStateToDOM();
+      } catch (err) {}
+    }
+  });
+
+  // ————— submit handler —————
+  const form = document.getElementById('intakeForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const errorBanner = document.getElementById('errorBanner');
+  const thanks = document.getElementById('thanks');
+  const cooldownNote = document.getElementById('cooldownNote');
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  let cooldownTimer = null;
+
+  // Build submit button content using safe DOM methods (no innerHTML)
+  function renderSubmitButton(label, withSpinner) {
+    while (submitBtn.firstChild) submitBtn.removeChild(submitBtn.firstChild);
+    if (withSpinner) {
+      const spin = document.createElement('span');
+      spin.className = 'spinner';
+      spin.setAttribute('aria-hidden', 'true');
+      submitBtn.appendChild(spin);
+    }
+    submitBtn.appendChild(document.createTextNode(label));
+  }
+
+  function showError(title, body) {
+    while (errorBanner.firstChild) errorBanner.removeChild(errorBanner.firstChild);
+    if (title) {
+      const strong = document.createElement('strong');
+      strong.textContent = title;
+      errorBanner.appendChild(strong);
+    }
+    if (body) {
+      errorBanner.appendChild(document.createTextNode(body));
+    }
+    errorBanner.classList.add('show');
+    errorBanner.hidden = false;
+  }
+
+  function showErrorWithRetry(title, body, onRetry) {
+    showError(title, body);
+    const retryBtn = document.createElement('button');
+    retryBtn.type = 'button';
+    retryBtn.className = 'btn-retry';
+    retryBtn.textContent = 'Try again';
+    retryBtn.addEventListener('click', () => {
+      hideError();
+      onRetry();
+    });
+    errorBanner.appendChild(document.createElement('br'));
+    errorBanner.appendChild(retryBtn);
+  }
+
+  function hideError() {
+    errorBanner.classList.remove('show');
+    errorBanner.hidden = true;
+    while (errorBanner.firstChild) errorBanner.removeChild(errorBanner.firstChild);
+  }
+
+  function countAnsweredNonContact() {
+    let count = 0;
+    document.querySelectorAll('.card.answered').forEach(c => {
+      if (!c.classList.contains('submit-card')) count++;
+    });
+    return count;
+  }
+
+  function startCooldownCountdown(remaining) {
+    if (cooldownTimer) clearInterval(cooldownTimer);
+    cooldownNote.classList.add('show');
+    cooldownNote.textContent = ERROR_COPY.cooldown.replace('{seconds}', String(remaining));
+    cooldownTimer = setInterval(() => {
+      remaining--;
+      if (remaining <= 0) {
+        clearInterval(cooldownTimer);
+        cooldownNote.classList.remove('show');
+        cooldownNote.textContent = '';
+        submitBtn.disabled = false;
+      } else {
+        cooldownNote.textContent = ERROR_COPY.cooldown.replace('{seconds}', String(remaining));
+      }
+    }, 1000);
+  }
+
+  // Check cooldown on page load (persist across refresh)
+  (function checkInitialCooldown() {
+    const last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    const elapsed = Date.now() - last;
+    const cooldownMs = CONFIG.cooldown_seconds * 1000;
+    if (elapsed < cooldownMs) {
+      const remaining = Math.ceil((cooldownMs - elapsed) / 1000);
+      submitBtn.disabled = true;
+      startCooldownCountdown(remaining);
+    }
+  })();
+
+  async function sendForm() {
+    submitBtn.disabled = true;
+    renderSubmitButton('Sending...', true);
+
+    const payload = buildDiscordPayload(state);
+
+    // T-C02: fetch timeout via AbortController
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), CONFIG.timeout_ms);
+
+    try {
+      const res = await fetch(CONFIG.webhook_endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+
+      if (!res.ok) throw new Error('HTTP_' + res.status);
+
+      localStorage.setItem(COOLDOWN_KEY, String(Date.now()));
+      localStorage.removeItem(STORAGE_KEY);
+
+      // T-C20: mark navigation state so back/refresh doesn't show a re-submit form
+      try { history.replaceState({ submitted: true, name: state.name }, '', location.pathname); } catch (e) {}
+
+      showThanks(state.name || 'friend');
+    } catch (err) {
+      clearTimeout(timeoutId);
+      if (err.name === 'AbortError') {
+        showErrorWithRetry(ERROR_COPY.timeout.title, ERROR_COPY.timeout.body, sendForm);
+      } else {
+        const bodyText = ERROR_COPY.network.body + CONFIG.brand_email + '.';
+        showErrorWithRetry(ERROR_COPY.network.title, bodyText, sendForm);
+      }
+      submitBtn.disabled = false;
+      renderSubmitButton('Send It →', false);
+    }
+  }
+
+  function showThanks(name) {
+    form.style.display = 'none';
+    document.querySelector('.progress').style.display = 'none';
+    document.querySelector('.header').style.display = 'none';
+    // T-C19: interpolate the name on the thanks screen
+    document.getElementById('thanksHeading').textContent = `Got it, ${name}.`;
+    thanks.classList.add('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // T-C20: if user navigated back to an already-submitted state, show the thanks directly
+  if (history.state && history.state.submitted) {
+    showThanks(history.state.name || state.name || 'friend');
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    hideError();
+
+    // T-C14: Honeypot (renamed to url_referrer)
+    if (form.url_referrer && form.url_referrer.value) {
+      showError('', ERROR_COPY.validation_contact);
+      return;
+    }
+
+    // T-C15: Cooldown check (15s, not 60s)
+    const last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    const elapsed = Date.now() - last;
+    const cooldownMs = CONFIG.cooldown_seconds * 1000;
+    if (elapsed < cooldownMs) {
+      const remaining = Math.ceil((cooldownMs - elapsed) / 1000);
+      showError('', ERROR_COPY.cooldown.replace('{seconds}', String(remaining)));
+      startCooldownCountdown(remaining);
+      return;
+    }
+
+    // T-C06: contact validation
+    if (!state.name || !state.name.trim() || !state.email || !state.email.trim()) {
+      showError('', ERROR_COPY.validation_contact);
+      return;
+    }
+    if (!EMAIL_RE.test(state.email.trim())) {
+      showError('', ERROR_COPY.validation_email);
+      const emailInput = form.querySelector('input[name="email"]');
+      if (emailInput) emailInput.focus();
+      return;
+    }
+
+    // T-C06: minimum-answer gate (at least 4 of the 11 non-contact questions)
+    const answeredCount = countAnsweredNonContact();
+    if (answeredCount < CONFIG.min_answers) {
+      showError('', ERROR_COPY.validation_min_answers);
+      return;
+    }
+
+    sendForm();
+  });
+
+  // ————— payload builder —————
+  function buildDiscordPayload(s) {
+    const TRUNC_MARK = '… [truncated — see full draft in intake tool]';
+
+    // T-C17: slice-and-mark helper — appends truncation marker when it cuts
+    const slice = (str, limit) => {
+      if (!str) return '—';
+      if (str.length <= limit) return str;
+      return str.slice(0, limit - TRUNC_MARK.length) + TRUNC_MARK;
+    };
+
+    // T-C04: map chip codes to human-readable labels
+    const chipsToLabels = (arr) => {
+      if (!Array.isArray(arr) || !arr.length) return '—';
+      return arr.map(v => CHIP_LABELS[v] || v).join(', ');
+    };
+
+    const ynFmt = (v) => v === null || v === undefined ? '—' : (v === 'yes' ? 'Yes' : (v === 'no' ? 'No' : String(v)));
+
+    // T-C05: reorder fields to match visible question order (Q1 → Q11; Q12 contact is in header)
+    const fields = [
+      { name: 'Q1 · Units in inches?', value: ynFmt(s.units) + (s.units === 'no' && s.units_other ? ` (${s.units_other})` : ''), inline: true },
+      { name: 'Q2 · Glow $225 fix?', value: ynFmt(s.glow_price), inline: true },
+      { name: 'Q3 · 3D printing?', value: ynFmt(s.threeD), inline: true },
+      { name: 'Q4 · Fill size gaps', value: chipsToLabels(s.gaps), inline: false },
+      { name: 'Q5 · Services offered', value: chipsToLabels(s.categories), inline: false },
+      { name: 'Q5b · Category pricing notes', value: slice(s.category_pricing, 1000), inline: false },
+      { name: 'Q6 · Silver typo fix?', value: ynFmt(s.silver), inline: true },
+      { name: 'Q7 · Turnaround', value: slice(s.turnaround, 500), inline: false },
+      { name: 'Q8 · Local pickup?', value: ynFmt(s.pickup) + (s.pickup === 'yes' && s.pickup_address ? ` — ${s.pickup_address}` : ''), inline: true },
+      { name: 'Q9 · Brand story', value: slice(s.story, 1000), inline: false },
+      { name: 'Q10 · Shopify ready?', value: ynFmt(s.shopify) + (s.shopify === 'yes' && s.shopify_url ? ` — ${s.shopify_url}` : ''), inline: true },
+      { name: 'Q11 · Extra notes', value: slice(s.notes, 1000), inline: false }
+    ];
+
+    // T-C18: forensics footer for spam investigation (UA, ISO timestamp, locale)
+    const forensics = `${navigator.userAgent} | ${new Date().toISOString()} | ${navigator.language || '—'}`;
+
+    return {
+      content: `**📋 New catalog intake from ${s.name}** (${s.email})`,
+      embeds: [{
+        title: 'Hatfield McCoy DTF — Catalog Intake',
+        color: 0xE91E8C,
+        fields: fields,
+        footer: { text: `H&M DTF · Submitted via hatfield-mccoy-dtf.futrbusiness.com/catalog-intake · ${forensics}` },
+        timestamp: new Date().toISOString()
+      }]
+    };
+  }
+</script>
+</body>
+</html>

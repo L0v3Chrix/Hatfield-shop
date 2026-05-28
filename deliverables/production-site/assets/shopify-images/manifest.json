@@ -1,0 +1,1843 @@
+{
+  "sourceDirectory": "Shopify-images-good",
+  "outputDirectory": "deliverables/brand-design-pack/assets/shopify-images",
+  "policy": "Original source files are preserved. Framework uses optimized derivatives.",
+  "images": [
+    {
+      "source": "Shopify-images-good/250th-anniversary.jpg",
+      "sourceBytes": 6554536,
+      "slug": "250th-anniversary",
+      "title": "250th-anniversary",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "250th anniversary",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/250th-anniversary-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 265430
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/250th-anniversary-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 138196
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/250th-anniversary-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 28118
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Ai-warehouse-DTF.jpg",
+      "sourceBytes": 1920037,
+      "slug": "ai-warehouse-dtf",
+      "title": "Ai-warehouse-DTF",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Ai warehouse DTF",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/ai-warehouse-dtf-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 220340
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/ai-warehouse-dtf-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 177934
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/ai-warehouse-dtf-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 42552
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Cute-sticker-sheet.jpg",
+      "sourceBytes": 5366784,
+      "slug": "cute-sticker-sheet",
+      "title": "Cute sticker sheet",
+      "collection": "Stickers",
+      "usage": [
+        "sticker product card"
+      ],
+      "alt": "Colorful custom sticker sheet",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 123690
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 104076
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 30824
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/DTF-builder.jpg",
+      "sourceBytes": 3667122,
+      "slug": "dtf-builder",
+      "title": "DTF-builder",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "DTF builder",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 75302
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 62684
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 17010
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/DTF-builder1.jpg",
+      "sourceBytes": 4366600,
+      "slug": "dtf-builder1",
+      "title": "DTF-builder1",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "DTF builder1",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-hero.webp",
+          "width": 1201,
+          "height": 880,
+          "bytes": 73108
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-card.webp",
+          "width": 900,
+          "height": 659,
+          "bytes": 50726
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-thumb.webp",
+          "width": 360,
+          "height": 264,
+          "bytes": 14988
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/DTF-printer.jpg",
+      "sourceBytes": 2340990,
+      "slug": "dtf-printer",
+      "title": "DTF-printer",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "DTF printer",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-hero.webp",
+          "width": 1264,
+          "height": 841,
+          "bytes": 96264
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-card.webp",
+          "width": 900,
+          "height": 599,
+          "bytes": 62424
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-thumb.webp",
+          "width": 360,
+          "height": 240,
+          "bytes": 17964
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Generated Image May 28, 2026 - 12_10PM.jpg",
+      "sourceBytes": 683952,
+      "slug": "generated-image-may-28,-2026---12-10pm",
+      "title": "Generated Image May 28, 2026 - 12_10PM",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Generated Image May 28, 2026   12_10PM",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/generated-image-may-28,-2026---12-10pm-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 92060
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/generated-image-may-28,-2026---12-10pm-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 76134
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/generated-image-may-28,-2026---12-10pm-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 21978
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Generated Image May 28, 2026 - 2_46PM.jpg",
+      "sourceBytes": 663739,
+      "slug": "generated-image-may-28,-2026---2-46pm",
+      "title": "Generated Image May 28, 2026 - 2_46PM",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Generated Image May 28, 2026   2_46PM",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/generated-image-may-28,-2026---2-46pm-hero.webp",
+          "width": 1128,
+          "height": 928,
+          "bytes": 113314
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/generated-image-may-28,-2026---2-46pm-card.webp",
+          "width": 900,
+          "height": 740,
+          "bytes": 75914
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/generated-image-may-28,-2026---2-46pm-thumb.webp",
+          "width": 360,
+          "height": 296,
+          "bytes": 14966
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Glitter-sticker.jpg",
+      "sourceBytes": 934032,
+      "slug": "glitter-sticker",
+      "title": "Glitter-sticker",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Glitter sticker",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 244578
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 195382
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 39866
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/H-M-jersey.jpg",
+      "sourceBytes": 34885,
+      "slug": "h-m-jersey",
+      "title": "H-M-jersey",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "H M jersey",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-hero.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 33964
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-card.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 33964
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 27294
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/H-M-storefront.jpg",
+      "sourceBytes": 239456,
+      "slug": "h-m-storefront",
+      "title": "H-M-storefront",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "H M storefront",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-hero.webp",
+          "width": 1600,
+          "height": 922,
+          "bytes": 149942
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-card.webp",
+          "width": 900,
+          "height": 519,
+          "bytes": 64890
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-thumb.webp",
+          "width": 360,
+          "height": 207,
+          "bytes": 15358
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Large-icon-gangsheet.jpg",
+      "sourceBytes": 1035142,
+      "slug": "large-icon-gangsheet",
+      "title": "Large-icon-gangsheet",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Large icon gangsheet",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 170068
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 140908
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 34870
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Small-tumbler-engraved.jpg",
+      "sourceBytes": 613089,
+      "slug": "small-tumbler-engraved",
+      "title": "Small-tumbler-engraved",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Small tumbler engraved",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-hero.webp",
+          "width": 1055,
+          "height": 1008,
+          "bytes": 30956
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-card.webp",
+          "width": 900,
+          "height": 860,
+          "bytes": 22356
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-thumb.webp",
+          "width": 360,
+          "height": 344,
+          "bytes": 4960
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Softball.jpg",
+      "sourceBytes": 898627,
+      "slug": "softball",
+      "title": "Softball",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Softball",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 86184
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 45726
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 13182
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Tumbler-WV.jpg",
+      "sourceBytes": 683952,
+      "slug": "tumbler-wv",
+      "title": "Tumbler-WV",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "Tumbler WV",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 92060
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 76134
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 21978
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/baseball.jpg",
+      "sourceBytes": 579997,
+      "slug": "baseball",
+      "title": "baseball",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "baseball",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/baseball-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 69978
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/baseball-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 58398
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/baseball-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 15884
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/big-gangsheet.jpg",
+      "sourceBytes": 930638,
+      "slug": "big-gangsheet",
+      "title": "big-gangsheet",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "big gangsheet",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/big-gangsheet-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 255078
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/big-gangsheet-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 208518
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/big-gangsheet-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 47738
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/blank-hats.jpg",
+      "sourceBytes": 1207687,
+      "slug": "blank-hats",
+      "title": "Blank hats",
+      "collection": "Blanks and apparel",
+      "usage": [
+        "hat transfer product card"
+      ],
+      "alt": "Blank hats ready for custom transfers",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-hats-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 61298
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-hats-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 34712
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-hats-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 11344
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/blank-items.jpg",
+      "sourceBytes": 2165966,
+      "slug": "blank-items",
+      "title": "Blank product assortment",
+      "collection": "Blanks and apparel",
+      "usage": [
+        "shop collection banner"
+      ],
+      "alt": "Blank apparel and merchandise assortment",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-items-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 156286
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-items-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 85362
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-items-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 24072
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/blank-items1.jpg",
+      "sourceBytes": 1847991,
+      "slug": "blank-items-alt",
+      "title": "Blank product assortment alternate",
+      "collection": "Blanks and apparel",
+      "usage": [
+        "contact quote support"
+      ],
+      "alt": "Blank items prepared for custom print production",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-items-alt-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 143716
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-items-alt-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 78620
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-items-alt-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 22550
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/blank-sweatshirt.jpg",
+      "sourceBytes": 2017542,
+      "slug": "blank-sweatshirt",
+      "title": "Blank sweatshirt",
+      "collection": "Blanks and apparel",
+      "usage": [
+        "blank product card"
+      ],
+      "alt": "Blank sweatshirt ready for custom transfer printing",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-sweatshirt-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 32506
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-sweatshirt-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 26514
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/blank-sweatshirt-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 6946
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/boy-sticker-sheet.jpg",
+      "sourceBytes": 4802648,
+      "slug": "boy-sticker-sheet",
+      "title": "Youth sticker sheet",
+      "collection": "Stickers",
+      "usage": [
+        "sticker collection card"
+      ],
+      "alt": "Youth themed custom sticker sheet",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/boy-sticker-sheet-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 189722
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/boy-sticker-sheet-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 103510
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/boy-sticker-sheet-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 26600
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/car-gang-sheet.jpg",
+      "sourceBytes": 868643,
+      "slug": "car-gang-sheet",
+      "title": "Car gang sheet",
+      "collection": "Gang sheets",
+      "usage": [
+        "builder page",
+        "gang sheet collection"
+      ],
+      "alt": "DTF gang sheet layout with vehicle graphics",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/car-gang-sheet-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 221540
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/car-gang-sheet-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 183666
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/car-gang-sheet-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 45288
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/dtf-process.jpg",
+      "sourceBytes": 684408,
+      "slug": "dtf-process",
+      "title": "DTF process",
+      "collection": "Guides",
+      "usage": [
+        "guide page",
+        "process module"
+      ],
+      "alt": "DTF printing process close-up",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-process-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 125320
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-process-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 100032
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-process-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 25066
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/floor-graphic.jpg",
+      "sourceBytes": 3583165,
+      "slug": "floor-graphic",
+      "title": "floor-graphic",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "floor graphic",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/floor-graphic-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 122034
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/floor-graphic-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 63152
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/floor-graphic-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 16320
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/gangsheets.jpg",
+      "sourceBytes": 761593,
+      "slug": "gangsheets",
+      "title": "gangsheets",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "gangsheets",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/gangsheets-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 160364
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/gangsheets-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 128746
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/gangsheets-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 30538
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/guru-pack.jpg",
+      "sourceBytes": 940097,
+      "slug": "guru-pack",
+      "title": "guru-pack",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "guru pack",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/guru-pack-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 182182
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/guru-pack-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 95342
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/guru-pack-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 19786
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/h-m-bag.jpg",
+      "sourceBytes": 48830,
+      "slug": "h-m-bag",
+      "title": "h-m-bag",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "h m bag",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-bag-hero.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 46856
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-bag-card.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 46856
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-bag-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 37450
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/h-m-jersey-back.jpg",
+      "sourceBytes": 33600,
+      "slug": "h-m-jersey-back",
+      "title": "h-m-jersey-back",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "h m jersey back",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-back-hero.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 29120
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-back-card.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 29120
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-back-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 24222
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/h-m-may4th.jpg",
+      "sourceBytes": 41864,
+      "slug": "h-m-may4th",
+      "title": "h-m-may4th",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "h m may4th",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-may4th-hero.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 32786
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-may4th-card.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 32786
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-may4th-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 27210
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/h-m-tumblers.jpg",
+      "sourceBytes": 762848,
+      "slug": "h-m-tumblers",
+      "title": "h-m-tumblers",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "h m tumblers",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-tumblers-hero.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 430826
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-tumblers-card.webp",
+          "width": 675,
+          "height": 900,
+          "bytes": 164660
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-tumblers-thumb.webp",
+          "width": 270,
+          "height": 360,
+          "bytes": 32272
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/hat-transfer.jpg",
+      "sourceBytes": 569029,
+      "slug": "hat-transfer",
+      "title": "Hat transfer",
+      "collection": "Hat transfers",
+      "usage": [
+        "product card",
+        "specialty route"
+      ],
+      "alt": "Custom transfer applied to a blank hat",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hat-transfer-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 56050
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hat-transfer-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 45912
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hat-transfer-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 9252
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/hatfield-tags.jpg",
+      "sourceBytes": 753950,
+      "slug": "hatfield-tags",
+      "title": "Hatfield tags",
+      "collection": "Labels and tags",
+      "usage": [
+        "brand detail",
+        "quality proof"
+      ],
+      "alt": "Hatfield McCoy branded tags",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hatfield-tags-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 137688
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hatfield-tags-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 116880
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hatfield-tags-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 36234
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/hoodies-blank.jpg",
+      "sourceBytes": 634861,
+      "slug": "hoodies-blank",
+      "title": "hoodies-blank",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "hoodies blank",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hoodies-blank-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 51116
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hoodies-blank-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 42282
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/hoodies-blank-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 12076
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/items-stickerd.jpg",
+      "sourceBytes": 5296762,
+      "slug": "items-stickerd",
+      "title": "items-stickerd",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "items stickerd",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/items-stickerd-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 131822
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/items-stickerd-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 103812
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/items-stickerd-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 23688
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/mermaid-patch.jpg",
+      "sourceBytes": 1032887,
+      "slug": "mermaid-patch",
+      "title": "mermaid-patch",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "mermaid patch",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/mermaid-patch-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 349258
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/mermaid-patch-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 280368
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/mermaid-patch-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 57170
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/neon-basketball.jpg",
+      "sourceBytes": 982384,
+      "slug": "neon-basketball",
+      "title": "Neon basketball print",
+      "collection": "Sports and teams",
+      "usage": [
+        "sports collection card"
+      ],
+      "alt": "Neon basketball transfer design sample",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-basketball-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 240884
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-basketball-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 201206
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-basketball-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 51580
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/neon-items.jpg",
+      "sourceBytes": 556657,
+      "slug": "neon-items",
+      "title": "neon-items",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "neon items",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-items-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 72196
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-items-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 58832
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-items-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 14066
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/neon-print-WV.jpg",
+      "sourceBytes": 820665,
+      "slug": "neon-wv-print",
+      "title": "Neon WV print",
+      "collection": "West Virginia DTF",
+      "usage": [
+        "local SEO",
+        "home proof"
+      ],
+      "alt": "West Virginia themed neon DTF print",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-wv-print-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 162694
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-wv-print-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 136998
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-wv-print-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 38784
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/neon-print.jpg",
+      "sourceBytes": 3563935,
+      "slug": "custom-dtf-transfers",
+      "title": "Custom DTF transfers",
+      "collection": "DTF transfers",
+      "usage": [
+        "home hero",
+        "product detail",
+        "collection card"
+      ],
+      "alt": "Neon Hatfield McCoy DTF transfer print sample",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 213298
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 171328
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 36436
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/neon-transfer-hoodie.jpg",
+      "sourceBytes": 579025,
+      "slug": "neon-hoodie-transfer",
+      "title": "Neon hoodie transfer",
+      "collection": "Apparel transfers",
+      "usage": [
+        "homepage route",
+        "PDP lifestyle"
+      ],
+      "alt": "Neon DTF transfer on a hoodie",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 86960
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 72414
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 18534
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/party-banner2.jpg",
+      "sourceBytes": 689441,
+      "slug": "party-banner2",
+      "title": "party-banner2",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "party banner2",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/party-banner2-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 113476
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/party-banner2-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 92896
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/party-banner2-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 24786
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/party-banner3.jpg",
+      "sourceBytes": 708563,
+      "slug": "party-banner3",
+      "title": "party-banner3",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "party banner3",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/party-banner3-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 121110
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/party-banner3-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 95520
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/party-banner3-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 20498
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/patches.jpg",
+      "sourceBytes": 1055164,
+      "slug": "custom-patches",
+      "title": "Custom patches",
+      "collection": "Patches",
+      "usage": [
+        "specialty product card"
+      ],
+      "alt": "Custom patch samples for apparel and merchandise",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 367178
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 291514
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 59658
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/pickleball.jpg",
+      "sourceBytes": 2219559,
+      "slug": "pickleball",
+      "title": "pickleball",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "pickleball",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pickleball-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 139322
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pickleball-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 74294
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pickleball-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 18180
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/pro-kit.jpg",
+      "sourceBytes": 672929,
+      "slug": "pro-kit",
+      "title": "pro-kit",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "pro kit",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pro-kit-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 97514
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pro-kit-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 75238
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pro-kit-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 18862
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/pro-vector.jpg",
+      "sourceBytes": 1729844,
+      "slug": "pro-vector",
+      "title": "pro-vector",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "pro vector",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pro-vector-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 123026
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pro-vector-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 101592
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/pro-vector-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 29130
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/puff-shirt.jpg",
+      "sourceBytes": 767049,
+      "slug": "puff-shirt",
+      "title": "puff-shirt",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "puff shirt",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-shirt-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 146572
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-shirt-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 107104
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-shirt-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 15248
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/puff-shirt2.jpg",
+      "sourceBytes": 408524,
+      "slug": "puff-shirt2",
+      "title": "puff-shirt2",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "puff shirt2",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-shirt2-hero.webp",
+          "width": 1264,
+          "height": 842,
+          "bytes": 28620
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-shirt2-card.webp",
+          "width": 900,
+          "height": 600,
+          "bytes": 17114
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-shirt2-thumb.webp",
+          "width": 360,
+          "height": 240,
+          "bytes": 4706
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/quality-tags.jpg",
+      "sourceBytes": 6341394,
+      "slug": "quality-tags",
+      "title": "Quality tags",
+      "collection": "Labels and tags",
+      "usage": [
+        "trust proof",
+        "detail image"
+      ],
+      "alt": "Close-up quality tags for finished merchandise",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/quality-tags-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 118680
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/quality-tags-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 97632
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/quality-tags-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 26756
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/rush-order.jpg",
+      "sourceBytes": 646892,
+      "slug": "rush-order",
+      "title": "rush-order",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "rush order",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/rush-order-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 89288
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/rush-order-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 75548
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/rush-order-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 20096
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/sticker-rolls.jpg",
+      "sourceBytes": 827592,
+      "slug": "sticker-rolls",
+      "title": "Sticker rolls",
+      "collection": "Stickers",
+      "usage": [
+        "sticker collection support"
+      ],
+      "alt": "Rolls of custom printed stickers",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/sticker-rolls-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 166444
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/sticker-rolls-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 133958
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/sticker-rolls-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 31506
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/uv-stickers.jpg",
+      "sourceBytes": 672644,
+      "slug": "uv-stickers",
+      "title": "uv-stickers",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "uv stickers",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/uv-stickers-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 136424
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/uv-stickers-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 110850
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/uv-stickers-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 26764
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/vibrant-transfers.jpg",
+      "sourceBytes": 1340978,
+      "slug": "vibrant-transfer-stack",
+      "title": "Vibrant transfer stack",
+      "collection": "DTF transfers",
+      "usage": [
+        "shop card",
+        "related product"
+      ],
+      "alt": "Stack of bright full color DTF transfer samples",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/vibrant-transfer-stack-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 239618
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/vibrant-transfer-stack-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 195468
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/vibrant-transfer-stack-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 48602
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/window-front.jpg",
+      "sourceBytes": 907606,
+      "slug": "window-front",
+      "title": "window-front",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "window front",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/window-front-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 241472
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/window-front-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 196056
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/window-front-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 38954
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/window-vinyl-decal.jpg",
+      "sourceBytes": 758289,
+      "slug": "window-vinyl-decal",
+      "title": "window-vinyl-decal",
+      "collection": "Unassigned",
+      "usage": [
+        "review"
+      ],
+      "alt": "window vinyl decal",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/window-vinyl-decal-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 147914
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/window-vinyl-decal-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 122762
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/window-vinyl-decal-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 30590
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/woman-hoodie-neon.jpg",
+      "sourceBytes": 543977,
+      "slug": "woman-hoodie-neon",
+      "title": "Neon hoodie lifestyle",
+      "collection": "Apparel transfers",
+      "usage": [
+        "hero lifestyle",
+        "wholesale proof"
+      ],
+      "alt": "Model wearing a hoodie with neon Hatfield McCoy style print",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/woman-hoodie-neon-hero.webp",
+          "width": 1152,
+          "height": 922,
+          "bytes": 67694
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/woman-hoodie-neon-card.webp",
+          "width": 900,
+          "height": 720,
+          "bytes": 49202
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/woman-hoodie-neon-thumb.webp",
+          "width": 360,
+          "height": 288,
+          "bytes": 14434
+        }
+      },
+      "status": "ready"
+    }
+  ],
+  "warnings": []
+}

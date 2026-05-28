@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "source_file": "deliverables/prototype/catalog-intake.html",
+    "purpose": "Map intake form chip codes to human-readable labels for Discord/GHL payload and any UI display. Stream C imports this to transform raw codes before the webhook POST.",
+    "last_updated": "2026-05-17"
+  },
+  "gaps": {
+    "dtf46": "46\" DTF: add 88\" and 92\" lengths",
+    "dtf22": "22\" DTF: add 204\"\u2013288\" lengths",
+    "sub24": "Sublimation 24\": add 108\"\u2013144\" lengths",
+    "none": "Leave all size ladders as-is"
+  },
+  "categories": {
+    "uv_dtf": "UV DTF",
+    "reflective": "Reflective DTF",
+    "embroidery": "Embroidery",
+    "3d_puff": "3D Puff Transfers",
+    "spangle": "Spangle / Sequin",
+    "banners": "Banners",
+    "die_cut": "Die Cut Stickers",
+    "laser": "Laser Engraving",
+    "personalized": "Tumblers / Pens / Golf Balls (personalized hard-surface)",
+    "sample_packs": "Sample Packs",
+    "custom_gang": "Custom Gang Sheet"
+  },
+  "yes_no": {
+    "units": {
+      "yes": "Yes \u2014 sizes are in inches",
+      "no": "No \u2014 something else"
+    },
+    "glow_price": {
+      "yes": "$225 is correct \u2014 fix the typo",
+      "no": "$153 is correct \u2014 leave it"
+    },
+    "threeD": {
+      "yes": "Yes \u2014 list 3D printing",
+      "no": "No \u2014 remove 3D printing"
+    },
+    "silver": {
+      "yes": "Yes \u2014 fix to Silver",
+      "no": "No \u2014 Sliver is correct"
+    },
+    "pickup": {
+      "yes": "Yes \u2014 offer local pickup",
+      "no": "No \u2014 shipping only"
+    },
+    "shopify": {
+      "yes": "Yes \u2014 Shopify store is ready",
+      "no": "No \u2014 need help setting up Shopify"
+    }
+  }
+}

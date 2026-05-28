@@ -1,0 +1,923 @@
+{
+  "_meta": {
+    "source": "shopify:zm1evm-rd.myshopify.com",
+    "extracted_at": "2026-05-25",
+    "sku_count": 94,
+    "collection_count": 7,
+    "notes": "Refreshed after production-readiness pricing correction: Glow 22x300 is now $225. All sizes written as width x length in inches. | Refreshed from Shopify Admin API. Preserved collection marketing copy; refreshed per-variant SKU/price/size. Glitter uses base SKU with color_options.sku_suffix for compound SKU on add-to-cart."
+  },
+  "collections": [
+    {
+      "slug": "dtf-22",
+      "name": "DTF 22\" Sheet",
+      "description": "Our workhorse. 22-inch wide DTF film, printed to order and pressed clean onto cotton, polyester, blends, nylon, and leather. No pretreatment. Won't crack, peel, or fade through the wash.",
+      "cover_image": "assets/images/covers/dtf.png",
+      "width_in": 22,
+      "size_options_count": 16,
+      "price_from": 12,
+      "products": [
+        {
+          "sku": "DTF-22-24",
+          "name": "DTF 22\" x 24\"",
+          "size": "22 x 24",
+          "price": 12,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063581860022"
+        },
+        {
+          "sku": "DTF-22-36",
+          "name": "DTF 22\" x 36\"",
+          "size": "22 x 36",
+          "price": 18,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063581892790"
+        },
+        {
+          "sku": "DTF-22-48",
+          "name": "DTF 22\" x 48\"",
+          "size": "22 x 48",
+          "price": 24,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063581925558"
+        },
+        {
+          "sku": "DTF-22-60",
+          "name": "DTF 22\" x 60\"",
+          "size": "22 x 60",
+          "price": 30,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063581958326"
+        },
+        {
+          "sku": "DTF-22-72",
+          "name": "DTF 22\" x 72\"",
+          "size": "22 x 72",
+          "price": 36,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063581991094"
+        },
+        {
+          "sku": "DTF-22-84",
+          "name": "DTF 22\" x 84\"",
+          "size": "22 x 84",
+          "price": 42,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582023862"
+        },
+        {
+          "sku": "DTF-22-96",
+          "name": "DTF 22\" x 96\"",
+          "size": "22 x 96",
+          "price": 48,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582056630"
+        },
+        {
+          "sku": "DTF-22-108",
+          "name": "DTF 22\" x 108\"",
+          "size": "22 x 108",
+          "price": 54,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582089398"
+        },
+        {
+          "sku": "DTF-22-120",
+          "name": "DTF 22\" x 120\"",
+          "size": "22 x 120",
+          "price": 60,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582122166"
+        },
+        {
+          "sku": "DTF-22-132",
+          "name": "DTF 22\" x 132\"",
+          "size": "22 x 132",
+          "price": 66,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582154934"
+        },
+        {
+          "sku": "DTF-22-144",
+          "name": "DTF 22\" x 144\"",
+          "size": "22 x 144",
+          "price": 72,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582187702"
+        },
+        {
+          "sku": "DTF-22-156",
+          "name": "DTF 22\" x 156\"",
+          "size": "22 x 156",
+          "price": 78,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582220470"
+        },
+        {
+          "sku": "DTF-22-168",
+          "name": "DTF 22\" x 168\"",
+          "size": "22 x 168",
+          "price": 84,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582253238"
+        },
+        {
+          "sku": "DTF-22-180",
+          "name": "DTF 22\" x 180\"",
+          "size": "22 x 180",
+          "price": 90,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582286006"
+        },
+        {
+          "sku": "DTF-22-192",
+          "name": "DTF 22\" x 192\"",
+          "size": "22 x 192",
+          "price": 96,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582318774"
+        },
+        {
+          "sku": "DTF-22-300",
+          "name": "DTF 22\" x 300\"",
+          "size": "22 x 300",
+          "price": 150,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582351542"
+        }
+      ]
+    },
+    {
+      "slug": "dtf-46",
+      "name": "DTF 46\" Sheet",
+      "description": "Big-format DTF for big designs. 46-inch wide film lets you run large jerseys, uniform runs, and oversized artwork without splicing. Same clean transfer, same blue-collar durability.",
+      "cover_image": "assets/images/covers/dtf.png",
+      "width_in": 46,
+      "size_options_count": 21,
+      "price_from": 12,
+      "products": [
+        {
+          "sku": "DTF-46-12",
+          "name": "DTF 46\" x 12\"",
+          "size": "46 x 12",
+          "price": 12,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582417078"
+        },
+        {
+          "sku": "DTF-46-24",
+          "name": "DTF 46\" x 24\"",
+          "size": "46 x 24",
+          "price": 24,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582449846"
+        },
+        {
+          "sku": "DTF-46-36",
+          "name": "DTF 46\" x 36\"",
+          "size": "46 x 36",
+          "price": 36,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582482614"
+        },
+        {
+          "sku": "DTF-46-48",
+          "name": "DTF 46\" x 48\"",
+          "size": "46 x 48",
+          "price": 48,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582515382"
+        },
+        {
+          "sku": "DTF-46-60",
+          "name": "DTF 46\" x 60\"",
+          "size": "46 x 60",
+          "price": 60,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582548150"
+        },
+        {
+          "sku": "DTF-46-72",
+          "name": "DTF 46\" x 72\"",
+          "size": "46 x 72",
+          "price": 72,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582580918"
+        },
+        {
+          "sku": "DTF-46-80",
+          "name": "DTF 46\" x 80\"",
+          "size": "46 x 80",
+          "price": 80,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582613686"
+        },
+        {
+          "sku": "DTF-46-84",
+          "name": "DTF 46\" x 84\"",
+          "size": "46 x 84",
+          "price": 84,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582646454"
+        },
+        {
+          "sku": "DTF-46-96",
+          "name": "DTF 46\" x 96\"",
+          "size": "46 x 96",
+          "price": 96,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582679222"
+        },
+        {
+          "sku": "DTF-46-108",
+          "name": "DTF 46\" x 108\"",
+          "size": "46 x 108",
+          "price": 108,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582711990"
+        },
+        {
+          "sku": "DTF-46-120",
+          "name": "DTF 46\" x 120\"",
+          "size": "46 x 120",
+          "price": 120,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582744758"
+        },
+        {
+          "sku": "DTF-46-132",
+          "name": "DTF 46\" x 132\"",
+          "size": "46 x 132",
+          "price": 132,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582777526"
+        },
+        {
+          "sku": "DTF-46-144",
+          "name": "DTF 46\" x 144\"",
+          "size": "46 x 144",
+          "price": 144,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582810294"
+        },
+        {
+          "sku": "DTF-46-156",
+          "name": "DTF 46\" x 156\"",
+          "size": "46 x 156",
+          "price": 156,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582843062"
+        },
+        {
+          "sku": "DTF-46-168",
+          "name": "DTF 46\" x 168\"",
+          "size": "46 x 168",
+          "price": 168,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582875830"
+        },
+        {
+          "sku": "DTF-46-180",
+          "name": "DTF 46\" x 180\"",
+          "size": "46 x 180",
+          "price": 180,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582908598"
+        },
+        {
+          "sku": "DTF-46-192",
+          "name": "DTF 46\" x 192\"",
+          "size": "46 x 192",
+          "price": 192,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582941366"
+        },
+        {
+          "sku": "DTF-46-204",
+          "name": "DTF 46\" x 204\"",
+          "size": "46 x 204",
+          "price": 204,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063582974134"
+        },
+        {
+          "sku": "DTF-46-216",
+          "name": "DTF 46\" x 216\"",
+          "size": "46 x 216",
+          "price": 216,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063583006902"
+        },
+        {
+          "sku": "DTF-46-228",
+          "name": "DTF 46\" x 228\"",
+          "size": "46 x 228",
+          "price": 228,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063583039670"
+        },
+        {
+          "sku": "DTF-46-240",
+          "name": "DTF 46\" x 240\"",
+          "size": "46 x 240",
+          "price": 240,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063583072438"
+        }
+      ]
+    },
+    {
+      "slug": "glitter-22",
+      "name": "Glitter DTF 22\" Sheet",
+      "description": "Sparkle that survives 40 washes. Silver, Gold, or Multi — same 22-inch DTF film, dialed up with glitter-grade shine. For team names, bachelorette runs, and anything that needs to catch the light.",
+      "cover_image": "assets/images/covers/glitter.png",
+      "width_in": 22,
+      "size_options_count": 16,
+      "price_from": 12,
+      "color_options": [
+        {
+          "name": "Silver",
+          "sku_suffix": "SIL"
+        },
+        {
+          "name": "Gold",
+          "sku_suffix": "GLD"
+        },
+        {
+          "name": "Multi",
+          "sku_suffix": "MLT"
+        }
+      ],
+      "products": [
+        {
+          "sku": "GLT-22-24",
+          "name": "Glitter DTF 22\" x 24\"",
+          "size": "22 x 24",
+          "price": 12,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583137974",
+            "GLD": "gid://shopify/ProductVariant/45063583170742",
+            "MLT": "gid://shopify/ProductVariant/45063583203510"
+          }
+        },
+        {
+          "sku": "GLT-22-36",
+          "name": "Glitter DTF 22\" x 36\"",
+          "size": "22 x 36",
+          "price": 18,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583236278",
+            "GLD": "gid://shopify/ProductVariant/45063583269046",
+            "MLT": "gid://shopify/ProductVariant/45063583301814"
+          }
+        },
+        {
+          "sku": "GLT-22-48",
+          "name": "Glitter DTF 22\" x 48\"",
+          "size": "22 x 48",
+          "price": 24,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583334582",
+            "GLD": "gid://shopify/ProductVariant/45063583367350",
+            "MLT": "gid://shopify/ProductVariant/45063583400118"
+          }
+        },
+        {
+          "sku": "GLT-22-60",
+          "name": "Glitter DTF 22\" x 60\"",
+          "size": "22 x 60",
+          "price": 30,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583432886",
+            "GLD": "gid://shopify/ProductVariant/45063583465654",
+            "MLT": "gid://shopify/ProductVariant/45063583498422"
+          }
+        },
+        {
+          "sku": "GLT-22-72",
+          "name": "Glitter DTF 22\" x 72\"",
+          "size": "22 x 72",
+          "price": 36,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583531190",
+            "GLD": "gid://shopify/ProductVariant/45063583563958",
+            "MLT": "gid://shopify/ProductVariant/45063583596726"
+          }
+        },
+        {
+          "sku": "GLT-22-84",
+          "name": "Glitter DTF 22\" x 84\"",
+          "size": "22 x 84",
+          "price": 42,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583629494",
+            "GLD": "gid://shopify/ProductVariant/45063583662262",
+            "MLT": "gid://shopify/ProductVariant/45063583695030"
+          }
+        },
+        {
+          "sku": "GLT-22-96",
+          "name": "Glitter DTF 22\" x 96\"",
+          "size": "22 x 96",
+          "price": 48,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583727798",
+            "GLD": "gid://shopify/ProductVariant/45063583760566",
+            "MLT": "gid://shopify/ProductVariant/45063583793334"
+          }
+        },
+        {
+          "sku": "GLT-22-108",
+          "name": "Glitter DTF 22\" x 108\"",
+          "size": "22 x 108",
+          "price": 54,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583826102",
+            "GLD": "gid://shopify/ProductVariant/45063583858870",
+            "MLT": "gid://shopify/ProductVariant/45063583891638"
+          }
+        },
+        {
+          "sku": "GLT-22-120",
+          "name": "Glitter DTF 22\" x 120\"",
+          "size": "22 x 120",
+          "price": 60,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063583924406",
+            "GLD": "gid://shopify/ProductVariant/45063583957174",
+            "MLT": "gid://shopify/ProductVariant/45063583989942"
+          }
+        },
+        {
+          "sku": "GLT-22-132",
+          "name": "Glitter DTF 22\" x 132\"",
+          "size": "22 x 132",
+          "price": 66,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063584022710",
+            "GLD": "gid://shopify/ProductVariant/45063584055478",
+            "MLT": "gid://shopify/ProductVariant/45063584088246"
+          }
+        },
+        {
+          "sku": "GLT-22-144",
+          "name": "Glitter DTF 22\" x 144\"",
+          "size": "22 x 144",
+          "price": 72,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063584121014",
+            "GLD": "gid://shopify/ProductVariant/45063584153782",
+            "MLT": "gid://shopify/ProductVariant/45063584186550"
+          }
+        },
+        {
+          "sku": "GLT-22-156",
+          "name": "Glitter DTF 22\" x 156\"",
+          "size": "22 x 156",
+          "price": 78,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063584219318",
+            "GLD": "gid://shopify/ProductVariant/45063584252086",
+            "MLT": "gid://shopify/ProductVariant/45063584284854"
+          }
+        },
+        {
+          "sku": "GLT-22-168",
+          "name": "Glitter DTF 22\" x 168\"",
+          "size": "22 x 168",
+          "price": 84,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063584317622",
+            "GLD": "gid://shopify/ProductVariant/45063584350390",
+            "MLT": "gid://shopify/ProductVariant/45063584383158"
+          }
+        },
+        {
+          "sku": "GLT-22-180",
+          "name": "Glitter DTF 22\" x 180\"",
+          "size": "22 x 180",
+          "price": 90,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063584415926",
+            "GLD": "gid://shopify/ProductVariant/45063584448694",
+            "MLT": "gid://shopify/ProductVariant/45063584481462"
+          }
+        },
+        {
+          "sku": "GLT-22-192",
+          "name": "Glitter DTF 22\" x 192\"",
+          "size": "22 x 192",
+          "price": 96,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063584514230",
+            "GLD": "gid://shopify/ProductVariant/45063584546998",
+            "MLT": "gid://shopify/ProductVariant/45063584579766"
+          }
+        },
+        {
+          "sku": "GLT-22-300",
+          "name": "Glitter DTF 22\" x 300\"",
+          "size": "22 x 300",
+          "price": 150,
+          "currency": "USD",
+          "storefront_variant_ids": {
+            "SIL": "gid://shopify/ProductVariant/45063584612534",
+            "GLD": "gid://shopify/ProductVariant/45063584645302",
+            "MLT": "gid://shopify/ProductVariant/45063584678070"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "glow-22",
+      "name": "Glow DTF 22\" Sheet",
+      "description": "Charges in 60 seconds. Glows bright when the lights cut out. Same 22-inch DTF durability with photoluminescent ink for safety gear, Halloween runs, and anything that needs to show up after dark.",
+      "cover_image": "assets/images/covers/glow.png",
+      "width_in": 22,
+      "size_options_count": 16,
+      "price_from": 18,
+      "notes": "22x300 price corrected to $225 during production-readiness pass.",
+      "products": [
+        {
+          "sku": "GID-22-24",
+          "name": "Glow DTF 22\" x 24\"",
+          "size": "22 x 24",
+          "price": 18,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584743606"
+        },
+        {
+          "sku": "GID-22-36",
+          "name": "Glow DTF 22\" x 36\"",
+          "size": "22 x 36",
+          "price": 27,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584776374"
+        },
+        {
+          "sku": "GID-22-48",
+          "name": "Glow DTF 22\" x 48\"",
+          "size": "22 x 48",
+          "price": 36,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584809142"
+        },
+        {
+          "sku": "GID-22-60",
+          "name": "Glow DTF 22\" x 60\"",
+          "size": "22 x 60",
+          "price": 45,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584841910"
+        },
+        {
+          "sku": "GID-22-72",
+          "name": "Glow DTF 22\" x 72\"",
+          "size": "22 x 72",
+          "price": 54,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584874678"
+        },
+        {
+          "sku": "GID-22-84",
+          "name": "Glow DTF 22\" x 84\"",
+          "size": "22 x 84",
+          "price": 63,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584907446"
+        },
+        {
+          "sku": "GID-22-96",
+          "name": "Glow DTF 22\" x 96\"",
+          "size": "22 x 96",
+          "price": 72,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584940214"
+        },
+        {
+          "sku": "GID-22-108",
+          "name": "Glow DTF 22\" x 108\"",
+          "size": "22 x 108",
+          "price": 81,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063584972982"
+        },
+        {
+          "sku": "GID-22-120",
+          "name": "Glow DTF 22\" x 120\"",
+          "size": "22 x 120",
+          "price": 90,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585005750"
+        },
+        {
+          "sku": "GID-22-132",
+          "name": "Glow DTF 22\" x 132\"",
+          "size": "22 x 132",
+          "price": 99,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585038518"
+        },
+        {
+          "sku": "GID-22-144",
+          "name": "Glow DTF 22\" x 144\"",
+          "size": "22 x 144",
+          "price": 108,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585071286"
+        },
+        {
+          "sku": "GID-22-156",
+          "name": "Glow DTF 22\" x 156\"",
+          "size": "22 x 156",
+          "price": 117,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585104054"
+        },
+        {
+          "sku": "GID-22-168",
+          "name": "Glow DTF 22\" x 168\"",
+          "size": "22 x 168",
+          "price": 126,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585136822"
+        },
+        {
+          "sku": "GID-22-180",
+          "name": "Glow DTF 22\" x 180\"",
+          "size": "22 x 180",
+          "price": 135,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585169590"
+        },
+        {
+          "sku": "GID-22-192",
+          "name": "Glow DTF 22\" x 192\"",
+          "size": "22 x 192",
+          "price": 144,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585202358"
+        },
+        {
+          "sku": "GID-22-300",
+          "name": "Glow DTF 22\" x 300\"",
+          "size": "22 x 300",
+          "price": 225,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585235126"
+        }
+      ]
+    },
+    {
+      "slug": "sublimation-24",
+      "name": "Sublimation 24\"",
+      "description": "Hard-surface transfers for mugs, tumblers, and decor. 24-inch wide sublimation paper with inks that bond into the substrate — no peeling, no cracking, just permanent color. Great for polyester apparel too.",
+      "cover_image": "assets/images/covers/sublimation.png",
+      "width_in": 24,
+      "size_options_count": 7,
+      "price_from": 8.5,
+      "products": [
+        {
+          "sku": "SUB-24-24",
+          "name": "Sublimation 24\" x 24\"",
+          "size": "24 x 24",
+          "price": 8.5,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585300662"
+        },
+        {
+          "sku": "SUB-24-36",
+          "name": "Sublimation 24\" x 36\"",
+          "size": "24 x 36",
+          "price": 12.75,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585333430"
+        },
+        {
+          "sku": "SUB-24-48",
+          "name": "Sublimation 24\" x 48\"",
+          "size": "24 x 48",
+          "price": 17,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585366198"
+        },
+        {
+          "sku": "SUB-24-60",
+          "name": "Sublimation 24\" x 60\"",
+          "size": "24 x 60",
+          "price": 21.25,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585398966"
+        },
+        {
+          "sku": "SUB-24-72",
+          "name": "Sublimation 24\" x 72\"",
+          "size": "24 x 72",
+          "price": 26,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585431734"
+        },
+        {
+          "sku": "SUB-24-84",
+          "name": "Sublimation 24\" x 84\"",
+          "size": "24 x 84",
+          "price": 31,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585464502"
+        },
+        {
+          "sku": "SUB-24-96",
+          "name": "Sublimation 24\" x 96\"",
+          "size": "24 x 96",
+          "price": 34,
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585497270"
+        }
+      ]
+    },
+    {
+      "slug": "gang-sheet",
+      "name": "Custom Gang Sheet",
+      "description": "Build-your-own. 22-inch wide, any length — fill the sheet with every design you need in one run. Gang them up, save money, get a single clean transfer to work with. Use the builder to lay out your artwork and get an instant quote.",
+      "cover_image": "assets/images/covers/gang-sheets.png",
+      "width_in": 22,
+      "price_from": null,
+      "products": [
+        {
+          "sku": "GS-22-CUSTOM",
+          "name": "Custom Gang Sheet 22\" wide",
+          "size": "22 x custom",
+          "price_model": "builder",
+          "currency": "USD",
+          "storefront_variant_id": "gid://shopify/ProductVariant/45063585562806",
+          "checkout_enabled": false,
+          "note": "Priced via Kixxl builder based on length and art layout."
+        }
+      ],
+      "size_options_count": 1
+    },
+    {
+      "slug": "3d-print",
+      "name": "3D Printing",
+      "description": "Small-batch 3D printing for brand-adjacent specialty work. Two printers, pricing by size tier. Priced per piece or per inch tier.",
+      "cover_image": "assets/images/covers/reflective.png",
+      "notes": "Inclusion pending Q3 intake confirmation — client may remove this if 3D is not offered as a retail service.",
+      "products": [
+        {
+          "sku": "3D-X1-1-3",
+          "name": "3D Printer X1 (1\"–3\")",
+          "size": "1-3 in",
+          "price": 5,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-X1-4-6",
+          "name": "3D Printer X1 (4\"–6\")",
+          "size": "4-6 in",
+          "price": 10,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-X1-7-10",
+          "name": "3D Printer X1 (7\"–10\")",
+          "size": "7-10 in",
+          "price": 20,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-X1-11-13",
+          "name": "3D Printer X1 (11\"–13\")",
+          "size": "11-13 in",
+          "price": 35,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-X1-13PLUS",
+          "name": "3D Printer X1 (13\"+)",
+          "size": "13+ in",
+          "price": 50,
+          "currency": "USD",
+          "note": "Starting at $50; custom quote for oversized.",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-1-2",
+          "name": "3D Printer H2S (1\"–2\")",
+          "size": "1-2 in",
+          "price": 5,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-2-3",
+          "name": "3D Printer H2S (2\"–3\")",
+          "size": "2-3 in",
+          "price": 8,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-3-4",
+          "name": "3D Printer H2S (3\"–4\")",
+          "size": "3-4 in",
+          "price": 12,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-4-5",
+          "name": "3D Printer H2S (4\"–5\")",
+          "size": "4-5 in",
+          "price": 15,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-5-6",
+          "name": "3D Printer H2S (5\"–6\")",
+          "size": "5-6 in",
+          "price": 20,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-6-7",
+          "name": "3D Printer H2S (6\"–7\")",
+          "size": "6-7 in",
+          "price": 25,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-7-8",
+          "name": "3D Printer H2S (7\"–8\")",
+          "size": "7-8 in",
+          "price": 30,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-8-9",
+          "name": "3D Printer H2S (8\"–9\")",
+          "size": "8-9 in",
+          "price": 35,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-9-10",
+          "name": "3D Printer H2S (9\"–10\")",
+          "size": "9-10 in",
+          "price": 40,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-10-12",
+          "name": "3D Printer H2S (10\"–12\")",
+          "size": "10-12 in",
+          "price": 50,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-12-14",
+          "name": "3D Printer H2S (12\"–14\")",
+          "size": "12-14 in",
+          "price": 60,
+          "currency": "USD",
+          "checkout_enabled": false
+        },
+        {
+          "sku": "3D-H2S-14PLUS",
+          "name": "3D Printer H2S (14\"+)",
+          "size": "14+ in",
+          "price_model": "custom_quote",
+          "currency": "USD",
+          "note": "Custom quote for 14\"+",
+          "checkout_enabled": false
+        }
+      ],
+      "checkout_enabled": false,
+      "quote_only_reason": "3D printed display products are not yet mapped to Shopify variants; route to quote/intake before checkout."
+    }
+  ]
+}

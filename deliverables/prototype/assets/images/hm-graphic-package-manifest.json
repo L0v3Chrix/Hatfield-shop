@@ -1,0 +1,48 @@
+{
+  "generated_by": "project-ops/generate-hm-graphic-package.py",
+  "reference_note": "Inspired by DTF Virginia merchandising structure only; no DTF Virginia assets copied.",
+  "transparent_png_assets": [
+    "product-graphics/appalachian-ridge-film.png",
+    "product-graphics/apparel-samples-stack.png",
+    "product-graphics/blank-shirt-transfer.png",
+    "product-graphics/builder-canvas-layout.png",
+    "product-graphics/dtf-transfer-peel.png",
+    "product-graphics/gang-sheet-roll.png",
+    "product-graphics/glitter-film-sheet.png",
+    "product-graphics/glow-film-sheet.png",
+    "product-graphics/heat-press-shirt.png",
+    "product-graphics/pressed-shirt-front.png",
+    "product-graphics/printer-output-film.png",
+    "product-graphics/service-sample-bundle.png",
+    "product-graphics/shipping-pouch-transfers.png",
+    "product-graphics/sublimation-tumbler.png",
+    "product-graphics/uv-dtf-sticker-pack.png",
+    "product-graphics/wide-format-roll.png"
+  ],
+  "icon_svgs": [
+    "icons/fast-turnaround.svg",
+    "icons/heat-press.svg",
+    "icons/local-pickup.svg",
+    "icons/no-minimums.svg",
+    "icons/print-film.svg",
+    "icons/shipping.svg",
+    "icons/upload-artwork.svg",
+    "icons/wash-durable.svg"
+  ],
+  "cover_pngs": [
+    "covers/dtf.png",
+    "covers/gang-sheets.png",
+    "covers/glitter.png",
+    "covers/glow.png",
+    "covers/reflective.png",
+    "covers/sublimation.png",
+    "covers/uv-dtf.png"
+  ],
+  "variation_boards": [
+    "variations/01-appalachian-neon.png",
+    "variations/02-clean-industrial.png",
+    "variations/03-premium-local-boutique.png",
+    "variations/04-builder-first.png",
+    "variations/05-catalog-first.png"
+  ]
+}

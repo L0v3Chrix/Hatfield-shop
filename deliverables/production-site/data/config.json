@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "purpose": "Runtime configuration for the Hatfield McCoy DTF prototype. Non-secret values only — webhook proxy endpoint hides the real Discord URL.",
+    "last_updated": "2026-05-19"
+  },
+  "kicksy": {
+    "mode": "redirect",
+    "redirect_url": "https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982709430&price=12.00&store=zm1evm-rd.myshopify.com&product=8801329938614&quantity=1&locale=en",
+    "fallback_product_url": "https://hatfield-mccoy-dtf.myshopify.com/products/dtf-22-gang-sheet-builder",
+    "button_label": "Build Your Gang Sheet",
+    "open_in_new_tab": false,
+    "embed_url": null,
+    "fallback_mode": "quote_form",
+    "iframe_height": "800",
+    "iframe_title": "Hatfield McCoy Gang Sheet Builder",
+    "comment": "Kixxl direct-launch path. Headless builder CTAs go directly to /apps/gangify/builder with verified product/variant/price/store params. The Shopify Online Store product page remains a fallback landing path only; do not route headless traffic through it. Iframe is not the launch path (Shopify X-Frame-Options: DENY). Quote form stays as secondary fallback."
+  },
+  "webhook": {
+    "endpoint": "/api/intake",
+    "timeout_ms": 15000,
+    "cooldown_seconds": 15,
+    "comment": "Form posts here. Vercel Edge Function at /api/intake.js proxies to Discord. Never expose the real webhook URL to the client bundle."
+  },
+  "brand_email": "HatfieldandMcCoydtf@gmail.com",
+  "brand_email_display": "Hatfield McCoy DTF Support",
+  "shop_email": "HatfieldandMcCoydtf@gmail.com",
+  "socials": {
+    "instagram": "https://www.instagram.com/Hatfieldnmccoydtf",
+    "instagram_handle": "@Hatfieldnmccoydtf",
+    "facebook": "https://www.facebook.com/people/Hatfield-McCoy-DTF/61583130086744/",
+    "youtube": "https://www.youtube.com/@HatfieldMcCoyDTF",
+    "tiktok": null,
+    "comment": "Latest client intake captured 2026-05-12. TikTok N/A, hidden."
+  },
+  "site": {
+    "url_staging": "https://hatfield-mccoy-dtf.futrbusiness.com",
+    "url_production": "https://www.hatfieldmccoydtf.com",
+    "preview_flag_enabled": false,
+    "preview_url_param": "preview",
+    "comment": "Set preview_flag_enabled=true via URL param ?preview=true on any page to show the .proto-flag watermark."
+  },
+  "cart": {
+    "storage_key": "hmdtf_cart_v1",
+    "max_quantity_per_line": 99,
+    "comment": "Shopify Storefront Cart API checkout enabled for Storefront-visible products. localStorage remains a display cache; checkout source of truth is Shopify cart checkoutUrl.",
+    "mode": "shopify_storefront_cart_api",
+    "shopify_cart_storage_key": "hmdtf_shopify_cart_v1"
+  },
+  "intake": {
+    "storage_key": "hmdtf_intake_draft_v1",
+    "cooldown_storage_key": "hmdtf_intake_last_submit",
+    "total_questions": 12,
+    "comment": "Form progress ceiling matches Q1..Q12. localStorage draft restore. 15s cooldown between submissions (anti-spam)."
+  },
+  "shop_phone": "(304) 688-9970",
+  "operations": {
+    "pickup_address": "311 George Kostas Dr, Logan, WV 25601",
+    "hours": "Mon-Fri 9am-9pm",
+    "domestic_flat_shipping_usd": 10,
+    "overnight_shipping_usd": 32,
+    "free_shipping_threshold_usd": 300,
+    "international_shipping": true,
+    "local_pickup": true,
+    "shipping_tool": null,
+    "same_day_cutoff_status": "conflict: Page 3 says 3pm; Page 4 says no same-day pickup cutoff",
+    "public_same_day_copy": "Contact us for same-day availability. Rush service is available when schedule allows."
+  },
+  "collaborator_email": "Harold@rmmarketing.ca",
+  "collaborator_email_comment": "Operational collaborator email for Shopify setup instructions only; not public storefront customer-support copy.",
+  "shopify": {
+    "store_domain": "hatfield-mccoy-dtf.myshopify.com",
+    "storefront_api_version": "2025-01",
+    "storefront_access_token": "__SHOPIFY_STOREFRONT_PUBLIC_TOKEN__",
+    "comment": "Public Storefront API token only. Do not place Admin API tokens or private Storefront tokens in this static config."
+  }
+}

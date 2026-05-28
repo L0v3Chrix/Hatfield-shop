@@ -1,0 +1,44 @@
+{
+  "name": "hatfield-mccoy-dtf-shopify",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Canonical Hatfield McCoy DTF storefront and Shopify support scripts",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "build": "node scripts/vercel-build.mjs",
+    "competitor:dtfva": "node scripts/competitor/dtfvirginia/run.js",
+    "competitor:dtfva:with-collections": "node scripts/competitor/dtfvirginia/run.js --include-collection-products",
+    "competitor:dtfva:frontend": "node scripts/competitor/dtfvirginia/generate-frontend.js",
+    "competitor:dtfva:shopify-state": "node scripts/competitor/dtfvirginia/export-shopify-state.js",
+    "competitor:dtfva:import:dry": "node scripts/competitor/dtfvirginia/import-drafts.js",
+    "competitor:dtfva:import": "node scripts/competitor/dtfvirginia/import-drafts.js --execute",
+    "competitor:dtfva:sync-metadata": "node scripts/competitor/dtfvirginia/import-drafts.js --execute --sync-metadata",
+    "competitor:dtfva:test": "node --test scripts/competitor/dtfvirginia/test/*.test.js",
+    "production:prepare": "python3 scripts/prepare-shopify-images.py && node scripts/production-readiness.mjs",
+    "production:verify": "node scripts/production-readiness.mjs --verify-only",
+    "vercel-build": "node scripts/vercel-build.mjs",
+    "catalog:probe": "node scripts/shopify/create-catalog.js --probe",
+    "catalog:dry-run": "node scripts/shopify/create-catalog.js --dry-run",
+    "catalog:dry-run:verbose": "node scripts/shopify/create-catalog.js --dry-run --verbose",
+    "catalog:run": "node scripts/shopify/create-catalog.js",
+    "catalog:update": "node scripts/shopify/create-catalog.js --update",
+    "catalog:verify": "node scripts/shopify/verify-catalog.js",
+    "catalog:export": "node scripts/shopify/export-to-json.js",
+    "catalog:export:dry": "node scripts/shopify/export-to-json.js --dry-run",
+    "catalog:media:dry": "node scripts/shopify/upload-live-product-media.js --dry-run",
+    "catalog:media:upload": "node scripts/shopify/upload-live-product-media.js",
+    "shopify:oauth:capture": "node scripts/shopify/capture-admin-token.js",
+    "kixxl:discount": "node scripts/shopify/create-internal-discount.js",
+    "kixxl:discount:dry": "node scripts/shopify/create-internal-discount.js --dry-run",
+    "kixxl:publish": "node scripts/shopify/publish-kixxl-product.js",
+    "kixxl:publish:dry": "node scripts/shopify/publish-kixxl-product.js --dry-run",
+    "kixxl:verify": "node scripts/shopify/verify-kixxl-live.js",
+    "kixxl:verify:post": "node scripts/shopify/verify-kixxl-live.js --post-deploy"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

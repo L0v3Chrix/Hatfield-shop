@@ -1,0 +1,370 @@
+{
+  "_meta": {
+    "purpose": "Swappable content. Brand voice defaults populated from senior-dev defaults + COMPETITIVE-INTEL.md patterns. When the client intake form returns, values here get swapped in-place with no DOM changes required.",
+    "last_updated": "2026-05-17",
+    "voice": "Bold, modern, straight to the point, real, creative, customer-first; fast without cutting corners."
+  },
+  "brand": {
+    "name": "Hatfield McCoy DTF",
+    "name_short": "H&M DTF",
+    "tagline": "Print Loud. Print Proud.",
+    "proud_since": "Founded 2022 \u00b7 Logan, WV",
+    "story_short": "Custom DTF heat transfers, gang sheets, sublimation, and specialty prints \u2014 designed, printed, and shipped fast from Logan, West Virginia. Bold, modern, straight to the point, and customer-first.",
+    "story_long": "Founded in 2022 in Logan, West Virginia, Hatfield McCoy DTF keeps custom printing bold, modern, and straight to the point. We move fast without cutting corners \u2014 getting your custom prints designed, printed, and out the door quick while keeping you updated from order to delivery. Every sheet that leaves the shop has to earn its place on the press: clean edges, strong color, no fade, no crack, no peel. If you can picture it, we help you get it pressed.",
+    "location_city": "Logan, West Virginia",
+    "location_region": "Appalachian West Virginia",
+    "email": "HatfieldandMcCoydtf@gmail.com",
+    "contact_email_display": "HatfieldandMcCoydtf@gmail.com",
+    "shop_email": "HatfieldandMcCoydtf@gmail.com",
+    "phone": "(304) 688-9970",
+    "founded": "2022",
+    "address": "311 George Kostas Dr, Logan, WV 25601",
+    "hours": "Mon-Fri 9am-9pm"
+  },
+  "tat": {
+    "standard": "24 hours for in-stock transfers",
+    "custom": "48 hours on custom gang sheets",
+    "rush": "Rush/expedited service available for a flat $10 when schedule allows",
+    "note": "All turnaround times start once artwork and payment are ready. Same-day pickup cutoff needs final confirmation; contact us for same-day availability."
+  },
+  "shipping": {
+    "heading": "Shipping, Pickup & Turnaround",
+    "policy": "Domestic flat-rate shipping is $10. Overnight shipping is available for $32. Orders of $300 or more qualify for free shipping. International shipping is available. Local pickup is available at 311 George Kostas Dr, Logan, WV 25601 during Mon-Fri 9am-9pm shop hours.",
+    "body": "Domestic flat-rate shipping is $10. Overnight shipping is available for $32. Orders of $300 or more qualify for free shipping. International shipping is available. Local pickup is available at 311 George Kostas Dr, Logan, WV 25601 during Mon-Fri 9am-9pm shop hours.",
+    "cutoff": "Same-day pickup cutoff still has conflicting intake answers: one page says 3pm and another says no cutoff. Public copy uses the safe version: contact us for same-day availability.",
+    "packaging": "Flat sheets ship rolled or flat-packed between stiff boards. Larger rolls go in a tube.",
+    "international": "International shipping is available; final options and timing are confirmed at checkout or by quote.",
+    "free_shipping": "Free shipping on orders of $300 or more.",
+    "domestic_flat_rate": "$10 domestic flat rate",
+    "overnight": "$32 overnight option",
+    "pickup": "Local pickup: 311 George Kostas Dr, Logan, WV 25601 \u00b7 Mon-Fri 9am-9pm"
+  },
+  "hero": {
+    "eyebrow": "Logan, WV \u00b7 Proudly Made",
+    "headline_stroke_1": "Print",
+    "headline_pop_1": "Loud.",
+    "headline_stroke_2": "Print",
+    "headline_pop_2": "Proud.",
+    "lede": "Custom DTF heat transfers, gang sheets, sublimation, and specialty prints \u2014 designed, printed, and shipped fast from Logan, West Virginia. No pretreatment. No minimums. No feud between you and a clean print.",
+    "cta_primary": "Build a Gang Sheet",
+    "cta_secondary": "Shop Transfers"
+  },
+  "story_section": {
+    "eyebrow": "Our Feud",
+    "headline_line_1": "One last feud the mountains will settle \u2014",
+    "headline_line_2": "bad prints versus ours.",
+    "paragraph": "Founded in 2022, we keep custom printing bold, modern, and straight to the point. We move fast without cutting corners, keep customers updated from order to delivery, and make sure every sheet lands how they pictured it."
+  },
+  "armory": {
+    "eyebrow": "The Armory",
+    "headline": "Pick your weapon.",
+    "subhead": "Existing catalog items remain as-is. Additional services are shown with their correct status: live catalog, contact us, contact Jessie, coming soon, or details/pricing pending."
+  },
+  "steps": [
+    {
+      "n": 1,
+      "title": "Upload",
+      "desc": "Send your art. PNG, JPG, PDF, AI, or EPS up to 50 MB. Transparent PNG at 300 DPI gives the cleanest print."
+    },
+    {
+      "n": 2,
+      "title": "Print",
+      "desc": "In-stock transfers turn in about 24 hours; custom gang sheets are about 48 hours once artwork and payment are ready."
+    },
+    {
+      "n": 3,
+      "title": "Press",
+      "desc": "Press with the instructions included in your order. Rush service is available for a flat $10 when the schedule allows."
+    }
+  ],
+  "comparison_table": {
+    "eyebrow": "H&M vs. the Rest",
+    "headline": "Why shops switch to us.",
+    "heading": "Why shops switch to us.",
+    "headers": [
+      "What you get",
+      "H&M DTF",
+      "Other DTF Providers"
+    ],
+    "rows": [
+      [
+        "Founded in Logan, WV since 2022",
+        "yes",
+        "varies"
+      ],
+      [
+        "$10 domestic flat shipping",
+        "yes",
+        "varies"
+      ],
+      [
+        "$32 overnight option",
+        "yes",
+        "rare"
+      ],
+      [
+        "Free shipping at $300+",
+        "yes",
+        "sometimes"
+      ],
+      [
+        "Local pickup Mon-Fri 9am-9pm",
+        "yes",
+        "rare"
+      ],
+      [
+        "In-stock turnaround around 24 hours",
+        "yes",
+        "3-7 days"
+      ],
+      [
+        "Custom gang sheets around 48 hours",
+        "yes",
+        "varies"
+      ],
+      [
+        "Gildan, Bella+Canvas, Comfort Colors compatibility",
+        "yes",
+        "varies"
+      ],
+      [
+        "Custom gang sheet builder path",
+        "yes",
+        "rarely"
+      ]
+    ]
+  },
+  "faq": [
+    {
+      "question": "How long does production take?",
+      "answer": "In-stock transfers are about 24 hours. Custom gang sheets are about 48 hours once artwork and payment are ready. Rush/expedited service is available for a flat $10 when the schedule allows."
+    },
+    {
+      "question": "How much is shipping?",
+      "answer": "Domestic flat-rate shipping is $10. Overnight shipping is available for $32. Orders of $300 or more qualify for free shipping. International shipping is available."
+    },
+    {
+      "question": "Do you offer local pickup?",
+      "answer": "Yes. Local pickup is available at 311 George Kostas Dr, Logan, WV 25601 during Mon-Fri 9am-9pm shop hours. Same-day cutoff needs final confirmation, so contact us for same-day availability."
+    },
+    {
+      "question": "What file formats do you accept?",
+      "answer": "PNG, JPG, PDF, AI, and EPS up to 50 MB. Transparent PNG at 300 DPI gives the cleanest print. If your file is not ready, send what you have and we will help you clean it up."
+    },
+    {
+      "question": "What garments or brands work with your transfers?",
+      "answer": "DTF works on cotton, polyester, blends, nylon, and leather. The client specifically asked us to display Gildan, Bella+Canvas, and Comfort Colors as compatible brand examples."
+    },
+    {
+      "question": "Is there a minimum order?",
+      "answer": "No minimum on standard transfer orders. One sheet is fine. Run one, run a hundred \u2014 same clean quality either way."
+    },
+    {
+      "question": "Do you offer UV DTF, embroidery, laser engraving, banners, stickers, and personalized items?",
+      "answer": "Yes, several additional services are being listed. Some are contact-us or contact-Jessie services, and some are coming soon or need final price/SKU details before becoming purchaseable online."
+    },
+    {
+      "question": "How does the gang sheet builder work?",
+      "answer": "The current launch path sends customers to the Shopify product where Kixxl can render the builder. Kixxl setup help is still open; the quote form remains the safe fallback if the builder is not ready."
+    }
+  ],
+  "reviews": {
+    "count": 47,
+    "count_display": "47+",
+    "stars": 5.0,
+    "stars_display": "\u2605 \u2605 \u2605 \u2605 \u2605",
+    "summary_line": "47+ shops running our transfers. Zero complaints on wash durability.",
+    "featured": [
+      {
+        "quote": "Colors didn't fade after 40 washes. Best transfers we've run.",
+        "author": "Rowan B.",
+        "role": "Shop owner \u00b7 Charleston, WV"
+      },
+      {
+        "quote": "Ordered Friday, picked up Monday. Clean edges, dead-true color. Switching our whole shop over.",
+        "author": "Mara K.",
+        "role": "Team apparel \u00b7 Morgantown, WV"
+      },
+      {
+        "quote": "Glow DTF held up through a 5K and two washes. My runners were stoked.",
+        "author": "Jess T.",
+        "role": "Running club organizer \u00b7 Huntington, WV"
+      }
+    ],
+    "stats": [
+      {
+        "label": "Orders Shipped",
+        "value": "1,200+"
+      },
+      {
+        "label": "Avg Turnaround",
+        "value": "36 hrs"
+      },
+      {
+        "label": "Review Score",
+        "value": "\u2605 5.0"
+      }
+    ]
+  },
+  "contact_strip": {
+    "headline_lead": "Questions?",
+    "headline_cyan": "We'll answer in a holler.",
+    "cta": "Contact The Shop"
+  },
+  "footer": {
+    "tagline": "Bold custom prints, founded in 2022 and pressed in Logan, West Virginia. Run loud, run proud, ship fast.",
+    "copyright": "\u00a9 2026 Hatfield McCoy DTF \u00b7 Logan, WV",
+    "built_by": "Built by RM Marketing"
+  },
+  "cart": {
+    "header_label": "CART",
+    "empty_state": "Your cart's empty. Fire up a sheet.",
+    "empty_cta": "Shop Transfers",
+    "subtotal_label": "Subtotal",
+    "qty_label": "Qty",
+    "qty_limit_reached": "Max quantity per line reached.",
+    "remove_label": "Remove",
+    "checkout_cta": "Checkout",
+    "checkout_cta_loading": "Sending you to checkout\u2026",
+    "loading_state": "Updating cart\u2026",
+    "error_state": "Couldn't update the cart. Try again or refresh the page.",
+    "shipping_note": "Shipping: $10 domestic flat rate, $32 overnight option, free shipping at $300+; taxes calculated at checkout.",
+    "close_drawer": "Close cart",
+    "checkout_note": "Shipping: $10 domestic flat rate, $32 overnight option, free shipping at $300+; taxes calculated at checkout."
+  },
+  "form_errors": {
+    "network_offline": "You're offline. Reconnect and try again \u2014 your answers are saved.",
+    "timeout": "Took too long to send. Your answers are saved \u2014 try again when you're ready.",
+    "webhook_error": "Couldn't reach the server. Your answers are saved \u2014 try again in a minute.",
+    "validation_email": "Please enter a valid email address.",
+    "validation_name": "Please enter your name.",
+    "validation_email_and_name": "We need your name and email so we can follow up.",
+    "spam_cooldown": "One sec \u2014 please wait {seconds} seconds before trying again.",
+    "spam_cooldown_generic": "Hang on \u2014 please wait a moment before sending again.",
+    "payload_too_large": "That's a lot of text. Trimming to fit \u2014 the gist still gets through.",
+    "generic": "Something went sideways. Try again in a minute."
+  },
+  "form_success": {
+    "thanks_heading": "Got it, {name}.",
+    "thanks_heading_fallback": "Got it.",
+    "thanks_body": "Your answers landed in our inbox. We'll pick this up and have the next draft of your store ready within a few days.",
+    "back_link_label": "Back to the store preview"
+  },
+  "pdp": {
+    "variant_label": "Select Size",
+    "upload_heading": "Upload Your Artwork",
+    "upload_helper": "PNG, JPG, PDF, AI, EPS \u00b7 50 MB max \u00b7 300 DPI recommended",
+    "upload_dropzone_idle": "Drop art here or tap to browse",
+    "upload_dropzone_hover": "Drop to upload",
+    "upload_file_ok": "Art looks good. Ready when you are.",
+    "upload_file_too_big": "File's over 50 MB. Try again with a smaller export.",
+    "upload_file_bad_format": "That format isn't on the list. Try PNG, JPG, PDF, AI, or EPS.",
+    "add_to_cart_label": "Add to Cart",
+    "need_gang_sheet_cta": "Need a gang sheet?"
+  },
+  "navigation": {
+    "builder": "Gang Sheet Builder",
+    "shop": "Shop",
+    "story": "Our Feud",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cart_short": "CART"
+  },
+  "about": {
+    "heading": "Founded in 2022. Built for fast custom print work.",
+    "body": "Founded in 2022 in Logan, West Virginia, Hatfield McCoy DTF keeps custom printing bold, modern, and straight to the point. We move fast without cutting corners \u2014 getting your custom prints designed, printed, and out the door quick while keeping you updated from order to delivery. Every sheet that leaves the shop has to earn its place on the press: clean edges, strong color, no fade, no crack, no peel. If you can picture it, we help you get it pressed."
+  },
+  "contact": {
+    "heading": "Questions? We'll answer in a holler.",
+    "body": "Call (304) 688-9970 or email HatfieldandMcCoydtf@gmail.com. Instagram: @Hatfieldnmccoydtf. Facebook and YouTube are linked below. TikTok is N/A."
+  },
+  "builder": {
+    "heading": "Custom Gang Sheet Builder",
+    "body": "Build custom gang sheets through the Shopify/Kixxl path when setup is complete. If the builder is not ready, use the quote form and the shop will follow up.",
+    "fallback_heading": "Design Your Gang Sheet",
+    "fallback_body": "Tell us the sheet size, quantity, artwork files, and deadline. Kixxl setup is still marked as needing help, so this quote form stays available as the safe fallback."
+  },
+  "brand_compatibility": {
+    "heading": "Compatible brand examples",
+    "body": "The client asked us to show the brand list publicly.",
+    "brands": [
+      "Gildan",
+      "Bella+Canvas",
+      "Comfort Colors"
+    ]
+  },
+  "additional_services": [
+    {
+      "name": "Reflective DTF",
+      "status": "Coming soon",
+      "cta": "Coming soon",
+      "public_note": "Show as coming soon; not purchaseable yet."
+    },
+    {
+      "name": "UV DTF",
+      "status": "Listed \u2014 details/pricing pending",
+      "cta": "Contact Us",
+      "public_note": "Offered, but final SKU/pricing/details need more time before online purchase."
+    },
+    {
+      "name": "Embroidery",
+      "status": "Listed",
+      "cta": "Contact Us",
+      "public_note": "Inquiry/contact-us service."
+    },
+    {
+      "name": "Laser engraving",
+      "status": "Listed",
+      "cta": "Contact Jessie",
+      "public_note": "Inquiry service; route to Jessie."
+    },
+    {
+      "name": "DTF Sample Packs",
+      "status": "Listed \u2014 price/SKU pending",
+      "cta": "Contact Us",
+      "public_note": "Offered, but price/SKU/details are missing."
+    },
+    {
+      "name": "Spangle/sequin transfers",
+      "status": "Coming soon",
+      "cta": "Coming soon",
+      "public_note": "Show as coming soon; not purchaseable yet."
+    },
+    {
+      "name": "3D Puff Transfers",
+      "status": "Listed",
+      "cta": "Contact Jessie",
+      "public_note": "Inquiry service; route to Jessie."
+    },
+    {
+      "name": "Gold Foil UV",
+      "status": "Coming soon",
+      "cta": "Coming soon",
+      "public_note": "Show as coming soon; not purchaseable yet."
+    },
+    {
+      "name": "TPU Patches",
+      "status": "Coming soon",
+      "cta": "Coming soon",
+      "public_note": "Show as coming soon; not purchaseable yet."
+    },
+    {
+      "name": "Banners",
+      "status": "Listed \u2014 price/SKU pending",
+      "cta": "Contact Us",
+      "public_note": "Offered, but price/SKU/details are missing."
+    },
+    {
+      "name": "Die Cut Stickers",
+      "status": "Listed \u2014 use regular sticker prices",
+      "cta": "Contact Us",
+      "public_note": "Needs source for regular sticker prices before online purchase."
+    },
+    {
+      "name": "Personalized items",
+      "status": "Listed",
+      "cta": "Contact Us",
+      "public_note": "Tumblers, pens, golf balls, and similar custom items by inquiry."
+    }
+  ]
+}

@@ -21,7 +21,6 @@ The build step copies `deliverables/production-site/` into `public/` and injects
 ## Required environment variables
 
 - `SHOPIFY_STOREFRONT_PUBLIC_TOKEN`
-- `DISCORD_WEBHOOK_URL`
 
 Optional:
 

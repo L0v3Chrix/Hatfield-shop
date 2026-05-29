@@ -3,43 +3,45 @@ import { collectArtworkEntries, shopifyOrderGid } from './lib/order-artwork-sync
 import { createClient } from '../scripts/shopify/lib/shopify-client.js'
 
 export const config = {
-  runtime: 'nodejs',
+  api: {
+    bodyParser: false,
+  },
 }
 
 const DEFAULT_METAFIELD_NAMESPACE = 'fulfillment'
 const DEFAULT_METAFIELD_KEY = 'artwork_manifest'
 
-export default async function handler(request) {
+export default async function handler(request, response) {
   if (request.method !== 'POST') {
-    return json({ error: 'Method not allowed.' }, 405)
+    return json(response, { error: 'Method not allowed.' }, 405)
   }
 
   const secret = process.env.SHOPIFY_ORDER_WEBHOOK_SECRET || process.env.SHOPIFY_ADMIN_CLIENT_SECRET || ''
   if (!secret) {
-    return json({ error: 'Shopify webhook secret is not configured.' }, 500)
+    return json(response, { error: 'Shopify webhook secret is not configured.' }, 500)
   }
 
   let rawBody = ''
   try {
-    rawBody = await request.text()
+    rawBody = await readRawBody(request)
   } catch {
-    return json({ error: 'Could not read webhook body.' }, 400)
+    return json(response, { error: 'Could not read webhook body.' }, 400)
   }
 
-  if (!verifyWebhookHmac(rawBody, request.headers.get('x-shopify-hmac-sha256') || '', secret)) {
-    return json({ error: 'Invalid Shopify webhook signature.' }, 401)
+  if (!verifyWebhookHmac(rawBody, request.headers['x-shopify-hmac-sha256'] || '', secret)) {
+    return json(response, { error: 'Invalid Shopify webhook signature.' }, 401)
   }
 
   let order
   try {
     order = JSON.parse(rawBody)
   } catch {
-    return json({ error: 'Webhook body was not valid JSON.' }, 400)
+    return json(response, { error: 'Webhook body was not valid JSON.' }, 400)
   }
 
   const artworkEntries = collectArtworkEntries(order)
   if (!artworkEntries.length) {
-    return json({ ok: true, skipped: true, reason: 'No artwork uploads found on this order.' }, 200)
+    return json(response, { ok: true, skipped: true, reason: 'No artwork uploads found on this order.' }, 200)
   }
 
   try {
@@ -53,7 +55,7 @@ export default async function handler(request) {
     }))
     const metafieldResult = await attachArtworkManifestToOrder(order, uploadedFiles)
 
-    return json({
+    return json(response, {
       ok: true,
       orderId: order.id || null,
       orderName: order.name || null,
@@ -63,7 +65,7 @@ export default async function handler(request) {
       metafieldReason: metafieldResult.reason,
     }, 200)
   } catch (error) {
-    return json({
+    return json(response, {
       error: error && error.message ? error.message : 'Order artwork sync failed.',
     }, 500)
   }
@@ -143,12 +145,18 @@ async function attachArtworkManifestToOrder(order, uploadedFiles) {
   return { attached: true, reason: '' }
 }
 
-function json(payload, status) {
-  return new Response(JSON.stringify(payload), {
-    status,
-    headers: {
-      'content-type': 'application/json; charset=utf-8',
-      'cache-control': 'no-store',
-    },
+function readRawBody(request) {
+  return new Promise((resolve, reject) => {
+    const chunks = []
+    request.on('data', (chunk) => chunks.push(Buffer.from(chunk)))
+    request.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')))
+    request.on('error', reject)
   })
+}
+
+function json(response, payload, status) {
+  response.statusCode = status
+  response.setHeader('content-type', 'application/json; charset=utf-8')
+  response.setHeader('cache-control', 'no-store')
+  response.end(JSON.stringify(payload))
 }

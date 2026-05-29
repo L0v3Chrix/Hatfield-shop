@@ -24,7 +24,7 @@ const product = {
   description: 'Hatfield McCoy DTF catalog listing for Custom DTF Transfers by Size.',
   productType: 'DTF Transfer',
   vendor: 'Hatfield McCoy DTF',
-  status: 'DRAFT',
+  status: 'ACTIVE',
   tags: ['competitor-parity', 'source-dtf-virginia'],
   options: [{ name: 'Size', values: ['2 x 2', '4 x 4'] }],
   variants: [
@@ -103,6 +103,19 @@ test('builds approval state from tags and risk flags', () => {
   assert.deepEqual(state.blockers, ['fulfillment'])
 })
 
+test('keeps draft products out of public checkout and storefront listing', () => {
+  const catalog = buildFrontendCatalog({
+    products: [{ ...product, status: 'DRAFT' }],
+    collections: [],
+    pages: [],
+  })
+
+  assert.equal(catalog.products[0].publishable, false)
+  assert.deepEqual(catalog.products[0].blockers, ['unpublished'])
+  assert.deepEqual(publicStorefrontProducts(catalog.products), [])
+  assert.equal(catalog.products[0].variants[0].checkoutEnabled, false)
+})
+
 test('builds frontend catalog with SEO copy and checkout-safe variants', () => {
   const catalog = buildFrontendCatalog({
     products: [product],
@@ -114,7 +127,7 @@ test('builds frontend catalog with SEO copy and checkout-safe variants', () => {
         'dtfva-custom-dtf-transfers': {
           handle: 'dtfva-custom-dtf-transfers',
           productId: 'gid://shopify/Product/999',
-          status: 'DRAFT',
+          status: 'ACTIVE',
           variants: [{ sku: 'DTFVA-2X2', variantId: 'gid://shopify/ProductVariant/999' }],
         },
       },

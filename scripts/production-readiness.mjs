@@ -4,6 +4,7 @@ import { copyFileSync, cpSync, existsSync, mkdirSync, readdirSync, readFileSync,
 import { dirname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { MOBILE_MENU_LINKS, buildFrontendCatalog, publicStorefrontProducts, writeFrontendArtifacts } from './competitor/dtfvirginia/frontend-generator.js'
+import { COLLECTIONS as SHOPIFY_COLLECTIONS, PRODUCTS as SHOPIFY_PRODUCTS } from './shopify/config/catalog.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -12,8 +13,16 @@ const SOURCE_ASSET_DIR = join(ROOT, 'Shopify-images-good')
 const OPTIMIZED_ASSET_DIR = join(BRAND_DIR, 'assets', 'shopify-images')
 const PRODUCTION_DIR = join(ROOT, 'deliverables', 'production-site')
 const NORMALIZED_CATALOG_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia', 'normalized-catalog.json')
-const SHOPIFY_STATE_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia', 'shopify-state.json')
+const LIVE_PRODUCTS_JSON_PATH = join(ROOT, 'deliverables', 'prototype', 'data', 'products.json')
 const SITE_URL = 'https://www.hatfieldmccoydtf.com'
+const SHOPIFY_HANDLE_TO_FRONTEND_SLUG = {
+  'dtf-22-sheet': 'dtf-22',
+  'dtf-46-sheet': 'dtf-46',
+  'glitter-dtf-22-sheet': 'glitter-22',
+  'glow-dtf-22-sheet': 'glow-22',
+  'sublimation-24': 'sublimation-24',
+  'custom-gang-sheet': 'gang-sheet',
+}
 
 const PENDING_CONFIRMATIONS = [
   {
@@ -207,8 +216,8 @@ function buildProductionPreview() {
 }
 
 function buildGeneratedCatalogLayer() {
-  const normalized = JSON.parse(readFileSync(NORMALIZED_CATALOG_PATH, 'utf8'))
-  const shopifyState = existsSync(SHOPIFY_STATE_PATH) ? JSON.parse(readFileSync(SHOPIFY_STATE_PATH, 'utf8')) : null
+  const normalized = buildLiveShopifyNormalizedCatalog()
+  const shopifyState = buildLiveShopifyState()
   const catalog = buildFrontendCatalog(normalized, { shopifyState })
   writeFrontendArtifacts(catalog, {
     outputDir: PRODUCTION_DIR,
@@ -216,6 +225,87 @@ function buildGeneratedCatalogLayer() {
     launched: false,
   })
   return catalog
+}
+
+function buildLiveShopifyNormalizedCatalog() {
+  const normalized = existsSync(NORMALIZED_CATALOG_PATH)
+    ? JSON.parse(readFileSync(NORMALIZED_CATALOG_PATH, 'utf8'))
+    : { pages: [] }
+  return {
+    meta: {
+      generated_at: new Date().toISOString(),
+      source: 'shopify-config/live-launch-catalog',
+    },
+    products: SHOPIFY_PRODUCTS.map((product) => ({
+      ...product,
+      tags: [
+        'shopify-launch-catalog',
+        product.status === 'ACTIVE' ? 'launch-approved' : 'launch-held',
+      ],
+      metafields: {
+        source_url: `https://hatfield-mccoy-dtf.myshopify.com/products/${product.handle}`,
+      },
+    })),
+    collections: SHOPIFY_COLLECTIONS.map((collection) => ({
+      handle: collection.handle,
+      title: collection.title,
+      description: `${collection.title} products approved for Hatfield McCoy DTF launch ordering.`,
+    })),
+    pages: normalized.pages ?? [],
+    validationErrors: [],
+  }
+}
+
+function buildLiveShopifyState() {
+  const productsJson = existsSync(LIVE_PRODUCTS_JSON_PATH)
+    ? JSON.parse(readFileSync(LIVE_PRODUCTS_JSON_PATH, 'utf8'))
+    : null
+  const stateByHandle = new Map()
+
+  for (const product of SHOPIFY_PRODUCTS) {
+    const slug = SHOPIFY_HANDLE_TO_FRONTEND_SLUG[product.handle]
+    const sourceCollection = productsJson?.collections?.find((collection) => collection.slug === slug)
+    stateByHandle.set(product.handle, {
+      handle: product.handle,
+      productId: '',
+      status: product.status,
+      variants: product.variants.map((variant) => ({
+        sku: variant.sku,
+        variantId: resolveLiveVariantId(sourceCollection, variant.sku),
+        price: variant.price,
+        selectedOptions: Object.entries(variant.options ?? {}).map(([name, value]) => ({ name, value })),
+      })),
+    })
+  }
+
+  return {
+    meta: {
+      generated_at: new Date().toISOString(),
+      source: relative(ROOT, LIVE_PRODUCTS_JSON_PATH),
+      product_count: stateByHandle.size,
+      missing_variant_ids: [...stateByHandle.values()]
+        .flatMap((product) => product.variants)
+        .filter((variant) => !variant.variantId).length,
+    },
+    products: Object.fromEntries([...stateByHandle.entries()]),
+    collections: SHOPIFY_COLLECTIONS.map((collection) => ({
+      handle: collection.handle,
+      collectionId: '',
+      missing: false,
+    })),
+  }
+}
+
+function resolveLiveVariantId(collection, sku) {
+  if (!collection) return ''
+  for (const product of collection.products ?? []) {
+    if (product.sku === sku && product.storefront_variant_id) return product.storefront_variant_id
+    if (product.storefront_variant_ids && sku.startsWith(`${product.sku}-`)) {
+      const suffix = sku.slice(product.sku.length + 1)
+      return product.storefront_variant_ids[suffix] ?? ''
+    }
+  }
+  return ''
 }
 
 function normalizeLinks(html) {

@@ -88,9 +88,11 @@ export function buildApprovalState(item) {
   const tags = item.tags ?? []
   const variants = item.variants ?? []
   const blockers = []
+  const status = String(item.shopifyStatus ?? item.status ?? '').toUpperCase()
   if (tags.includes('needs-fulfillment-review') || tags.includes('fulfillment-needs-review')) blockers.push('fulfillment')
   if (tags.includes('source-tag-kixxl-proxy-product')) blockers.push('proxy')
   if (String(item.productType || '').toLowerCase().includes('kixxl_rolling_canvas_product_hidden')) blockers.push('proxy')
+  if (status && status !== 'ACTIVE') blockers.push('unpublished')
   const publishable = blockers.length === 0 && variants.length > 0
   return {
     blockers,

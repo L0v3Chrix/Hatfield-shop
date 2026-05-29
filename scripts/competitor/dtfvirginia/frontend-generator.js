@@ -16,9 +16,9 @@ const DEFAULT_IMAGE = '/assets/images/logo-primary.png'
 export const MOBILE_MENU_LINKS = [
   { href: '/shop', label: 'Shop' },
   { href: '/gang-sheet-builder', label: 'Build a sheet' },
-  { href: '/collections/dtfva-dtf-transfers', label: 'DTF transfers' },
-  { href: '/collections/dtfva-uv-dtf-transfers', label: 'UV DTF / stickers' },
-  { href: '/collections/dtfva-custom-t-shirts', label: 'Apparel / blanks' },
+  { href: '/collections/dtf-transfers', label: 'DTF transfers' },
+  { href: '/collections/glitter-dtf', label: 'Glitter DTF' },
+  { href: '/collections/sublimation', label: 'Sublimation' },
   { href: '/wholesale', label: 'Wholesale' },
   { href: '/guides', label: 'Guides' },
   { href: '/contact', label: 'Contact' },
@@ -227,9 +227,9 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
     : ''
   const relatedLinks = [
     ['Shop all products', '/products'],
-    ['DTF transfer collections', '/collections/dtfva-dtf-transfers'],
-    ['Gang sheet options', '/collections/dtfva-gang-sheet'],
-    ['Pressing guide', '/pages/dtf-transfer-pressing-instructions-step-by-step-guide'],
+    ['DTF transfer collections', '/collections/dtf-transfers'],
+    ['Gang sheet options', '/gang-sheet-builder'],
+    ['Pressing guide', '/guides'],
   ].map(([label, url]) => `<a href="${escapeHtml(url)}">${escapeHtml(label)}</a>`).join('')
   const selectorOptions = shownVariants.map((variant) => {
     const label = [variant.title || variant.sku, formatOptions(variant.options)].filter(Boolean).join(' - ')
@@ -951,7 +951,7 @@ function buildShopCategories(products) {
 }
 
 export function publicStorefrontProducts(products = []) {
-  return products.filter((product) => product.publicVisible !== false && !product.internalProxy)
+  return products.filter((product) => product.publicVisible !== false && !product.internalProxy && product.publishable)
 }
 
 function categorizeProduct(product) {

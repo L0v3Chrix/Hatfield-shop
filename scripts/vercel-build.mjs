@@ -19,7 +19,7 @@ if (!existsSync(SOURCE_DIR)) {
   throw new Error(`Missing built storefront at ${SOURCE_DIR}`)
 }
 
-if (!storefrontToken) {
+if (!storefrontToken || /^__.+__$/.test(storefrontToken)) {
   throw new Error('Missing SHOPIFY_STOREFRONT_PUBLIC_TOKEN (or SHOPIFY_STOREFRONT_ACCESS_TOKEN) for deploy-time config injection.')
 }
 

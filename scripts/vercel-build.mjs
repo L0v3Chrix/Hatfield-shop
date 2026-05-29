@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -23,9 +23,8 @@ if (!storefrontToken) {
   throw new Error('Missing SHOPIFY_STOREFRONT_PUBLIC_TOKEN (or SHOPIFY_STOREFRONT_ACCESS_TOKEN) for deploy-time config injection.')
 }
 
-rmSync(PUBLIC_DIR, { recursive: true, force: true })
 mkdirSync(PUBLIC_DIR, { recursive: true })
-cpSync(SOURCE_DIR, PUBLIC_DIR, { recursive: true })
+cpSync(SOURCE_DIR, PUBLIC_DIR, { recursive: true, force: true })
 
 const config = JSON.parse(readFileSync(CONFIG_PATH, 'utf8'))
 config.site = {

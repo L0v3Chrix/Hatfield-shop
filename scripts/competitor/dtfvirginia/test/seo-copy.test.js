@@ -103,7 +103,7 @@ test('builds approval state from tags and risk flags', () => {
   assert.deepEqual(state.blockers, ['fulfillment'])
 })
 
-test('keeps draft products out of public checkout and storefront listing', () => {
+test('keeps draft products visible but out of public checkout', () => {
   const catalog = buildFrontendCatalog({
     products: [{ ...product, status: 'DRAFT' }],
     collections: [],
@@ -112,8 +112,11 @@ test('keeps draft products out of public checkout and storefront listing', () =>
 
   assert.equal(catalog.products[0].publishable, false)
   assert.deepEqual(catalog.products[0].blockers, ['unpublished'])
-  assert.deepEqual(publicStorefrontProducts(catalog.products), [])
+  assert.deepEqual(publicStorefrontProducts(catalog.products), [catalog.products[0]])
   assert.equal(catalog.products[0].variants[0].checkoutEnabled, false)
+  const html = renderProductPage(catalog.products[0], { siteUrl: 'https://www.hatfieldmccoydtf.com' })
+  assert.match(html, /Sold out/)
+  assert.doesNotMatch(html, /Add selected option<\/button>/)
 })
 
 test('builds frontend catalog with SEO copy and checkout-safe variants', () => {

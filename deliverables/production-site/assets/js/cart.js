@@ -78,7 +78,7 @@
       if (summary.checkoutReadyQuantity > 0) bits.push(summary.checkoutReadyQuantity + ' item' + (summary.checkoutReadyQuantity === 1 ? ' is' : 's are') + ' ready for checkout');
       if (summary.artworkPendingLineCount > 0) bits.push(summary.artworkPendingLineCount + ' line' + (summary.artworkPendingLineCount === 1 ? ' still needs' : 's still need') + ' artwork uploaded');
       if (summary.builderLineCount > 0) bits.push(summary.builderLineCount + ' builder item' + (summary.builderLineCount === 1 ? ' needs' : 's need') + ' a saved design');
-      if (summary.reviewLineCount > 0) bits.push(summary.reviewLineCount + ' line' + (summary.reviewLineCount === 1 ? ' is held back for' : 's are held back for') + ' launch review');
+      if (summary.reviewLineCount > 0) bits.push(summary.reviewLineCount + ' line' + (summary.reviewLineCount === 1 ? ' is unavailable' : 's are unavailable') + ' for online checkout');
       if (!bits.length) bits.push('Your cart is empty');
       else if (!summary.checkoutBlocked) bits.push('Ready for secure Shopify checkout');
       summary.statusMessage = bits.join('. ') + '.';
@@ -364,7 +364,7 @@
       throw new Error('One or more builder items still need a saved design before checkout can open.');
     }
     if (summary.reviewLineCount > 0) {
-      throw new Error('One or more products in this cart are still held back from online ordering.');
+      throw new Error('One or more products in this cart are unavailable for online checkout.');
     }
     if (summary.artworkPendingLineCount > 0) {
       throw new Error('Upload artwork for every direct-order line before checkout.');
@@ -664,7 +664,7 @@
           ? 'Builder lines need a saved design before Shopify checkout can open.'
           : cartSummary.artworkPendingLineCount > 0
             ? 'Upload artwork on each direct-order line before Shopify checkout can open.'
-            : 'One or more lines in this cart are not live for online ordering yet.'
+            : 'One or more lines in this cart are currently sold out or unavailable for online checkout.'
         : '';
     }
 

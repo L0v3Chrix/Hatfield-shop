@@ -13,6 +13,7 @@ const SOURCE_ASSET_DIR = join(ROOT, 'Shopify-images-good')
 const OPTIMIZED_ASSET_DIR = join(BRAND_DIR, 'assets', 'shopify-images')
 const PRODUCTION_DIR = join(ROOT, 'deliverables', 'production-site')
 const NORMALIZED_CATALOG_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia', 'normalized-catalog.json')
+const SHOPIFY_STATE_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia', 'shopify-state.json')
 const LIVE_PRODUCTS_JSON_PATH = join(ROOT, 'deliverables', 'prototype', 'data', 'products.json')
 const SITE_URL = 'https://www.hatfieldmccoydtf.com'
 const SHOPIFY_HANDLE_TO_FRONTEND_SLUG = {
@@ -216,8 +217,8 @@ function buildProductionPreview() {
 }
 
 function buildGeneratedCatalogLayer() {
-  const normalized = buildLiveShopifyNormalizedCatalog()
-  const shopifyState = buildLiveShopifyState()
+  const normalized = buildFullStorefrontNormalizedCatalog()
+  const shopifyState = buildFullStorefrontShopifyState()
   const catalog = buildFrontendCatalog(normalized, { shopifyState })
   writeFrontendArtifacts(catalog, {
     outputDir: PRODUCTION_DIR,
@@ -227,16 +228,13 @@ function buildGeneratedCatalogLayer() {
   return catalog
 }
 
-function buildLiveShopifyNormalizedCatalog() {
+function buildFullStorefrontNormalizedCatalog() {
   const normalized = existsSync(NORMALIZED_CATALOG_PATH)
     ? JSON.parse(readFileSync(NORMALIZED_CATALOG_PATH, 'utf8'))
-    : { pages: [] }
-  return {
-    meta: {
-      generated_at: new Date().toISOString(),
-      source: 'shopify-config/live-launch-catalog',
-    },
-    products: SHOPIFY_PRODUCTS.map((product) => ({
+    : { products: [], collections: [], pages: [] }
+  const productsByHandle = new Map((normalized.products ?? []).map((product) => [product.handle, product]))
+  for (const product of SHOPIFY_PRODUCTS) {
+    productsByHandle.set(product.handle, {
       ...product,
       tags: [
         'shopify-launch-catalog',
@@ -245,22 +243,36 @@ function buildLiveShopifyNormalizedCatalog() {
       metafields: {
         source_url: `https://hatfield-mccoy-dtf.myshopify.com/products/${product.handle}`,
       },
-    })),
-    collections: SHOPIFY_COLLECTIONS.map((collection) => ({
+    })
+  }
+  const collectionsByHandle = new Map((normalized.collections ?? []).map((collection) => [collection.handle, collection]))
+  for (const collection of SHOPIFY_COLLECTIONS) {
+    collectionsByHandle.set(collection.handle, {
       handle: collection.handle,
       title: collection.title,
       description: `${collection.title} products approved for Hatfield McCoy DTF launch ordering.`,
-    })),
+    })
+  }
+  return {
+    meta: {
+      generated_at: new Date().toISOString(),
+      source: 'dtfva-catalog-plus-shopify-launch-catalog',
+    },
+    products: [...productsByHandle.values()],
+    collections: [...collectionsByHandle.values()],
     pages: normalized.pages ?? [],
     validationErrors: [],
   }
 }
 
-function buildLiveShopifyState() {
+function buildFullStorefrontShopifyState() {
+  const importedState = existsSync(SHOPIFY_STATE_PATH)
+    ? JSON.parse(readFileSync(SHOPIFY_STATE_PATH, 'utf8'))
+    : { products: {}, collections: [] }
   const productsJson = existsSync(LIVE_PRODUCTS_JSON_PATH)
     ? JSON.parse(readFileSync(LIVE_PRODUCTS_JSON_PATH, 'utf8'))
     : null
-  const stateByHandle = new Map()
+  const stateByHandle = new Map(readShopifyStateProducts(importedState).map((product) => [product.handle, product]))
 
   for (const product of SHOPIFY_PRODUCTS) {
     const slug = SHOPIFY_HANDLE_TO_FRONTEND_SLUG[product.handle]
@@ -281,19 +293,28 @@ function buildLiveShopifyState() {
   return {
     meta: {
       generated_at: new Date().toISOString(),
-      source: relative(ROOT, LIVE_PRODUCTS_JSON_PATH),
+      source: `${relative(ROOT, SHOPIFY_STATE_PATH)} + ${relative(ROOT, LIVE_PRODUCTS_JSON_PATH)}`,
       product_count: stateByHandle.size,
       missing_variant_ids: [...stateByHandle.values()]
         .flatMap((product) => product.variants)
         .filter((variant) => !variant.variantId).length,
     },
     products: Object.fromEntries([...stateByHandle.entries()]),
-    collections: SHOPIFY_COLLECTIONS.map((collection) => ({
-      handle: collection.handle,
-      collectionId: '',
-      missing: false,
-    })),
+    collections: [
+      ...(importedState.collections ?? []),
+      ...SHOPIFY_COLLECTIONS.map((collection) => ({
+        handle: collection.handle,
+        collectionId: '',
+        missing: false,
+      })),
+    ],
   }
+}
+
+function readShopifyStateProducts(shopifyState) {
+  const products = shopifyState?.products ?? []
+  if (Array.isArray(products)) return products
+  return Object.values(products)
 }
 
 function resolveLiveVariantId(collection, sku) {

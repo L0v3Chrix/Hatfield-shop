@@ -240,13 +240,13 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
               <td>${escapeHtml(variant.title || variant.sku)}</td>
               <td>${escapeHtml(formatOptions(variant.options))}</td>
               <td>$${escapeHtml(formatDisplayPrice(variant.price))}</td>
-              <td>${builderProduct ? `<a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a>` : variant.checkoutEnabled ? `<button class="buy-button" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(variant.sku)}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(variant.title || variant.sku)}" data-price="${escapeHtml(variant.price)}" data-merchandise-id="${escapeHtml(variant.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button>` : `<a class="quote-button table-link" href="/contact">Not live yet</a>`}</td>
+              <td>${builderProduct ? `<a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a>` : variant.checkoutEnabled ? `<button class="buy-button" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(variant.sku)}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(variant.title || variant.sku)}" data-price="${escapeHtml(variant.price)}" data-merchandise-id="${escapeHtml(variant.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button>` : `<button class="quote-button table-link" type="button" disabled aria-disabled="true">Sold out</button>`}</td>
             </tr>`).join('')
   const primaryCta = builderProduct
     ? `<a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>`
     : primaryVariant?.checkoutEnabled
       ? `<button class="buy-button feature-cta" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(primaryVariant?.sku ?? '')}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(primaryVariant?.title || primaryVariant?.sku || '')}" data-price="${escapeHtml(primaryVariant?.price ?? firstPrice)}" data-merchandise-id="${escapeHtml(primaryVariant?.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add selected option</button>`
-      : `<a class="quote-button feature-cta" href="/contact">Not live yet</a>`
+      : `<button class="quote-button feature-cta" type="button" disabled aria-disabled="true">Sold out</button>`
   return renderShell({
     seo: product.seo,
     siteUrl,
@@ -272,7 +272,7 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
           <div class="purchase-panel">
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="eager" decoding="async">
             <span class="price">From $${escapeHtml(firstPrice)}</span>
-            <p>${builderProduct ? 'Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.' : product.publishable ? 'Choose an option, add it to the cart, then upload artwork before checkout.' : 'This product family is still being held back from online ordering while fulfillment is confirmed.'}</p>
+            <p>${builderProduct ? 'Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.' : product.publishable ? 'Choose an option, add it to the cart, then upload artwork before checkout.' : 'This product is visible in the catalog but currently marked sold out until production and Shopify publication are approved.'}</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select">${selectorOptions}</select></label>
             ${primaryCta}
             <div class="approval-list">
@@ -329,8 +329,11 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
               cta.removeAttribute('href');
             } else {
               cta.className = 'quote-button feature-cta';
-              cta.textContent = 'Not live yet';
-              cta.setAttribute('href', '/contact');
+              cta.textContent = 'Sold out';
+              cta.setAttribute('type', 'button');
+              cta.setAttribute('disabled', 'true');
+              cta.setAttribute('aria-disabled', 'true');
+              cta.removeAttribute('href');
             }
           });
         })();
@@ -951,7 +954,7 @@ function buildShopCategories(products) {
 }
 
 export function publicStorefrontProducts(products = []) {
-  return products.filter((product) => product.publicVisible !== false && !product.internalProxy && product.publishable)
+  return products.filter((product) => product.publicVisible !== false && !product.internalProxy)
 }
 
 function categorizeProduct(product) {
@@ -1025,7 +1028,7 @@ function displayPriceNumber(price) {
 
 function orderPathLabel(product) {
   if (isBuilderProduct(product)) return 'Builder path'
-  return product.publishable ? 'Buy online' : 'Not live yet'
+  return product.publishable ? 'Buy online' : 'Sold out'
 }
 
 function isBuilderProduct(product) {

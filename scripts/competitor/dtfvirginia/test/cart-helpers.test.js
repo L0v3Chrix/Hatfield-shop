@@ -99,7 +99,7 @@ test('summarizeCart reports mixed-cart truthfully and blocks checkout when any n
   assert.match(summary.statusMessage, /2 items are ready for checkout/i)
   assert.match(summary.statusMessage, /1 line still needs artwork uploaded/i)
   assert.match(summary.statusMessage, /1 builder item needs a saved design/i)
-  assert.match(summary.statusMessage, /1 line is held back for launch review/i)
+  assert.match(summary.statusMessage, /1 line is unavailable for online checkout/i)
 })
 
 test('summarizeCart marks fully buyable carts as checkout-ready', () => {

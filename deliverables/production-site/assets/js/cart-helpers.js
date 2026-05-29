@@ -91,7 +91,7 @@
       messageParts.push(`${pluralize(builderLineCount, 'builder item needs', 'builder items need')} a saved design`)
     }
     if (reviewLineCount > 0) {
-      messageParts.push(`${pluralize(reviewLineCount, 'line is held back for', 'lines are held back for')} launch review`)
+      messageParts.push(`${pluralize(reviewLineCount, 'line is unavailable', 'lines are unavailable')} for online checkout`)
     }
     if (!messageParts.length) {
       messageParts.push('Your cart is empty.')

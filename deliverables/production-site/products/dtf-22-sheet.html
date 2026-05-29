@@ -354,8 +354,11 @@
               cta.removeAttribute('href');
             } else {
               cta.className = 'quote-button feature-cta';
-              cta.textContent = 'Not live yet';
-              cta.setAttribute('href', '/contact');
+              cta.textContent = 'Sold out';
+              cta.setAttribute('type', 'button');
+              cta.setAttribute('disabled', 'true');
+              cta.setAttribute('aria-disabled', 'true');
+              cta.removeAttribute('href');
             }
           });
         })();

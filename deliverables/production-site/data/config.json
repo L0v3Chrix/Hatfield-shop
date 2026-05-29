@@ -18,7 +18,7 @@
   "uploads": {
     "endpoint": "/api/upload-artwork",
     "max_bytes": 52428800,
-    "comment": "Artwork uploads land in durable blob storage and the returned URL is attached to Shopify cart line items."
+    "comment": "Artwork uploads land in durable storage and the returned URL is attached to Shopify cart line items."
   },
   "brand_email": "HatfieldandMcCoydtf@gmail.com",
   "brand_email_display": "Hatfield McCoy DTF Support",

@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "purpose": "Runtime configuration for the Hatfield McCoy DTF prototype. Non-secret values only — webhook proxy endpoint hides the real Discord URL.",
+    "purpose": "Runtime configuration for the Hatfield McCoy DTF storefront. Non-secret values only.",
     "last_updated": "2026-05-19"
   },
   "kicksy": {
@@ -10,16 +10,15 @@
     "button_label": "Build Your Gang Sheet",
     "open_in_new_tab": false,
     "embed_url": null,
-    "fallback_mode": "quote_form",
+    "fallback_mode": "builder_only",
     "iframe_height": "800",
     "iframe_title": "Hatfield McCoy Gang Sheet Builder",
-    "comment": "Kixxl direct-launch path. Headless builder CTAs go directly to /apps/gangify/builder with verified product/variant/price/store params. The Shopify Online Store product page remains a fallback landing path only; do not route headless traffic through it. Iframe is not the launch path (Shopify X-Frame-Options: DENY). Quote form stays as secondary fallback."
+    "comment": "Gangify direct-launch path. Headless builder CTAs go directly to /apps/gangify/builder with verified product/variant/price/store params. The Shopify Online Store product page remains a fallback landing path only; do not route headless traffic through it. Iframe is not the launch path (Shopify X-Frame-Options: DENY)."
   },
-  "webhook": {
-    "endpoint": "/api/intake",
-    "timeout_ms": 15000,
-    "cooldown_seconds": 15,
-    "comment": "Form posts here. Vercel Edge Function at /api/intake.js proxies to Discord. Never expose the real webhook URL to the client bundle."
+  "uploads": {
+    "endpoint": "/api/upload-artwork",
+    "max_bytes": 52428800,
+    "comment": "Artwork uploads land in durable blob storage and the returned URL is attached to Shopify cart line items."
   },
   "brand_email": "HatfieldandMcCoydtf@gmail.com",
   "brand_email_display": "Hatfield McCoy DTF Support",

@@ -1,6 +1,6 @@
 # Hatfield McCoy DTF Production Readiness Summary
 
-Generated: 2026-05-28T23:25:13.930Z
+Generated: 2026-05-29T01:19:52.587Z
 
 ## Status
 
@@ -21,7 +21,7 @@ Generated: 2026-05-28T23:25:13.930Z
 - Client confirmation required for operational public claims; build may proceed with fallback copy.
 - Shopify products must remain draft until copy, fulfillment, pricing, imagery, SEO, and checkout approvals pass.
 - robots.txt is intentionally Disallow: / for preview; launch requires approval-gated sitemap and robots update.
-- Quote, wholesale, and artwork review forms need production endpoints before public launch.
+- Artwork upload and Shopify publication must be verified before public launch.
 
 ## Build-Now Rule
 
@@ -33,7 +33,7 @@ Build the complete site now using fallback copy for pending operational details.
 - `pressing-instructions`: Confirm final time, temperature, pressure, peel, and wash instructions for published guide copy.
 - `wholesale-minimum`: Confirm minimum order threshold or remove the threshold claim entirely.
 - `wholesale-turnaround`: Confirm wholesale turnaround language and cutoff policy before publishing.
-- `form-endpoints`: Connect quote, wholesale, artwork review, and contact forms to production destinations.
+- `artwork-upload-endpoint`: Connect the direct-order artwork upload endpoint and confirm files are attached to order metadata.
 - `shopify-publish-approval`: Approve fulfillment, pricing, copy, images, SEO, and checkout for every published product.
 
 ## Route Map

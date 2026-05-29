@@ -49,18 +49,18 @@ const PENDING_CONFIRMATIONS = [
     affectedRoutes: ['/wholesale'],
   },
   {
-    id: 'form-endpoints',
-    label: 'Form endpoints',
+    id: 'artwork-upload-endpoint',
+    label: 'Artwork upload endpoint',
     owner: 'Build team + Hatfield McCoy',
-    buildFallback: 'Forms may be built with disabled, draft, or test endpoints until the final destination is confirmed.',
-    launchRequirement: 'Connect quote, wholesale, artwork review, and contact forms to production destinations.',
-    affectedRoutes: ['/contact', '/wholesale'],
+    buildFallback: 'Direct ordering can stay in preview until the production artwork upload destination is verified.',
+    launchRequirement: 'Connect the direct-order artwork upload endpoint and confirm files are attached to order metadata.',
+    affectedRoutes: ['/shop', '/products/sample-dtf-transfer', '/gang-sheet-builder'],
   },
   {
     id: 'shopify-publish-approval',
     label: 'Shopify publish approval',
     owner: 'Jesse / Hatfield McCoy',
-    buildFallback: 'Products remain draft or review-gated until approval is complete.',
+    buildFallback: 'Products remain draft or launch-held until publication, media, and checkout verification are complete.',
     launchRequirement: 'Approve fulfillment, pricing, copy, images, SEO, and checkout for every published product.',
     affectedRoutes: ['/shop', '/products/sample-dtf-transfer', '/gang-sheet-builder'],
   },
@@ -88,7 +88,7 @@ const ROUTES = [
     output: 'products/sample-dtf-transfer/index.html',
     route: '/products/sample-dtf-transfer',
     title: 'Custom DTF Transfers by Size | Hatfield McCoy DTF',
-    description: 'Sample product page template for custom DTF transfer products with variant clarity, artwork review states, and Shopify checkout readiness.',
+    description: 'Sample product page template for custom DTF transfer products with variant clarity, artwork upload, and Shopify checkout readiness.',
     schemaType: 'Product',
   },
   {
@@ -96,7 +96,7 @@ const ROUTES = [
     output: 'gang-sheet-builder/index.html',
     route: '/gang-sheet-builder',
     title: 'Gang Sheet Builder | Hatfield McCoy DTF',
-    description: 'Builder-first gang sheet ordering route for uploading artwork, choosing sheet size, reviewing layouts, and preparing Shopify checkout.',
+    description: 'Builder-first gang sheet ordering route for uploading artwork, choosing a fixed-size sheet, and preparing Shopify checkout.',
     schemaType: 'WebPage',
   },
   {
@@ -120,7 +120,7 @@ const ROUTES = [
     output: 'contact/index.html',
     route: '/contact',
     title: 'Contact Hatfield McCoy DTF',
-    description: 'Contact and quote route for artwork review, wholesale questions, local pickup details, custom print requests, and support.',
+    description: 'Contact route for wholesale questions, local pickup details, custom print requests, and support.',
     schemaType: 'ContactPage',
   },
 ]
@@ -446,7 +446,7 @@ function verifyProductionPreview() {
       'Client confirmation required for operational public claims; build may proceed with fallback copy.',
       'Shopify products must remain draft until copy, fulfillment, pricing, imagery, SEO, and checkout approvals pass.',
       'robots.txt is intentionally Disallow: / for preview; launch requires approval-gated sitemap and robots update.',
-      'Quote, wholesale, and artwork review forms need production endpoints before public launch.',
+      'Artwork upload and Shopify publication must be verified before public launch.',
     ],
   }
 }

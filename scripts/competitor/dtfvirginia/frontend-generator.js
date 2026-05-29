@@ -240,11 +240,13 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
               <td>${escapeHtml(variant.title || variant.sku)}</td>
               <td>${escapeHtml(formatOptions(variant.options))}</td>
               <td>$${escapeHtml(formatDisplayPrice(variant.price))}</td>
-              <td>${builderProduct ? `<a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a>` : `<button class="${variant.checkoutEnabled ? 'buy-button' : 'quote-button'}" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(variant.sku)}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(variant.title || variant.sku)}" data-price="${escapeHtml(variant.price)}" data-merchandise-id="${escapeHtml(variant.merchandiseId || '')}" data-checkout-ready="${variant.checkoutEnabled ? 'true' : 'false'}">${variant.checkoutEnabled ? 'Add to cart' : 'Request help'}</button>`}</td>
+              <td>${builderProduct ? `<a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a>` : variant.checkoutEnabled ? `<button class="buy-button" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(variant.sku)}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(variant.title || variant.sku)}" data-price="${escapeHtml(variant.price)}" data-merchandise-id="${escapeHtml(variant.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button>` : `<a class="quote-button table-link" href="/contact">Not live yet</a>`}</td>
             </tr>`).join('')
   const primaryCta = builderProduct
     ? `<a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>`
-    : `<button class="${primaryVariant?.checkoutEnabled ? 'buy-button' : 'quote-button'} feature-cta" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(primaryVariant?.sku ?? '')}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(primaryVariant?.title || primaryVariant?.sku || '')}" data-price="${escapeHtml(primaryVariant?.price ?? firstPrice)}" data-merchandise-id="${escapeHtml(primaryVariant?.merchandiseId || '')}" data-checkout-ready="${primaryVariant?.checkoutEnabled ? 'true' : 'false'}">${primaryVariant?.checkoutEnabled ? 'Add selected option' : 'Request product help'}</button>`
+    : primaryVariant?.checkoutEnabled
+      ? `<button class="buy-button feature-cta" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(primaryVariant?.sku ?? '')}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(primaryVariant?.title || primaryVariant?.sku || '')}" data-price="${escapeHtml(primaryVariant?.price ?? firstPrice)}" data-merchandise-id="${escapeHtml(primaryVariant?.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add selected option</button>`
+      : `<a class="quote-button feature-cta" href="/contact">Not live yet</a>`
   return renderShell({
     seo: product.seo,
     siteUrl,
@@ -264,17 +266,17 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
             </div>
             <div class="hero-actions">
               <a class="btn primary" href="${builderProduct ? '/gang-sheet-builder' : '#variants'}">${builderProduct ? 'Open builder' : 'Choose options'}</a>
-              <a class="btn secondary" href="/contact">Ask about this product</a>
+              <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
             </div>
           </div>
           <div class="purchase-panel">
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="eager" decoding="async">
             <span class="price">From $${escapeHtml(firstPrice)}</span>
-            <p>${builderProduct ? 'Open the builder to arrange art, choose the right sheet path, and move toward checkout or review.' : product.publishable ? 'Choose an option and check out online.' : 'Choose an option and send it to Hatfield McCoy DTF so we can confirm artwork, production details, and timing.'}</p>
+            <p>${builderProduct ? 'Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.' : product.publishable ? 'Choose an option, add it to the cart, then upload artwork before checkout.' : 'This product family is still being held back from online ordering while fulfillment is confirmed.'}</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select">${selectorOptions}</select></label>
             ${primaryCta}
             <div class="approval-list">
-              ${['Artwork guidance', 'Production support', 'Nationwide shipping'].map((label) => `<span>${escapeHtml(label)}</span>`).join('')}
+              ${['Artwork upload in cart', 'Direct Shopify checkout', 'Nationwide shipping'].map((label) => `<span>${escapeHtml(label)}</span>`).join('')}
             </div>
           </div>
         </section>
@@ -287,8 +289,8 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
           <aside class="notes-panel">
             <p class="eyebrow">Artwork and production notes</p>
             <ul>
-              <li>Upload or send clean artwork whenever possible.</li>
-              <li>Exact colors, placement, sizing, and material needs can be confirmed before production.</li>
+              <li>Upload clean artwork in the cart before checkout.</li>
+              <li>Exact colors, placement, sizing, and material details travel with the order metadata.</li>
               <li>Local pickup and shipped order paths can be coordinated from Logan, WV.</li>
             </ul>
           </aside>
@@ -321,8 +323,15 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
             cta.dataset.price = match.dataset.price || '0';
             cta.dataset.merchandiseId = match.dataset.merchandiseId || '';
             cta.dataset.checkoutReady = match.dataset.checkoutReady || 'false';
-            cta.className = (match.dataset.checkoutReady === 'true' ? 'buy-button' : 'quote-button') + ' feature-cta';
-            cta.textContent = match.dataset.checkoutReady === 'true' ? 'Add selected option' : 'Request product help';
+            if (match.dataset.checkoutReady === 'true') {
+              cta.className = 'buy-button feature-cta';
+              cta.textContent = 'Add selected option';
+              cta.removeAttribute('href');
+            } else {
+              cta.className = 'quote-button feature-cta';
+              cta.textContent = 'Not live yet';
+              cta.setAttribute('href', '/contact');
+            }
           });
         })();
       </script>`,
@@ -353,13 +362,13 @@ function renderInternalProxyProductPage(product, { siteUrl = DEFAULT_SITE_URL } 
             </div>
             <div class="hero-actions">
               <a class="btn primary feature-cta" href="${escapeHtml(actionUrl)}">${escapeHtml(actionLabel)}</a>
-              <a class="btn secondary" href="/contact">Ask about this product</a>
+              <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
             </div>
           </div>
           <div class="purchase-panel">
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="eager" decoding="async">
             <span class="price">From $${escapeHtml(firstPrice)}</span>
-            <p>We will confirm artwork, size, material, and production details before this moves into checkout.</p>
+            <p>This route stays guided so customers land on the correct fixed-size builder or support path instead of raw backend variants.</p>
             <a class="btn primary feature-cta" href="${escapeHtml(actionUrl)}">${escapeHtml(actionLabel)}</a>
           </div>
         </section>
@@ -387,7 +396,7 @@ export function renderCollectionPage(collection, products, { siteUrl = DEFAULT_S
     ['All products', '/products'],
     ['All collections', '/collections'],
     ['Shop catalog', '/shop'],
-    ['Quote help', '/contact'],
+    ['Artwork guide', '/guides#artwork'],
   ].map(([label, url]) => `<a href="${escapeHtml(url)}">${escapeHtml(label)}</a>`).join('')
   return renderShell({
     seo: collection.seo,
@@ -403,7 +412,7 @@ export function renderCollectionPage(collection, products, { siteUrl = DEFAULT_S
             <div class="status-strip" aria-label="Collection stats">
               <span>${scopedProducts.length} matching products</span>
               <span>${categories.length} product ${categories.length === 1 ? 'family' : 'families'}</span>
-              <span>Checkout and quote help</span>
+              <span>Artwork upload in cart</span>
             </div>
           </div>
           <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="eager" decoding="async">
@@ -482,7 +491,7 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="lazy" decoding="async">
             <span class="kicker">${escapeHtml(category.label)}</span>
             <strong>${category.products.length} ${category.products.length === 1 ? 'product' : 'products'}</strong>
-            <small>From $${escapeHtml(lowPrice)} with checkout and quote help</small>
+            <small>From $${escapeHtml(lowPrice)} with direct checkout</small>
           </a>`
   }).join('')
   const cards = frontendCatalog.products.map((product) => productCardMarkup(product, { className: 'catalog-card' })).join('')
@@ -496,8 +505,8 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
           <div>
             <p class="eyebrow">Shop Hatfield McCoy DTF</p>
             <h1>Custom DTF, stickers, apparel, signs, and print-ready goods.</h1>
-            <p class="lede">Shop transfers, gang sheets, UV DTF, apparel, signage, and specialty print services. Checkout-ready items can go straight to cart; custom orders route to help.</p>
-            <div class="hero-actions"><a class="btn primary" href="/gang-sheet-builder">Build a gang sheet</a><a class="btn secondary" href="/contact">Get quote help</a></div>
+            <p class="lede">Shop transfers, gang sheets, UV DTF, apparel, signage, and specialty print products. Direct-order items go straight to cart, and fixed-size builder routes stay cleanly separated.</p>
+            <div class="hero-actions"><a class="btn primary" href="/gang-sheet-builder">Build a gang sheet</a><a class="btn secondary" href="/guides#artwork">Artwork guide</a></div>
           </div>
           <div class="shop-stats" aria-label="Catalog status">
             <strong>${frontendCatalog.products.length}</strong><span>Products</span>
@@ -519,7 +528,7 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
         <section class="catalog-grid" id="catalog-grid" aria-label="All products">${cards}</section>
         <section class="order-path-band" aria-label="Ordering paths">
           <article><span class="kicker">Fast reorder</span><strong>Know the size and file?</strong><p>Choose the closest product, select a variant, and add it to the cart.</p></article>
-          <article><span class="kicker">Artwork help</span><strong>Need a production check?</strong><p>Send the product into a quote path and we will confirm details before print.</p></article>
+          <article><span class="kicker">Artwork upload</span><strong>Ready with your file?</strong><p>Add the right option to the cart, upload artwork there, and move directly into checkout.</p></article>
           <article><span class="kicker">Bigger runs</span><strong>Building for a team or shop?</strong><p>Use collections to compare families, materials, and pricing before you commit.</p></article>
         </section>
         <section class="collection-strip" aria-label="Collections">
@@ -580,7 +589,7 @@ export function renderProductIndexPage(products, { siteUrl = DEFAULT_SITE_URL } 
         <section class="collection-hero">
           <p class="eyebrow">All products</p>
           <h1>Every product, organized for fast ordering.</h1>
-          <p class="lede">${products.length} product pages with visible pricing, product-family routing, and a clear next step for checkout or quote help.</p>
+          <p class="lede">${products.length} product pages with visible pricing, product-family routing, and a clear next step for checkout or builder ordering.</p>
         </section>
         <section class="product-grid">${cards}</section>
       </main>`,
@@ -687,7 +696,7 @@ function renderShell({ seo, body }) {
     ${mobileMenuButtonMarkup()}
     <div class="nav-actions"><button class="btn secondary cart-btn" type="button" aria-label="Cart, 0 items"><span class="cart-btn-label">Cart</span><span class="cart-count-badge" id="cart-count">0</span></button><a class="btn primary" href="/gang-sheet-builder">Start order</a></div>
   </div>
-  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/products">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/contact">Quote help</a></div></nav>
+  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/products">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/guides#artwork">Artwork guide</a></div></nav>
   ${mobileMenuMarkup()}
 </header>
 ${body}
@@ -697,7 +706,7 @@ ${cartDrawerMarkup()}
 ${mobileMenuScript()}
 <script>
   document.addEventListener('click', function(event) {
-    var button = event.target.closest('.buy-button:not(:disabled), .quote-button:not(:disabled)');
+    var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
     event.preventDefault();
     window.Cart.add({
@@ -709,6 +718,7 @@ ${mobileMenuScript()}
       qty: 1,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
+      requiresArtwork: button.dataset.requiresArtwork !== 'false',
       attributes: [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }]
     });
     if (window.openCart) window.openCart();
@@ -776,7 +786,7 @@ function cartDrawerMarkup() {
     <div><span class="eyebrow">Order cart</span><h2>Cart</h2></div>
     <button class="cart-close" type="button" aria-label="Close cart">Close</button>
   </div>
-  <p class="cart-empty" id="cart-empty">Add products for checkout or quote review. Custom and review-only items can stay in the cart while we confirm artwork and fulfillment.</p>
+  <p class="cart-empty" id="cart-empty">Add products to start your order. Upload artwork inside the cart before checkout.</p>
   <div class="cart-summary-slot" id="cart-summary" hidden></div>
   <div class="cart-items" id="cart-items"></div>
   <div class="cart-recommendations-slot" id="cart-recommendations" hidden></div>
@@ -784,7 +794,7 @@ function cartDrawerMarkup() {
     <div class="cart-total-row"><span>Total</span><strong id="cart-total">$0.00</strong></div>
     <p class="cart-note" id="cart-note" hidden></p>
     <button class="buy-button" id="cart-checkout" type="button" disabled>Checkout</button>
-    <a class="quote-link" href="/contact">Need a quote or artwork review?</a>
+    <a class="quote-link" href="/guides#artwork">Artwork prep guide</a>
   </div>
 </aside>`
 }
@@ -901,6 +911,11 @@ function pageCss() {
     .cart-footer{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:12px}
     .cart-total-row{display:flex;justify-content:space-between;font-size:1.1rem}
     .quote-link{color:var(--cyan);font-weight:900;text-align:center}
+    .cart-item-upload{display:grid;gap:6px;margin-top:8px}
+    .cart-upload-input{display:none}
+    .cart-upload-btn{width:max-content;border:1px solid rgba(0,229,255,.42);background:rgba(0,229,255,.08);color:var(--cyan);border-radius:999px;padding:6px 10px;font-weight:950;text-transform:uppercase}
+    .cart-upload-btn:disabled{opacity:.6;cursor:wait}
+    .cart-upload-status{color:var(--muted);font-size:.78rem;line-height:1.3}
     .cart-recommendations{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
     .cart-recommendations-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .cart-recommendations-head span{font-weight:950;text-transform:uppercase;font-size:.74rem;color:var(--soft)}
@@ -1010,7 +1025,7 @@ function displayPriceNumber(price) {
 
 function orderPathLabel(product) {
   if (isBuilderProduct(product)) return 'Builder path'
-  return product.publishable ? 'Buy online' : 'Quote help'
+  return product.publishable ? 'Buy online' : 'Not live yet'
 }
 
 function isBuilderProduct(product) {
@@ -1023,7 +1038,7 @@ function isBuilderProduct(product) {
   const keyText = `${handle} ${title} ${tags.join(' ')}`
   const text = `${handleWithoutPrefix} ${title} ${productType} ${rawProductType} ${tags.join(' ')}`
   const familyText = `${handleWithoutPrefix} ${title} ${productType} ${rawProductType}`
-  if (/builder|kixxl|gang-sheet-builder|gang builder|sheet builder/.test(keyText)) return true
+  if (/builder|gang-sheet-builder|gang builder|sheet builder/.test(keyText)) return true
   if (rawProductType.includes('kixxl_rolling_canvas_product_hidden') || productType.includes('kixxl_rolling_canvas_product_hidden')) return true
   if (tags.includes('source-tag-kixxl-proxy-product')) return true
   if (/3d puff transfers/.test(text)) return true

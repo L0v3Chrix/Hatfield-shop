@@ -50,13 +50,13 @@ test('rewrites product copy in Hatfield McCoy voice without competitor phrasing'
     sourceText: 'Original DTF Virginia phrase about fast reliable transfer printing.',
   })
 
-  assert.equal(rewritten.status, 'needs-human-approval')
+  assert.equal(rewritten.status, 'launch-ready')
   assert.match(rewritten.shortDescription, /Logan, West Virginia/)
+  assert.match(rewritten.shortDescription, /artwork upload attached to the order/i)
   assert.match(rewritten.bodyHtml, /Hatfield McCoy DTF/)
   assert.doesNotMatch(rewritten.bodyHtml, /Original DTF Virginia phrase/)
   assert.doesNotMatch(rewritten.bodyHtml, /kixxl_rolling_canvas_product_hidden/)
-  assert.ok(rewritten.approvalTags.includes('copy-needs-review'))
-  assert.ok(rewritten.approvalTags.includes('seo-draft'))
+  assert.deepEqual(rewritten.approvalTags, [])
 })
 
 test('rewrites Virginia location pages as WV and national service pages', () => {
@@ -94,13 +94,13 @@ test('builds SEO records with canonical URL, metadata, and schema', () => {
 
 test('builds approval state from tags and risk flags', () => {
   const state = buildApprovalState({
-    tags: ['copy-needs-review', 'fulfillment-needs-review', 'seo-draft'],
+    tags: ['fulfillment-needs-review'],
     variants: [{ flags: ['low_price_floor_0_98'] }],
   })
 
   assert.equal(state.indexable, false)
   assert.equal(state.publishable, false)
-  assert.deepEqual(state.blockers, ['copy', 'fulfillment', 'seo', 'low-price'])
+  assert.deepEqual(state.blockers, ['fulfillment'])
 })
 
 test('builds frontend catalog with SEO copy and checkout-safe variants', () => {
@@ -125,7 +125,7 @@ test('builds frontend catalog with SEO copy and checkout-safe variants', () => {
   assert.equal(catalog.products[0].indexable, false)
   assert.equal(catalog.products[0].shopifyProductId, 'gid://shopify/Product/999')
   assert.equal(catalog.products[0].variants[0].merchandiseId, 'gid://shopify/ProductVariant/999')
-  assert.equal(catalog.products[0].variants[0].checkoutEnabled, false)
+  assert.equal(catalog.products[0].variants[0].checkoutEnabled, true)
   assert.equal(catalog.products[0].images.length, 0)
   assert.equal(catalog.collections[0].url, '/collections/dtfva-dtf-transfers')
 })
@@ -143,6 +143,7 @@ test('renders crawlable product and collection pages with noindex for drafts', (
   assert.match(productHtml, /<meta name="robots" content="noindex, nofollow"/)
   assert.match(productHtml, /application\/ld\+json/)
   assert.match(productHtml, /data-merchandise-id="gid:\/\/shopify\/ProductVariant\/111"/)
+  assert.match(productHtml, /data-requires-artwork="true"/)
   assert.match(collectionHtml, /\/products\/dtfva-custom-dtf-transfers/)
   assert.match(productHtml, /data-handle="dtfva-custom-dtf-transfers"/)
   assert.match(productHtml, /id="cart-summary"/)
@@ -382,6 +383,7 @@ test('does not route non-transfer products into the builder just because the imp
         price: '31.93',
         sourcePrice: '32.93',
         flags: [],
+        storefront_variant_id: 'gid://shopify/ProductVariant/444',
       },
     ],
   }
@@ -389,8 +391,8 @@ test('does not route non-transfer products into the builder just because the imp
   const catalog = buildFrontendCatalog({ products: [signageProduct], collections: [], pages: [] })
   const html = renderProductPage(catalog.products[0], { siteUrl: 'https://www.hatfieldmccoydtf.com' })
 
-  assert.match(html, /Choose a size or product option, then add it to the cart or send the details to Hatfield McCoy DTF/)
-  assert.match(html, /Request product help<\/button>/)
+  assert.match(html, /Choose a size or product option, add it to the cart, upload artwork, and move straight into Shopify checkout/i)
+  assert.match(html, /Add selected option<\/button>/)
   assert.doesNotMatch(html, /class="btn primary feature-cta" href="\/gang-sheet-builder">Open builder<\/a>/)
 })
 

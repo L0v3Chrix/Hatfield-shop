@@ -17,9 +17,16 @@
   const STORAGE_KEY = 'hm_cart_v1';
   const SHOPIFY_CART_STORAGE_KEY = 'hmdtf_shopify_cart_v1';
   const GANGIFY_BUILDER_URL = '/gang-sheet-builder';
+  const ARTWORK_MAX_BYTES = 50 * 1024 * 1024;
+  const ARTWORK_ACCEPTED_TYPES = /\.(png|jpe?g|pdf|ai|eps)$/i;
   const cartHelpers = window.HMCartHelpers || {
     isBuilderKey(key) {
-      return /builder|gang-sheet|by-size|kixxl|rolling-canvas|sheet-builder|3d-puff/.test(key);
+      return /builder|gang-sheet|sheet-builder|3d-puff/.test(key);
+    },
+    attributeValue(item, key) {
+      const attributes = Array.isArray(item && item.attributes) ? item.attributes : [];
+      const match = attributes.find((entry) => String(entry && entry.key || '').toLowerCase() === String(key).toLowerCase());
+      return match && match.value ? String(match.value) : '';
     },
     classifyCartItem(item) {
       if (item && (item.merchandiseId || item.storefront_variant_id)) return 'checkout-ready';
@@ -31,6 +38,13 @@
       if (cartHelpers.isBuilderKey(key)) return 'builder-required';
       return 'review-required';
     },
+    itemNeedsArtwork(item) {
+      if (cartHelpers.classifyCartItem(item) !== 'checkout-ready') return false;
+      return !(item && (item.requiresArtwork === false || item.requiresArtwork === 'false'));
+    },
+    itemHasArtwork(item) {
+      return Boolean(item && (item.artworkUrl || cartHelpers.attributeValue(item, 'Artwork upload URL') || cartHelpers.attributeValue(item, 'Artwork file URL')));
+    },
     summarizeCart(items) {
       const safeItems = Array.isArray(items) ? items : [];
       const summary = {
@@ -38,6 +52,7 @@
         totalQuantity: 0,
         checkoutReadyQuantity: 0,
         checkoutReadyLineCount: 0,
+        artworkPendingLineCount: 0,
         builderLineCount: 0,
         reviewLineCount: 0,
         checkoutBlocked: false,
@@ -51,17 +66,19 @@
         if (state === 'checkout-ready') {
           summary.checkoutReadyQuantity += qty;
           summary.checkoutReadyLineCount += 1;
+          if (cartHelpers.itemNeedsArtwork(item) && !cartHelpers.itemHasArtwork(item)) summary.artworkPendingLineCount += 1;
         } else if (state === 'builder-required') {
           summary.builderLineCount += 1;
         } else {
           summary.reviewLineCount += 1;
         }
       });
-      summary.checkoutBlocked = summary.builderLineCount > 0 || summary.reviewLineCount > 0;
+      summary.checkoutBlocked = summary.builderLineCount > 0 || summary.reviewLineCount > 0 || summary.artworkPendingLineCount > 0;
       const bits = [];
       if (summary.checkoutReadyQuantity > 0) bits.push(summary.checkoutReadyQuantity + ' item' + (summary.checkoutReadyQuantity === 1 ? ' is' : 's are') + ' ready for checkout');
+      if (summary.artworkPendingLineCount > 0) bits.push(summary.artworkPendingLineCount + ' line' + (summary.artworkPendingLineCount === 1 ? ' still needs' : 's still need') + ' artwork uploaded');
       if (summary.builderLineCount > 0) bits.push(summary.builderLineCount + ' builder item' + (summary.builderLineCount === 1 ? ' needs' : 's need') + ' a saved design');
-      if (summary.reviewLineCount > 0) bits.push(summary.reviewLineCount + ' item' + (summary.reviewLineCount === 1 ? ' still needs' : 's still need') + ' review');
+      if (summary.reviewLineCount > 0) bits.push(summary.reviewLineCount + ' line' + (summary.reviewLineCount === 1 ? ' is held back for' : 's are held back for') + ' launch review');
       if (!bits.length) bits.push('Your cart is empty');
       else if (!summary.checkoutBlocked) bits.push('Ready for secure Shopify checkout');
       summary.statusMessage = bits.join('. ') + '.';
@@ -108,7 +125,7 @@
   }
 
   function hasCheckoutOnlyItems(items) {
-    return items.some(i => !(i.merchandiseId || i.storefront_variant_id));
+    return cartHelpers.summarizeCart(items).checkoutBlocked;
   }
 
   function normalizeKey(value) {
@@ -174,6 +191,9 @@
         items[idx].qty += qty;
         if (item.handle || item.productHandle) items[idx].handle = item.handle || item.productHandle;
         if (item.file) items[idx].file = item.file;
+        if (item.artworkUrl) items[idx].artworkUrl = item.artworkUrl;
+        if (item.uploadedAt) items[idx].uploadedAt = item.uploadedAt;
+        if (item.requiresArtwork !== undefined) items[idx].requiresArtwork = item.requiresArtwork;
         if (checkoutReady && merchandiseId) {
           items[idx].merchandiseId = merchandiseId;
         } else if (!checkoutReady) {
@@ -191,8 +211,11 @@
           qty,
           thumb: item.thumb || '',
           file: item.file || null,
+          artworkUrl: item.artworkUrl || '',
+          requiresArtwork: item.requiresArtwork === undefined ? true : item.requiresArtwork,
           merchandiseId,
           attributes: Array.isArray(item.attributes) ? item.attributes : [],
+          uploadedAt: item.uploadedAt || '',
           addedAt: Date.now()
         });
       }
@@ -232,6 +255,15 @@
     },
     clear() {
       save([]);
+      notify();
+    },
+    updateLine(sku, variant, patch) {
+      const items = load();
+      const idx = findIndex(items, sku, variant);
+      if (idx < 0) return;
+      const next = typeof patch === 'function' ? patch({ ...items[idx] }) : { ...items[idx], ...(patch || {}) };
+      items[idx] = next;
+      save(items);
       notify();
     }
   };
@@ -278,6 +310,13 @@
     return runtimeConfigPromise;
   }
 
+  function getUploadConfig(config) {
+    return (config && config.uploads) || {
+      endpoint: '/api/upload-artwork',
+      max_bytes: ARTWORK_MAX_BYTES
+    };
+  }
+
   async function storefrontGraphql(query, variables) {
     const cfg = await loadRuntimeConfig();
     const shopify = cfg.shopify || {};
@@ -304,6 +343,7 @@
     const merchandiseId = item.merchandiseId || item.storefront_variant_id || '';
     if (!merchandiseId) return null;
     const attributes = Array.isArray(item.attributes) ? item.attributes : [];
+    if (cartHelpers.itemNeedsArtwork(item) && !cartHelpers.itemHasArtwork(item)) return null;
     const cleanAttributes = attributes
       .filter(a => a && a.key && a.value && a.value !== 'n/a')
       .map(a => ({ key: String(a.key), value: String(a.value) }));
@@ -317,10 +357,17 @@
   async function createShopifyCheckout(items) {
     const lines = items.map(toCartLine).filter(Boolean);
     if (!lines.length) {
-      throw new Error('No checkout-ready Shopify products are in the cart. Use the builder or quote form for custom items.');
+      throw new Error('No checkout-ready Shopify products are in the cart yet.');
     }
-    if (lines.length !== items.length) {
-      throw new Error('One or more cart items are quote/builder-only and cannot be checked out directly yet. Remove those items or submit a quote.');
+    const summary = cartHelpers.summarizeCart(items);
+    if (summary.builderLineCount > 0) {
+      throw new Error('One or more builder items still need a saved design before checkout can open.');
+    }
+    if (summary.reviewLineCount > 0) {
+      throw new Error('One or more products in this cart are still held back from online ordering.');
+    }
+    if (summary.artworkPendingLineCount > 0) {
+      throw new Error('Upload artwork for every direct-order line before checkout.');
     }
     const mutation = `mutation CartCreate($lines: [CartLineInput!]!) {
       cartCreate(input: { lines: $lines }) {
@@ -358,6 +405,46 @@
     alert(message || 'Checkout is temporarily unavailable.');
   }
 
+  function applyArtworkAttributes(item, result) {
+    const attributes = Array.isArray(item.attributes) ? item.attributes.slice() : [];
+    const next = attributes.filter((entry) => {
+      const key = String(entry && entry.key || '').toLowerCase();
+      return key !== 'artwork file' && key !== 'artwork file url' && key !== 'artwork upload url';
+    });
+    if (result.fileName) next.push({ key: 'Artwork file', value: result.fileName });
+    if (result.url) {
+      next.push({ key: 'Artwork file URL', value: result.url });
+      next.push({ key: 'Artwork upload URL', value: result.url });
+    }
+    return next;
+  }
+
+  async function uploadArtworkFile(file) {
+    if (!file) throw new Error('Choose an artwork file first.');
+    if (file.size > ARTWORK_MAX_BYTES) {
+      throw new Error('File is too large. Max 50MB.');
+    }
+    if (!ARTWORK_ACCEPTED_TYPES.test(file.name)) {
+      throw new Error('Unsupported file type. Use PNG, JPG, PDF, AI, or EPS.');
+    }
+    const config = await loadRuntimeConfig();
+    const uploadConfig = getUploadConfig(config);
+    const form = new FormData();
+    form.append('file', file, file.name);
+    const response = await fetch(uploadConfig.endpoint || '/api/upload-artwork', {
+      method: 'POST',
+      body: form
+    });
+    let payload = null;
+    try {
+      payload = await response.json();
+    } catch (_) {}
+    if (!response.ok || !payload || !payload.url) {
+      throw new Error(payload && payload.error ? payload.error : 'Artwork upload failed.');
+    }
+    return payload;
+  }
+
   function buildItemRow(item) {
     const row = el('div', { class: 'cart-item', dataset: { sku: item.sku, variant: item.variant || '' } });
 
@@ -373,6 +460,54 @@
         ? 'Builder item'
         : 'Review required';
     body.appendChild(el('div', { class: 'cart-item-state cart-item-state-' + lineState, text: lineBadgeText }));
+
+    if (lineState === 'checkout-ready' && cartHelpers.itemNeedsArtwork(item)) {
+      const uploadWrap = el('div', { class: 'cart-item-upload' });
+      const uploadLabel = el('label', { class: 'cart-upload-label' });
+      const uploadInput = el('input', {
+        class: 'cart-upload-input',
+        type: 'file',
+        accept: '.png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript'
+      });
+      const uploadButton = el('button', {
+        class: 'cart-upload-btn',
+        type: 'button',
+        text: cartHelpers.itemHasArtwork(item) ? 'Replace artwork' : 'Upload artwork',
+        onclick: () => uploadInput.click()
+      });
+      const uploadStatus = el('div', {
+        class: 'cart-upload-status',
+        text: cartHelpers.itemHasArtwork(item)
+          ? 'Artwork attached' + (item.file ? ': ' + item.file : '')
+          : 'Upload artwork before checkout'
+      });
+      uploadInput.addEventListener('change', async (event) => {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+        uploadButton.disabled = true;
+        uploadStatus.textContent = 'Uploading artwork…';
+        try {
+          const uploaded = await uploadArtworkFile(file);
+          Cart.updateLine(item.sku, item.variant, (current) => ({
+            ...current,
+            file: uploaded.fileName || file.name,
+            artworkUrl: uploaded.url,
+            uploadedAt: uploaded.uploadedAt || new Date().toISOString(),
+            attributes: applyArtworkAttributes(current, {
+              fileName: uploaded.fileName || file.name,
+              url: uploaded.url
+            })
+          }));
+        } catch (err) {
+          uploadButton.disabled = false;
+          uploadStatus.textContent = err && err.message ? err.message : 'Artwork upload failed.';
+        }
+      });
+      uploadLabel.appendChild(uploadInput);
+      uploadWrap.appendChild(uploadButton);
+      uploadWrap.appendChild(uploadStatus);
+      body.appendChild(uploadWrap);
+    }
 
     const controls = el('div', { class: 'cart-item-controls' });
     const dec = el('button', { class: 'qty-btn', 'aria-label': 'Decrease quantity', text: '−',
@@ -422,9 +557,15 @@
         el('strong', { text: String(summaryData.builderLineCount) })
       ]));
     }
+    if (summaryData.artworkPendingLineCount > 0) {
+      summary.appendChild(el('div', { class: 'cart-summary-row' }, [
+        el('span', { text: 'Artwork pending' }),
+        el('strong', { text: String(summaryData.artworkPendingLineCount) })
+      ]));
+    }
     if (summaryData.reviewLineCount > 0) {
       summary.appendChild(el('div', { class: 'cart-summary-row' }, [
-        el('span', { text: 'Review lines' }),
+        el('span', { text: 'Held back' }),
         el('strong', { text: String(summaryData.reviewLineCount) })
       ]));
     }
@@ -457,6 +598,7 @@
             thumb: product.image,
             merchandiseId: product.merchandiseId,
             checkoutReady: true,
+            requiresArtwork: true,
             attributes: [{ key: 'Source', value: 'Curated cart recommendation' }]
           })
         });
@@ -519,8 +661,10 @@
       note.hidden = !hasQuoteOnlyItems;
       note.textContent = hasQuoteOnlyItems
         ? cartSummary.builderLineCount > 0
-          ? 'Builder lines need a saved design before Shopify checkout can open. Review-only lines should go through quote help.'
-          : 'This cart includes review-only items. Send a quote request or remove review-only items before Shopify checkout.'
+          ? 'Builder lines need a saved design before Shopify checkout can open.'
+          : cartSummary.artworkPendingLineCount > 0
+            ? 'Upload artwork on each direct-order line before Shopify checkout can open.'
+            : 'One or more lines in this cart are not live for online ordering yet.'
         : '';
     }
 

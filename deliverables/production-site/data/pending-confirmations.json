@@ -41,21 +41,22 @@
     ]
   },
   {
-    "id": "form-endpoints",
-    "label": "Form endpoints",
+    "id": "artwork-upload-endpoint",
+    "label": "Artwork upload endpoint",
     "owner": "Build team + Hatfield McCoy",
-    "buildFallback": "Forms may be built with disabled, draft, or test endpoints until the final destination is confirmed.",
-    "launchRequirement": "Connect quote, wholesale, artwork review, and contact forms to production destinations.",
+    "buildFallback": "Direct ordering can stay in preview until the production artwork upload destination is verified.",
+    "launchRequirement": "Connect the direct-order artwork upload endpoint and confirm files are attached to order metadata.",
     "affectedRoutes": [
-      "/contact",
-      "/wholesale"
+      "/shop",
+      "/products/sample-dtf-transfer",
+      "/gang-sheet-builder"
     ]
   },
   {
     "id": "shopify-publish-approval",
     "label": "Shopify publish approval",
     "owner": "Jesse / Hatfield McCoy",
-    "buildFallback": "Products remain draft or review-gated until approval is complete.",
+    "buildFallback": "Products remain draft or launch-held until publication, media, and checkout verification are complete.",
     "launchRequirement": "Approve fulfillment, pricing, copy, images, SEO, and checkout for every published product.",
     "affectedRoutes": [
       "/shop",

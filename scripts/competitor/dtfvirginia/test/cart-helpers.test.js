@@ -31,7 +31,7 @@ test('classifyCartItem separates checkout-ready, builder, and review-only lines'
       handle: 'custom-dtf-transfers-by-size',
       name: 'Custom DTF Transfers by Size',
     }),
-    'builder-required',
+    'review-required',
   )
 
   assert.equal(
@@ -75,8 +75,8 @@ test('summarizeCart reports mixed-cart truthfully and blocks checkout when any n
       qty: 2,
     },
     {
-      handle: 'custom-dtf-transfers-by-size',
-      name: 'Custom DTF Transfers by Size',
+      handle: 'dtf-22-gang-sheet-builder',
+      name: 'DTF 22 Gang Sheet Builder',
       price: 0,
       qty: 1,
     },
@@ -91,13 +91,15 @@ test('summarizeCart reports mixed-cart truthfully and blocks checkout when any n
   assert.equal(summary.totalQuantity, 4)
   assert.equal(summary.checkoutReadyQuantity, 2)
   assert.equal(summary.checkoutReadyLineCount, 1)
+  assert.equal(summary.artworkPendingLineCount, 1)
   assert.equal(summary.builderLineCount, 1)
   assert.equal(summary.reviewLineCount, 1)
   assert.equal(summary.subtotal, 49)
   assert.equal(summary.checkoutBlocked, true)
   assert.match(summary.statusMessage, /2 items are ready for checkout/i)
+  assert.match(summary.statusMessage, /1 line still needs artwork uploaded/i)
   assert.match(summary.statusMessage, /1 builder item needs a saved design/i)
-  assert.match(summary.statusMessage, /1 item still needs review/i)
+  assert.match(summary.statusMessage, /1 line is held back for launch review/i)
 })
 
 test('summarizeCart marks fully buyable carts as checkout-ready', () => {
@@ -110,6 +112,7 @@ test('summarizeCart marks fully buyable carts as checkout-ready', () => {
       merchandiseId: 'gid://shopify/ProductVariant/2',
       price: 18,
       qty: 1,
+      artworkUrl: 'https://blob.example/file.png',
     },
   ])
 
@@ -118,4 +121,25 @@ test('summarizeCart marks fully buyable carts as checkout-ready', () => {
   assert.equal(summary.builderLineCount, 0)
   assert.equal(summary.reviewLineCount, 0)
   assert.match(summary.statusMessage, /ready for secure shopify checkout/i)
+})
+
+test('itemHasArtwork and itemNeedsArtwork reflect direct-order upload state', () => {
+  const helpers = loadCartHelpers()
+
+  assert.equal(
+    helpers.itemNeedsArtwork({
+      handle: 'dtf-22-sheet',
+      merchandiseId: 'gid://shopify/ProductVariant/1',
+    }),
+    true,
+  )
+
+  assert.equal(
+    helpers.itemHasArtwork({
+      handle: 'dtf-22-sheet',
+      merchandiseId: 'gid://shopify/ProductVariant/1',
+      attributes: [{ key: 'Artwork upload URL', value: 'https://blob.example/a.png' }],
+    }),
+    true,
+  )
 })

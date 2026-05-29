@@ -3,28 +3,26 @@ const BRAND = 'Hatfield McCoy DTF'
 const LOCATION = 'Logan, West Virginia'
 const SHORT_LOCATION = 'Logan, WV'
 
-const COPY_REVIEW_TAGS = ['copy-needs-review', 'seo-draft']
-
 export function rewriteProductCopy(product, { sourceText = '' } = {}) {
   const family = customerProductType(product.productType)
   const lowPrice = (product.variants ?? []).some((variant) => variant.flags?.includes('low_price_floor_0_98'))
   const fulfillmentReview = product.tags?.includes('needs-fulfillment-review')
+  const heldBack = fulfillmentReview || product.tags?.includes('source-tag-kixxl-proxy-product')
   const displayTitle = String(product.title ?? '').trim()
   const safeTitle = escapeHtml(displayTitle)
-  const shortDescription = `${displayTitle} from ${BRAND}, produced in ${LOCATION} with nationwide shipping and friendly help for artwork, sizing, and order details.`
+  const shortDescription = `${displayTitle} from ${BRAND}, produced in ${LOCATION} with nationwide shipping, direct checkout, and artwork upload attached to the order.`
   const bodyHtml = [
     `<p>${safeTitle} is part of the ${BRAND} expanded catalog for shops, creators, teams, and local businesses that need reliable custom print work without guesswork.</p>`,
-    `<p>This ${family.toLowerCase()} option keeps pricing, production notes, and artwork questions easy to compare before anything moves to print.</p>`,
-    `<p>Choose a size or product option, then add it to the cart or send the details to Hatfield McCoy DTF for help with artwork, materials, and fulfillment.</p>`,
+    `<p>This ${family.toLowerCase()} option keeps pricing, production notes, and ordering steps easy to compare before you commit.</p>`,
+    `<p>Choose a size or product option, add it to the cart, upload artwork, and move straight into Shopify checkout.</p>`,
   ].join('\n')
 
   return {
-    status: 'needs-human-approval',
+    status: heldBack ? 'launch-hold' : 'launch-ready',
     shortDescription,
     bodyHtml,
     sourceTextReferenceLength: String(sourceText ?? '').length,
     approvalTags: [
-      ...COPY_REVIEW_TAGS,
       ...(fulfillmentReview ? ['fulfillment-needs-review'] : []),
       ...(lowPrice ? ['pricing-needs-review'] : []),
     ],
@@ -34,13 +32,13 @@ export function rewriteProductCopy(product, { sourceText = '' } = {}) {
 export function rewriteCollectionCopy(collection) {
   const title = escapeHtml(collection.title)
   return {
-    status: 'needs-human-approval',
-    shortDescription: `${title} from ${BRAND}, organized so customers can compare product families, materials, prices, and ordering paths quickly.`,
+    status: 'launch-ready',
+    shortDescription: `${title} from ${BRAND}, organized so customers can compare product families, materials, prices, and direct-order paths quickly.`,
     bodyHtml: [
       `<p>${title} brings related Hatfield McCoy DTF catalog options into one browseable lane for customers comparing sizes, materials, price points, and production fit.</p>`,
-      `<p>Browse this collection to find the best fit, then move into checkout or request help when artwork and fulfillment details need confirmation.</p>`,
+      `<p>Browse this collection to find the best fit, add the right option to the cart, and upload artwork before checkout.</p>`,
     ].join('\n'),
-    approvalTags: COPY_REVIEW_TAGS,
+    approvalTags: [],
   }
 }
 
@@ -51,16 +49,16 @@ export function rewriteServicePageCopy(page) {
   const title = isVirginiaLocation ? 'DTF Transfers Shipped Nationwide from West Virginia' : titleize(handle)
   const bodyHtml = [
     `<p>${BRAND} prints from ${SHORT_LOCATION} and ships nationwide, giving brands, teams, shops, and creators a direct path to custom DTF, UV DTF, sublimation, and specialty print products.</p>`,
-    `<p>Use this page to understand ordering steps, artwork expectations, and service options before sending a quote request or starting a build.</p>`,
+    `<p>Use this page to understand ordering steps, artwork prep expectations, and the fastest checkout path for each product family.</p>`,
   ].join('\n')
 
   return {
     handle,
     title,
-    status: 'needs-human-approval',
+    status: 'launch-ready',
     bodyHtml,
     sourceUrl: page.sourceUrl,
-    approvalTags: COPY_REVIEW_TAGS,
+    approvalTags: [],
   }
 }
 
@@ -90,20 +88,19 @@ export function buildApprovalState(item) {
   const tags = item.tags ?? []
   const variants = item.variants ?? []
   const blockers = []
-  if (tags.includes('copy-needs-review')) blockers.push('copy')
   if (tags.includes('needs-fulfillment-review') || tags.includes('fulfillment-needs-review')) blockers.push('fulfillment')
-  if (tags.includes('seo-draft')) blockers.push('seo')
-  if (variants.some((variant) => variant.flags?.includes('low_price_floor_0_98'))) blockers.push('low-price')
-  const publishable = tags.includes('publish-approved') && blockers.length === 0
+  if (tags.includes('source-tag-kixxl-proxy-product')) blockers.push('proxy')
+  if (String(item.productType || '').toLowerCase().includes('kixxl_rolling_canvas_product_hidden')) blockers.push('proxy')
+  const publishable = blockers.length === 0 && variants.length > 0
   return {
     blockers,
     publishable,
-    indexable: publishable && tags.includes('seo-ready'),
+    indexable: false,
   }
 }
 
 export function createProductSeoDescription(product, copy) {
-  return `${product.title} from ${BRAND} in ${LOCATION}. ${copy.shortDescription.replace(/\.$/, '')}. Ships nationwide with checkout and quote help available.`
+  return `${product.title} from ${BRAND} in ${LOCATION}. ${copy.shortDescription.replace(/\.$/, '')}. Ships nationwide with direct checkout and artwork upload.`
 }
 
 export function stripSourceCopy(html) {

@@ -30,6 +30,7 @@
     "catalog:export:dry": "node scripts/shopify/export-to-json.js --dry-run",
     "catalog:media:dry": "node scripts/shopify/upload-live-product-media.js --dry-run",
     "catalog:media:upload": "node scripts/shopify/upload-live-product-media.js",
+    "shopify:webhook:orders:artwork": "node scripts/shopify/register-order-artwork-webhook.js",
     "shopify:oauth:capture": "node scripts/shopify/capture-admin-token.js",
     "kixxl:discount": "node scripts/shopify/create-internal-discount.js",
     "kixxl:discount:dry": "node scripts/shopify/create-internal-discount.js --dry-run",
@@ -39,6 +40,7 @@
     "kixxl:verify:post": "node scripts/shopify/verify-kixxl-live.js --post-deploy"
   },
   "dependencies": {
+    "@vercel/blob": "^2.4.0",
     "dotenv": "^16.4.5"
   }
 }

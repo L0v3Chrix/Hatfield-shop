@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "purpose": "Runtime configuration for the Hatfield McCoy DTF storefront. Non-secret values only.",
+    "purpose": "Runtime configuration for the Hatfield McCoy DTF prototype. Non-secret values only — webhook proxy endpoint hides the real Discord URL.",
     "last_updated": "2026-05-19"
   },
   "kicksy": {
@@ -10,15 +10,16 @@
     "button_label": "Build Your Gang Sheet",
     "open_in_new_tab": false,
     "embed_url": null,
-    "fallback_mode": "builder_only",
+    "fallback_mode": "quote_form",
     "iframe_height": "800",
     "iframe_title": "Hatfield McCoy Gang Sheet Builder",
-    "comment": "Gangify direct-launch path. Headless builder CTAs go directly to /apps/gangify/builder with verified product/variant/price/store params. The Shopify Online Store product page remains a fallback landing path only; do not route headless traffic through it. Iframe is not the launch path (Shopify X-Frame-Options: DENY)."
+    "comment": "Kixxl direct-launch path. Headless builder CTAs go directly to /apps/gangify/builder with verified product/variant/price/store params. The Shopify Online Store product page remains a fallback landing path only; do not route headless traffic through it. Iframe is not the launch path (Shopify X-Frame-Options: DENY). Quote form stays as secondary fallback."
   },
-  "uploads": {
-    "endpoint": "/api/upload-artwork",
-    "max_bytes": 52428800,
-    "comment": "Artwork uploads land in durable storage and the returned URL is attached to Shopify cart line items."
+  "webhook": {
+    "endpoint": "/api/intake",
+    "timeout_ms": 15000,
+    "cooldown_seconds": 15,
+    "comment": "Form posts here. Vercel Edge Function at /api/intake.js proxies to Discord. Never expose the real webhook URL to the client bundle."
   },
   "brand_email": "HatfieldandMcCoydtf@gmail.com",
   "brand_email_display": "Hatfield McCoy DTF Support",
@@ -33,7 +34,7 @@
   },
   "site": {
     "url_staging": "https://hatfield-mccoy-dtf.futrbusiness.com",
-    "url_production": "https://www.hatfieldmccoydtf.com",
+    "url_production": null,
     "preview_flag_enabled": false,
     "preview_url_param": "preview",
     "comment": "Set preview_flag_enabled=true via URL param ?preview=true on any page to show the .proto-flag watermark."
@@ -69,7 +70,7 @@
   "shopify": {
     "store_domain": "hatfield-mccoy-dtf.myshopify.com",
     "storefront_api_version": "2025-01",
-    "storefront_access_token": "__SHOPIFY_STOREFRONT_PUBLIC_TOKEN__",
+    "storefront_access_token": "9f44d0ba20a37ac1a156473e40a40e76",
     "comment": "Public Storefront API token only. Do not place Admin API tokens or private Storefront tokens in this static config."
   }
 }

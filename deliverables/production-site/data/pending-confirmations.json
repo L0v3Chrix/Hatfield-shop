@@ -41,14 +41,25 @@
     ]
   },
   {
-    "id": "artwork-upload-endpoint",
-    "label": "Artwork upload endpoint",
+    "id": "form-endpoints",
+    "label": "Form endpoints",
     "owner": "Build team + Hatfield McCoy",
-    "buildFallback": "Direct ordering can stay in preview until the production artwork upload destination is verified.",
-    "launchRequirement": "Connect the direct-order artwork upload endpoint and confirm files are attached to order metadata.",
+    "buildFallback": "Forms may be built with disabled, draft, or test endpoints until the final destination is confirmed.",
+    "launchRequirement": "Connect quote, wholesale, artwork review, and contact forms to production destinations.",
     "affectedRoutes": [
+      "/contact",
+      "/wholesale"
+    ]
+  },
+  {
+    "id": "mobile-screenshot-review",
+    "label": "Mobile screenshot approval",
+    "owner": "Build team + Hatfield McCoy",
+    "buildFallback": "Mobile screenshots must be reviewed and accepted before deployment or indexing is opened.",
+    "launchRequirement": "Capture and approve mobile screenshots for home, shop, gang sheet builder, and cart flows before deployment.",
+    "affectedRoutes": [
+      "/",
       "/shop",
-      "/products/sample-dtf-transfer",
       "/gang-sheet-builder"
     ]
   },
@@ -56,7 +67,7 @@
     "id": "shopify-publish-approval",
     "label": "Shopify publish approval",
     "owner": "Jesse / Hatfield McCoy",
-    "buildFallback": "Products remain draft or launch-held until publication, media, and checkout verification are complete.",
+    "buildFallback": "Products remain draft or review-gated until approval is complete.",
     "launchRequirement": "Approve fulfillment, pricing, copy, images, SEO, and checkout for every published product.",
     "affectedRoutes": [
       "/shop",

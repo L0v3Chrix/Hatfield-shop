@@ -17,6 +17,7 @@
     "competitor:dtfva:import": "node scripts/competitor/dtfvirginia/import-drafts.js --execute",
     "competitor:dtfva:sync-metadata": "node scripts/competitor/dtfvirginia/import-drafts.js --execute --sync-metadata",
     "competitor:dtfva:test": "node --test scripts/competitor/dtfvirginia/test/*.test.js",
+    "images:coverage": "node scripts/competitor/dtfvirginia/asset-coverage-report.mjs",
     "production:prepare": "python3 scripts/prepare-shopify-images.py && node scripts/production-readiness.mjs",
     "production:verify": "node scripts/production-readiness.mjs --verify-only",
     "vercel-build": "node scripts/vercel-build.mjs",

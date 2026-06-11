@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T11:57:13.937Z",
+  "generatedAt": "2026-06-11T11:59:44.694Z",
   "summary": {
     "routes": 7,
     "htmlFiles": 297,
@@ -9,9 +9,9 @@
     "manifestWarnings": 0,
     "placeholders": 0,
     "pendingConfirmations": 6,
-    "pendingConfirmationMentions": 11,
+    "pendingConfirmationMentions": 7,
     "blockers": 0,
-    "reviewItems": 11
+    "reviewItems": 7
   },
   "gates": {
     "buildCanProceedBeforeClientConfirmations": true,
@@ -88,30 +88,6 @@
       "file": "deliverables/production-site/index.html",
       "line": 164,
       "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/production-readiness-checklist.html",
-      "line": 30,
-      "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/production-readiness-checklist.html",
-      "line": 31,
-      "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/production-readiness-checklist.html",
-      "line": 32,
-      "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/production-readiness-checklist.html",
-      "line": 33,
-      "token": "pending operational review"
     },
     {
       "type": "client-confirmation",

@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-06-11T17:55:51.260Z",
+  "endpointHost": "zm1evm-rd.myshopify.com",
+  "visibility": [
+    {
+      "handle": "dtf-22-sheet",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45063581860022"
+    },
+    {
+      "handle": "dtf-46-sheet",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45063582417078"
+    },
+    {
+      "handle": "glitter-dtf-22-sheet",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45063583137974"
+    },
+    {
+      "handle": "glow-dtf-22-sheet",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45063584743606"
+    },
+    {
+      "handle": "sublimation-24",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45063585300662"
+    },
+    {
+      "handle": "dtf-22-gang-sheet-builder",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45134982709430"
+    },
+    {
+      "handle": "dtf-46-gang-sheet-builder",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45135045198006"
+    },
+    {
+      "handle": "glitter-dtf-22-gang-sheet-builder",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45135046344886"
+    },
+    {
+      "handle": "glow-dtf-22-gang-sheet-builder",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45135055650998"
+    },
+    {
+      "handle": "sublimation-24-gang-sheet-builder",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45135059648694"
+    }
+  ],
+  "cartCreate": {
+    "normal": {
+      "ok": true,
+      "handle": "dtf-22-sheet",
+      "checkoutHost": "hatfield-mccoy-dtf.myshopify.com",
+      "userErrors": []
+    },
+    "builder": {
+      "apiAllows": true,
+      "handle": "dtf-22-gang-sheet-builder"
+    }
+  },
+  "secretScan": {
+    "rootsScanned": 2,
+    "hits": []
+  }
+}

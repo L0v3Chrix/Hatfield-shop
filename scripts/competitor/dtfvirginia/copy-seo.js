@@ -116,21 +116,26 @@ export function stripSourceCopy(html) {
 
 function buildSchema({ kind, title, description, canonicalUrl, price, availability }) {
   if (kind === 'product') {
-    return {
+    const schema = {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: title,
       description,
       brand: { '@type': 'Brand', name: BRAND },
-      offers: {
+    }
+    // No offers block without an honest price — quote-path products must not
+    // claim a $0.00 (or floored) price in structured data.
+    if (price) {
+      schema.offers = {
         '@type': 'Offer',
         url: canonicalUrl,
         priceCurrency: 'USD',
-        price: price ?? '0.00',
+        price,
         availability: `https://schema.org/${availability}`,
         itemCondition: 'https://schema.org/NewCondition',
-      },
+      }
     }
+    return schema
   }
   if (kind === 'collection') {
     return {

@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-06-11T17:48:52.236Z",
+  "model": "gemini-3-pro-image",
+  "results": [
+    {
+      "slug": "gen-service-sample-bundle",
+      "status": "ok",
+      "bytes": 2918433
+    }
+  ]
+}

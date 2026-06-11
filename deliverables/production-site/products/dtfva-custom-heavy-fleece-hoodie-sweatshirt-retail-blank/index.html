@@ -15,19 +15,24 @@
   <meta property="og:image" content="/assets/images/logo-primary.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preload" href="/assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/site.css">
   <style>
     .seo-page{width:min(1240px,calc(100% - 40px));margin:0 auto;padding:clamp(22px,3.4vw,38px) 0 82px;position:relative;z-index:1}
     .breadcrumbs{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:.84rem;margin-bottom:18px}
     .breadcrumbs a{color:var(--cyan);text-decoration:none;font-weight:800}
-    .seo-page h1{font-size:clamp(2.25rem,4.15vw,4rem);line-height:.98;margin:12px 0 12px;max-width:920px}
-    .seo-page h2{font-size:clamp(1.45rem,2.7vw,2.6rem);line-height:1}
+    .seo-page h1{font-size:clamp(2.25rem,4.15vw,4rem);line-height:1.08;letter-spacing:.015em;margin:12px 0 14px;max-width:920px}
+    .seo-page h2{font-size:clamp(1.45rem,2.7vw,2.6rem);line-height:1.14;letter-spacing:.015em}
     .product-hero,.collection-hero,.shop-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,360px);gap:28px;align-items:start;padding:18px 0 24px;border-bottom:1px solid var(--line)}
     .collection-hero{padding-bottom:24px}
     .collection-hero>img{width:100%;height:clamp(190px,24vw,300px);aspect-ratio:1/1;object-fit:contain;object-position:center;padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,.11);background:radial-gradient(circle at 50% 32%,rgba(255,255,255,.08),transparent 48%),var(--bg-3)}
     .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
     .status-strip,.approval-list,.catalog-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
     .status-strip span,.approval-list span,.catalog-meta span{min-height:28px;display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);border-radius:999px;padding:0 9px;font-weight:950;text-transform:uppercase;font-size:.68rem;color:var(--soft)}
+    .route-chip.route-order-online{border-color:rgba(57,255,20,.5);color:#b8ffba}
+    .route-chip.route-builder{border-color:rgba(0,229,255,.5);color:#aef0ff}
+    .route-chip.route-quote{border-color:rgba(233,30,140,.45);color:#ffc2e2}
     .purchase-panel,.content-band,.variant-band,.shop-stats,.collection-strip,.merchandising-band,.notes-panel,.merch-family-band,.order-path-band article{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.026));border-radius:8px;padding:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 18px 50px rgba(0,0,0,.24)}
     .purchase-panel{position:sticky;top:142px;display:grid;gap:12px;align-self:start}
     .purchase-panel img{width:100%;height:clamp(180px,23vw,260px);aspect-ratio:1/1;object-fit:contain;object-position:center;padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,.11);background:radial-gradient(circle at 50% 32%,rgba(255,255,255,.08),transparent 48%),var(--bg-3)}
@@ -114,6 +119,15 @@
     .cart-items{display:grid;gap:10px;align-content:start;overflow:auto}
     .cart-item{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:start;border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(255,255,255,.04)}
     .cart-item-thumb{width:40px;height:40px;border-radius:6px;background:linear-gradient(135deg,var(--magenta),var(--cyan))}
+    .cart-item-next{display:inline-flex;align-items:center;min-height:32px;margin-top:6px;padding:0 10px;border:1px solid rgba(0,229,255,.5);border-radius:6px;color:#aef0ff;font-weight:950;text-transform:uppercase;font-size:.66rem;text-decoration:none}
+    @media(max-width:480px){.cart-drawer{padding:14px}.qty-btn,.cart-remove{min-height:44px}.cart-item-next{min-height:40px}}
+    .seo-page p,.seo-page li{line-height:1.6}
+    h1,h2,h3{letter-spacing:.015em}
+    .btn,.buy-button,.quote-button,.filter-tab,.catalog-card,.family-card,.product-card,.collection-card{transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background-color .16s ease}
+    .buy-button:not(:disabled):hover,.quote-button:not(:disabled):hover,.btn:hover{transform:translateY(-1px)}
+    .catalog-card:hover,.family-card:hover,.product-card:hover,.collection-card:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,.42);border-color:rgba(0,229,255,.3)}
+    :focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
     .cart-item-name{font-weight:950}
     .cart-item-state{width:max-content;margin-top:6px;border-radius:999px;padding:4px 8px;font-size:.68rem;font-weight:950;text-transform:uppercase}
     .cart-item-state-checkout-ready{border:1px solid rgba(57,255,20,.32);background:rgba(57,255,20,.08);color:var(--lime)}
@@ -127,6 +141,11 @@
     .cart-footer{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:12px}
     .cart-total-row{display:flex;justify-content:space-between;font-size:1.1rem}
     .quote-link{color:var(--cyan);font-weight:900;text-align:center}
+    .cart-item-upload{display:grid;gap:6px;margin-top:8px}
+    .cart-upload-input{display:none}
+    .cart-upload-btn{width:max-content;border:1px solid rgba(0,229,255,.42);background:rgba(0,229,255,.08);color:var(--cyan);border-radius:999px;padding:6px 10px;font-weight:950;text-transform:uppercase}
+    .cart-upload-btn:disabled{opacity:.6;cursor:wait}
+    .cart-upload-status{color:var(--muted);font-size:.78rem;line-height:1.3}
     .cart-recommendations{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
     .cart-recommendations-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .cart-recommendations-head span{font-weight:950;text-transform:uppercase;font-size:.74rem;color:var(--soft)}
@@ -144,7 +163,7 @@
     .support-nav .wrap{display:grid;width:min(1240px,calc(100% - 40px));grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
     .mini-link{justify-content:center;text-align:center;white-space:normal}
     @media(max-width:1100px){.wrap{width:min(1240px,calc(100% - 28px))}.nav-link{min-width:0;justify-content:center;padding:0 8px;overflow-wrap:anywhere}.mini-link{justify-content:center;white-space:normal}}
-    @media(max-width:900px){.primary-nav,.support-nav{display:none!important}.top-nav{min-height:58px;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;padding:7px 0}.brand{order:2;justify-self:center;max-width:100%;gap:6px;white-space:nowrap}.brand img{width:28px;height:28px}.mobile-menu-toggle{order:1;justify-self:start;display:inline-flex;width:44px;min-width:44px;min-height:44px;padding:0;gap:0;border-color:rgba(0,229,255,.58);background:rgba(0,229,255,.1)}.mobile-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hamburger-lines{width:21px;height:15px}.hamburger-lines::before{top:5px}.nav-actions{order:3;justify-self:end;gap:0}.nav-actions .btn:not(.cart-btn){display:none}.cart-btn{min-height:44px;min-width:44px;width:44px;padding-inline:0;gap:0;border-radius:999px}.cart-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mobile-menu{z-index:21;padding:12px 14px 16px;background:linear-gradient(180deg,rgba(10,12,18,.985),rgba(10,12,18,.965));box-shadow:0 28px 72px rgba(0,0,0,.58)}.seo-page{width:min(1240px,calc(100% - 28px));padding:12px 0 40px}.breadcrumbs{gap:6px;font-size:.76rem;margin-bottom:12px}.shop-tools,.collection-strip,.shop-hero,.merchandising-band,.order-path-band{grid-template-columns:1fr}.product-hero,.shop-hero,.collection-hero{grid-template-columns:1fr;gap:10px;padding:8px 0 12px}.shop-page .shop-stats{display:none}.filter-tabs,.collection-subnav,.collection-links,.link-band{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.filter-tabs::-webkit-scrollbar,.collection-subnav::-webkit-scrollbar,.collection-links::-webkit-scrollbar,.link-band::-webkit-scrollbar{display:none}.filter-tab{flex:0 0 auto;min-height:34px;font-size:.68rem}.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.hero-actions .btn{flex:none;min-height:40px;padding-inline:12px}.status-strip,.approval-list,.catalog-meta{gap:6px;margin-top:10px}.status-strip span,.approval-list span,.catalog-meta span{min-height:24px;padding:0 8px;font-size:.58rem}.merch-family-band{padding:12px;margin-top:14px}.merch-family-band .section-heading{display:flex;align-items:start;justify-content:space-between;flex-direction:row;gap:10px;margin-bottom:10px}.merch-family-band .section-heading h2{font-size:1.24rem;line-height:1.08}.merch-family-band .eyebrow{display:none}.family-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.family-card{min-height:186px;align-content:start;gap:7px;padding:10px}.family-card img{height:88px;aspect-ratio:1/1;object-fit:contain}.family-card strong{font-size:.92rem;line-height:1.1}.family-card small{display:block;font-size:.74rem;line-height:1.3}.order-path-band{gap:10px}.order-path-band article{padding:14px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}.catalog-card{grid-template-rows:112px 1fr}.catalog-card img{height:112px;padding:10px}.catalog-card-body{padding:10px;gap:7px}.catalog-card h3{font-size:.92rem;line-height:1.08}.catalog-card p{display:none}.catalog-meta span:nth-child(2){display:none}.purchase-panel{position:static;display:flex;flex-direction:column;padding:12px;gap:8px}.purchase-panel .price{order:1;font-size:1.48rem}.purchase-panel p{order:2;margin:0}.purchase-panel img{order:3;height:188px;padding:10px}.variant-select{order:4}.feature-cta{order:5}.approval-list{order:6}.collection-links a,.link-band a{flex:0 0 auto}.collection-strip{padding:12px}.section-heading{align-items:start;flex-direction:column;gap:10px}.seo-page h1{font-size:clamp(1.72rem,7.4vw,2.18rem);line-height:1.02;letter-spacing:0;overflow-wrap:break-word}.seo-page .lede{font-size:.94rem;line-height:1.45}.content-band,.variant-band,.link-band{margin-top:16px}.table-wrap{border:1px solid var(--line);border-radius:8px}.table-wrap table{min-width:540px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.seo-page .product-card{grid-template-rows:112px 1fr;min-height:0}.seo-page .product-card img{height:112px;padding:10px}.product-card p{display:none}.collection-hero>img{height:196px;padding:10px}}
+    @media(max-width:900px){.primary-nav,.support-nav{display:none!important}.top-nav{min-height:58px;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;padding:7px 0}.brand{order:2;justify-self:center;max-width:100%;gap:6px;white-space:nowrap}.brand img{width:28px;height:28px}.mobile-menu-toggle{order:1;justify-self:start;display:inline-flex;width:44px;min-width:44px;min-height:44px;padding:0;gap:0;border-color:rgba(0,229,255,.58);background:rgba(0,229,255,.1)}.mobile-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hamburger-lines{width:21px;height:15px}.hamburger-lines::before{top:5px}.nav-actions{order:3;justify-self:end;gap:0}.nav-actions .btn:not(.cart-btn){display:none}.cart-btn{min-height:44px;min-width:44px;width:44px;padding-inline:0;gap:0;border-radius:999px}.cart-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mobile-menu{z-index:21;padding:12px 14px 16px;background:linear-gradient(180deg,rgba(10,12,18,.985),rgba(10,12,18,.965));box-shadow:0 28px 72px rgba(0,0,0,.58)}.seo-page{width:min(1240px,calc(100% - 28px));padding:12px 0 40px}.breadcrumbs{gap:6px;font-size:.76rem;margin-bottom:12px}.shop-tools,.collection-strip,.shop-hero,.merchandising-band,.order-path-band{grid-template-columns:1fr}.product-hero,.shop-hero,.collection-hero{grid-template-columns:1fr;gap:10px;padding:8px 0 12px}.shop-page .shop-stats{display:none}.filter-tabs,.collection-subnav,.collection-links,.link-band{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.filter-tabs::-webkit-scrollbar,.collection-subnav::-webkit-scrollbar,.collection-links::-webkit-scrollbar,.link-band::-webkit-scrollbar{display:none}.filter-tab{flex:0 0 auto;min-height:44px;font-size:.68rem}.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.hero-actions .btn{flex:none;min-height:40px;padding-inline:12px}.status-strip,.approval-list,.catalog-meta{gap:6px;margin-top:10px}.status-strip span,.approval-list span,.catalog-meta span{min-height:24px;padding:0 8px;font-size:.58rem}.merch-family-band{padding:12px;margin-top:14px}.merch-family-band .section-heading{display:flex;align-items:start;justify-content:space-between;flex-direction:row;gap:10px;margin-bottom:10px}.merch-family-band .section-heading h2{font-size:1.24rem;line-height:1.08}.merch-family-band .eyebrow{display:none}.family-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.family-card{min-height:186px;align-content:start;gap:7px;padding:10px}.family-card img{height:88px;aspect-ratio:1/1;object-fit:contain}.family-card strong{font-size:.92rem;line-height:1.1}.family-card small{display:block;font-size:.74rem;line-height:1.3}.order-path-band{gap:10px}.order-path-band article{padding:14px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}.catalog-card{grid-template-rows:112px 1fr}.catalog-card img{height:112px;padding:10px}.catalog-card-body{padding:10px;gap:7px}.catalog-card h3{font-size:.92rem;line-height:1.08}.catalog-card p{display:none}.catalog-meta .option-count{display:none}.purchase-panel{position:static;display:flex;flex-direction:column;padding:12px;gap:8px}.purchase-panel .price{order:1;font-size:1.48rem}.purchase-panel p{order:2;margin:0}.purchase-panel img{order:3;height:188px;padding:10px}.variant-select{order:4}.feature-cta{order:5}.approval-list{order:6}.collection-links a,.link-band a{flex:0 0 auto}.collection-strip{padding:12px}.section-heading{align-items:start;flex-direction:column;gap:10px}.seo-page h1{font-size:clamp(1.72rem,7.4vw,2.18rem);line-height:1.08;letter-spacing:.01em;overflow-wrap:break-word}.seo-page .lede{font-size:.94rem;line-height:1.45}.content-band,.variant-band,.link-band{margin-top:16px}.table-wrap{border:1px solid var(--line);border-radius:8px}.table-wrap table{min-width:540px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.seo-page .product-card{grid-template-rows:112px 1fr;min-height:0}.seo-page .product-card img{height:112px;padding:10px}.product-card p{display:none}.collection-hero>img{height:196px;padding:10px}}
     @media(max-width:680px){.hero-actions{grid-template-columns:1fr}.family-grid,.catalog-grid,.product-grid{grid-template-columns:1fr}.catalog-card,.seo-page .product-card{min-height:0}.catalog-card h3{font-size:.98rem}.catalog-card p,.product-card p{display:block;-webkit-line-clamp:3}.purchase-panel img{height:172px}.table-wrap table{min-width:520px}}
     @media(max-width:420px){.seo-page{width:min(1240px,calc(100% - 24px))}.catalog-card h3{font-size:.86rem}.status-strip span,.approval-list span,.catalog-meta span{font-size:.55rem}.purchase-panel img{height:180px}.collection-hero>img{height:180px}}
   </style>
@@ -159,14 +178,14 @@
     <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="hamburger-lines" aria-hidden="true"></span><span class="mobile-menu-label">Menu</span></button>
     <div class="nav-actions"><button class="btn secondary cart-btn" type="button" aria-label="Cart, 0 items"><span class="cart-btn-label">Cart</span><span class="cart-count-badge" id="cart-count">0</span></button><a class="btn primary" href="/gang-sheet-builder">Start order</a></div>
   </div>
-  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/products">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/contact">Quote help</a></div></nav>
+  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/products">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/guides#artwork">Artwork guide</a></div></nav>
   
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
     <a href="/shop">Shop</a>
     <a href="/gang-sheet-builder">Build a sheet</a>
-    <a href="/collections/dtfva-dtf-transfers">DTF transfers</a>
-    <a href="/collections/dtfva-uv-dtf-transfers">UV DTF / stickers</a>
-    <a href="/collections/dtfva-custom-t-shirts">Apparel / blanks</a>
+    <a href="/collections/dtf-transfers">DTF transfers</a>
+    <a href="/collections/glitter-dtf">Glitter DTF</a>
+    <a href="/collections/sublimation">Sublimation</a>
     <a href="/wholesale">Wholesale</a>
     <a href="/guides">Guides</a>
     <a href="/contact">Contact</a>
@@ -177,28 +196,28 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/shop">Shop</a><span>/</span><a href="/products">Products</a><span>/</span><span>Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank</span></nav>
         <section class="product-hero">
           <div>
-            <p class="eyebrow">Apparel · Logan, WV production</p>
+            <p class="eyebrow">Apparel &amp; blanks · Logan, WV production</p>
             <h1>Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank</h1>
-            <p class="lede">Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping and friendly help for artwork, sizing, and order details.</p>
-            <div class="status-strip" aria-label="Approval status">
-              <span>Quote help</span>
+            <p class="lede">Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
+            <div class="status-strip" aria-label="Ordering path">
+              <span class="route-chip route-quote">Request a quote</span>
               <span>From $44.00</span>
               <span>48 options</span>
               <span>Custom Print Product</span>
             </div>
             <div class="hero-actions">
               <a class="btn primary" href="#variants">Choose options</a>
-              <a class="btn secondary" href="/contact">Ask about this product</a>
+              <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
             </div>
           </div>
           <div class="purchase-panel">
-            <img src="/assets/shopify-images/blank-sweatshirt-hero.webp" width="900" height="900" alt="Blank sweatshirt ready for custom transfer printing" loading="eager" decoding="async">
+            <img src="/assets/shopify-images/hoodies-blank-hero.webp" width="900" height="900" alt="Blank hoodies ready for custom transfers" loading="eager" decoding="async">
             <span class="price">From $44.00</span>
-            <p>Choose an option and send it to Hatfield McCoy DTF so we can confirm artwork, production details, and timing.</p>
+            <p>Send the artwork and details — the shop will quote the right setup and turnaround.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BLACK">XS / Black - Size: XS · Color: Black - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_ASPHALT">XS / Asphalt - Size: XS · Color: Asphalt - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BONE">XS / Bone - Size: XS · Color: Bone - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_HEATHER_GREY">XS / Heather Grey - Size: XS · Color: Heather Grey - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_LIEUTENANT">XS / Lieutenant - Size: XS · Color: Lieutenant - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_SEA_BLUE">XS / Sea Blue - Size: XS · Color: Sea Blue - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_BLACK">S / Black - Size: S · Color: Black - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_ASPHALT">S / Asphalt - Size: S · Color: Asphalt - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_BONE">S / Bone - Size: S · Color: Bone - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_HEATHER_GREY">S / Heather Grey - Size: S · Color: Heather Grey - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_LIEUTENANT">S / Lieutenant - Size: S · Color: Lieutenant - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_SEA_BLUE">S / Sea Blue - Size: S · Color: Sea Blue - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_BLACK">M / Black - Size: M · Color: Black - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_ASPHALT">M / Asphalt - Size: M · Color: Asphalt - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_BONE">M / Bone - Size: M · Color: Bone - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_HEATHER_GREY">M / Heather Grey - Size: M · Color: Heather Grey - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_LIEUTENANT">M / Lieutenant - Size: M · Color: Lieutenant - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_SEA_BLUE">M / Sea Blue - Size: M · Color: Sea Blue - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_BLACK">L / Black - Size: L · Color: Black - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_ASPHALT">L / Asphalt - Size: L · Color: Asphalt - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_BONE">L / Bone - Size: L · Color: Bone - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_HEATHER_GREY">L / Heather Grey - Size: L · Color: Heather Grey - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_LIEUTENANT">L / Lieutenant - Size: L · Color: Lieutenant - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_SEA_BLUE">L / Sea Blue - Size: L · Color: Sea Blue - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_BLACK">XL / Black - Size: XL · Color: Black - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_ASPHALT">XL / Asphalt - Size: XL · Color: Asphalt - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_BONE">XL / Bone - Size: XL · Color: Bone - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_HEATHER_GREY">XL / Heather Grey - Size: XL · Color: Heather Grey - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_LIEUTENANT">XL / Lieutenant - Size: XL · Color: Lieutenant - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_SEA_BLUE">XL / Sea Blue - Size: XL · Color: Sea Blue - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_BLACK">2XL / Black - Size: 2XL · Color: Black - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_ASPHALT">2XL / Asphalt - Size: 2XL · Color: Asphalt - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_BONE">2XL / Bone - Size: 2XL · Color: Bone - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_HEATHER_GREY">2XL / Heather Grey - Size: 2XL · Color: Heather Grey - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_LIEUTENANT">2XL / Lieutenant - Size: 2XL · Color: Lieutenant - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_SEA_BLUE">2XL / Sea Blue - Size: 2XL · Color: Sea Blue - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_BLACK">3XL / Black - Size: 3XL · Color: Black - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_ASPHALT">3XL / Asphalt - Size: 3XL · Color: Asphalt - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_BONE">3XL / Bone - Size: 3XL · Color: Bone - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_HEATHER_GREY">3XL / Heather Grey - Size: 3XL · Color: Heather Grey - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_LIEUTENANT">3XL / Lieutenant - Size: 3XL · Color: Lieutenant - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_SEA_BLUE">3XL / Sea Blue - Size: 3XL · Color: Sea Blue - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_BLACK">4XL / Black - Size: 4XL · Color: Black - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_ASPHALT">4XL / Asphalt - Size: 4XL · Color: Asphalt - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_BONE">4XL / Bone - Size: 4XL · Color: Bone - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_HEATHER_GREY">4XL / Heather Grey - Size: 4XL · Color: Heather Grey - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_LIEUTENANT">4XL / Lieutenant - Size: 4XL · Color: Lieutenant - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_SEA_BLUE">4XL / Sea Blue - Size: 4XL · Color: Sea Blue - $51.00</option></select></label>
-            <button class="quote-button feature-cta" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XS / Black" data-price="44.00" data-merchandise-id="gid://shopify/ProductVariant/45145070338230" data-checkout-ready="false">Request product help</button>
+            <a class="quote-button feature-cta" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a>
             <div class="approval-list">
-              <span>Artwork guidance</span><span>Production support</span><span>Nationwide shipping</span>
+              <span>Artwork upload in cart</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
           </div>
         </section>
@@ -207,19 +226,19 @@
             <p class="eyebrow">Product details</p>
             <h2>Built for clear ordering.</h2>
             <p>Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank is part of the Hatfield McCoy DTF expanded catalog for shops, creators, teams, and local businesses that need reliable custom print work without guesswork.</p>
-<p>This custom print product option keeps pricing, production notes, and artwork questions easy to compare before anything moves to print.</p>
-<p>Choose a size or product option, then add it to the cart or send the details to Hatfield McCoy DTF for help with artwork, materials, and fulfillment.</p>
+<p>This custom print product option keeps pricing, production notes, and ordering steps easy to compare before you commit.</p>
+<p>Choose a size or product option, add it to the cart, upload artwork, and move straight into Shopify checkout.</p>
           </article>
           <aside class="notes-panel">
             <p class="eyebrow">Artwork and production notes</p>
             <ul>
-              <li>Upload or send clean artwork whenever possible.</li>
-              <li>Exact colors, placement, sizing, and material needs can be confirmed before production.</li>
+              <li>Upload clean artwork in the cart before checkout.</li>
+              <li>Exact colors, placement, sizing, and material details travel with the order metadata.</li>
               <li>Local pickup and shipped order paths can be coordinated from Logan, WV.</li>
             </ul>
           </aside>
         </section>
-        <section class="link-band" aria-label="Related resources"><a href="/products">Shop all products</a><a href="/collections/dtfva-dtf-transfers">DTF transfer collections</a><a href="/collections/dtfva-gang-sheet">Gang sheet options</a><a href="/pages/dtf-transfer-pressing-instructions-step-by-step-guide">Pressing guide</a></section>
+        <section class="link-band" aria-label="Related resources"><a href="/products">Shop all products</a><a href="/collections/dtf-transfers">DTF transfer collections</a><a href="/gang-sheet-builder">Gang sheet options</a><a href="/guides">Pressing guide</a></section>
         <section class="variant-band" id="variants">
           <div class="section-heading">
             <div>
@@ -234,289 +253,289 @@
               <td>XS / Black</td>
               <td>Size: XS · Color: Black</td>
               <td>$44.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XS / Black" data-price="44.00" data-merchandise-id="gid://shopify/ProductVariant/45145070338230" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XS / Asphalt</td>
               <td>Size: XS · Color: Asphalt</td>
               <td>$44.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XS / Asphalt" data-price="44.00" data-merchandise-id="gid://shopify/ProductVariant/45145070370998" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XS / Bone</td>
               <td>Size: XS · Color: Bone</td>
               <td>$44.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XS / Bone" data-price="44.00" data-merchandise-id="gid://shopify/ProductVariant/45145070403766" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XS / Heather Grey</td>
               <td>Size: XS · Color: Heather Grey</td>
               <td>$44.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XS / Heather Grey" data-price="44.00" data-merchandise-id="gid://shopify/ProductVariant/45145070436534" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XS / Lieutenant</td>
               <td>Size: XS · Color: Lieutenant</td>
               <td>$44.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XS / Lieutenant" data-price="44.00" data-merchandise-id="gid://shopify/ProductVariant/45145070469302" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XS / Sea Blue</td>
               <td>Size: XS · Color: Sea Blue</td>
               <td>$44.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XS / Sea Blue" data-price="44.00" data-merchandise-id="gid://shopify/ProductVariant/45145070502070" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>S / Black</td>
               <td>Size: S · Color: Black</td>
               <td>$45.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="S / Black" data-price="45.00" data-merchandise-id="gid://shopify/ProductVariant/45145070534838" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>S / Asphalt</td>
               <td>Size: S · Color: Asphalt</td>
               <td>$45.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="S / Asphalt" data-price="45.00" data-merchandise-id="gid://shopify/ProductVariant/45145070567606" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>S / Bone</td>
               <td>Size: S · Color: Bone</td>
               <td>$45.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="S / Bone" data-price="45.00" data-merchandise-id="gid://shopify/ProductVariant/45145070600374" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>S / Heather Grey</td>
               <td>Size: S · Color: Heather Grey</td>
               <td>$45.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="S / Heather Grey" data-price="45.00" data-merchandise-id="gid://shopify/ProductVariant/45145070633142" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>S / Lieutenant</td>
               <td>Size: S · Color: Lieutenant</td>
               <td>$45.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="S / Lieutenant" data-price="45.00" data-merchandise-id="gid://shopify/ProductVariant/45145070665910" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>S / Sea Blue</td>
               <td>Size: S · Color: Sea Blue</td>
               <td>$45.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="S / Sea Blue" data-price="45.00" data-merchandise-id="gid://shopify/ProductVariant/45145070698678" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>M / Black</td>
               <td>Size: M · Color: Black</td>
               <td>$46.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="M / Black" data-price="46.00" data-merchandise-id="gid://shopify/ProductVariant/45145070731446" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>M / Asphalt</td>
               <td>Size: M · Color: Asphalt</td>
               <td>$46.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="M / Asphalt" data-price="46.00" data-merchandise-id="gid://shopify/ProductVariant/45145070764214" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>M / Bone</td>
               <td>Size: M · Color: Bone</td>
               <td>$46.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="M / Bone" data-price="46.00" data-merchandise-id="gid://shopify/ProductVariant/45145070796982" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>M / Heather Grey</td>
               <td>Size: M · Color: Heather Grey</td>
               <td>$46.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="M / Heather Grey" data-price="46.00" data-merchandise-id="gid://shopify/ProductVariant/45145070829750" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>M / Lieutenant</td>
               <td>Size: M · Color: Lieutenant</td>
               <td>$46.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="M / Lieutenant" data-price="46.00" data-merchandise-id="gid://shopify/ProductVariant/45145070862518" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>M / Sea Blue</td>
               <td>Size: M · Color: Sea Blue</td>
               <td>$46.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="M / Sea Blue" data-price="46.00" data-merchandise-id="gid://shopify/ProductVariant/45145070895286" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>L / Black</td>
               <td>Size: L · Color: Black</td>
               <td>$47.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="L / Black" data-price="47.00" data-merchandise-id="gid://shopify/ProductVariant/45145070928054" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>L / Asphalt</td>
               <td>Size: L · Color: Asphalt</td>
               <td>$47.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="L / Asphalt" data-price="47.00" data-merchandise-id="gid://shopify/ProductVariant/45145070960822" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>L / Bone</td>
               <td>Size: L · Color: Bone</td>
               <td>$47.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="L / Bone" data-price="47.00" data-merchandise-id="gid://shopify/ProductVariant/45145070993590" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>L / Heather Grey</td>
               <td>Size: L · Color: Heather Grey</td>
               <td>$47.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="L / Heather Grey" data-price="47.00" data-merchandise-id="gid://shopify/ProductVariant/45145071026358" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>L / Lieutenant</td>
               <td>Size: L · Color: Lieutenant</td>
               <td>$47.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="L / Lieutenant" data-price="47.00" data-merchandise-id="gid://shopify/ProductVariant/45145071059126" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>L / Sea Blue</td>
               <td>Size: L · Color: Sea Blue</td>
               <td>$47.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="L / Sea Blue" data-price="47.00" data-merchandise-id="gid://shopify/ProductVariant/45145071091894" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XL / Black</td>
               <td>Size: XL · Color: Black</td>
               <td>$48.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XL / Black" data-price="48.00" data-merchandise-id="gid://shopify/ProductVariant/45145071124662" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XL / Asphalt</td>
               <td>Size: XL · Color: Asphalt</td>
               <td>$48.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XL / Asphalt" data-price="48.00" data-merchandise-id="gid://shopify/ProductVariant/45145071157430" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XL / Bone</td>
               <td>Size: XL · Color: Bone</td>
               <td>$48.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XL / Bone" data-price="48.00" data-merchandise-id="gid://shopify/ProductVariant/45145071190198" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XL / Heather Grey</td>
               <td>Size: XL · Color: Heather Grey</td>
               <td>$48.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XL / Heather Grey" data-price="48.00" data-merchandise-id="gid://shopify/ProductVariant/45145071222966" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XL / Lieutenant</td>
               <td>Size: XL · Color: Lieutenant</td>
               <td>$48.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XL / Lieutenant" data-price="48.00" data-merchandise-id="gid://shopify/ProductVariant/45145071255734" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>XL / Sea Blue</td>
               <td>Size: XL · Color: Sea Blue</td>
               <td>$48.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="XL / Sea Blue" data-price="48.00" data-merchandise-id="gid://shopify/ProductVariant/45145071288502" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>2XL / Black</td>
               <td>Size: 2XL · Color: Black</td>
               <td>$49.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="2XL / Black" data-price="49.00" data-merchandise-id="gid://shopify/ProductVariant/45145071321270" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>2XL / Asphalt</td>
               <td>Size: 2XL · Color: Asphalt</td>
               <td>$49.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="2XL / Asphalt" data-price="49.00" data-merchandise-id="gid://shopify/ProductVariant/45145071354038" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>2XL / Bone</td>
               <td>Size: 2XL · Color: Bone</td>
               <td>$49.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="2XL / Bone" data-price="49.00" data-merchandise-id="gid://shopify/ProductVariant/45145071386806" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>2XL / Heather Grey</td>
               <td>Size: 2XL · Color: Heather Grey</td>
               <td>$49.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="2XL / Heather Grey" data-price="49.00" data-merchandise-id="gid://shopify/ProductVariant/45145071419574" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>2XL / Lieutenant</td>
               <td>Size: 2XL · Color: Lieutenant</td>
               <td>$49.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="2XL / Lieutenant" data-price="49.00" data-merchandise-id="gid://shopify/ProductVariant/45145071452342" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>2XL / Sea Blue</td>
               <td>Size: 2XL · Color: Sea Blue</td>
               <td>$49.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="2XL / Sea Blue" data-price="49.00" data-merchandise-id="gid://shopify/ProductVariant/45145071485110" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>3XL / Black</td>
               <td>Size: 3XL · Color: Black</td>
               <td>$50.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="3XL / Black" data-price="50.00" data-merchandise-id="gid://shopify/ProductVariant/45145071517878" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>3XL / Asphalt</td>
               <td>Size: 3XL · Color: Asphalt</td>
               <td>$50.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="3XL / Asphalt" data-price="50.00" data-merchandise-id="gid://shopify/ProductVariant/45145071550646" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>3XL / Bone</td>
               <td>Size: 3XL · Color: Bone</td>
               <td>$50.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="3XL / Bone" data-price="50.00" data-merchandise-id="gid://shopify/ProductVariant/45145071583414" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>3XL / Heather Grey</td>
               <td>Size: 3XL · Color: Heather Grey</td>
               <td>$50.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="3XL / Heather Grey" data-price="50.00" data-merchandise-id="gid://shopify/ProductVariant/45145071616182" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>3XL / Lieutenant</td>
               <td>Size: 3XL · Color: Lieutenant</td>
               <td>$50.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="3XL / Lieutenant" data-price="50.00" data-merchandise-id="gid://shopify/ProductVariant/45145071648950" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>3XL / Sea Blue</td>
               <td>Size: 3XL · Color: Sea Blue</td>
               <td>$50.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="3XL / Sea Blue" data-price="50.00" data-merchandise-id="gid://shopify/ProductVariant/45145071681718" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>4XL / Black</td>
               <td>Size: 4XL · Color: Black</td>
               <td>$51.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_BLACK" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="4XL / Black" data-price="51.00" data-merchandise-id="gid://shopify/ProductVariant/45145071714486" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>4XL / Asphalt</td>
               <td>Size: 4XL · Color: Asphalt</td>
               <td>$51.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_ASPHALT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="4XL / Asphalt" data-price="51.00" data-merchandise-id="gid://shopify/ProductVariant/45145071747254" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>4XL / Bone</td>
               <td>Size: 4XL · Color: Bone</td>
               <td>$51.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_BONE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="4XL / Bone" data-price="51.00" data-merchandise-id="gid://shopify/ProductVariant/45145071780022" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>4XL / Heather Grey</td>
               <td>Size: 4XL · Color: Heather Grey</td>
               <td>$51.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_HEATHER_GREY" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="4XL / Heather Grey" data-price="51.00" data-merchandise-id="gid://shopify/ProductVariant/45145071812790" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>4XL / Lieutenant</td>
               <td>Size: 4XL · Color: Lieutenant</td>
               <td>$51.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_LIEUTENANT" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="4XL / Lieutenant" data-price="51.00" data-merchandise-id="gid://shopify/ProductVariant/45145071845558" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr>
             <tr>
               <td>4XL / Sea Blue</td>
               <td>Size: 4XL · Color: Sea Blue</td>
               <td>$51.00</td>
-              <td><button class="quote-button" data-handle="dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank" data-sku="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_SEA_BLUE" data-name="Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank" data-variant="4XL / Sea Blue" data-price="51.00" data-merchandise-id="gid://shopify/ProductVariant/45145071878326" data-checkout-ready="false">Request help</button></td>
+              <td><a class="quote-button table-link" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a></td>
             </tr></tbody></table></div>
         </section>
       </main>
@@ -526,6 +545,10 @@
           var cta = document.querySelector('.feature-cta');
           var buttons = Array.prototype.slice.call(document.querySelectorAll('#variants button[data-sku]'));
           if (!select || !cta || cta.tagName === 'A') return;
+          var quoteHref = '/contact?product=' + encodeURIComponent(cta.dataset.handle || '');
+          cta.addEventListener('click', function(){
+            if (cta.classList.contains('quote-button')) window.location.href = quoteHref;
+          });
           select.addEventListener('change', function(){
             var match = buttons.find(function(button){ return button.dataset.sku === select.value; });
             if (!match) return;
@@ -535,8 +558,18 @@
             cta.dataset.price = match.dataset.price || '0';
             cta.dataset.merchandiseId = match.dataset.merchandiseId || '';
             cta.dataset.checkoutReady = match.dataset.checkoutReady || 'false';
-            cta.className = (match.dataset.checkoutReady === 'true' ? 'buy-button' : 'quote-button') + ' feature-cta';
-            cta.textContent = match.dataset.checkoutReady === 'true' ? 'Add selected option' : 'Request product help';
+            if (match.dataset.checkoutReady === 'true') {
+              cta.className = 'buy-button feature-cta';
+              cta.textContent = 'Add selected option';
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
+            } else {
+              cta.className = 'quote-button feature-cta';
+              cta.textContent = 'Request a quote';
+              cta.setAttribute('type', 'button');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
+            }
           });
         })();
       </script>
@@ -547,7 +580,7 @@
     <div><span class="eyebrow">Order cart</span><h2>Cart</h2></div>
     <button class="cart-close" type="button" aria-label="Close cart">Close</button>
   </div>
-  <p class="cart-empty" id="cart-empty">Add products for checkout or quote review. Custom and review-only items can stay in the cart while we confirm artwork and fulfillment.</p>
+  <p class="cart-empty" id="cart-empty">Add products to start your order. Upload artwork inside the cart before checkout.</p>
   <div class="cart-summary-slot" id="cart-summary" hidden></div>
   <div class="cart-items" id="cart-items"></div>
   <div class="cart-recommendations-slot" id="cart-recommendations" hidden></div>
@@ -555,7 +588,7 @@
     <div class="cart-total-row"><span>Total</span><strong id="cart-total">$0.00</strong></div>
     <p class="cart-note" id="cart-note" hidden></p>
     <button class="buy-button" id="cart-checkout" type="button" disabled>Checkout</button>
-    <a class="quote-link" href="/contact">Need a quote or artwork review?</a>
+    <a class="quote-link" href="/guides#artwork">Artwork prep guide</a>
   </div>
 </aside>
 <script src="/assets/js/cart-helpers.js"></script>
@@ -587,7 +620,7 @@
 </script>
 <script>
   document.addEventListener('click', function(event) {
-    var button = event.target.closest('.buy-button:not(:disabled), .quote-button:not(:disabled)');
+    var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
     event.preventDefault();
     window.Cart.add({
@@ -599,6 +632,7 @@
       qty: 1,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
+      requiresArtwork: button.dataset.requiresArtwork !== 'false',
       attributes: [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }]
     });
     if (window.openCart) window.openCart();

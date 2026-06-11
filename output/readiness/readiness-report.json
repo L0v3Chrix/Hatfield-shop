@@ -1,0 +1,144 @@
+{
+  "generatedAt": "2026-06-11T18:42:01.506Z",
+  "summary": {
+    "routes": 7,
+    "htmlFiles": 296,
+    "sourceImages": 57,
+    "optimizedImages": 243,
+    "manifestImages": 80,
+    "manifestWarnings": 0,
+    "placeholders": 0,
+    "pendingConfirmations": 6,
+    "pendingConfirmationMentions": 0,
+    "blockers": 0,
+    "reviewItems": 0
+  },
+  "gates": {
+    "buildCanProceedBeforeClientConfirmations": true,
+    "previewNoindex": true,
+    "sourceAssetsPreserved": true,
+    "shopifyDraftControlled": true,
+    "competitorCopyPublishBlocked": true
+  },
+  "routes": [
+    {
+      "route": "/",
+      "output": "index.html",
+      "title": "Hatfield McCoy DTF | Custom DTF Transfers and Gang Sheets"
+    },
+    {
+      "route": "/shop",
+      "output": "shop/index.html",
+      "title": "Shop DTF Transfers | Hatfield McCoy DTF"
+    },
+    {
+      "route": "/products/sample-dtf-transfer",
+      "output": "products/sample-dtf-transfer/index.html",
+      "title": "Custom DTF Transfers by Size | Hatfield McCoy DTF"
+    },
+    {
+      "route": "/gang-sheet-builder",
+      "output": "gang-sheet-builder/index.html",
+      "title": "Gang Sheet Builder | Hatfield McCoy DTF"
+    },
+    {
+      "route": "/wholesale",
+      "output": "wholesale/index.html",
+      "title": "Wholesale DTF Transfers | Hatfield McCoy DTF"
+    },
+    {
+      "route": "/guides",
+      "output": "guides/index.html",
+      "title": "DTF Pressing and Artwork Guides | Hatfield McCoy DTF"
+    },
+    {
+      "route": "/contact",
+      "output": "contact/index.html",
+      "title": "Contact Hatfield McCoy DTF"
+    }
+  ],
+  "blockers": [],
+  "reviewItems": [],
+  "assetWorkflow": {
+    "sourceDirectory": "Shopify-images-good",
+    "optimizedDirectory": "deliverables/brand-design-pack/assets/shopify-images",
+    "manifest": "deliverables/brand-design-pack/assets/shopify-images/manifest.json",
+    "policy": "Original source assets are preserved. Production preview references optimized derivatives."
+  },
+  "pendingConfirmations": [
+    {
+      "id": "pickup-details",
+      "label": "Pickup details",
+      "owner": "Jesse / Hatfield McCoy",
+      "buildFallback": "Pickup address, hours, cutoff policy, and response time are pending Hatfield McCoy confirmation.",
+      "launchRequirement": "Confirm pickup address, hours, order cutoff policy, and expected response time.",
+      "affectedRoutes": [
+        "/contact",
+        "/"
+      ]
+    },
+    {
+      "id": "pressing-instructions",
+      "label": "DTF pressing instructions",
+      "owner": "Jesse / Hatfield McCoy",
+      "buildFallback": "Final time, temperature, pressure, peel, and wash guidance is pending Hatfield McCoy confirmation.",
+      "launchRequirement": "Confirm final time, temperature, pressure, peel, and wash instructions for published guide copy.",
+      "affectedRoutes": [
+        "/guides"
+      ]
+    },
+    {
+      "id": "wholesale-minimum",
+      "label": "Wholesale minimum order threshold",
+      "owner": "Jesse / Hatfield McCoy",
+      "buildFallback": "Minimum order threshold is pending Hatfield McCoy confirmation.",
+      "launchRequirement": "Confirm minimum order threshold or remove the threshold claim entirely.",
+      "affectedRoutes": [
+        "/wholesale"
+      ]
+    },
+    {
+      "id": "wholesale-turnaround",
+      "label": "Wholesale turnaround and cutoff policy",
+      "owner": "Jesse / Hatfield McCoy",
+      "buildFallback": "Turnaround and cutoff policy are pending operational review.",
+      "launchRequirement": "Confirm wholesale turnaround language and cutoff policy before publishing.",
+      "affectedRoutes": [
+        "/wholesale"
+      ]
+    },
+    {
+      "id": "artwork-upload-endpoint",
+      "label": "Artwork upload endpoint",
+      "owner": "Build team + Hatfield McCoy",
+      "buildFallback": "Direct ordering can stay in preview until the production artwork upload destination is verified.",
+      "launchRequirement": "Connect the direct-order artwork upload endpoint and confirm files are attached to order metadata.",
+      "affectedRoutes": [
+        "/shop",
+        "/products/sample-dtf-transfer",
+        "/gang-sheet-builder"
+      ]
+    },
+    {
+      "id": "shopify-publish-approval",
+      "label": "Shopify publish approval",
+      "owner": "Jesse / Hatfield McCoy",
+      "buildFallback": "Products remain draft or launch-held until publication, media, and checkout verification are complete.",
+      "launchRequirement": "Approve fulfillment, pricing, copy, images, SEO, and checkout for every published product.",
+      "affectedRoutes": [
+        "/shop",
+        "/products/sample-dtf-transfer",
+        "/gang-sheet-builder"
+      ]
+    }
+  ],
+  "readyToBuild": true,
+  "readyToImplement": true,
+  "readyToLaunch": false,
+  "launchBlockers": [
+    "Client confirmation required for operational public claims; build may proceed with fallback copy.",
+    "Shopify products must remain draft until copy, fulfillment, pricing, imagery, SEO, and checkout approvals pass.",
+    "robots.txt is intentionally Disallow: / for preview; launch requires approval-gated sitemap and robots update.",
+    "Artwork upload and Shopify publication must be verified before public launch."
+  ]
+}

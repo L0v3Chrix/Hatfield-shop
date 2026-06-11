@@ -50,8 +50,8 @@
 
   // Defaults — used if data files missing (Stream B delivers real ones).
   const DEFAULT_CONFIG = {
-    kicksy: { embed_url: null, fallback_mode: 'quote_form', iframe_height: '800', iframe_title: 'Gang Sheet Builder' },
-    webhook: { endpoint: '/api/intake' },
+    kicksy: { embed_url: null, fallback_mode: 'builder_only', iframe_height: '800', iframe_title: 'Gang Sheet Builder' },
+    uploads: { endpoint: '/api/upload-artwork', max_bytes: 52428800 },
     brand_email: 'HatfieldandMcCoydtf@gmail.com',
     socials: { instagram: null, facebook: null, tiktok: null },
     site: { url_staging: 'https://hatfield-mccoy-dtf.futrbusiness.com' }
@@ -135,7 +135,7 @@
       heading: 'Custom Gang Sheet Builder',
       body: 'Drop your artwork onto the 22″ canvas, arrange until the sheet is full, and submit your layout. We print exactly what you lay out. No minimums.',
       fallback_heading: 'Design Your Gang Sheet',
-      fallback_body: 'Tell us what you want to fit onto a custom sheet. We\'ll send a quote and layout preview within 1 business day.'
+      fallback_body: 'Use one of the fixed-size builder routes below, upload artwork, and finish through Shopify checkout.'
     }
   };
 
@@ -856,13 +856,29 @@
     return label;
   }
 
-  function handleFile(labelNode, file) {
+  async function uploadArtwork(file) {
+    const endpoint = (((state.config || {}).uploads || {}).endpoint) || '/api/upload-artwork';
+    const maxBytes = Number((((state.config || {}).uploads || {}).max_bytes) || 50 * 1024 * 1024);
+    if (!file) throw new Error('Choose an artwork file first.');
+    if (file.size > maxBytes) throw new Error('File is too large. Max 50MB.');
+    const form = new FormData();
+    form.append('file', file, file.name);
+    const response = await fetch(endpoint, { method: 'POST', body: form });
+    const payload = await response.json().catch(() => null);
+    if (!response.ok || !payload || !payload.url) {
+      throw new Error((payload && payload.error) || 'Artwork upload failed.');
+    }
+    return payload;
+  }
+
+  async function handleFile(labelNode, file) {
     const fn = labelNode.querySelector('.upload-filename');
     const err = labelNode.querySelector('.upload-error');
     if (err) err.textContent = '';
     if (fn) fn.textContent = '';
     labelNode.classList.remove('has-error', 'has-file');
     delete labelNode.dataset.file;
+    delete labelNode.dataset.fileUrl;
 
     if (!file) return;
 
@@ -879,9 +895,17 @@
       return;
     }
 
-    if (fn) fn.textContent = file.name + ' · ' + (file.size / 1024 / 1024).toFixed(2) + ' MB';
-    labelNode.dataset.file = file.name;
-    labelNode.classList.add('has-file');
+    if (fn) fn.textContent = 'Uploading ' + file.name + '…';
+    try {
+      const uploaded = await uploadArtwork(file);
+      if (fn) fn.textContent = (uploaded.fileName || file.name) + ' · ' + (file.size / 1024 / 1024).toFixed(2) + ' MB';
+      labelNode.dataset.file = uploaded.fileName || file.name;
+      labelNode.dataset.fileUrl = uploaded.url;
+      labelNode.classList.add('has-file');
+    } catch (uploadError) {
+      if (err) err.textContent = uploadError && uploadError.message ? uploadError.message : 'Artwork upload failed.';
+      labelNode.classList.add('has-error');
+    }
   }
 
   function onAddToCart(col) {
@@ -916,6 +940,7 @@
     // File from upload box
     const upload = document.querySelector('.upload-box[data-sku="' + col.slug + '"]');
     const file = upload && upload.dataset.file ? upload.dataset.file : null;
+    const fileUrl = upload && upload.dataset.fileUrl ? upload.dataset.fileUrl : '';
 
     if (window.Cart) {
       window.Cart.add({
@@ -927,12 +952,15 @@
         qty: qty,
         thumb: coverForCollection(col),
         file: file,
+        artworkUrl: fileUrl,
+        requiresArtwork: true,
         merchandiseId: merchandiseId,
         attributes: [
           { key: 'SKU', value: sku },
           { key: 'Size', value: size || 'n/a' },
           { key: 'Color', value: color || 'n/a' },
-          { key: 'Artwork file', value: file || 'not uploaded in browser checkout' }
+          { key: 'Artwork file', value: file || 'not uploaded yet' },
+          { key: 'Artwork upload URL', value: fileUrl || 'n/a' }
         ]
       });
     }
@@ -949,24 +977,23 @@
     const mode = k.mode;
     clear(host);
 
-    // Mode: redirect → render a launch button + retain the quote form as a secondary path.
+    // Mode: redirect → render launch buttons for the fixed-size builder routes.
     // This is the current Kixxl integration (Shopify-hosted builder page; iframe is blocked by
     // Shopify's X-Frame-Options, so we deep-link instead).
     if (mode === 'redirect' && redirectUrl) {
       host.appendChild(buildLaunchButton(redirectUrl, k.button_label || 'Launch Gang Sheet Builder', !!k.open_in_new_tab));
-      const alt = el('div', { class: 'builder-alt' });
-      alt.appendChild(el('h3', { text: 'Need a custom quote instead?' }));
-      alt.appendChild(buildQuoteForm());
-      host.appendChild(alt);
       rewriteBuilderAnchors(redirectUrl, !!k.open_in_new_tab);
       installBuilderClickDelegate();
       return;
     }
 
     // Legacy iframe mode (retained for backward compat — not used with current Kixxl).
-    const forceFallback = k.fallback_mode === 'quote_form' && (!embedUrl || embedUrl === pendingEmbedSentinel);
-    if (!embedUrl || embedUrl === pendingEmbedSentinel || forceFallback) {
-      host.appendChild(buildQuoteForm());
+    if (!embedUrl || embedUrl === pendingEmbedSentinel) {
+      const note = el('div', { class: 'builder-alt' });
+      note.appendChild(el('h3', { text: 'Builder route is being finalized.' }));
+      note.appendChild(el('p', { text: 'Use the fixed-size gang sheet products in the catalog until the live builder route is available here.' }));
+      note.appendChild(el('a', { class: 'btn btn-primary', href: '/shop', text: 'Browse fixed-size products' }));
+      host.appendChild(note);
       return;
     }
 

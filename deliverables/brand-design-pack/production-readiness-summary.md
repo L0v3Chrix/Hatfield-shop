@@ -1,6 +1,6 @@
 # Hatfield McCoy DTF Production Readiness Summary
 
-Generated: 2026-05-29T04:00:54.740Z
+Generated: 2026-06-11T18:42:01.506Z
 
 ## Status
 
@@ -9,8 +9,8 @@ Generated: 2026-05-29T04:00:54.740Z
 - Ready to launch: no
 - Production preview routes: 7
 - Source images preserved: 57
-- Optimized WebP derivatives: 180
-- Manifest images: 57
+- Optimized WebP derivatives: 243
+- Manifest images: 80
 - Manifest warnings: 0
 - Automated blockers: 0
 - Client-confirmation placeholders: 0

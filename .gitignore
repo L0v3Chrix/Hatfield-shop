@@ -25,3 +25,6 @@ yarn-debug.log*
 .idea/
 *.swp
 .vercel
+
+# Image-curation candidates (only approved images enter Shopify-images-good/)
+tmp/

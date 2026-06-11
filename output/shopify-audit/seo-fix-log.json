@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-06-11T16:51:32.375Z",
+  "applied": [
+    {
+      "handle": "dtf-22-sheet",
+      "id": "gid://shopify/Product/8780862292150",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "DTF 22\" Sheet | Hatfield McCoy DTF",
+        "description": "Order DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "dtf-46-sheet",
+      "id": "gid://shopify/Product/8780862324918",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "DTF 46\" Sheet | Hatfield McCoy DTF",
+        "description": "Order DTF 46\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "glitter-dtf-22-sheet",
+      "id": "gid://shopify/Product/8780862357686",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "Glitter DTF 22\" Sheet | Hatfield McCoy DTF",
+        "description": "Order Glitter DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "glow-dtf-22-sheet",
+      "id": "gid://shopify/Product/8780862390454",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "Glow DTF 22\" Sheet | Hatfield McCoy DTF",
+        "description": "Order Glow DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "sublimation-24",
+      "id": "gid://shopify/Product/8780862423222",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "Sublimation 24\" | Hatfield McCoy DTF",
+        "description": "Order Sublimation 24\" from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "dtf-22-gang-sheet-builder",
+      "id": "gid://shopify/Product/8801329938614",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "DTF 22\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for DTF 22\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "dtf-46-gang-sheet-builder",
+      "id": "gid://shopify/Product/8801338130614",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "DTF 46\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for DTF 46\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "glitter-dtf-22-gang-sheet-builder",
+      "id": "gid://shopify/Product/8801338327222",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "Glitter DTF 22\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for Glitter DTF 22\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "glow-dtf-22-gang-sheet-builder",
+      "id": "gid://shopify/Product/8801338884278",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "Glow DTF 22\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for Glow DTF 22\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
+      }
+    },
+    {
+      "handle": "sublimation-24-gang-sheet-builder",
+      "id": "gid://shopify/Product/8801339211958",
+      "before": {
+        "title": null,
+        "description": null
+      },
+      "after": {
+        "title": "Sublimation 24\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for Sublimation 24\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
+      }
+    }
+  ]
+}

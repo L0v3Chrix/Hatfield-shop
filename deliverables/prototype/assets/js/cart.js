@@ -463,6 +463,12 @@
         : 'Review required';
     body.appendChild(el('div', { class: 'cart-item-state cart-item-state-' + lineState, text: lineBadgeText }));
 
+    if (lineState === 'builder-required') {
+      body.appendChild(el('a', { class: 'cart-item-next', href: '/gang-sheet-builder', text: 'Finish in builder' }));
+    } else if (lineState === 'review-required') {
+      body.appendChild(el('a', { class: 'cart-item-next', href: '/contact', text: 'Request a quote' }));
+    }
+
     if (lineState === 'checkout-ready' && cartHelpers.itemNeedsArtwork(item)) {
       const uploadWrap = el('div', { class: 'cart-item-upload' });
       const uploadLabel = el('label', { class: 'cart-upload-label' });
@@ -530,7 +536,8 @@
     controls.appendChild(remove);
     body.appendChild(controls);
 
-    const price = el('div', { class: 'cart-item-price', text: money(item.price * item.qty) });
+    const lineTotal = Number(item.price) * item.qty;
+    const price = el('div', { class: 'cart-item-price', text: lineTotal > 0 ? money(lineTotal) : 'Quote' });
 
     row.appendChild(thumb);
     row.appendChild(body);

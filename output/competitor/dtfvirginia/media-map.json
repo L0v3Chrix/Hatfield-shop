@@ -3,7 +3,7 @@
     "handle": "dtfva-42-custom-sublimation-gang-sheets-builder",
     "image": "/assets/shopify-images/42-gang-sheet-builder.png",
     "alt": "42 inch gang sheet builder sample",
-    "family": "sublimation-tumbler",
+    "family": "gen-sublimation-tumbler",
     "grade": "curated"
   },
   {
@@ -66,21 +66,21 @@
     "handle": "dtfva-custom-sublimation-transfers-by-size",
     "image": "/assets/shopify-images/custom-sublimation-transfers-by-size.png",
     "alt": "Custom sublimation transfers by size sample",
-    "family": "sublimation-tumbler",
+    "family": "gen-sublimation-tumbler",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-glitter-dtf-transfer-by-size",
     "image": "/assets/shopify-images/custom-glitter-dtf-transfer-by-size.png",
     "alt": "Custom glitter DTF transfer by size sample",
-    "family": "glitter-film-sheet",
+    "family": "gen-glitter-film-sheet",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size",
     "image": "/assets/shopify-images/custom-flouresent-dtf-transfers-by-size.png",
     "alt": "Custom fluorescent DTF transfers by size sample",
-    "family": "glow-film-sheet",
+    "family": "gen-glow-film-sheet",
     "grade": "curated"
   },
   {
@@ -99,16 +99,16 @@
   },
   {
     "handle": "dtfva-fluorescent-dtf-printing-build-bold-bright-designs",
-    "image": "/assets/images/product-graphics/glow-film-sheet.webp",
+    "image": "/assets/shopify-images/gen-glow-film-sheet-card.webp",
     "alt": "Fluorescent DTF Printing – Build Bold, Bright, and Stunning designs — Hatfield McCoy DTF",
-    "family": "glow-film-sheet",
-    "grade": "generic"
+    "family": "gen-glow-film-sheet",
+    "grade": "good"
   },
   {
     "handle": "dtfva-glitter-dtf-transfers-builder",
     "image": "/assets/shopify-images/22-glitter-dtf-transfer-builder.png",
     "alt": "22 inch glitter DTF transfer builder sample",
-    "family": "glitter-film-sheet",
+    "family": "gen-glitter-film-sheet",
     "grade": "curated"
   },
   {
@@ -122,28 +122,28 @@
     "handle": "dtfva-next-level-3600",
     "image": "/assets/shopify-images/next-level-3600-cotton-crew-t-shirt.png",
     "alt": "Next Level 3600 cotton crew t-shirt sample",
-    "family": "apparel-samples-stack",
+    "family": "gen-apparel-samples-stack",
     "grade": "curated"
   },
   {
     "handle": "dtfva-gildan-64000",
     "image": "/assets/shopify-images/gildan-64000-unisex-softstyle-t-shirt.png",
     "alt": "Gildan 64000 unisex softstyle t-shirt sample",
-    "family": "apparel-samples-stack",
+    "family": "gen-apparel-samples-stack",
     "grade": "curated"
   },
   {
     "handle": "dtfva-bella-canvas-3001",
     "image": "/assets/shopify-images/bella-canvas-3001-unisex-jersey-tee.png",
     "alt": "BELLA + CANVAS 3001 unisex jersey tee sample",
-    "family": "apparel-samples-stack",
+    "family": "gen-apparel-samples-stack",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank",
     "image": "/assets/shopify-images/custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank.png",
     "alt": "Custom Shaka Wear drop shoulder cropped t-shirt sample",
-    "family": "apparel-samples-stack",
+    "family": "gen-apparel-samples-stack",
     "grade": "curated"
   },
   {
@@ -164,21 +164,21 @@
     "handle": "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank",
     "image": "/assets/shopify-images/custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank.png",
     "alt": "Custom Shaka Wear Max heavyweight short sleeve t-shirt sample",
-    "family": "apparel-samples-stack",
+    "family": "gen-apparel-samples-stack",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt",
     "image": "/assets/shopify-images/custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt.png",
     "alt": "Custom American Apparel heavyweight cotton long sleeve t-shirt sample",
-    "family": "apparel-samples-stack",
+    "family": "gen-apparel-samples-stack",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
     "image": "/assets/shopify-images/custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee.png",
     "alt": "Custom Los Angeles Apparel 1865GD garment dye sleeveless tee sample",
-    "family": "apparel-samples-stack",
+    "family": "gen-apparel-samples-stack",
     "grade": "curated"
   },
   {
@@ -227,7 +227,7 @@
     "handle": "dtfva-perforated-window-vinyl",
     "image": "/assets/shopify-images/perforated-window-vinyl-window-perf-graphics.png",
     "alt": "Perforated window vinyl sample",
-    "family": "window-vinyl-decal",
+    "family": "gen-perf-window-vinyl",
     "grade": "curated"
   },
   {
@@ -246,9 +246,9 @@
   },
   {
     "handle": "dtfva-custom-hockey-pucks",
-    "image": "/assets/shopify-images/h-m-jersey-card.webp",
+    "image": "/assets/shopify-images/gen-hockey-puck-card.webp",
     "alt": "Custom Hockey Pucks — Hatfield McCoy DTF",
-    "family": "h-m-jersey",
+    "family": "gen-hockey-puck",
     "grade": "good"
   },
   {
@@ -302,37 +302,37 @@
   },
   {
     "handle": "dtfva-glitter-dtf-gang-sheet",
-    "image": "/assets/images/product-graphics/glitter-film-sheet.webp",
+    "image": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
     "alt": "Glitter DTF Gang Sheet 22\" — Hatfield McCoy DTF",
-    "family": "glitter-film-sheet",
-    "grade": "generic"
+    "family": "gen-glitter-film-sheet",
+    "grade": "good"
   },
   {
     "handle": "dtfva-sublimation-gang-sheets-bulk-printing",
     "image": "/assets/shopify-images/42-and-22-sublimation-gangsheet.png",
     "alt": "42 and 22 inch sublimation gang sheet sample",
-    "family": "sublimation-tumbler",
+    "family": "gen-sublimation-tumbler",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-sublimation-gang-sheets",
     "image": "/assets/shopify-images/42-and-22-sublimation-gangsheet.png",
     "alt": "42 and 22 inch sublimation gang sheet sample",
-    "family": "sublimation-tumbler",
+    "family": "gen-sublimation-tumbler",
     "grade": "curated"
   },
   {
     "handle": "dtfva-sublimation-gang-sheet-builder",
-    "image": "/assets/images/product-graphics/sublimation-tumbler.webp",
+    "image": "/assets/shopify-images/gen-sublimation-tumbler-card.webp",
     "alt": "22\" Custom Sublimation Gang Sheet Builder — Hatfield McCoy DTF",
-    "family": "sublimation-tumbler",
-    "grade": "generic"
+    "family": "gen-sublimation-tumbler",
+    "grade": "good"
   },
   {
     "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
     "image": "/assets/shopify-images/fluorescent-dtf-printing-bold-bright-stunning.png",
     "alt": "Fluorescent DTF printing bold bright and stunning sample",
-    "family": "glow-film-sheet",
+    "family": "gen-glow-film-sheet",
     "grade": "curated"
   },
   {

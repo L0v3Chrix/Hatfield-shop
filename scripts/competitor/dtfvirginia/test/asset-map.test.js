@@ -43,7 +43,7 @@ test('garment-dye apparel routes to apparel, not sublimation', () => {
     handle: 'dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee',
     title: 'Custom Los Angeles Apparel 1865GD Garment Dye Sleeveless Tee',
   })
-  assert.equal(family, 'apparel-samples-stack')
+  assert.equal(family, 'gen-apparel-samples-stack')
 })
 
 test('rush fee routes to the rush-order photo', () => {
@@ -93,6 +93,6 @@ test('curated overrides win the card slot and keep the rule-resolved hero', () =
     title: 'BELLA + CANVAS 3001 Unisex Jersey Tee',
   })
   assert.equal(card.src, HANDLE_IMAGE_OVERRIDES[handle].src)
-  assert.equal(family, 'apparel-samples-stack')
+  assert.equal(family, 'gen-apparel-samples-stack')
   assert.notEqual(hero.src, card.src)
 })

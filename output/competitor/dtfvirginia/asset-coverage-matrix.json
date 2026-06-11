@@ -1,32 +1,33 @@
 {
-  "generatedAt": "2026-06-11T11:56:57.198Z",
+  "generatedAt": "2026-06-11T17:54:45.324Z",
   "rollup": {
     "products": {
       "count": 57,
       "byGrade": {
         "curated": 30,
-        "generic": 6,
-        "good": 21
+        "generic": 3,
+        "good": 24
       },
       "byFamily": {
-        "sublimation-tumbler": 5,
+        "gen-sublimation-tumbler": 5,
         "big-gangsheet": 7,
         "custom-patches": 2,
         "hat-transfer": 1,
         "guru-pack": 3,
-        "glitter-film-sheet": 3,
-        "glow-film-sheet": 3,
+        "gen-glitter-film-sheet": 3,
+        "gen-glow-film-sheet": 3,
         "cute-sticker-sheet": 4,
         "quality-tags": 1,
-        "apparel-samples-stack": 7,
+        "gen-apparel-samples-stack": 7,
         "blank-sweatshirt": 1,
         "hoodies-blank": 1,
         "party-banner2": 1,
         "floor-graphic": 1,
-        "window-vinyl-decal": 3,
+        "window-vinyl-decal": 2,
+        "gen-perf-window-vinyl": 1,
         "softball": 1,
         "baseball": 1,
-        "h-m-jersey": 1,
+        "gen-hockey-puck": 1,
         "pickleball": 1,
         "h-m-tumblers": 1,
         "puff-shirt": 2,
@@ -38,25 +39,27 @@
     "collections": {
       "count": 38,
       "byGrade": {
-        "good": 14,
-        "generic": 24
+        "good": 19,
+        "generic": 19
       },
       "byFamily": {
-        "featured-merch-scene": 3,
+        "featured-merch-scene": 2,
         "uv-stickers": 5,
         "pro-vector": 1,
         "vibrant-transfer-stack": 8,
         "dtf-builder": 2,
         "dtf-printer": 1,
         "neon-items": 2,
+        "gen-coin-display": 1,
         "party-banner2": 1,
-        "glitter-football-tee": 8,
-        "sublimation-tumbler": 1,
-        "wide-format-roll": 1,
+        "glitter-football-tee": 2,
+        "gen-sublimation-tumbler": 1,
+        "gen-magnet-truck-door": 1,
         "h-m-jersey": 1,
-        "apparel-samples-stack": 1,
+        "gen-apparel-samples-stack": 1,
         "custom-patches": 1,
         "window-vinyl-decal": 1,
+        "gen-glitter-film-sheet": 6,
         "puff-shirt2": 1
       }
     }
@@ -66,12 +69,12 @@
       "handle": "dtfva-42-custom-sublimation-gang-sheets-builder",
       "title": "42\" Custom Sublimation Gang Sheet Builder",
       "ruleLabel": "Sublimation transfers",
-      "family": "sublimation-tumbler",
+      "family": "gen-sublimation-tumbler",
       "card": "/assets/shopify-images/42-gang-sheet-builder.png",
-      "hero": "/assets/images/product-graphics/sublimation-tumbler.webp",
+      "hero": "/assets/shopify-images/gen-sublimation-tumbler-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-sublimation-tumbler"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-dtf-gang-sheets-fast-reliable-transfer-printing",
@@ -165,34 +168,34 @@
       "handle": "dtfva-custom-sublimation-transfers-by-size",
       "title": "Custom Sublimation Transfers by Size",
       "ruleLabel": "Sublimation transfers",
-      "family": "sublimation-tumbler",
+      "family": "gen-sublimation-tumbler",
       "card": "/assets/shopify-images/custom-sublimation-transfers-by-size.png",
-      "hero": "/assets/images/product-graphics/sublimation-tumbler.webp",
+      "hero": "/assets/shopify-images/gen-sublimation-tumbler-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-sublimation-tumbler"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-glitter-dtf-transfer-by-size",
       "title": "Custom Glitter DTF Transfer by Size",
       "ruleLabel": "Specialty finish transfers",
-      "family": "glitter-film-sheet",
+      "family": "gen-glitter-film-sheet",
       "card": "/assets/shopify-images/custom-glitter-dtf-transfer-by-size.png",
-      "hero": "/assets/images/product-graphics/glitter-film-sheet.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-glitter-film-sheet"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size",
       "title": "Custom Fluorescent DTF Transfers by Size",
       "ruleLabel": "Fluorescent and neon transfers",
-      "family": "glow-film-sheet",
+      "family": "gen-glow-film-sheet",
       "card": "/assets/shopify-images/custom-flouresent-dtf-transfers-by-size.png",
-      "hero": "/assets/images/product-graphics/glow-film-sheet.webp",
+      "hero": "/assets/shopify-images/gen-glow-film-sheet-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-glow-film-sheet"
+      "planned": null
     },
     {
       "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
@@ -220,23 +223,23 @@
       "handle": "dtfva-fluorescent-dtf-printing-build-bold-bright-designs",
       "title": "Fluorescent DTF Printing – Build Bold, Bright, and Stunning designs",
       "ruleLabel": "Fluorescent and neon transfers",
-      "family": "glow-film-sheet",
-      "card": "/assets/images/product-graphics/glow-film-sheet.webp",
-      "hero": "/assets/images/product-graphics/glow-film-sheet.webp",
+      "family": "gen-glow-film-sheet",
+      "card": "/assets/shopify-images/gen-glow-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glow-film-sheet-hero.webp",
       "overridden": false,
-      "grade": "generic",
-      "planned": "gen-glow-film-sheet"
+      "grade": "good",
+      "planned": null
     },
     {
       "handle": "dtfva-glitter-dtf-transfers-builder",
       "title": "Glitter DTF Transfers 22\" Builder",
       "ruleLabel": "Specialty finish transfers",
-      "family": "glitter-film-sheet",
+      "family": "gen-glitter-film-sheet",
       "card": "/assets/shopify-images/22-glitter-dtf-transfer-builder.png",
-      "hero": "/assets/images/product-graphics/glitter-film-sheet.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-glitter-film-sheet"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-woven-labels",
@@ -253,45 +256,45 @@
       "handle": "dtfva-next-level-3600",
       "title": "Next Level 3600 - Cotton Crew T-Shirt",
       "ruleLabel": "Apparel blanks",
-      "family": "apparel-samples-stack",
+      "family": "gen-apparel-samples-stack",
       "card": "/assets/shopify-images/next-level-3600-cotton-crew-t-shirt.png",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-apparel-samples-stack"
+      "planned": null
     },
     {
       "handle": "dtfva-gildan-64000",
       "title": "Gildan 64000 - Unisex Softstyle® T-Shirt",
       "ruleLabel": "Apparel blanks",
-      "family": "apparel-samples-stack",
+      "family": "gen-apparel-samples-stack",
       "card": "/assets/shopify-images/gildan-64000-unisex-softstyle-t-shirt.png",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-apparel-samples-stack"
+      "planned": null
     },
     {
       "handle": "dtfva-bella-canvas-3001",
       "title": "BELLA + CANVAS 3001 - Unisex Jersey Tee",
       "ruleLabel": "Apparel blanks",
-      "family": "apparel-samples-stack",
+      "family": "gen-apparel-samples-stack",
       "card": "/assets/shopify-images/bella-canvas-3001-unisex-jersey-tee.png",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-apparel-samples-stack"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank",
       "title": "Custom Shaka Wear Drop Shoulder Cropped T-Shirt - Premium Blank",
       "ruleLabel": "Apparel blanks",
-      "family": "apparel-samples-stack",
+      "family": "gen-apparel-samples-stack",
       "card": "/assets/shopify-images/custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank.png",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-apparel-samples-stack"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496",
@@ -319,34 +322,34 @@
       "handle": "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank",
       "title": "Custom Shaka Wear Max Heavyweight Short Sleeve T-Shirt - Premium Blank",
       "ruleLabel": "Apparel blanks",
-      "family": "apparel-samples-stack",
+      "family": "gen-apparel-samples-stack",
       "card": "/assets/shopify-images/custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank.png",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-apparel-samples-stack"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt",
       "title": "Custom American Apparel Unisex Heavyweight Cotton Long Sleeve T-Shirt",
       "ruleLabel": "Apparel blanks",
-      "family": "apparel-samples-stack",
+      "family": "gen-apparel-samples-stack",
       "card": "/assets/shopify-images/custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt.png",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-apparel-samples-stack"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
       "title": "Custom Los Angeles Apparel 1865GD – Garment Dye Sleeveless Tee",
       "ruleLabel": "Apparel blanks",
-      "family": "apparel-samples-stack",
+      "family": "gen-apparel-samples-stack",
       "card": "/assets/shopify-images/custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee.png",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-apparel-samples-stack"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-dtf-gang-sheets-30-inches-builder",
@@ -418,9 +421,9 @@
       "handle": "dtfva-perforated-window-vinyl",
       "title": "Perforated Window Vinyl (Window Perf Graphics)",
       "ruleLabel": "Signage and magnets",
-      "family": "window-vinyl-decal",
+      "family": "gen-perf-window-vinyl",
       "card": "/assets/shopify-images/perforated-window-vinyl-window-perf-graphics.png",
-      "hero": "/assets/shopify-images/window-vinyl-decal-hero.webp",
+      "hero": "/assets/shopify-images/gen-perf-window-vinyl-hero.webp",
       "overridden": true,
       "grade": "curated",
       "planned": null
@@ -451,9 +454,9 @@
       "handle": "dtfva-custom-hockey-pucks",
       "title": "Custom Hockey Pucks",
       "ruleLabel": "Sports products",
-      "family": "h-m-jersey",
-      "card": "/assets/shopify-images/h-m-jersey-card.webp",
-      "hero": "/assets/shopify-images/h-m-jersey-hero.webp",
+      "family": "gen-hockey-puck",
+      "card": "/assets/shopify-images/gen-hockey-puck-card.webp",
+      "hero": "/assets/shopify-images/gen-hockey-puck-hero.webp",
       "overridden": false,
       "grade": "good",
       "planned": null
@@ -539,56 +542,56 @@
       "handle": "dtfva-glitter-dtf-gang-sheet",
       "title": "Glitter DTF Gang Sheet 22\"",
       "ruleLabel": "Specialty finish transfers",
-      "family": "glitter-film-sheet",
-      "card": "/assets/images/product-graphics/glitter-film-sheet.webp",
-      "hero": "/assets/images/product-graphics/glitter-film-sheet.webp",
+      "family": "gen-glitter-film-sheet",
+      "card": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "overridden": false,
-      "grade": "generic",
-      "planned": "gen-glitter-film-sheet"
+      "grade": "good",
+      "planned": null
     },
     {
       "handle": "dtfva-sublimation-gang-sheets-bulk-printing",
       "title": "22\" Sublimation Gang Sheets",
       "ruleLabel": "Sublimation transfers",
-      "family": "sublimation-tumbler",
+      "family": "gen-sublimation-tumbler",
       "card": "/assets/shopify-images/42-and-22-sublimation-gangsheet.png",
-      "hero": "/assets/images/product-graphics/sublimation-tumbler.webp",
+      "hero": "/assets/shopify-images/gen-sublimation-tumbler-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-sublimation-tumbler"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-sublimation-gang-sheets",
       "title": "42\" Custom Sublimation Gang Sheets",
       "ruleLabel": "Sublimation transfers",
-      "family": "sublimation-tumbler",
+      "family": "gen-sublimation-tumbler",
       "card": "/assets/shopify-images/42-and-22-sublimation-gangsheet.png",
-      "hero": "/assets/images/product-graphics/sublimation-tumbler.webp",
+      "hero": "/assets/shopify-images/gen-sublimation-tumbler-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-sublimation-tumbler"
+      "planned": null
     },
     {
       "handle": "dtfva-sublimation-gang-sheet-builder",
       "title": "22\" Custom Sublimation Gang Sheet Builder",
       "ruleLabel": "Sublimation transfers",
-      "family": "sublimation-tumbler",
-      "card": "/assets/images/product-graphics/sublimation-tumbler.webp",
-      "hero": "/assets/images/product-graphics/sublimation-tumbler.webp",
+      "family": "gen-sublimation-tumbler",
+      "card": "/assets/shopify-images/gen-sublimation-tumbler-card.webp",
+      "hero": "/assets/shopify-images/gen-sublimation-tumbler-hero.webp",
       "overridden": false,
-      "grade": "generic",
-      "planned": "gen-sublimation-tumbler"
+      "grade": "good",
+      "planned": null
     },
     {
       "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
       "title": "Fluorescent DTF Printing - Bold, Bright, and Stunning",
       "ruleLabel": "Fluorescent and neon transfers",
-      "family": "glow-film-sheet",
+      "family": "gen-glow-film-sheet",
       "card": "/assets/shopify-images/fluorescent-dtf-printing-bold-bright-stunning.png",
-      "hero": "/assets/images/product-graphics/glow-film-sheet.webp",
+      "hero": "/assets/shopify-images/gen-glow-film-sheet-hero.webp",
       "overridden": true,
       "grade": "curated",
-      "planned": "gen-glow-film-sheet"
+      "planned": null
     },
     {
       "handle": "dtfva-custom-dtf-gang-sheets-your-colors-deserve-to-pop",
@@ -766,9 +769,9 @@
     {
       "handle": "dtfva-commemorative-coins",
       "title": "Commemorative Coins",
-      "family": "featured-merch-scene",
-      "card": "/assets/shopify-images/featured-merch-scene-card.webp",
-      "hero": "/assets/shopify-images/featured-merch-scene-hero.webp",
+      "family": "gen-coin-display",
+      "card": "/assets/shopify-images/gen-coin-display-card.webp",
+      "hero": "/assets/shopify-images/gen-coin-display-hero.webp",
       "grade": "good",
       "planned": null
     },
@@ -787,7 +790,7 @@
       "family": "glitter-football-tee",
       "card": "/assets/shopify-images/glitter-football-tee-card.webp",
       "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
-      "grade": "generic",
+      "grade": "good",
       "planned": null
     },
     {
@@ -820,11 +823,11 @@
     {
       "handle": "dtfva-dye-sublimation-transfers",
       "title": "Custom Dye Sublimation Transfers",
-      "family": "sublimation-tumbler",
-      "card": "/assets/images/product-graphics/sublimation-tumbler.webp",
-      "hero": "/assets/images/product-graphics/sublimation-tumbler.webp",
-      "grade": "generic",
-      "planned": "gen-sublimation-tumbler"
+      "family": "gen-sublimation-tumbler",
+      "card": "/assets/shopify-images/gen-sublimation-tumbler-card.webp",
+      "hero": "/assets/shopify-images/gen-sublimation-tumbler-hero.webp",
+      "grade": "good",
+      "planned": null
     },
     {
       "handle": "dtfva-gang-sheet",
@@ -832,17 +835,17 @@
       "family": "glitter-football-tee",
       "card": "/assets/shopify-images/glitter-football-tee-card.webp",
       "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
-      "grade": "generic",
+      "grade": "good",
       "planned": null
     },
     {
       "handle": "dtfva-custom-magnets",
       "title": "Custom Magnets",
-      "family": "wide-format-roll",
-      "card": "/assets/images/product-graphics/wide-format-roll.webp",
-      "hero": "/assets/images/product-graphics/wide-format-roll.webp",
-      "grade": "generic",
-      "planned": "gen-wide-format-roll"
+      "family": "gen-magnet-truck-door",
+      "card": "/assets/shopify-images/gen-magnet-truck-door-card.webp",
+      "hero": "/assets/shopify-images/gen-magnet-truck-door-hero.webp",
+      "grade": "good",
+      "planned": null
     },
     {
       "handle": "dtfva-custom-sports-balls-pucks",
@@ -865,11 +868,11 @@
     {
       "handle": "dtfva-custom-t-shirts",
       "title": "Custom T-Shirts",
-      "family": "apparel-samples-stack",
-      "card": "/assets/images/product-graphics/apparel-samples-stack.webp",
-      "hero": "/assets/images/product-graphics/apparel-samples-stack.webp",
-      "grade": "generic",
-      "planned": "gen-apparel-samples-stack"
+      "family": "gen-apparel-samples-stack",
+      "card": "/assets/shopify-images/gen-apparel-samples-stack-card.webp",
+      "hero": "/assets/shopify-images/gen-apparel-samples-stack-hero.webp",
+      "grade": "good",
+      "planned": null
     },
     {
       "handle": "dtfva-custom-uv-printed-patches",
@@ -919,36 +922,36 @@
     {
       "handle": "dtfva-glitter-dtf",
       "title": "Glitter And Gold Glitter DTF Transfers",
-      "family": "glitter-football-tee",
-      "card": "/assets/shopify-images/glitter-football-tee-card.webp",
-      "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
+      "family": "gen-glitter-film-sheet",
+      "card": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "grade": "generic",
       "planned": null
     },
     {
       "handle": "dtfva-glitter",
       "title": "Glitter DTF Transfers And Gold Glitter DTF Transfers",
-      "family": "glitter-football-tee",
-      "card": "/assets/shopify-images/glitter-football-tee-card.webp",
-      "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
+      "family": "gen-glitter-film-sheet",
+      "card": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "grade": "generic",
       "planned": null
     },
     {
       "handle": "dtfva-gold-foil-gang-sheets",
       "title": "Gold Foil DTF Transfers – Gold Foil Sheets & Gang Sheet Builder",
-      "family": "glitter-football-tee",
-      "card": "/assets/shopify-images/glitter-football-tee-card.webp",
-      "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
+      "family": "gen-glitter-film-sheet",
+      "card": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "grade": "generic",
       "planned": null
     },
     {
       "handle": "dtfva-gold-glitter-dtf",
       "title": "Gold Glitter DTF Transfers",
-      "family": "glitter-football-tee",
-      "card": "/assets/shopify-images/glitter-football-tee-card.webp",
-      "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
+      "family": "gen-glitter-film-sheet",
+      "card": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "grade": "generic",
       "planned": null
     },
@@ -991,18 +994,18 @@
     {
       "handle": "dtfva-silver-foil-gang-sheets",
       "title": "Silver Foil DTF Transfers – Silver Sheets & Gang Sheet Builder",
-      "family": "glitter-football-tee",
-      "card": "/assets/shopify-images/glitter-football-tee-card.webp",
-      "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
+      "family": "gen-glitter-film-sheet",
+      "card": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "grade": "generic",
       "planned": null
     },
     {
       "handle": "dtfva-spangle-transfers",
       "title": "Spangle DTF Transfers",
-      "family": "glitter-football-tee",
-      "card": "/assets/shopify-images/glitter-football-tee-card.webp",
-      "hero": "/assets/shopify-images/glitter-football-tee-hero.webp",
+      "family": "gen-glitter-film-sheet",
+      "card": "/assets/shopify-images/gen-glitter-film-sheet-card.webp",
+      "hero": "/assets/shopify-images/gen-glitter-film-sheet-hero.webp",
       "grade": "generic",
       "planned": null
     },

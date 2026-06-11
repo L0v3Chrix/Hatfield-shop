@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-06-11T16:19:06.063Z",
+  "gate": "LOCAL_READY",
+  "local": [
+    {
+      "name": "unit + generator tests",
+      "ok": true
+    },
+    {
+      "name": "production build",
+      "ok": true
+    },
+    {
+      "name": "readiness audit + copy scanner",
+      "ok": true
+    },
+    {
+      "name": "round-trip integrity",
+      "ok": true
+    }
+  ],
+  "network": [
+    {
+      "name": "shopify state audit",
+      "ok": true
+    },
+    {
+      "name": "storefront visibility + cartCreate",
+      "ok": true
+    },
+    {
+      "name": "builder live verification",
+      "ok": true
+    }
+  ]
+}

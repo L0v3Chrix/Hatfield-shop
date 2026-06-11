@@ -19,8 +19,8 @@
 | Action | Unblocks | How |
 |---|---|---|
 | Set a valid Gemini API key for the `gemini-nanobanana-mcp` server | D4/D5 image generation (23 photoreal replacements/gaps; prompts ready) | MCP server env config, then rerun the generation batch |
-| Provision Admin token `write_products` (+ theme write scope if API path used) | B3 media replace on live products; B1 SEO-field fixes; E2 theme work | Shopify Dev Dashboard app scopes |
-| Approve + run media replace | Live products currently carry one generic illustration each | `npm run catalog:media:dry` → approval → upload with `--replace` (B3 adds the mode after D4/D5 land) |
+| ~~Provision `write_products`~~ **DONE 2026-06-11** — client-credentials auth carries write scope (proven by live mutations) | — | — |
+| ~~Media replace~~ **DONE 2026-06-11** — all 10 ACTIVE products upgraded to real photos (`--replace` mode; inverse in `output/shopify-audit/media-replace-log.json`); SEO title/description filled on all 10 (inverse in `seo-fix-log.json`). Re-run after D4/D5 imagery lands for the photoreal generation set | — | — |
 | Run webhook registration on the deployed endpoint | Order-artwork sync (`api/shopify-order-artwork-sync.js` is inert; registry is empty) | `npm run shopify:webhook:orders:artwork` with `SHOPIFY_ORDER_ARTWORK_WEBHOOK_URL` + HMAC secret set in Vercel |
 | Staging runtime checks (C2) | Builder click capture at 390/1440 + designless add-to-cart → checkout must be blocked by the app's order validation | On the Vercel preview; if validation does NOT block, hide native buy buttons on builder templates in a theme DUPLICATE (E2) |
 | Verify Vercel project env | First branch-preview deploy (`vercel-build.mjs` throws without `SHOPIFY_STOREFRONT_PUBLIC_TOKEN`) | Vercel dashboard |

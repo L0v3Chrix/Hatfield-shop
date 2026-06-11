@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T16:19:00.414Z",
+  "generatedAt": "2026-06-11T16:56:10.608Z",
   "shop": {
     "name": "Hatfield Mccoy DTF",
     "domain": "zm1evm-rd.myshopify.com",
@@ -31,18 +31,7 @@
     "duplicateSkus": [],
     "activeZeroMedia": [],
     "activeZeroPriced": [],
-    "activeMissingSeo": [
-      "dtf-22-sheet",
-      "dtf-46-sheet",
-      "glitter-dtf-22-sheet",
-      "glow-dtf-22-sheet",
-      "sublimation-24",
-      "dtf-22-gang-sheet-builder",
-      "dtf-46-gang-sheet-builder",
-      "glitter-dtf-22-gang-sheet-builder",
-      "glow-dtf-22-gang-sheet-builder",
-      "sublimation-24-gang-sheet-builder"
-    ],
+    "activeMissingSeo": [],
     "configProductsMissingLive": [],
     "configCollectionsMissingLive": [],
     "collectionsWithoutImage": [
@@ -186,8 +175,8 @@
       "productType": "DTF Transfer",
       "tags": [],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "DTF 22\" Sheet | Hatfield McCoy DTF",
+        "description": "Order DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 16,
@@ -292,8 +281,8 @@
       "productType": "DTF Transfer",
       "tags": [],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "DTF 46\" Sheet | Hatfield McCoy DTF",
+        "description": "Order DTF 46\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 21,
@@ -423,8 +412,8 @@
       "productType": "Glitter DTF Transfer",
       "tags": [],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Glitter DTF 22\" Sheet | Hatfield McCoy DTF",
+        "description": "Order Glitter DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 48,
@@ -689,8 +678,8 @@
       "productType": "Glow DTF Transfer",
       "tags": [],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Glow DTF 22\" Sheet | Hatfield McCoy DTF",
+        "description": "Order Glow DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 16,
@@ -795,8 +784,8 @@
       "productType": "Sublimation Transfer",
       "tags": [],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Sublimation 24\" | Hatfield McCoy DTF",
+        "description": "Order Sublimation 24\" from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 7,
@@ -885,8 +874,8 @@
         "Gang Sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "DTF 22\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for DTF 22\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 16,
@@ -993,8 +982,8 @@
         "Gang Sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "DTF 46\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for DTF 46\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 21,
@@ -1126,8 +1115,8 @@
         "Gang Sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Glitter DTF 22\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for Glitter DTF 22\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 48,
@@ -1394,8 +1383,8 @@
         "Gang Sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Glow DTF 22\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for Glow DTF 22\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 16,
@@ -1502,8 +1491,8 @@
         "Gang Sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Sublimation 24\" Gang Sheet Builder | Hatfield McCoy DTF",
+        "description": "Open the gang sheet builder for Sublimation 24\" Gang Sheet Builder — set your sheet size, upload artwork, and check out. Printed in Logan, WV."
       },
       "mediaCount": 1,
       "variantsCount": 7,

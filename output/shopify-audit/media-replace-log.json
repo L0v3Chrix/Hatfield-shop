@@ -1,0 +1,105 @@
+{
+  "generatedAt": "2026-06-11T16:55:30.118Z",
+  "replaced": [
+    {
+      "handle": "sublimation-24-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801339211958",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309412022"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/builder-canvas-layout.webp?v=1779987063"
+      ]
+    },
+    {
+      "handle": "glow-dtf-22-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801338884278",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309444790"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/glow-film-sheet.webp?v=1779987063"
+      ]
+    },
+    {
+      "handle": "glitter-dtf-22-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801338327222",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309477558"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/glitter-film-sheet.webp?v=1779987064"
+      ]
+    },
+    {
+      "handle": "dtf-46-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801338130614",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309510326"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/gang-sheet-roll.webp?v=1779987064"
+      ]
+    },
+    {
+      "handle": "dtf-22-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801329938614",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309543094"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/car-gang-sheet-card.webp?v=1779987064"
+      ]
+    },
+    {
+      "handle": "sublimation-24",
+      "productId": "gid://shopify/Product/8780862423222",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309575862"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/sublimation-tumbler.webp?v=1779987065"
+      ]
+    },
+    {
+      "handle": "glow-dtf-22-sheet",
+      "productId": "gid://shopify/Product/8780862390454",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309608630"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/glow-film-sheet_44102603-9143-4072-a25e-a184325eadd6.webp?v=1779987065"
+      ]
+    },
+    {
+      "handle": "glitter-dtf-22-sheet",
+      "productId": "gid://shopify/Product/8780862357686",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309641398"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/glitter-film-sheet_b0242178-44d6-4b74-bd7a-4ed575f5b34e.webp?v=1779987065"
+      ]
+    },
+    {
+      "handle": "dtf-46-sheet",
+      "productId": "gid://shopify/Product/8780862324918",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309674166"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/custom-dtf-transfers-card.webp?v=1779987066"
+      ]
+    },
+    {
+      "handle": "dtf-22-sheet",
+      "productId": "gid://shopify/Product/8780862292150",
+      "deletedMediaIds": [
+        "gid://shopify/MediaImage/32800309706934"
+      ],
+      "previousUrls": [
+        "https://cdn.shopify.com/s/files/1/0719/9699/7814/files/vibrant-transfer-stack-card.webp?v=1779987066"
+      ]
+    }
+  ]
+}

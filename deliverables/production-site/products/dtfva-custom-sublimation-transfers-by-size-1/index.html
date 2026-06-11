@@ -127,6 +127,11 @@
     .cart-footer{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:12px}
     .cart-total-row{display:flex;justify-content:space-between;font-size:1.1rem}
     .quote-link{color:var(--cyan);font-weight:900;text-align:center}
+    .cart-item-upload{display:grid;gap:6px;margin-top:8px}
+    .cart-upload-input{display:none}
+    .cart-upload-btn{width:max-content;border:1px solid rgba(0,229,255,.42);background:rgba(0,229,255,.08);color:var(--cyan);border-radius:999px;padding:6px 10px;font-weight:950;text-transform:uppercase}
+    .cart-upload-btn:disabled{opacity:.6;cursor:wait}
+    .cart-upload-status{color:var(--muted);font-size:.78rem;line-height:1.3}
     .cart-recommendations{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
     .cart-recommendations-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .cart-recommendations-head span{font-weight:950;text-transform:uppercase;font-size:.74rem;color:var(--soft)}
@@ -159,14 +164,14 @@
     <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="hamburger-lines" aria-hidden="true"></span><span class="mobile-menu-label">Menu</span></button>
     <div class="nav-actions"><button class="btn secondary cart-btn" type="button" aria-label="Cart, 0 items"><span class="cart-btn-label">Cart</span><span class="cart-count-badge" id="cart-count">0</span></button><a class="btn primary" href="/gang-sheet-builder">Start order</a></div>
   </div>
-  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/products">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/contact">Quote help</a></div></nav>
+  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/products">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/guides#artwork">Artwork guide</a></div></nav>
   
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
     <a href="/shop">Shop</a>
     <a href="/gang-sheet-builder">Build a sheet</a>
-    <a href="/collections/dtfva-dtf-transfers">DTF transfers</a>
-    <a href="/collections/dtfva-uv-dtf-transfers">UV DTF / stickers</a>
-    <a href="/collections/dtfva-custom-t-shirts">Apparel / blanks</a>
+    <a href="/collections/dtf-transfers">DTF transfers</a>
+    <a href="/collections/glitter-dtf">Glitter DTF</a>
+    <a href="/collections/sublimation">Sublimation</a>
     <a href="/wholesale">Wholesale</a>
     <a href="/guides">Guides</a>
     <a href="/contact">Contact</a>
@@ -187,13 +192,13 @@
             </div>
             <div class="hero-actions">
               <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
-              <a class="btn secondary" href="/contact">Ask about this product</a>
+              <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
             </div>
           </div>
           <div class="purchase-panel">
             <img src="/assets/images/product-graphics/sublimation-tumbler.webp" width="900" height="900" alt="Sublimation tumbler product sample" loading="eager" decoding="async">
             <span class="price">From $0.98</span>
-            <p>We will confirm artwork, size, material, and production details before this moves into checkout.</p>
+            <p>This route stays guided so customers land on the correct fixed-size builder or support path instead of raw backend variants.</p>
             <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
           </div>
         </section>
@@ -212,7 +217,7 @@
     <div><span class="eyebrow">Order cart</span><h2>Cart</h2></div>
     <button class="cart-close" type="button" aria-label="Close cart">Close</button>
   </div>
-  <p class="cart-empty" id="cart-empty">Add products for checkout or quote review. Custom and review-only items can stay in the cart while we confirm artwork and fulfillment.</p>
+  <p class="cart-empty" id="cart-empty">Add products to start your order. Upload artwork inside the cart before checkout.</p>
   <div class="cart-summary-slot" id="cart-summary" hidden></div>
   <div class="cart-items" id="cart-items"></div>
   <div class="cart-recommendations-slot" id="cart-recommendations" hidden></div>
@@ -220,7 +225,7 @@
     <div class="cart-total-row"><span>Total</span><strong id="cart-total">$0.00</strong></div>
     <p class="cart-note" id="cart-note" hidden></p>
     <button class="buy-button" id="cart-checkout" type="button" disabled>Checkout</button>
-    <a class="quote-link" href="/contact">Need a quote or artwork review?</a>
+    <a class="quote-link" href="/guides#artwork">Artwork prep guide</a>
   </div>
 </aside>
 <script src="/assets/js/cart-helpers.js"></script>
@@ -252,7 +257,7 @@
 </script>
 <script>
   document.addEventListener('click', function(event) {
-    var button = event.target.closest('.buy-button:not(:disabled), .quote-button:not(:disabled)');
+    var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
     event.preventDefault();
     window.Cart.add({
@@ -264,6 +269,7 @@
       qty: 1,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
+      requiresArtwork: button.dataset.requiresArtwork !== 'false',
       attributes: [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }]
     });
     if (window.openCart) window.openCart();

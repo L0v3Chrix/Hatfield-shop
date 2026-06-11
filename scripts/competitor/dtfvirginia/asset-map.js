@@ -45,6 +45,41 @@ const IMAGE_FAMILIES = {
   wideFormatRoll: graphicFamily('wide-format-roll', 'Wide format print roll for signs and transfers'),
 }
 
+// Hand-curated per-product card images. Entries here take precedence over
+// PRODUCT_RULES for the card slot only; hero stays rule-resolved.
+export const HANDLE_IMAGE_OVERRIDES = {
+  'dtfva-42-custom-sublimation-gang-sheets-builder': { src: `${SHOPIFY_ASSET_BASE}/42-gang-sheet-builder.png`, alt: '42 inch gang sheet builder sample' },
+  'dtfva-custom-dtf-gang-sheets-dtf-virginia': { src: `${SHOPIFY_ASSET_BASE}/46-gang-sheet.png`, alt: '46 inch gang sheet sample' },
+  'dtfva-america-s-250th-anniversary-patch-1-inch-circle': { src: `${SHOPIFY_ASSET_BASE}/250th-anniversary.jpg`, alt: 'America\'s 250th anniversary patch sample' },
+  'dtfva-brand-growth-pack': { src: `${SHOPIFY_ASSET_BASE}/guru-pack.jpg`, alt: 'GURU branding kit growth pack sample' },
+  'dtfva-brand-business-pack': { src: `${SHOPIFY_ASSET_BASE}/items-stickerd.jpg`, alt: 'Merch branding kit business pack sample' },
+  'dtfva-custom-sublimation-transfers-by-size': { src: `${SHOPIFY_ASSET_BASE}/custom-sublimation-transfers-by-size.png`, alt: 'Custom sublimation transfers by size sample' },
+  'dtfva-custom-glitter-dtf-transfer-by-size': { src: `${SHOPIFY_ASSET_BASE}/custom-glitter-dtf-transfer-by-size.png`, alt: 'Custom glitter DTF transfer by size sample' },
+  'dtfva-custom-fluorescent-dtf-transfers-by-size': { src: `${SHOPIFY_ASSET_BASE}/custom-flouresent-dtf-transfers-by-size.png`, alt: 'Custom fluorescent DTF transfers by size sample' },
+  'dtfva-custom-dtf-gang-sheets-printing-service': { src: `${SHOPIFY_ASSET_BASE}/custome-22-gang-sheet-builder.png`, alt: 'Custom 22 inch gang sheet builder sample' },
+  'dtfva-glitter-dtf-transfers-builder': { src: `${SHOPIFY_ASSET_BASE}/22-glitter-dtf-transfer-builder.png`, alt: '22 inch glitter DTF transfer builder sample' },
+  'dtfva-next-level-3600': { src: `${SHOPIFY_ASSET_BASE}/next-level-3600-cotton-crew-t-shirt.png`, alt: 'Next Level 3600 cotton crew t-shirt sample' },
+  'dtfva-gildan-64000': { src: `${SHOPIFY_ASSET_BASE}/gildan-64000-unisex-softstyle-t-shirt.png`, alt: 'Gildan 64000 unisex softstyle t-shirt sample' },
+  'dtfva-bella-canvas-3001': { src: `${SHOPIFY_ASSET_BASE}/bella-canvas-3001-unisex-jersey-tee.png`, alt: 'BELLA + CANVAS 3001 unisex jersey tee sample' },
+  'dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank': { src: `${SHOPIFY_ASSET_BASE}/custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank.png`, alt: 'Custom Shaka Wear drop shoulder cropped t-shirt sample' },
+  'dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank': { src: `${SHOPIFY_ASSET_BASE}/custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank.png`, alt: 'Custom Shaka Wear Max heavyweight short sleeve t-shirt sample' },
+  'dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt': { src: `${SHOPIFY_ASSET_BASE}/custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt.png`, alt: 'Custom American Apparel heavyweight cotton long sleeve t-shirt sample' },
+  'dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee': { src: `${SHOPIFY_ASSET_BASE}/custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee.png`, alt: 'Custom Los Angeles Apparel 1865GD garment dye sleeveless tee sample' },
+  'dtfva-custom-dtf-gang-sheets-30-inches': { src: `${SHOPIFY_ASSET_BASE}/dtf-gang-sheets-30.png`, alt: 'DTF gang sheets 30 inch sample' },
+  'dtfva-window-clings': { src: `${SHOPIFY_ASSET_BASE}/window-front.jpg`, alt: 'Window cling storefront sample' },
+  'dtfva-perforated-window-vinyl': { src: `${SHOPIFY_ASSET_BASE}/perforated-window-vinyl-window-perf-graphics.png`, alt: 'Perforated window vinyl sample' },
+  'dtfva-3d-puff-transfers': { src: `${SHOPIFY_ASSET_BASE}/puff-shirt2.png`, alt: '3D puff transfer shirt sample' },
+  'dtfva-custom-dtf-transfers-by-size-virginia': { src: `${SHOPIFY_ASSET_BASE}/custom-dtf-transfers-by-size.png`, alt: 'Custom DTF transfers by size sample' },
+  'dtfva-sublimation-gang-sheets-bulk-printing': { src: `${SHOPIFY_ASSET_BASE}/42-and-22-sublimation-gangsheet.png`, alt: '42 and 22 inch sublimation gang sheet sample' },
+  'dtfva-custom-sublimation-gang-sheets': { src: `${SHOPIFY_ASSET_BASE}/42-and-22-sublimation-gangsheet.png`, alt: '42 and 22 inch sublimation gang sheet sample' },
+  'dtfva-fluorescent-dtf-printing-bold-bright-stunning': { src: `${SHOPIFY_ASSET_BASE}/fluorescent-dtf-printing-bold-bright-stunning.png`, alt: 'Fluorescent DTF printing bold bright and stunning sample' },
+  'dtfva-digital-factory-dtf-desktop-edition': { src: `${SHOPIFY_ASSET_BASE}/digital-factory-12.png`, alt: 'Digital Factory 12 Direct to Film Edition icon' },
+  'dtfva-add-driver-port-24-wide-or-larger': { src: `${SHOPIFY_ASSET_BASE}/add-driver-port-24-wide-or-larger.png`, alt: 'Add driver port 24 inch wide or larger sample' },
+  'dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code': { src: `${SHOPIFY_ASSET_BASE}/cadlink-digital-factory-direct-to-film-dtf-for-wide-format.png`, alt: 'CADlink Digital Factory DTF wide format sample' },
+  'dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code': { src: `${SHOPIFY_ASSET_BASE}/add-driver-port-23-wide-or-smaller.png`, alt: 'Add driver port 23 inch wide or smaller sample' },
+  'dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format': { src: `${SHOPIFY_ASSET_BASE}/cadlink-digital-factory-v12-dtf-printing-15-days-trial-desktop-wide-format.png`, alt: 'Cadlink Digital Factory v12 DTF printing trial sample' },
+}
+
 const PRODUCT_RULES = [
   [/\b(software|cadlink|rip|driver|port|trial)\b|digital factory/, IMAGE_FAMILIES.printerOutputFilm, 'Software and RIP support'],
   [/vector|artwork|branding kit|brand starter|brand growth|brand business|logo/, IMAGE_FAMILIES.serviceSampleBundle, 'Artwork and brand services'],
@@ -96,6 +131,8 @@ export function getAssetMapImages({ product = null, collection = null } = {}) {
 
 export function resolveProductImages(product = {}) {
   const family = resolveFamily(product, PRODUCT_RULES, IMAGE_FAMILIES.customDtfTransfers)
+  const override = HANDLE_IMAGE_OVERRIDES[product?.handle ?? '']
+  if (override) return { family: family.slug, card: override, hero: family.hero }
   return { family: family.slug, card: family.card, hero: family.hero }
 }
 

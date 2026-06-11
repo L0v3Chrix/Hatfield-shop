@@ -495,7 +495,7 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
   ].map(([id, label, count], index) => `<button class="filter-tab${index === 0 ? ' active' : ''}" type="button" data-filter="${escapeHtml(id)}">${escapeHtml(label)} <span>${count}</span></button>`).join('')
   const collectionLinks = frontendCatalog.collections.slice(0, 10).map((collection) => `
             <a href="${escapeHtml(collection.url)}">${escapeHtml(collection.title)}</a>`).join('')
-  const featuredFamilies = categories.slice(0, 6).map((category) => {
+  const featuredFamilies = categories.map((category) => {
     const image = productCardImage(category)
     const lowPrice = lowestPrice(category.products)
     return `
@@ -577,6 +577,14 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
             });
           });
           if (search) search.addEventListener('input', apply);
+          function applyHashFamily(){
+            var match = (location.hash || '').match(/family=([a-z-]+)/);
+            if (!match) return;
+            var target = tabs.find(function(tab){ return tab.dataset.filter === match[1]; });
+            if (target) target.click();
+          }
+          window.addEventListener('hashchange', applyHashFamily);
+          applyHashFamily();
         })();
       </script>`,
   })
@@ -617,19 +625,33 @@ export function renderCollectionIndexPage(collections, products = [], { siteUrl 
     urlPath: '/collections',
     indexable: false,
   })
-  const cards = collections.map((collection) => {
+  // Group the collection tiles under their dominant buyer family so the index
+  // reads as a handful of sections instead of a flat wall of tiles.
+  const FAMILY_ORDER = ['transfers', 'builders', 'stickers', 'apparel', 'signage', 'promo', 'services']
+  const grouped = new Map(FAMILY_ORDER.map((id) => [id, []]))
+  for (const collection of collections) {
     const image = resolveCollectionImages(collection).card
     const scopedProducts = productsForCollection(collection, products)
-    const categories = buildShopCategories(scopedProducts)
-    const familyLabel = categories.slice(0, 2).map((category) => category.label).join(' + ') || 'Custom print products'
-    return `
+    const dominant = categorizeCollectionForNav(collection)
+    grouped.get(dominant).push(`
           <a class="product-card collection-card" href="${escapeHtml(collection.url)}">
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="lazy" decoding="async">
             <span>Collection</span>
             <strong>${escapeHtml(collection.title)}</strong>
-            <small>${scopedProducts.length} ${scopedProducts.length === 1 ? 'product' : 'products'} · ${escapeHtml(familyLabel)}</small>
-          </a>`
-  }).join('')
+            <small>${scopedProducts.length} ${scopedProducts.length === 1 ? 'product' : 'products'}</small>
+          </a>`)
+  }
+  const familySections = FAMILY_ORDER
+    .filter((id) => grouped.get(id).length)
+    .map((id) => `
+        <section class="collection-family-group" aria-label="${escapeHtml(FAMILY_LABELS[id])} collections">
+          <div class="section-heading">
+            <div><p class="eyebrow">Product family</p><h2>${escapeHtml(FAMILY_LABELS[id])}</h2></div>
+            <strong>${grouped.get(id).length} ${grouped.get(id).length === 1 ? 'collection' : 'collections'}</strong>
+          </div>
+          <div class="product-grid">${grouped.get(id).join('')}</div>
+        </section>`)
+    .join('')
   return renderShell({
     seo,
     siteUrl,
@@ -639,9 +661,9 @@ export function renderCollectionIndexPage(collections, products = [], { siteUrl 
         <section class="collection-hero">
           <p class="eyebrow">Collections</p>
           <h1>Find the right print path faster.</h1>
-          <p class="lede">${collections.length} collection routes organize the catalog by product family, material, and ordering path.</p>
+          <p class="lede">${collections.length} collection routes, grouped by product family so you can land on the right lane fast.</p>
         </section>
-        <section class="product-grid">${cards}</section>
+        ${familySections}
       </main>`,
   })
 }
@@ -824,6 +846,9 @@ function pageCss() {
     .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
     .status-strip,.approval-list,.catalog-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
     .status-strip span,.approval-list span,.catalog-meta span{min-height:28px;display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);border-radius:999px;padding:0 9px;font-weight:950;text-transform:uppercase;font-size:.68rem;color:var(--soft)}
+    .route-chip.route-order-online{border-color:rgba(57,255,20,.5);color:#b8ffba}
+    .route-chip.route-builder{border-color:rgba(0,229,255,.5);color:#aef0ff}
+    .route-chip.route-quote{border-color:rgba(233,30,140,.45);color:#ffc2e2}
     .purchase-panel,.content-band,.variant-band,.shop-stats,.collection-strip,.merchandising-band,.notes-panel,.merch-family-band,.order-path-band article{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.026));border-radius:8px;padding:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 18px 50px rgba(0,0,0,.24)}
     .purchase-panel{position:sticky;top:142px;display:grid;gap:12px;align-self:start}
     .purchase-panel img{width:100%;height:clamp(180px,23vw,260px);aspect-ratio:1/1;object-fit:contain;object-position:center;padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,.11);background:radial-gradient(circle at 50% 32%,rgba(255,255,255,.08),transparent 48%),var(--bg-3)}
@@ -945,7 +970,7 @@ function pageCss() {
     .support-nav .wrap{display:grid;width:min(1240px,calc(100% - 40px));grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
     .mini-link{justify-content:center;text-align:center;white-space:normal}
     @media(max-width:1100px){.wrap{width:min(1240px,calc(100% - 28px))}.nav-link{min-width:0;justify-content:center;padding:0 8px;overflow-wrap:anywhere}.mini-link{justify-content:center;white-space:normal}}
-    @media(max-width:900px){.primary-nav,.support-nav{display:none!important}.top-nav{min-height:58px;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;padding:7px 0}.brand{order:2;justify-self:center;max-width:100%;gap:6px;white-space:nowrap}.brand img{width:28px;height:28px}.mobile-menu-toggle{order:1;justify-self:start;display:inline-flex;width:44px;min-width:44px;min-height:44px;padding:0;gap:0;border-color:rgba(0,229,255,.58);background:rgba(0,229,255,.1)}.mobile-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hamburger-lines{width:21px;height:15px}.hamburger-lines::before{top:5px}.nav-actions{order:3;justify-self:end;gap:0}.nav-actions .btn:not(.cart-btn){display:none}.cart-btn{min-height:44px;min-width:44px;width:44px;padding-inline:0;gap:0;border-radius:999px}.cart-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mobile-menu{z-index:21;padding:12px 14px 16px;background:linear-gradient(180deg,rgba(10,12,18,.985),rgba(10,12,18,.965));box-shadow:0 28px 72px rgba(0,0,0,.58)}.seo-page{width:min(1240px,calc(100% - 28px));padding:12px 0 40px}.breadcrumbs{gap:6px;font-size:.76rem;margin-bottom:12px}.shop-tools,.collection-strip,.shop-hero,.merchandising-band,.order-path-band{grid-template-columns:1fr}.product-hero,.shop-hero,.collection-hero{grid-template-columns:1fr;gap:10px;padding:8px 0 12px}.shop-page .shop-stats{display:none}.filter-tabs,.collection-subnav,.collection-links,.link-band{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.filter-tabs::-webkit-scrollbar,.collection-subnav::-webkit-scrollbar,.collection-links::-webkit-scrollbar,.link-band::-webkit-scrollbar{display:none}.filter-tab{flex:0 0 auto;min-height:34px;font-size:.68rem}.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.hero-actions .btn{flex:none;min-height:40px;padding-inline:12px}.status-strip,.approval-list,.catalog-meta{gap:6px;margin-top:10px}.status-strip span,.approval-list span,.catalog-meta span{min-height:24px;padding:0 8px;font-size:.58rem}.merch-family-band{padding:12px;margin-top:14px}.merch-family-band .section-heading{display:flex;align-items:start;justify-content:space-between;flex-direction:row;gap:10px;margin-bottom:10px}.merch-family-band .section-heading h2{font-size:1.24rem;line-height:1.08}.merch-family-band .eyebrow{display:none}.family-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.family-card{min-height:186px;align-content:start;gap:7px;padding:10px}.family-card img{height:88px;aspect-ratio:1/1;object-fit:contain}.family-card strong{font-size:.92rem;line-height:1.1}.family-card small{display:block;font-size:.74rem;line-height:1.3}.order-path-band{gap:10px}.order-path-band article{padding:14px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}.catalog-card{grid-template-rows:112px 1fr}.catalog-card img{height:112px;padding:10px}.catalog-card-body{padding:10px;gap:7px}.catalog-card h3{font-size:.92rem;line-height:1.08}.catalog-card p{display:none}.catalog-meta span:nth-child(2){display:none}.purchase-panel{position:static;display:flex;flex-direction:column;padding:12px;gap:8px}.purchase-panel .price{order:1;font-size:1.48rem}.purchase-panel p{order:2;margin:0}.purchase-panel img{order:3;height:188px;padding:10px}.variant-select{order:4}.feature-cta{order:5}.approval-list{order:6}.collection-links a,.link-band a{flex:0 0 auto}.collection-strip{padding:12px}.section-heading{align-items:start;flex-direction:column;gap:10px}.seo-page h1{font-size:clamp(1.72rem,7.4vw,2.18rem);line-height:1.02;letter-spacing:0;overflow-wrap:break-word}.seo-page .lede{font-size:.94rem;line-height:1.45}.content-band,.variant-band,.link-band{margin-top:16px}.table-wrap{border:1px solid var(--line);border-radius:8px}.table-wrap table{min-width:540px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.seo-page .product-card{grid-template-rows:112px 1fr;min-height:0}.seo-page .product-card img{height:112px;padding:10px}.product-card p{display:none}.collection-hero>img{height:196px;padding:10px}}
+    @media(max-width:900px){.primary-nav,.support-nav{display:none!important}.top-nav{min-height:58px;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;padding:7px 0}.brand{order:2;justify-self:center;max-width:100%;gap:6px;white-space:nowrap}.brand img{width:28px;height:28px}.mobile-menu-toggle{order:1;justify-self:start;display:inline-flex;width:44px;min-width:44px;min-height:44px;padding:0;gap:0;border-color:rgba(0,229,255,.58);background:rgba(0,229,255,.1)}.mobile-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hamburger-lines{width:21px;height:15px}.hamburger-lines::before{top:5px}.nav-actions{order:3;justify-self:end;gap:0}.nav-actions .btn:not(.cart-btn){display:none}.cart-btn{min-height:44px;min-width:44px;width:44px;padding-inline:0;gap:0;border-radius:999px}.cart-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mobile-menu{z-index:21;padding:12px 14px 16px;background:linear-gradient(180deg,rgba(10,12,18,.985),rgba(10,12,18,.965));box-shadow:0 28px 72px rgba(0,0,0,.58)}.seo-page{width:min(1240px,calc(100% - 28px));padding:12px 0 40px}.breadcrumbs{gap:6px;font-size:.76rem;margin-bottom:12px}.shop-tools,.collection-strip,.shop-hero,.merchandising-band,.order-path-band{grid-template-columns:1fr}.product-hero,.shop-hero,.collection-hero{grid-template-columns:1fr;gap:10px;padding:8px 0 12px}.shop-page .shop-stats{display:none}.filter-tabs,.collection-subnav,.collection-links,.link-band{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.filter-tabs::-webkit-scrollbar,.collection-subnav::-webkit-scrollbar,.collection-links::-webkit-scrollbar,.link-band::-webkit-scrollbar{display:none}.filter-tab{flex:0 0 auto;min-height:44px;font-size:.68rem}.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.hero-actions .btn{flex:none;min-height:40px;padding-inline:12px}.status-strip,.approval-list,.catalog-meta{gap:6px;margin-top:10px}.status-strip span,.approval-list span,.catalog-meta span{min-height:24px;padding:0 8px;font-size:.58rem}.merch-family-band{padding:12px;margin-top:14px}.merch-family-band .section-heading{display:flex;align-items:start;justify-content:space-between;flex-direction:row;gap:10px;margin-bottom:10px}.merch-family-band .section-heading h2{font-size:1.24rem;line-height:1.08}.merch-family-band .eyebrow{display:none}.family-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.family-card{min-height:186px;align-content:start;gap:7px;padding:10px}.family-card img{height:88px;aspect-ratio:1/1;object-fit:contain}.family-card strong{font-size:.92rem;line-height:1.1}.family-card small{display:block;font-size:.74rem;line-height:1.3}.order-path-band{gap:10px}.order-path-band article{padding:14px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}.catalog-card{grid-template-rows:112px 1fr}.catalog-card img{height:112px;padding:10px}.catalog-card-body{padding:10px;gap:7px}.catalog-card h3{font-size:.92rem;line-height:1.08}.catalog-card p{display:none}.catalog-meta .option-count{display:none}.purchase-panel{position:static;display:flex;flex-direction:column;padding:12px;gap:8px}.purchase-panel .price{order:1;font-size:1.48rem}.purchase-panel p{order:2;margin:0}.purchase-panel img{order:3;height:188px;padding:10px}.variant-select{order:4}.feature-cta{order:5}.approval-list{order:6}.collection-links a,.link-band a{flex:0 0 auto}.collection-strip{padding:12px}.section-heading{align-items:start;flex-direction:column;gap:10px}.seo-page h1{font-size:clamp(1.72rem,7.4vw,2.18rem);line-height:1.02;letter-spacing:0;overflow-wrap:break-word}.seo-page .lede{font-size:.94rem;line-height:1.45}.content-band,.variant-band,.link-band{margin-top:16px}.table-wrap{border:1px solid var(--line);border-radius:8px}.table-wrap table{min-width:540px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.seo-page .product-card{grid-template-rows:112px 1fr;min-height:0}.seo-page .product-card img{height:112px;padding:10px}.product-card p{display:none}.collection-hero>img{height:196px;padding:10px}}
     @media(max-width:680px){.hero-actions{grid-template-columns:1fr}.family-grid,.catalog-grid,.product-grid{grid-template-columns:1fr}.catalog-card,.seo-page .product-card{min-height:0}.catalog-card h3{font-size:.98rem}.catalog-card p,.product-card p{display:block;-webkit-line-clamp:3}.purchase-panel img{height:172px}.table-wrap table{min-width:520px}}
     @media(max-width:420px){.seo-page{width:min(1240px,calc(100% - 24px))}.catalog-card h3{font-size:.86rem}.status-strip span,.approval-list span,.catalog-meta span{font-size:.55rem}.purchase-panel img{height:180px}.collection-hero>img{height:180px}}
   `
@@ -966,16 +991,27 @@ export function publicStorefrontProducts(products = []) {
   return products.filter((product) => product.publicVisible !== false && !product.internalProxy)
 }
 
+// Buyer-intent family names — these are customer-facing navigation labels.
+const FAMILY_LABELS = {
+  transfers: 'Transfers by size',
+  builders: 'Gang sheet builders',
+  stickers: 'UV DTF & stickers',
+  apparel: 'Apparel & blanks',
+  signage: 'Signs & graphics',
+  promo: 'Promo & gifts',
+  services: 'Shop services & software',
+}
+
 function categorizeProduct(product) {
   const text = `${product.title} ${product.productType} ${product.handle}`.toLowerCase()
-  if (isBuilderProduct(product)) return { id: 'builders', label: 'Builders' }
-  if (/uv|sticker|decal|label|patch/.test(text)) return { id: 'stickers', label: 'UV and stickers' }
-  if (/shirt|tee|hoodie|sweatshirt|apparel|hat/.test(text)) return { id: 'apparel', label: 'Apparel' }
-  if (/banner|sign|window|floor|magnet|vinyl|graphics/.test(text)) return { id: 'signage', label: 'Signage' }
-  if (/software|cadlink|rip|service|design|branding|logo/.test(text)) return { id: 'services', label: 'Services' }
-  if (/tumbler|cup|ball|puck|coin|personalized|promo/.test(text)) return { id: 'promo', label: 'Promotional' }
-  if (/gang|sheet|transfer|dtf|foil|glitter|puff|fluorescent|spangle/.test(text)) return { id: 'transfers', label: 'Transfers' }
-  return { id: 'other', label: 'Other products' }
+  if (isBuilderProduct(product)) return { id: 'builders', label: FAMILY_LABELS.builders }
+  if (/uv|sticker|decal|label|patch/.test(text)) return { id: 'stickers', label: FAMILY_LABELS.stickers }
+  if (/shirt|tee|hoodie|sweatshirt|apparel|hat/.test(text)) return { id: 'apparel', label: FAMILY_LABELS.apparel }
+  if (/banner|sign|window|floor|magnet|vinyl|graphics/.test(text)) return { id: 'signage', label: FAMILY_LABELS.signage }
+  if (/software|cadlink|rip|service|design|branding|logo/.test(text)) return { id: 'services', label: FAMILY_LABELS.services }
+  if (/tumbler|cup|ball|puck|coin|personalized|promo/.test(text)) return { id: 'promo', label: FAMILY_LABELS.promo }
+  // Everything else in this catalog is a transfer product — no 'other' bucket.
+  return { id: 'transfers', label: FAMILY_LABELS.transfers }
 }
 
 function productCardMarkup(product, { className = 'product-card' } = {}) {
@@ -989,7 +1025,7 @@ function productCardMarkup(product, { className = 'product-card' } = {}) {
               <span class="kicker">${escapeHtml(category.label)}</span>
               ${isCatalog ? `<h3>${escapeHtml(product.title)}</h3>` : `<strong>${escapeHtml(product.title)}</strong>`}
               <p>${escapeHtml(product.copy.shortDescription)}</p>
-              <div class="catalog-meta">${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}<span>${variantCount} ${variantCount === 1 ? 'option' : 'options'}</span><span class="route-chip route-${escapeHtml(buyerRoute(product))}">${escapeHtml(action)}</span></div>
+              <div class="catalog-meta">${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}<span class="option-count">${variantCount} ${variantCount === 1 ? 'option' : 'options'}</span><span class="route-chip route-${escapeHtml(buyerRoute(product))}">${escapeHtml(action)}</span></div>
               <em>View options</em>
             </div>`
   return `
@@ -1134,8 +1170,25 @@ function unique(values) {
   return [...new Set(values.filter(Boolean))]
 }
 
+// Nav grouping keys off the collection's own name — scoped-product counts skew
+// toward builders because the transfer superset includes them.
+function categorizeCollectionForNav(collection) {
+  const handle = String(collection.handle ?? '').replace(/^dtfva-/, '')
+  const text = `${handle} ${collection.title}`.toLowerCase()
+  if (/builder/.test(text)) return 'builders'
+  if (/uv|sticker|decal|label|patch/.test(text)) return 'stickers'
+  if (/shirt|tee|hoodie|sweatshirt|apparel|hat\b/.test(text)) return 'apparel'
+  if (/banner|sign|window|floor|magnet|vinyl|graphic/.test(text)) return 'signage'
+  if (/software|cadlink|rip|service|vector|branding|logo|artwork/.test(text)) return 'services'
+  if (/tumbler|cup|ball|puck|coin|personalized|promo|gift/.test(text)) return 'promo'
+  return 'transfers'
+}
+
 function productsForCollection(collection, products) {
-  const text = `${collection.handle} ${collection.title}`.toLowerCase()
+  // Strip the import prefix — "dtfva-" otherwise matches the /dtf/ scoping rule
+  // for every collection (same trap as asset-map's searchableText).
+  const handle = String(collection.handle ?? '').replace(/^dtfva-/, '')
+  const text = `${handle} ${collection.title}`.toLowerCase()
   if (/\ball\b|featured|best-seller/.test(text)) return products
   if (/builder|gang-builder/.test(text)) {
     const builderProducts = products.filter((product) => isBuilderProduct(product))

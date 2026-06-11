@@ -291,7 +291,7 @@ test('treats builder products as a distinct family and keeps builder collections
   const shopHtml = renderShopPage(catalog, { siteUrl: 'https://www.hatfieldmccoydtf.com' })
   const builderCollectionHtml = renderCollectionPage(catalog.collections[0], catalog.products, { siteUrl: 'https://www.hatfieldmccoydtf.com' })
 
-  assert.match(shopHtml, /data-filter="builders">Builders <span>1<\/span><\/button>/)
+  assert.match(shopHtml, /data-filter="builders">Gang sheet builders <span>1<\/span><\/button>/)
   assert.match(shopHtml, /data-category="builders"/)
   assert.match(builderCollectionHtml, /Custom DTF Gang Sheets Builder/)
   assert.doesNotMatch(builderCollectionHtml, /Standard DTF Transfer/)

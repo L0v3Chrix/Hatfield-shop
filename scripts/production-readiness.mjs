@@ -353,6 +353,8 @@ function ensureMeta(html, route) {
     '  <meta property="og:type" content="website">',
     `  <meta property="og:image" content="${SITE_URL}/assets/shopify-images/custom-dtf-transfers-hero.webp">`,
     '  <meta name="twitter:card" content="summary_large_image">',
+    '  <link rel="preload" href="/assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>',
+    '  <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>',
   ].join('\n')
   return html.replace('  <link rel="stylesheet" href="/assets/site.css">', `${extra}\n  <link rel="stylesheet" href="/assets/site.css">`)
 }

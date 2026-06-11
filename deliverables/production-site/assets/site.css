@@ -1,3 +1,20 @@
+/* Brand faces, self-hosted (OFL): Anton (display) + Space Grotesk (body).
+   These were declared but never loaded — headlines were rendering in Impact. */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/anton-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/assets/fonts/space-grotesk-latin.woff2') format('woff2');
+}
+
 :root {
   --magenta: #E91E8C;
   --magenta-bright: #FF2D9E;
@@ -1137,4 +1154,25 @@ h3 { margin: 0; font-size: 1.55rem; }
   .guide-grid.three,
   .product-grid,
   .option-grid { gap: 10px; }
+}
+
+/* ——— Design polish 2026-06-11: typographic rhythm + interaction states ——— */
+h1, h2, h3 { letter-spacing: 0.015em; }
+h1 { line-height: 1.08; }
+h2 { line-height: 1.14; }
+h3 { line-height: 1.2; }
+p, li { line-height: 1.6; }
+a, .btn, button, .guide-card, .category-showcase a, .card, .resource-item {
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background-color .16s ease, color .16s ease;
+}
+.btn:hover, button:not(:disabled):hover { transform: translateY(-1px); }
+.category-showcase a:hover, .guide-card:hover, .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 229, 255, 0.35);
+}
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
 }

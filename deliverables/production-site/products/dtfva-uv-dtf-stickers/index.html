@@ -185,8 +185,8 @@
             <p class="eyebrow">Builders · Logan, WV production</p>
             <h1>22&quot; UV DTF Stickers</h1>
             <p class="lede">22&quot; UV DTF Stickers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-            <div class="status-strip" aria-label="Approval status">
-              <span>Builder path</span>
+            <div class="status-strip" aria-label="Ordering path">
+              <span class="route-chip route-builder">Customize in builder</span>
               <span>From $11.00</span>
               <span>25 options</span>
               <span>Gang Sheet</span>
@@ -393,6 +393,10 @@
           var cta = document.querySelector('.feature-cta');
           var buttons = Array.prototype.slice.call(document.querySelectorAll('#variants button[data-sku]'));
           if (!select || !cta || cta.tagName === 'A') return;
+          var quoteHref = '/contact?product=' + encodeURIComponent(cta.dataset.handle || '');
+          cta.addEventListener('click', function(){
+            if (cta.classList.contains('quote-button')) window.location.href = quoteHref;
+          });
           select.addEventListener('change', function(){
             var match = buttons.find(function(button){ return button.dataset.sku === select.value; });
             if (!match) return;
@@ -405,14 +409,14 @@
             if (match.dataset.checkoutReady === 'true') {
               cta.className = 'buy-button feature-cta';
               cta.textContent = 'Add selected option';
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             } else {
               cta.className = 'quote-button feature-cta';
-              cta.textContent = 'Sold out';
+              cta.textContent = 'Request a quote';
               cta.setAttribute('type', 'button');
-              cta.setAttribute('disabled', 'true');
-              cta.setAttribute('aria-disabled', 'true');
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             }
           });
         })();

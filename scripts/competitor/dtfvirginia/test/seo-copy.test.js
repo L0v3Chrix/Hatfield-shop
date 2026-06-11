@@ -115,7 +115,9 @@ test('keeps draft products visible but out of public checkout', () => {
   assert.deepEqual(publicStorefrontProducts(catalog.products), [catalog.products[0]])
   assert.equal(catalog.products[0].variants[0].checkoutEnabled, false)
   const html = renderProductPage(catalog.products[0], { siteUrl: 'https://www.hatfieldmccoydtf.com' })
-  assert.match(html, /Sold out/)
+  // Non-checkout products route to quote — never a stock claim the shop did not make.
+  assert.match(html, /Request a quote/)
+  assert.doesNotMatch(html, /Sold out/)
   assert.doesNotMatch(html, /Add selected option<\/button>/)
 })
 

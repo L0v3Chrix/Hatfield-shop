@@ -47,7 +47,7 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
         checkoutEnabled: approval.publishable && !!merchandiseId,
       }
     })
-    const firstPrice = variants.find((variant) => Number(variant.price) > 0)?.price ?? '0.00'
+    const firstPrice = firstDisplayPrice({ variants })
     const seoDescription = createProductSeoDescription(displayProduct, copy)
     const seo = buildSeoRecord({
       kind: 'product',
@@ -220,10 +220,10 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
   const variantCount = product.variants.length
   const orderLabel = orderPathLabel(product)
   const builderProduct = isBuilderProduct(product)
-  const primaryVariant = product.variants.find((variant) => Number(variant.price) > 0) ?? product.variants[0]
+  const primaryVariant = product.variants.find((variant) => variantDisplayPrice(variant)) ?? product.variants[0]
   const shownVariants = variantsForDisplay(product)
   const variantLimitNotice = product.variants.length > shownVariants.length
-    ? `<p class="variant-limit-note">This product has ${product.variants.length} available configurations. We show a manageable starting set here so customers can choose a path without sorting through backend-style catalog rows.</p>`
+    ? `<p class="variant-limit-note">This product has ${product.variants.length} available configurations. We show a focused starting set here — ask the shop if you need a size or option you don't see.</p>`
     : ''
   const relatedLinks = [
     ['Shop all products', '/products'],
@@ -231,22 +231,27 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
     ['Gang sheet options', '/gang-sheet-builder'],
     ['Pressing guide', '/guides'],
   ].map(([label, url]) => `<a href="${escapeHtml(url)}">${escapeHtml(label)}</a>`).join('')
+  const quoteHref = `/contact?product=${encodeURIComponent(product.handle)}`
   const selectorOptions = shownVariants.map((variant) => {
+    const price = variantDisplayPrice(variant)
     const label = [variant.title || variant.sku, formatOptions(variant.options)].filter(Boolean).join(' - ')
-    return `<option value="${escapeHtml(variant.sku)}">${escapeHtml(label)} - $${escapeHtml(variant.price)}</option>`
+    return `<option value="${escapeHtml(variant.sku)}">${escapeHtml(label)}${price ? ` - $${escapeHtml(price)}` : ''}</option>`
   }).join('')
-  const rows = shownVariants.map((variant) => `
+  const rows = shownVariants.map((variant) => {
+    const price = variantDisplayPrice(variant)
+    return `
             <tr>
               <td>${escapeHtml(variant.title || variant.sku)}</td>
               <td>${escapeHtml(formatOptions(variant.options))}</td>
-              <td>$${escapeHtml(formatDisplayPrice(variant.price))}</td>
-              <td>${builderProduct ? `<a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a>` : variant.checkoutEnabled ? `<button class="buy-button" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(variant.sku)}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(variant.title || variant.sku)}" data-price="${escapeHtml(variant.price)}" data-merchandise-id="${escapeHtml(variant.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button>` : `<button class="quote-button table-link" type="button" disabled aria-disabled="true">Sold out</button>`}</td>
-            </tr>`).join('')
+              <td>${price ? `$${escapeHtml(price)}` : 'Quoted'}</td>
+              <td>${builderProduct ? `<a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a>` : variant.checkoutEnabled && price ? `<button class="buy-button" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(variant.sku)}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(variant.title || variant.sku)}" data-price="${escapeHtml(variant.price)}" data-merchandise-id="${escapeHtml(variant.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button>` : `<a class="quote-button table-link" href="${escapeHtml(quoteHref)}">Request a quote</a>`}</td>
+            </tr>`
+  }).join('')
   const primaryCta = builderProduct
     ? `<a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>`
-    : primaryVariant?.checkoutEnabled
-      ? `<button class="buy-button feature-cta" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(primaryVariant?.sku ?? '')}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(primaryVariant?.title || primaryVariant?.sku || '')}" data-price="${escapeHtml(primaryVariant?.price ?? firstPrice)}" data-merchandise-id="${escapeHtml(primaryVariant?.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add selected option</button>`
-      : `<button class="quote-button feature-cta" type="button" disabled aria-disabled="true">Sold out</button>`
+    : primaryVariant?.checkoutEnabled && Number(primaryVariant?.price) > 0
+      ? `<button class="buy-button feature-cta" data-handle="${escapeHtml(product.handle)}" data-sku="${escapeHtml(primaryVariant?.sku ?? '')}" data-name="${escapeHtml(product.title)}" data-variant="${escapeHtml(primaryVariant?.title || primaryVariant?.sku || '')}" data-price="${escapeHtml(primaryVariant?.price ?? '')}" data-merchandise-id="${escapeHtml(primaryVariant?.merchandiseId || '')}" data-checkout-ready="true" data-requires-artwork="true">Add selected option</button>`
+      : `<a class="quote-button feature-cta" href="${escapeHtml(quoteHref)}">Request a quote</a>`
   return renderShell({
     seo: product.seo,
     siteUrl,
@@ -258,9 +263,9 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
             <p class="eyebrow">${escapeHtml(category.label)} · Logan, WV production</p>
             <h1>${escapeHtml(product.title)}</h1>
             <p class="lede">${escapeHtml(product.copy.shortDescription)}</p>
-            <div class="status-strip" aria-label="Approval status">
-              <span>${escapeHtml(orderLabel)}</span>
-              <span>From $${escapeHtml(firstPrice)}</span>
+            <div class="status-strip" aria-label="Ordering path">
+              <span class="route-chip route-${escapeHtml(buyerRoute(product))}">${escapeHtml(orderLabel)}</span>
+              ${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}
               <span>${variantCount} ${variantCount === 1 ? 'option' : 'options'}</span>
               <span>${escapeHtml(product.productType || 'Custom print product')}</span>
             </div>
@@ -271,8 +276,8 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
           </div>
           <div class="purchase-panel">
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="eager" decoding="async">
-            <span class="price">From $${escapeHtml(firstPrice)}</span>
-            <p>${builderProduct ? 'Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.' : product.publishable ? 'Choose an option, add it to the cart, then upload artwork before checkout.' : 'This product is visible in the catalog but currently marked sold out until production and Shopify publication are approved.'}</p>
+            <span class="price">${firstPrice ? `From $${escapeHtml(firstPrice)}` : 'Quoted to your spec'}</span>
+            <p>${builderProduct ? 'Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.' : buyerRoute(product) === 'order-online' ? 'Choose an option, add it to the cart, then upload artwork before checkout.' : 'Send the artwork and details — the shop will quote the right setup and turnaround.'}</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select">${selectorOptions}</select></label>
             ${primaryCta}
             <div class="approval-list">
@@ -314,6 +319,10 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
           var cta = document.querySelector('.feature-cta');
           var buttons = Array.prototype.slice.call(document.querySelectorAll('#variants button[data-sku]'));
           if (!select || !cta || cta.tagName === 'A') return;
+          var quoteHref = '/contact?product=' + encodeURIComponent(cta.dataset.handle || '');
+          cta.addEventListener('click', function(){
+            if (cta.classList.contains('quote-button')) window.location.href = quoteHref;
+          });
           select.addEventListener('change', function(){
             var match = buttons.find(function(button){ return button.dataset.sku === select.value; });
             if (!match) return;
@@ -326,14 +335,14 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
             if (match.dataset.checkoutReady === 'true') {
               cta.className = 'buy-button feature-cta';
               cta.textContent = 'Add selected option';
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             } else {
               cta.className = 'quote-button feature-cta';
-              cta.textContent = 'Sold out';
+              cta.textContent = 'Request a quote';
               cta.setAttribute('type', 'button');
-              cta.setAttribute('disabled', 'true');
-              cta.setAttribute('aria-disabled', 'true');
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             }
           });
         })();
@@ -357,10 +366,10 @@ function renderInternalProxyProductPage(product, { siteUrl = DEFAULT_SITE_URL } 
           <div>
             <p class="eyebrow">${escapeHtml(category.label)} · ordering path</p>
             <h1>${escapeHtml(product.title)}</h1>
-            <p class="lede">This product is managed through a guided ordering path so customers do not have to sort through backend sizing records. Start with the builder or send the details to Hatfield McCoy DTF for help.</p>
+            <p class="lede">This product is ordered through a guided path so sizing and materials are set right the first time. Start with the builder or send the details to Hatfield McCoy DTF.</p>
             <div class="status-strip" aria-label="Ordering status">
               <span>Guided order</span>
-              <span>From $${escapeHtml(firstPrice)}</span>
+              ${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}
               <span>${escapeHtml(orderPathLabel(product))}</span>
             </div>
             <div class="hero-actions">
@@ -370,8 +379,8 @@ function renderInternalProxyProductPage(product, { siteUrl = DEFAULT_SITE_URL } 
           </div>
           <div class="purchase-panel">
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="eager" decoding="async">
-            <span class="price">From $${escapeHtml(firstPrice)}</span>
-            <p>This route stays guided so customers land on the correct fixed-size builder or support path instead of raw backend variants.</p>
+            <span class="price">${firstPrice ? `From $${escapeHtml(firstPrice)}` : 'Quoted to your spec'}</span>
+            <p>A guided route that lands you on the correct fixed-size builder or support path.</p>
             <a class="btn primary feature-cta" href="${escapeHtml(actionUrl)}">${escapeHtml(actionLabel)}</a>
           </div>
         </section>
@@ -379,7 +388,7 @@ function renderInternalProxyProductPage(product, { siteUrl = DEFAULT_SITE_URL } 
           <article>
             <p class="eyebrow">Cleaner ordering</p>
             <h2>Built for guided setup.</h2>
-            <p>This listing uses generated sizing data behind the scenes, so the public page is routed into a customer-facing order path instead of exposing internal variant codes.</p>
+            <p>Orders for this product run through a guided setup so sizing and materials are confirmed before production starts.</p>
           </article>
         </section>
       </main>`,
@@ -494,7 +503,7 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
             <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="lazy" decoding="async">
             <span class="kicker">${escapeHtml(category.label)}</span>
             <strong>${category.products.length} ${category.products.length === 1 ? 'product' : 'products'}</strong>
-            <small>From $${escapeHtml(lowPrice)} with direct checkout</small>
+            <small>${lowPrice ? `From $${escapeHtml(lowPrice)} with direct checkout` : 'Quoted to your spec by the shop'}</small>
           </a>`
   }).join('')
   const cards = frontendCatalog.products.map((product) => productCardMarkup(product, { className: 'catalog-card' })).join('')
@@ -980,7 +989,7 @@ function productCardMarkup(product, { className = 'product-card' } = {}) {
               <span class="kicker">${escapeHtml(category.label)}</span>
               ${isCatalog ? `<h3>${escapeHtml(product.title)}</h3>` : `<strong>${escapeHtml(product.title)}</strong>`}
               <p>${escapeHtml(product.copy.shortDescription)}</p>
-              <div class="catalog-meta"><span>From $${escapeHtml(firstPrice)}</span><span>${variantCount} ${variantCount === 1 ? 'option' : 'options'}</span><span>${escapeHtml(action)}</span></div>
+              <div class="catalog-meta">${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}<span>${variantCount} ${variantCount === 1 ? 'option' : 'options'}</span><span class="route-chip route-${escapeHtml(buyerRoute(product))}">${escapeHtml(action)}</span></div>
               <em>View options</em>
             </div>`
   return `
@@ -1007,28 +1016,59 @@ function productCardImage(category) {
 function lowestPrice(products) {
   const prices = products
     .flatMap((product) => product.variants ?? [])
-    .map((variant) => displayPriceNumber(variant.price))
+    .map((variant) => Number(variantDisplayPrice(variant)))
     .filter((price) => Number.isFinite(price) && price > 0)
-  return prices.length ? Math.min(...prices).toFixed(2) : '0.98'
+  return prices.length ? Math.min(...prices).toFixed(2) : null
 }
 
 function firstDisplayPrice(product) {
-  return formatDisplayPrice(product.variants.find((variant) => Number(variant.price) > 0)?.price ?? product.variants[0]?.price ?? '0.98')
+  for (const variant of product.variants ?? []) {
+    const price = variantDisplayPrice(variant)
+    if (price) return price
+  }
+  return null
 }
 
 function formatDisplayPrice(price) {
-  return displayPriceNumber(price).toFixed(2)
+  const value = displayPriceNumber(price)
+  return value === null ? null : value.toFixed(2)
 }
 
+// Returns null for missing/zero prices — templates render the buyer-route state
+// instead of a fabricated floor price.
 function displayPriceNumber(price) {
   const parsed = Number(price)
-  if (!Number.isFinite(parsed) || parsed <= 0) return 0.98
-  return parsed < 0.98 ? 0.98 : parsed
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : null
+}
+
+// The importer floored unpriced variants to $0.98 and flagged them; an honest
+// display price treats those as unpriced (quote path), never as $0.98.
+function variantDisplayPrice(variant) {
+  if (!variant) return null
+  if ((variant.flags ?? []).includes('low_price_floor_0_98')) return null
+  return formatDisplayPrice(variant.price)
+}
+
+const BUYER_ROUTE_LABELS = {
+  'order-online': 'Order online',
+  builder: 'Customize in builder',
+  quote: 'Request a quote',
+  unavailable: 'Not currently available online',
+}
+
+// The single routing truth for cards, PDP hero, and variant tables. 'unavailable'
+// is reserved for items the shop explicitly cannot produce; everything else that
+// is not online-purchasable routes to quote (production default).
+export function buyerRoute(product) {
+  if (isBuilderProduct(product)) return 'builder'
+  const purchasable = (product.variants ?? []).some(
+    (variant) => variant.checkoutEnabled && variantDisplayPrice(variant) !== null
+  )
+  return purchasable ? 'order-online' : 'quote'
 }
 
 function orderPathLabel(product) {
-  if (isBuilderProduct(product)) return 'Builder path'
-  return product.publishable ? 'Buy online' : 'Sold out'
+  return BUYER_ROUTE_LABELS[buyerRoute(product)]
 }
 
 function isBuilderProduct(product) {

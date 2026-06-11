@@ -58,6 +58,25 @@ const unindexed = htmlFiles.filter((f) => !readFileSync(f, 'utf8').includes('noi
 check(`noindex present in all ${htmlFiles.length} HTML files`, unindexed.length === 0,
   unindexed.slice(0, 5).map((f) => f.replace(PS, '')).join(', '))
 
+// 3b. Honest buyer states: no fabricated floor price, no stock claims
+const bannedCopy = []
+for (const f of htmlFiles) {
+  const text = readFileSync(f, 'utf8')
+  if (text.includes('From $0.98')) bannedCopy.push({ file: f.replace(PS, ''), term: 'From $0.98' })
+  if (/Sold out|Coming soon/.test(text)) bannedCopy.push({ file: f.replace(PS, ''), term: 'Sold out/Coming soon' })
+}
+check('no fabricated "From $0.98" / "Sold out" / "Coming soon" in built output', bannedCopy.length === 0,
+  bannedCopy.slice(0, 5).map((b) => `${b.file} (${b.term})`).join(', '))
+
+// 3c. Builder PDPs never render an add-to-cart path
+const builderPdps = htmlFiles.filter((f) =>
+  readFileSync(f, 'utf8').includes('class="btn primary feature-cta" href="/gang-sheet-builder"'))
+// The cart drawer's checkout button also carries .buy-button on every page;
+// only add-to-cart buttons (data-handle) are an offense on builder PDPs.
+const builderOffenders = builderPdps.filter((f) => readFileSync(f, 'utf8').includes('class="buy-button" data-handle='))
+check(`builder PDPs (${builderPdps.length}) render no buy-button markup`, builderOffenders.length === 0,
+  builderOffenders.slice(0, 5).map((f) => f.replace(PS, '')).join(', '))
+
 // 4. robots.txt stays closed until the launch gate
 const robots = readFileSync(join(PS, 'robots.txt'), 'utf8')
 check('robots.txt disallows all crawling', /User-agent: \*\s*\nDisallow: \//.test(robots))

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-11T11:59:44.285Z",
+    "generated_at": "2026-06-11T15:59:10.836Z",
     "source": "dtfva-catalog-plus-shopify-launch-catalog",
     "product_count": 85,
     "public_product_count": 63,
@@ -4388,14 +4388,6 @@
           "brand": {
             "@type": "Brand",
             "name": "Hatfield McCoy DTF"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.hatfieldmccoydtf.com/products/dtfva-america-s-250th-anniversary-patch-1-inch-circle",
-            "priceCurrency": "USD",
-            "price": "0.98",
-            "availability": "https://schema.org/PreOrder",
-            "itemCondition": "https://schema.org/NewCondition"
           }
         }
       },
@@ -4592,7 +4584,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-uv-printed-custom-leather-patches",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "1.60",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -6425,7 +6417,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-uv-printed-custom-tpu-patches",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "1.60",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -11098,7 +11090,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-custom-glitter-dtf-transfer-by-size-1",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "4.03",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -16179,7 +16171,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-custom-sublimation-transfers-by-size",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "0.30",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -18013,7 +18005,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-custom-woven-labels",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "0.68",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -26273,7 +26265,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-uv-dtf-transfer-by-size-189",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "1.11",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -32889,7 +32881,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-custom-posters-3",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "6.49",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -40091,7 +40083,7 @@
             "@type": "Offer",
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-dye-cut-stickers",
             "priceCurrency": "USD",
-            "price": "0.98",
+            "price": "2.04",
             "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
@@ -42522,14 +42514,6 @@
           "brand": {
             "@type": "Brand",
             "name": "Hatfield McCoy DTF"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.hatfieldmccoydtf.com/products/dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format",
-            "priceCurrency": "USD",
-            "price": "0.98",
-            "availability": "https://schema.org/PreOrder",
-            "itemCondition": "https://schema.org/NewCondition"
           }
         }
       },
@@ -44044,14 +44028,6 @@
           "brand": {
             "@type": "Brand",
             "name": "Hatfield McCoy DTF"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.hatfieldmccoydtf.com/products/custom-gang-sheet",
-            "priceCurrency": "USD",
-            "price": "0.00",
-            "availability": "https://schema.org/PreOrder",
-            "itemCondition": "https://schema.org/NewCondition"
           }
         }
       },

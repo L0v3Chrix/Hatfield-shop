@@ -153,7 +153,7 @@
     @media(max-width:680px){.hero-actions{grid-template-columns:1fr}.family-grid,.catalog-grid,.product-grid{grid-template-columns:1fr}.catalog-card,.seo-page .product-card{min-height:0}.catalog-card h3{font-size:.98rem}.catalog-card p,.product-card p{display:block;-webkit-line-clamp:3}.purchase-panel img{height:172px}.table-wrap table{min-width:520px}}
     @media(max-width:420px){.seo-page{width:min(1240px,calc(100% - 24px))}.catalog-card h3{font-size:.86rem}.status-strip span,.approval-list span,.catalog-meta span{font-size:.55rem}.purchase-panel img{height:180px}.collection-hero>img{height:180px}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Custom Gang Sheet","description":"Custom Gang Sheet from Hatfield McCoy DTF in Logan, West Virginia. Custom Gang Sheet from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwid…","brand":{"@type":"Brand","name":"Hatfield McCoy DTF"},"offers":{"@type":"Offer","url":"https://www.hatfieldmccoydtf.com/products/custom-gang-sheet","priceCurrency":"USD","price":"0.00","availability":"https://schema.org/PreOrder","itemCondition":"https://schema.org/NewCondition"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Custom Gang Sheet","description":"Custom Gang Sheet from Hatfield McCoy DTF in Logan, West Virginia. Custom Gang Sheet from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwid…","brand":{"@type":"Brand","name":"Hatfield McCoy DTF"}}</script>
 </head>
 <body>
 <div class="announce"><div class="wrap"><span>Custom DTF transfers</span><span>Gang sheet builder</span><span>Logan, WV production · nationwide shipping</span></div></div>
@@ -185,9 +185,9 @@
             <p class="eyebrow">Transfers · Logan, WV production</p>
             <h1>Custom Gang Sheet</h1>
             <p class="lede">Custom Gang Sheet from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-            <div class="status-strip" aria-label="Approval status">
-              <span>Sold out</span>
-              <span>From $0.98</span>
+            <div class="status-strip" aria-label="Ordering path">
+              <span class="route-chip route-quote">Request a quote</span>
+              
               <span>1 option</span>
               <span>Gang Sheet</span>
             </div>
@@ -198,10 +198,10 @@
           </div>
           <div class="purchase-panel">
             <img src="/assets/shopify-images/big-gangsheet-hero.webp" width="900" height="900" alt="Wide gang sheet packed with customer artwork" loading="eager" decoding="async">
-            <span class="price">From $0.98</span>
-            <p>This product is visible in the catalog but currently marked sold out until production and Shopify publication are approved.</p>
-            <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="GS-22-CUSTOM">GS-22-CUSTOM - Size: 22&quot; Wide Custom - $0.00</option></select></label>
-            <button class="quote-button feature-cta" type="button" disabled aria-disabled="true">Sold out</button>
+            <span class="price">Quoted to your spec</span>
+            <p>Send the artwork and details — the shop will quote the right setup and turnaround.</p>
+            <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="GS-22-CUSTOM">GS-22-CUSTOM - Size: 22&quot; Wide Custom</option></select></label>
+            <a class="quote-button feature-cta" href="/contact?product=custom-gang-sheet">Request a quote</a>
             <div class="approval-list">
               <span>Artwork upload in cart</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
@@ -238,8 +238,8 @@
             <tr>
               <td>GS-22-CUSTOM</td>
               <td>Size: 22&quot; Wide Custom</td>
-              <td>$0.98</td>
-              <td><button class="quote-button table-link" type="button" disabled aria-disabled="true">Sold out</button></td>
+              <td>Quoted</td>
+              <td><a class="quote-button table-link" href="/contact?product=custom-gang-sheet">Request a quote</a></td>
             </tr></tbody></table></div>
         </section>
       </main>
@@ -249,6 +249,10 @@
           var cta = document.querySelector('.feature-cta');
           var buttons = Array.prototype.slice.call(document.querySelectorAll('#variants button[data-sku]'));
           if (!select || !cta || cta.tagName === 'A') return;
+          var quoteHref = '/contact?product=' + encodeURIComponent(cta.dataset.handle || '');
+          cta.addEventListener('click', function(){
+            if (cta.classList.contains('quote-button')) window.location.href = quoteHref;
+          });
           select.addEventListener('change', function(){
             var match = buttons.find(function(button){ return button.dataset.sku === select.value; });
             if (!match) return;
@@ -261,14 +265,14 @@
             if (match.dataset.checkoutReady === 'true') {
               cta.className = 'buy-button feature-cta';
               cta.textContent = 'Add selected option';
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             } else {
               cta.className = 'quote-button feature-cta';
-              cta.textContent = 'Sold out';
+              cta.textContent = 'Request a quote';
               cta.setAttribute('type', 'button');
-              cta.setAttribute('disabled', 'true');
-              cta.setAttribute('aria-disabled', 'true');
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             }
           });
         })();

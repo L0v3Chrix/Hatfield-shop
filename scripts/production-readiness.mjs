@@ -493,7 +493,7 @@ function verifyProductionPreview() {
     for (const href of extractAttributes(html, 'href')) {
       if (href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#')) continue
       if (href === '#') continue
-      const clean = href.split('#')[0]
+      const clean = href.split('#')[0].split('?')[0]
       if (!clean) continue
       if (clean.startsWith('/')) {
         const target = resolveProductionPath(clean)

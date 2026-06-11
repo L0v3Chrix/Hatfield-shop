@@ -185,9 +185,9 @@
             <p class="eyebrow">Builders · Logan, WV production</p>
             <h1>Custom Glitter DTF Transfer by Size</h1>
             <p class="lede">Custom Glitter DTF Transfer by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-            <div class="status-strip" aria-label="Approval status">
-              <span>Builder path</span>
-              <span>From $0.98</span>
+            <div class="status-strip" aria-label="Ordering path">
+              <span class="route-chip route-builder">Customize in builder</span>
+              <span>From $0.40</span>
               <span>14 options</span>
               <span>Custom Print Product</span>
             </div>
@@ -198,7 +198,7 @@
           </div>
           <div class="purchase-panel">
             <img src="/assets/images/product-graphics/glitter-film-sheet.webp" width="900" height="900" alt="Glitter transfer film sheet" loading="eager" decoding="async">
-            <span class="price">From $0.98</span>
+            <span class="price">From $0.40</span>
             <p>Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-2_X_2">2&quot; x 2&quot; - Size: 2&quot; x 2&quot; - $0.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-3_X_3">3&quot; x 3&quot; - Size: 3&quot; x 3&quot; - $1.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-4_X_4">4&quot; x 4&quot; - Size: 4&quot; x 4&quot; - $1.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-5_X_5">5&quot; x 5&quot; - Size: 5&quot; x 5&quot; - $2.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-6_X_6">6&quot; x 6&quot; - Size: 6&quot; x 6&quot; - $3.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-7_X_7">7&quot; x 7&quot; - Size: 7&quot; x 7&quot; - $4.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-8_X_8">8&quot; x 8&quot; - Size: 8&quot; x 8&quot; - $5.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-9_X_9">9&quot; x 9&quot; - Size: 9&quot; x 9&quot; - $6.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-9_X_11">9&quot; x 11&quot; - Size: 9&quot; x 11&quot; - $7.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-10_X_10">10&quot; x 10&quot; - Size: 10&quot; x 10&quot; - $7.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-11_X_11">11&quot; x 11&quot; - Size: 11&quot; x 11&quot; - $7.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-11_X_14">11&quot; x 14&quot; - Size: 11&quot; x 14&quot; - $9.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-12_X_14">12&quot; x 14&quot; - Size: 12&quot; x 14&quot; - $10.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-12_X_17">12&quot; x 17&quot; - Size: 12&quot; x 17&quot; - $13.40</option></select></label>
             <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
@@ -238,7 +238,7 @@
             <tr>
               <td>2&quot; x 2&quot;</td>
               <td>Size: 2&quot; x 2&quot;</td>
-              <td>$0.98</td>
+              <td>$0.40</td>
               <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
             </tr>
             <tr>
@@ -327,6 +327,10 @@
           var cta = document.querySelector('.feature-cta');
           var buttons = Array.prototype.slice.call(document.querySelectorAll('#variants button[data-sku]'));
           if (!select || !cta || cta.tagName === 'A') return;
+          var quoteHref = '/contact?product=' + encodeURIComponent(cta.dataset.handle || '');
+          cta.addEventListener('click', function(){
+            if (cta.classList.contains('quote-button')) window.location.href = quoteHref;
+          });
           select.addEventListener('change', function(){
             var match = buttons.find(function(button){ return button.dataset.sku === select.value; });
             if (!match) return;
@@ -339,14 +343,14 @@
             if (match.dataset.checkoutReady === 'true') {
               cta.className = 'buy-button feature-cta';
               cta.textContent = 'Add selected option';
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             } else {
               cta.className = 'quote-button feature-cta';
-              cta.textContent = 'Sold out';
+              cta.textContent = 'Request a quote';
               cta.setAttribute('type', 'button');
-              cta.setAttribute('disabled', 'true');
-              cta.setAttribute('aria-disabled', 'true');
-              cta.removeAttribute('href');
+              cta.removeAttribute('disabled');
+              cta.removeAttribute('aria-disabled');
             }
           });
         })();

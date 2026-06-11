@@ -31,6 +31,7 @@
     "catalog:media:dry": "node scripts/shopify/upload-live-product-media.js --dry-run",
     "catalog:media:upload": "node scripts/shopify/upload-live-product-media.js",
     "shopify:audit": "node scripts/shopify/audit-store-state.mjs",
+    "shopify:storefront:verify": "node scripts/shopify/verify-storefront-visibility.mjs",
     "shopify:webhook:orders:artwork": "node scripts/shopify/register-order-artwork-webhook.js",
     "shopify:oauth:capture": "node scripts/shopify/capture-admin-token.js",
     "kixxl:discount": "node scripts/shopify/create-internal-discount.js",

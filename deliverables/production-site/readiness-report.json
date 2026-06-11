@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-11T06:23:18.433Z",
+  "generatedAt": "2026-06-11T11:52:45.091Z",
   "summary": {
     "routes": 7,
     "htmlFiles": 297,
     "sourceImages": 57,
-    "optimizedImages": 180,
-    "manifestImages": 57,
+    "optimizedImages": 177,
+    "manifestImages": 58,
     "manifestWarnings": 0,
     "placeholders": 0,
     "pendingConfirmations": 6,

@@ -42,6 +42,10 @@ const plannedFor = (family) => (GENERIC_FAMILIES.has(family) ? `gen-${family}` :
 const MAX_PRODUCTS_PER_FAMILY = 6
 const MAX_COLLECTIONS_PER_FAMILY = 4
 
+// Derivative sets intentionally kept without a manifest source until D5
+// regenerates them (mirrors LEGACY_PINNED_SLUGS in prepare-shopify-images.py).
+const LEGACY_PINNED_SLUGS = new Set(['featured-merch-scene'])
+
 const normalized = JSON.parse(readFileSync(NORMALIZED, 'utf8'))
 const shopifyState = existsSync(SHOPIFY_STATE) ? JSON.parse(readFileSync(SHOPIFY_STATE, 'utf8')) : null
 const catalog = buildFrontendCatalog(normalized, { shopifyState })
@@ -70,7 +74,8 @@ function gradeEntry({ family, card, hero, overridden, familyCount, maxPerFamily 
   if (!srcExists(card?.src) || !srcExists(hero?.src)) return 'missing'
   if (overridden) return 'curated'
   const isDerivative = /-(card|hero|thumb)\.webp$/.test(card?.src ?? '')
-  if (isDerivative && manifestDerivatives.size && !manifestDerivatives.has(basename(card.src))) return 'stale'
+  if (isDerivative && manifestDerivatives.size && !manifestDerivatives.has(basename(card.src))
+    && !LEGACY_PINNED_SLUGS.has(family)) return 'stale'
   if (GENERIC_FAMILIES.has(family) || familyCount > maxPerFamily) return 'generic'
   return 'good'
 }

@@ -8,16 +8,16 @@
   },
   {
     "handle": "dtfva-custom-dtf-gang-sheets-fast-reliable-transfer-printing",
-    "image": "/assets/images/product-graphics/gang-sheet-roll.webp",
+    "image": "/assets/shopify-images/big-gangsheet-card.webp",
     "alt": "Custom DTF Gang Sheets 46″ Builder — Hatfield McCoy DTF",
-    "family": "gang-sheet-roll",
+    "family": "big-gangsheet",
     "grade": "generic"
   },
   {
     "handle": "dtfva-custom-dtf-gang-sheets-dtf-virginia",
     "image": "/assets/shopify-images/46-gang-sheet.png",
     "alt": "46 inch gang sheet sample",
-    "family": "gang-sheet-roll",
+    "family": "big-gangsheet",
     "grade": "curated"
   },
   {
@@ -43,23 +43,23 @@
   },
   {
     "handle": "dtfva-brand-starter-pack",
-    "image": "/assets/images/product-graphics/service-sample-bundle.webp",
+    "image": "/assets/shopify-images/guru-pack-card.webp",
     "alt": "PRO Branding Kit - Starter Pack — Hatfield McCoy DTF",
-    "family": "service-sample-bundle",
-    "grade": "generic"
+    "family": "guru-pack",
+    "grade": "good"
   },
   {
     "handle": "dtfva-brand-growth-pack",
     "image": "/assets/shopify-images/guru-pack.jpg",
     "alt": "GURU branding kit growth pack sample",
-    "family": "service-sample-bundle",
+    "family": "guru-pack",
     "grade": "curated"
   },
   {
     "handle": "dtfva-brand-business-pack",
     "image": "/assets/shopify-images/items-stickerd.jpg",
     "alt": "Merch branding kit business pack sample",
-    "family": "service-sample-bundle",
+    "family": "guru-pack",
     "grade": "curated"
   },
   {
@@ -94,7 +94,7 @@
     "handle": "dtfva-custom-dtf-gang-sheets-printing-service",
     "image": "/assets/shopify-images/custome-22-gang-sheet-builder.png",
     "alt": "Custom 22 inch gang sheet builder sample",
-    "family": "gang-sheet-roll",
+    "family": "big-gangsheet",
     "grade": "curated"
   },
   {
@@ -155,9 +155,9 @@
   },
   {
     "handle": "dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank",
-    "image": "/assets/shopify-images/blank-sweatshirt-card.webp",
+    "image": "/assets/shopify-images/hoodies-blank-card.webp",
     "alt": "Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank — Hatfield McCoy DTF",
-    "family": "blank-sweatshirt",
+    "family": "hoodies-blank",
     "grade": "good"
   },
   {
@@ -178,92 +178,92 @@
     "handle": "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
     "image": "/assets/shopify-images/custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee.png",
     "alt": "Custom Los Angeles Apparel 1865GD garment dye sleeveless tee sample",
-    "family": "sublimation-tumbler",
+    "family": "apparel-samples-stack",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-dtf-gang-sheets-30-inches-builder",
-    "image": "/assets/images/product-graphics/gang-sheet-roll.webp",
+    "image": "/assets/shopify-images/big-gangsheet-card.webp",
     "alt": "Custom DTF Gang Sheets 30\" Builder — Hatfield McCoy DTF",
-    "family": "gang-sheet-roll",
+    "family": "big-gangsheet",
     "grade": "generic"
   },
   {
     "handle": "dtfva-custom-dtf-gang-sheets-30-inches",
     "image": "/assets/shopify-images/dtf-gang-sheets-30.png",
     "alt": "DTF gang sheets 30 inch sample",
-    "family": "gang-sheet-roll",
+    "family": "big-gangsheet",
     "grade": "curated"
   },
   {
     "handle": "dtfva-party-banners",
-    "image": "/assets/images/product-graphics/wide-format-roll.webp",
+    "image": "/assets/shopify-images/party-banner2-card.webp",
     "alt": "Party Banners — Hatfield McCoy DTF",
-    "family": "wide-format-roll",
-    "grade": "generic"
+    "family": "party-banner2",
+    "grade": "good"
   },
   {
     "handle": "dtfva-indoor-floor-graphics",
-    "image": "/assets/images/product-graphics/wide-format-roll.webp",
+    "image": "/assets/shopify-images/floor-graphic-card.webp",
     "alt": "Indoor Floor Graphics — Hatfield McCoy DTF",
-    "family": "wide-format-roll",
-    "grade": "generic"
+    "family": "floor-graphic",
+    "grade": "good"
   },
   {
     "handle": "dtfva-window-clings",
     "image": "/assets/shopify-images/window-front.jpg",
     "alt": "Window cling storefront sample",
-    "family": "wide-format-roll",
+    "family": "window-vinyl-decal",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-window-graphics",
-    "image": "/assets/images/product-graphics/wide-format-roll.webp",
+    "image": "/assets/shopify-images/window-vinyl-decal-card.webp",
     "alt": "Custom Window Graphics — Hatfield McCoy DTF",
-    "family": "wide-format-roll",
-    "grade": "generic"
+    "family": "window-vinyl-decal",
+    "grade": "good"
   },
   {
     "handle": "dtfva-perforated-window-vinyl",
     "image": "/assets/shopify-images/perforated-window-vinyl-window-perf-graphics.png",
     "alt": "Perforated window vinyl sample",
-    "family": "wide-format-roll",
+    "family": "window-vinyl-decal",
     "grade": "curated"
   },
   {
     "handle": "dtfva-custom-softballs",
-    "image": "/assets/shopify-images/neon-basketball-card.webp",
+    "image": "/assets/shopify-images/softball-card.webp",
     "alt": "Custom Softballs — Hatfield McCoy DTF",
-    "family": "neon-basketball",
+    "family": "softball",
     "grade": "good"
   },
   {
     "handle": "dtfva-custom-baseballs",
-    "image": "/assets/shopify-images/neon-basketball-card.webp",
+    "image": "/assets/shopify-images/baseball-card.webp",
     "alt": "Custom Baseballs — Hatfield McCoy DTF",
-    "family": "neon-basketball",
+    "family": "baseball",
     "grade": "good"
   },
   {
     "handle": "dtfva-custom-hockey-pucks",
-    "image": "/assets/shopify-images/neon-basketball-card.webp",
+    "image": "/assets/shopify-images/h-m-jersey-card.webp",
     "alt": "Custom Hockey Pucks — Hatfield McCoy DTF",
-    "family": "neon-basketball",
+    "family": "h-m-jersey",
     "grade": "good"
   },
   {
     "handle": "dtfva-custom-pickleballs",
-    "image": "/assets/shopify-images/neon-basketball-card.webp",
+    "image": "/assets/shopify-images/pickleball-card.webp",
     "alt": "Custom Pickleballs — Hatfield McCoy DTF",
-    "family": "neon-basketball",
+    "family": "pickleball",
     "grade": "good"
   },
   {
     "handle": "dtfva-personalized-tumblers",
-    "image": "/assets/images/product-graphics/sublimation-tumbler.webp",
+    "image": "/assets/shopify-images/h-m-tumblers-card.webp",
     "alt": "Personalized Tumblers — Hatfield McCoy DTF",
-    "family": "sublimation-tumbler",
-    "grade": "generic"
+    "family": "h-m-tumblers",
+    "grade": "good"
   },
   {
     "handle": "dtfva-uv-dtf-transfer-by-size",
@@ -290,7 +290,7 @@
     "handle": "dtfva-custom-dtf-transfers-by-size-virginia",
     "image": "/assets/shopify-images/custom-dtf-transfers-by-size.png",
     "alt": "Custom DTF transfers by size sample",
-    "family": "gang-sheet-roll",
+    "family": "big-gangsheet",
     "grade": "curated"
   },
   {
@@ -337,9 +337,9 @@
   },
   {
     "handle": "dtfva-custom-dtf-gang-sheets-your-colors-deserve-to-pop",
-    "image": "/assets/images/product-graphics/gang-sheet-roll.webp",
+    "image": "/assets/shopify-images/big-gangsheet-card.webp",
     "alt": "Custom DTF Gang Sheets 22\" — Hatfield McCoy DTF",
-    "family": "gang-sheet-roll",
+    "family": "big-gangsheet",
     "grade": "generic"
   },
   {
@@ -351,51 +351,51 @@
   },
   {
     "handle": "dtfva-professional-vector-design-services",
-    "image": "/assets/images/product-graphics/service-sample-bundle.webp",
+    "image": "/assets/shopify-images/pro-vector-card.webp",
     "alt": "Professional Vector Design Services — Hatfield McCoy DTF",
-    "family": "service-sample-bundle",
-    "grade": "generic"
+    "family": "pro-vector",
+    "grade": "good"
   },
   {
     "handle": "dtfva-rush-fee",
-    "image": "/assets/images/product-graphics/dtf-transfer-peel.webp",
+    "image": "/assets/shopify-images/rush-order-card.webp",
     "alt": "RUSH FEE - for same-day or expedited Printing — Hatfield McCoy DTF",
-    "family": "dtf-transfer-peel",
-    "grade": "generic"
+    "family": "rush-order",
+    "grade": "good"
   },
   {
     "handle": "dtfva-digital-factory-dtf-desktop-edition",
     "image": "/assets/shopify-images/digital-factory-12.png",
     "alt": "Digital Factory 12 Direct to Film Edition icon",
-    "family": "printer-output-film",
+    "family": "dtf-printer",
     "grade": "curated"
   },
   {
     "handle": "dtfva-add-driver-port-24-wide-or-larger",
     "image": "/assets/shopify-images/add-driver-port-24-wide-or-larger.png",
     "alt": "Add driver port 24 inch wide or larger sample",
-    "family": "printer-output-film",
+    "family": "dtf-printer",
     "grade": "curated"
   },
   {
     "handle": "dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code",
     "image": "/assets/shopify-images/cadlink-digital-factory-direct-to-film-dtf-for-wide-format.png",
     "alt": "CADlink Digital Factory DTF wide format sample",
-    "family": "printer-output-film",
+    "family": "dtf-printer",
     "grade": "curated"
   },
   {
     "handle": "dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code",
     "image": "/assets/shopify-images/add-driver-port-23-wide-or-smaller.png",
     "alt": "Add driver port 23 inch wide or smaller sample",
-    "family": "printer-output-film",
+    "family": "dtf-printer",
     "grade": "curated"
   },
   {
     "handle": "dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format",
     "image": "/assets/shopify-images/cadlink-digital-factory-v12-dtf-printing-15-days-trial-desktop-wide-format.png",
     "alt": "Cadlink Digital Factory v12 DTF printing trial sample",
-    "family": "printer-output-film",
+    "family": "dtf-printer",
     "grade": "curated"
   }
 ]

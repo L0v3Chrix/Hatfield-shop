@@ -1,6 +1,6 @@
 # Hatfield McCoy DTF Production Readiness Summary
 
-Generated: 2026-06-11T11:52:45.091Z
+Generated: 2026-06-11T11:57:13.937Z
 
 ## Status
 

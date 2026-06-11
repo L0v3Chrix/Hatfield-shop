@@ -19,7 +19,7 @@
     "competitor:dtfva:test": "node --test scripts/competitor/dtfvirginia/test/*.test.js",
     "images:coverage": "node scripts/competitor/dtfvirginia/asset-coverage-report.mjs",
     "production:prepare": "python3 scripts/prepare-shopify-images.py && node scripts/production-readiness.mjs",
-    "production:verify": "node scripts/production-readiness.mjs --verify-only",
+    "production:verify": "node scripts/production-readiness.mjs --verify-only && node scripts/copy-compliance.mjs",
     "vercel-build": "node scripts/vercel-build.mjs",
     "catalog:probe": "node scripts/shopify/create-catalog.js --probe",
     "catalog:dry-run": "node scripts/shopify/create-catalog.js --dry-run",

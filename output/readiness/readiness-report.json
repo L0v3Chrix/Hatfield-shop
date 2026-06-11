@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-11T16:10:27.597Z",
+  "generatedAt": "2026-06-11T16:17:07.491Z",
   "summary": {
     "routes": 7,
-    "htmlFiles": 297,
+    "htmlFiles": 296,
     "sourceImages": 57,
     "optimizedImages": 177,
     "manifestImages": 58,
     "manifestWarnings": 0,
     "placeholders": 0,
     "pendingConfirmations": 6,
-    "pendingConfirmationMentions": 7,
+    "pendingConfirmationMentions": 0,
     "blockers": 0,
-    "reviewItems": 7
+    "reviewItems": 0
   },
   "gates": {
     "buildCanProceedBeforeClientConfirmations": true,
@@ -58,50 +58,7 @@
     }
   ],
   "blockers": [],
-  "reviewItems": [
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/build-now-implementation-brief.md",
-      "line": 35,
-      "token": "pending confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/contact/index.html",
-      "line": 65,
-      "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/copy-proof-build-brief.md",
-      "line": 8,
-      "token": "pending confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/guides/index.html",
-      "line": 53,
-      "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/index.html",
-      "line": 164,
-      "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/wholesale/index.html",
-      "line": 59,
-      "token": "pending Hatfield McCoy confirmation"
-    },
-    {
-      "type": "client-confirmation",
-      "file": "deliverables/production-site/wholesale/index.html",
-      "line": 60,
-      "token": "pending operational review"
-    }
-  ],
+  "reviewItems": [],
   "assetWorkflow": {
     "sourceDirectory": "Shopify-images-good",
     "optimizedDirectory": "deliverables/brand-design-pack/assets/shopify-images",

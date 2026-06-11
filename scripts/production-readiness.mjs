@@ -12,6 +12,7 @@ const BRAND_DIR = join(ROOT, 'deliverables', 'brand-design-pack')
 const SOURCE_ASSET_DIR = join(ROOT, 'Shopify-images-good')
 const OPTIMIZED_ASSET_DIR = join(BRAND_DIR, 'assets', 'shopify-images')
 const PRODUCTION_DIR = join(ROOT, 'deliverables', 'production-site')
+const REPORT_DIR = join(ROOT, 'output', 'readiness')
 const NORMALIZED_CATALOG_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia', 'normalized-catalog.json')
 const SHOPIFY_STATE_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia', 'shopify-state.json')
 const LIVE_PRODUCTS_JSON_PATH = join(ROOT, 'deliverables', 'prototype', 'data', 'products.json')
@@ -159,8 +160,11 @@ function main() {
   const verifyOnly = flags.has('--verify-only')
   if (!verifyOnly) buildProductionPreview()
   const report = verifyProductionPreview()
-  writeFileSync(join(PRODUCTION_DIR, 'readiness-report.json'), JSON.stringify(report, null, 2) + '\n')
-  writeFileSync(join(PRODUCTION_DIR, 'production-readiness-checklist.html'), renderChecklistHtml(report))
+  // Internal audit artifacts live OUTSIDE the deployable tree — nothing under
+  // production-site/ may describe build state to the public.
+  mkdirSync(REPORT_DIR, { recursive: true })
+  writeFileSync(join(REPORT_DIR, 'readiness-report.json'), JSON.stringify(report, null, 2) + '\n')
+  writeFileSync(join(REPORT_DIR, 'production-readiness-checklist.html'), renderChecklistHtml(report))
   writeFileSync(join(BRAND_DIR, 'production-readiness-summary.md'), renderSummaryMarkdown(report))
   printReport(report)
   if (report.summary.blockers > 0) process.exitCode = 1
@@ -176,13 +180,11 @@ function buildProductionPreview() {
   mkdirSync(join(PRODUCTION_DIR, 'assets', 'images'), { recursive: true })
   copyFileSync(join(ROOT, 'deliverables', 'prototype', 'assets', 'images', 'logo-primary.png'), join(PRODUCTION_DIR, 'assets', 'images', 'logo-primary.png'))
   copyFileSync(join(ROOT, 'deliverables', 'prototype', 'assets', 'images', 'favicon.png'), join(PRODUCTION_DIR, 'assets', 'images', 'favicon.png'))
-  copyFileSync(join(BRAND_DIR, 'shopify-asset-readiness-plan.md'), join(PRODUCTION_DIR, 'shopify-asset-readiness-plan.md'))
-  copyFileSync(join(BRAND_DIR, 'copy-proof-build-brief.md'), join(PRODUCTION_DIR, 'copy-proof-build-brief.md'))
-  copyFileSync(join(BRAND_DIR, 'build-now-implementation-brief.md'), join(PRODUCTION_DIR, 'build-now-implementation-brief.md'))
   mkdirSync(join(PRODUCTION_DIR, 'data'), { recursive: true })
   copyFileSync(join(ROOT, 'deliverables', 'prototype', 'data', 'config.json'), join(PRODUCTION_DIR, 'data', 'config.json'))
-  writeFileSync(join(PRODUCTION_DIR, 'data', 'pending-confirmations.json'), JSON.stringify(PENDING_CONFIRMATIONS, null, 2) + '\n')
-  writeFileSync(join(PRODUCTION_DIR, 'production-readiness-checklist.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Production Readiness Checklist</title><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="${SITE_URL}/production-readiness-checklist.html"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Production Readiness Checklist"}</script></head><body></body></html>`)
+  // Owner-action tracking (formerly "pending confirmations") is internal only.
+  mkdirSync(REPORT_DIR, { recursive: true })
+  writeFileSync(join(REPORT_DIR, 'owner-actions.json'), JSON.stringify(PENDING_CONFIRMATIONS, null, 2) + '\n')
 
   for (const route of ROUTES) {
     const sourcePath = join(BRAND_DIR, route.source)

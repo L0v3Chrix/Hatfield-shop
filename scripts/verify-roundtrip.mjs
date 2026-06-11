@@ -130,11 +130,21 @@ const priceMismatch = builderUrlPrices.filter((p) => !builderPagePrices.has(p))
 check('builder page visible "From $" prices match launch-URL price params', priceMismatch.length === 0,
   `url prices ${[...new Set(builderUrlPrices)].join(',')} vs visible ${[...builderPagePrices].join(',')}`)
 
-// 6. Readiness report gates
-const report = JSON.parse(readFileSync(join(PS, 'readiness-report.json'), 'utf8'))
+// 6. Readiness report gates (internal artifact — lives outside the deploy tree)
+const report = JSON.parse(readFileSync(join(ROOT, 'output', 'readiness', 'readiness-report.json'), 'utf8'))
 check('readiness report: 0 automated blockers', report.summary?.blockers === 0,
   `blockers=${report.summary?.blockers}`)
 check('readiness report: previewNoindex gate true', report.gates?.previewNoindex === true)
+
+// 6b. No internal audit artifacts may ship in the deployable tree
+const INTERNAL_ARTIFACTS = [
+  'readiness-report.json', 'production-readiness-checklist.html',
+  'data/pending-confirmations.json', 'shopify-asset-readiness-plan.md',
+  'copy-proof-build-brief.md', 'build-now-implementation-brief.md',
+]
+const shippedInternal = INTERNAL_ARTIFACTS.filter((f) => existsSync(join(PS, f)))
+check('no internal audit artifacts in production-site/', shippedInternal.length === 0,
+  shippedInternal.join(', '))
 
 // 7. Local asset paths referenced from JS strings + shop img tags exist on disk
 const cartJs = readFileSync(join(PS, 'assets', 'js', 'cart.js'), 'utf8')

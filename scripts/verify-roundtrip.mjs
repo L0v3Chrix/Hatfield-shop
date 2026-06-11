@@ -77,6 +77,40 @@ const badUrls = gangifyUrls.filter((raw) => {
 check('every builder URL has numeric variant/product, price>0, store set', badUrls.length === 0,
   badUrls.join(' | '))
 
+// 5b. No gangify URL anywhere in built output may carry missing/blank params,
+//     and the builder page's visible prices must match its URL price params
+const allGangify = []
+for (const f of htmlFiles) {
+  const text = readFileSync(f, 'utf8')
+  for (const url of text.match(/https:\/\/[^"']*apps\/gangify\/builder\?[^"']*/g) ?? []) {
+    allGangify.push({ file: f.replace(PS, ''), url })
+  }
+}
+const configJson = join(PS, 'data', 'config.json')
+if (existsSync(configJson)) {
+  const text = readFileSync(configJson, 'utf8')
+  for (const url of text.match(/https:\/\/[^"\\]*apps\/gangify\/builder\?[^"\\]*/g) ?? []) {
+    allGangify.push({ file: '/data/config.json', url })
+  }
+}
+const badAnywhere = allGangify.filter(({ url }) => {
+  const params = new URL(url.replace(/&amp;/g, '&')).searchParams
+  return !/^\d+$/.test(params.get('variant') ?? '') ||
+    !/^\d+$/.test(params.get('product') ?? '') ||
+    !(parseFloat(params.get('price') ?? '0') > 0)
+})
+check(`all ${allGangify.length} gangify URLs site-wide have populated params`, badAnywhere.length === 0,
+  badAnywhere.slice(0, 3).map((b) => b.file).join(', '))
+const builderPagePrices = new Set(
+  (builderHtml.match(/From \$([0-9.]+)/g) ?? []).map((m) => parseFloat(m.replace('From $', '')))
+)
+const builderUrlPrices = gangifyUrls.map((raw) =>
+  parseFloat(new URL(raw.replace(/&amp;/g, '&')).searchParams.get('price'))
+)
+const priceMismatch = builderUrlPrices.filter((p) => !builderPagePrices.has(p))
+check('builder page visible "From $" prices match launch-URL price params', priceMismatch.length === 0,
+  `url prices ${[...new Set(builderUrlPrices)].join(',')} vs visible ${[...builderPagePrices].join(',')}`)
+
 // 6. Readiness report gates
 const report = JSON.parse(readFileSync(join(PS, 'readiness-report.json'), 'utf8'))
 check('readiness report: 0 automated blockers', report.summary?.blockers === 0,

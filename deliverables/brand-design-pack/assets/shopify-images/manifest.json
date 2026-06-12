@@ -207,7 +207,7 @@
       "source": "Shopify-images-good/Generated Image May 28, 2026 - 12_10PM.jpg",
       "sourceBytes": 683952,
       "slug": "tumbler-mascot-navy",
-      "title": "Navy tumbler (third-party collegiate marks \u2014 archive only)",
+      "title": "Navy tumbler (third-party collegiate marks — archive only)",
       "collection": "Archive - third-party marks",
       "usage": [
         "archive"
@@ -1732,7 +1732,7 @@
       "source": "Shopify-images-good/h-m-may4th.jpg",
       "sourceBytes": 41864,
       "slug": "h-m-may4th",
-      "title": "Customer artwork sample (third-party characters \u2014 archive only)",
+      "title": "Customer artwork sample (third-party characters — archive only)",
       "collection": "Archive - third-party marks",
       "usage": [
         "archive"
@@ -2648,6 +2648,61 @@
           "width": 360,
           "height": 288,
           "bytes": 14434
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/custom-dtf-gang-sheets-22-screenshot-2026-06-09.png",
+      "sourceBytes": 2323139,
+      "slug": "custom-dtf-gang-sheets-22-screenshot",
+      "title": "22 inch DTF gang sheet screenshot",
+      "collection": "Gang sheets",
+      "usage": [
+        "product card",
+        "builder page"
+      ],
+      "alt": "22 inch custom DTF gang sheet builder screenshot",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-hero.webp",
+          "bytes": 137218
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-card.webp",
+          "bytes": 76770
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-thumb.webp",
+          "bytes": 20944
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/cadlink-square-blue-background.png",
+      "sourceBytes": 1036641,
+      "slug": "cadlink-square-blue-background",
+      "title": "CADlink software",
+      "collection": "Software and RIP",
+      "usage": [
+        "product card"
+      ],
+      "alt": "CADlink Digital Factory software product graphic on blue background",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-hero.webp",
+          "bytes": 30672
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-card.webp",
+          "bytes": 20156
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-thumb.webp",
+          "bytes": 6636
         }
       },
       "status": "ready"

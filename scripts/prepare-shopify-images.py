@@ -482,6 +482,14 @@ IMAGE_ROLES = {
         "alt": "Printed gang sheet roll packed with colorful artwork",
         "focalPoint": "center",
     },
+    "custom-dtf-gang-sheets-22-screenshot-2026-06-09.png": {
+        "slug": "custom-dtf-gang-sheets-22-screenshot",
+        "title": "22 inch DTF gang sheet screenshot",
+        "collection": "Gang sheets",
+        "usage": ["product card", "builder page"],
+        "alt": "22 inch custom DTF gang sheet builder screenshot",
+        "focalPoint": "center",
+    },
     "gen-builder-canvas-layout.png": {
         "slug": "gen-builder-canvas-layout",
         "title": "Gang sheet layout",
@@ -616,6 +624,14 @@ IMAGE_ROLES = {
         "collection": "Software and RIP",
         "usage": ["product card"],
         "alt": "Print production workstation beside a wide format printer",
+        "focalPoint": "center",
+    },
+    "cadlink-square-blue-background.png": {
+        "slug": "cadlink-square-blue-background",
+        "title": "CADlink software",
+        "collection": "Software and RIP",
+        "usage": ["product card"],
+        "alt": "CADlink Digital Factory software product graphic on blue background",
         "focalPoint": "center",
     },
     "gen-hockey-puck.png": {

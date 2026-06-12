@@ -92,9 +92,9 @@
   },
   {
     "handle": "dtfva-custom-dtf-gang-sheets-printing-service",
-    "image": "/assets/shopify-images/custome-22-gang-sheet-builder.png",
-    "alt": "Custom 22 inch gang sheet builder sample",
-    "family": "big-gangsheet",
+    "image": "/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-card.webp",
+    "alt": "22 inch custom DTF gang sheet builder screenshot",
+    "family": "custom-dtf-gang-sheets-22-screenshot",
     "grade": "curated"
   },
   {
@@ -337,10 +337,10 @@
   },
   {
     "handle": "dtfva-custom-dtf-gang-sheets-your-colors-deserve-to-pop",
-    "image": "/assets/shopify-images/big-gangsheet-card.webp",
-    "alt": "Custom DTF Gang Sheets 22\" — Hatfield McCoy DTF",
-    "family": "big-gangsheet",
-    "grade": "generic"
+    "image": "/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-card.webp",
+    "alt": "22 inch custom DTF gang sheet builder screenshot",
+    "family": "custom-dtf-gang-sheets-22-screenshot",
+    "grade": "curated"
   },
   {
     "handle": "dtfva-uv-dtf-stickers",
@@ -379,23 +379,23 @@
   },
   {
     "handle": "dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code",
-    "image": "/assets/shopify-images/cadlink-digital-factory-direct-to-film-dtf-for-wide-format.png",
-    "alt": "CADlink Digital Factory DTF wide format sample",
-    "family": "dtf-printer",
+    "image": "/assets/shopify-images/cadlink-square-blue-background-card.webp",
+    "alt": "CADlink Digital Factory software product graphic on blue background",
+    "family": "cadlink-square-blue-background",
     "grade": "curated"
   },
   {
     "handle": "dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code",
-    "image": "/assets/shopify-images/add-driver-port-23-wide-or-smaller.png",
-    "alt": "Add driver port 23 inch wide or smaller sample",
-    "family": "dtf-printer",
+    "image": "/assets/shopify-images/cadlink-square-blue-background-card.webp",
+    "alt": "CADlink Digital Factory software product graphic on blue background",
+    "family": "cadlink-square-blue-background",
     "grade": "curated"
   },
   {
     "handle": "dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format",
-    "image": "/assets/shopify-images/cadlink-digital-factory-v12-dtf-printing-15-days-trial-desktop-wide-format.png",
-    "alt": "Cadlink Digital Factory v12 DTF printing trial sample",
-    "family": "dtf-printer",
+    "image": "/assets/shopify-images/cadlink-square-blue-background-card.webp",
+    "alt": "CADlink Digital Factory software product graphic on blue background",
+    "family": "cadlink-square-blue-background",
     "grade": "curated"
   }
 ]

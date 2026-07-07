@@ -1,0 +1,20 @@
+# Mirror .gitignore (a .vercelignore replaces .gitignore for CLI uploads)
+node_modules
+.env
+.env.local
+.env.*.local
+public
+.vercel
+tmp
+.DS_Store
+*.log
+.vscode
+.idea
+
+# Not needed at build/runtime — keep CLI uploads small
+Shopify-images-good
+output
+docs
+scripts/shopify/reports
+deliverables/brand-design-pack
+deliverables/prototype

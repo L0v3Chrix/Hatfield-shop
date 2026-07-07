@@ -512,6 +512,7 @@
         }
       });
       uploadLabel.appendChild(uploadInput);
+      uploadWrap.appendChild(uploadLabel);
       uploadWrap.appendChild(uploadButton);
       uploadWrap.appendChild(uploadStatus);
       body.appendChild(uploadWrap);

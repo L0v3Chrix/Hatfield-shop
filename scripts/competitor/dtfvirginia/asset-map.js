@@ -110,7 +110,7 @@ export const HANDLE_IMAGE_OVERRIDES = {
   'dtfva-add-driver-port-24-wide-or-larger': { src: `${SHOPIFY_ASSET_BASE}/add-driver-port-24-wide-or-larger.png`, alt: 'Add driver port 24 inch wide or larger sample' },
   'dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code': { src: `${SHOPIFY_ASSET_BASE}/cadlink-digital-factory-direct-to-film-dtf-for-wide-format.png`, alt: 'CADlink Digital Factory DTF wide format sample' },
   'dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code': { src: `${SHOPIFY_ASSET_BASE}/add-driver-port-23-wide-or-smaller.png`, alt: 'Add driver port 23 inch wide or smaller sample' },
-  'dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format': { src: `${SHOPIFY_ASSET_BASE}/cadlink-digital-factory-v12-dtf-printing-15-days-trial-desktop-wide-format.png`, alt: 'Cadlink Digital Factory v12 DTF printing trial sample' },
+  'dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format': { src: `${SHOPIFY_ASSET_BASE}/cadlink-square-blue-background.png`, alt: 'CADlink Digital Factory software product graphic' },
 }
 
 const PRODUCT_RULES = [

@@ -66,30 +66,55 @@ export function ensureExtension(name, contentType) {
   return name
 }
 
+const KIXXL_SHEET_KEYS = ['_actual_gang_sheet', 'sheet_preview']
+
 export function collectArtworkEntries(order) {
   const lineItems = Array.isArray(order && order.line_items) ? order.line_items : []
   return lineItems.flatMap((lineItem, lineIndex) => {
     const attributes = normalizeAttributeList(
       lineItem && (lineItem.properties || lineItem.custom_attributes || lineItem.customAttributes || lineItem.attributes)
     )
-    const artworkUrlEntry = attributes.find((entry) => ARTWORK_URL_KEYS.has(entry.key.toLowerCase()))
-    if (!artworkUrlEntry || !artworkUrlEntry.value) return []
-    const artworkNameEntry = attributes.find((entry) => ARTWORK_NAME_KEYS.has(entry.key.toLowerCase()))
-    const rawFileName = artworkNameEntry && artworkNameEntry.value
-      ? artworkNameEntry.value
-      : inferFileNameFromUrl(artworkUrlEntry.value, `artwork-${lineIndex + 1}`)
     const lineTitle = String(lineItem && (lineItem.title || lineItem.name) || `Line ${lineIndex + 1}`).trim()
     const variantTitle = String(lineItem && (lineItem.variant_title || lineItem.variantTitle) || '').trim()
     const sku = String(lineItem && lineItem.sku || '').trim()
     const quantity = Math.max(1, Number(lineItem && lineItem.quantity) || 1)
+
+    const artworkUrlEntry = attributes.find((entry) => ARTWORK_URL_KEYS.has(entry.key.toLowerCase()))
+    if (artworkUrlEntry && artworkUrlEntry.value) {
+      const artworkNameEntry = attributes.find((entry) => ARTWORK_NAME_KEYS.has(entry.key.toLowerCase()))
+      const rawFileName = artworkNameEntry && artworkNameEntry.value
+        ? artworkNameEntry.value
+        : inferFileNameFromUrl(artworkUrlEntry.value, `artwork-${lineIndex + 1}`)
+      return [{
+        lineIndex,
+        lineTitle,
+        variantTitle,
+        sku,
+        quantity,
+        artworkUrl: artworkUrlEntry.value,
+        artworkFileName: normalizeFileName(rawFileName, `artwork-${lineIndex + 1}`),
+      }]
+    }
+
+    // Kixxl/Gangify builder lines carry their design as app-specific properties
+    // instead of the direct-upload keys. Fold them into the same manifest so
+    // fulfillment has one place to look regardless of order path.
+    const byKey = new Map(attributes.map((entry) => [entry.key.toLowerCase(), entry.value]))
+    const sheetUrl = KIXXL_SHEET_KEYS.map((key) => byKey.get(key)).find(Boolean)
+    if (!sheetUrl) return []
+    const previewUrl = byKey.get('sheet_preview') || sheetUrl
     return [{
       lineIndex,
       lineTitle,
       variantTitle,
       sku,
       quantity,
-      artworkUrl: artworkUrlEntry.value,
-      artworkFileName: normalizeFileName(rawFileName, `artwork-${lineIndex + 1}`),
+      artworkUrl: sheetUrl,
+      previewUrl,
+      artworkFileName: normalizeFileName(
+        inferFileNameFromUrl(previewUrl, `gang-sheet-${lineIndex + 1}`),
+        `gang-sheet-${lineIndex + 1}`
+      ),
     }]
   })
 }

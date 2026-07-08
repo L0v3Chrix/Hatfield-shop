@@ -49,7 +49,7 @@ export default async function handler(request, response) {
       id: '',
       name: entry.artworkFileName,
       url: entry.artworkUrl,
-      sourceUrl: entry.artworkUrl,
+      sourceUrl: entry.previewUrl || entry.artworkUrl,
       lineIndex: entry.lineIndex,
       sku: entry.sku,
     }))

@@ -61,3 +61,30 @@ test('shopifyOrderGid and webhook HMAC verification are valid', () => {
   assert.equal(verifyWebhookHmac(body, header, secret), true)
   assert.equal(verifyWebhookHmac(body, 'bad-header', secret), false)
 })
+
+test('collectArtworkEntries folds Kixxl builder properties into the manifest', () => {
+  const order = {
+    line_items: [{
+      title: 'DTF 22" Gang Sheet Builder',
+      sku: 'DTF-22-24-B',
+      quantity: 1,
+      properties: [
+        { name: '_app_name', value: 'Kixxl' },
+        { name: '_actual_gang_sheet', value: 'https://app.gangifyapp.com/preview-sheet/889996155596#/uploads/preview-sheet-1' },
+        { name: 'sheet_preview', value: 'https://d3uxk88roi69oj.cloudfront.net/shops/zm1evm-rd.myshopify.com/customer-uploads/temp/Sheet_1_abc.png#/uploads/gang-sheet-1' },
+        { name: 'sheet_type', value: 'created' },
+      ],
+    }],
+  }
+  const entries = collectArtworkEntries(order)
+  assert.equal(entries.length, 1)
+  assert.equal(entries[0].sku, 'DTF-22-24-B')
+  assert.equal(entries[0].artworkUrl, 'https://app.gangifyapp.com/preview-sheet/889996155596#/uploads/preview-sheet-1')
+  assert.match(entries[0].previewUrl, /cloudfront/)
+  assert.match(entries[0].artworkFileName, /Sheet_1_abc/)
+})
+
+test('collectArtworkEntries still skips lines with no artwork data at all', () => {
+  const order = { line_items: [{ title: 'Plain product', sku: 'X', quantity: 1, properties: [{ name: 'Source', value: 'catalog' }] }] }
+  assert.equal(collectArtworkEntries(order).length, 0)
+})

@@ -33,7 +33,9 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
     const variantIdBySku = new Map((shopifyProduct?.variants ?? []).map((variant) => [variant.sku, variant.variantId]))
     const copy = rewriteProductCopy(displayProduct)
     const tags = unique([...(product.tags ?? []), ...copy.approvalTags])
-    const approval = buildApprovalState({ ...product, tags })
+    // Live Shopify status must win over the normalized snapshot's status —
+    // otherwise products activated after import keep an 'unpublished' blocker.
+    const approval = buildApprovalState({ ...product, tags, shopifyStatus: shopifyProduct?.status })
     const variants = (product.variants ?? []).map((variant) => {
       const merchandiseId = variantIdBySku.get(variant.sku) ?? variant.storefront_variant_id ?? variant.merchandiseId ?? ''
       return {

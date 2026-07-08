@@ -71,6 +71,473 @@
       "status": "ready"
     },
     {
+      "source": "Shopify-images-good/Cute-sticker-sheet.jpg",
+      "sourceBytes": 5366784,
+      "slug": "cute-sticker-sheet",
+      "title": "Cute sticker sheet",
+      "collection": "Stickers",
+      "usage": [
+        "sticker product card"
+      ],
+      "alt": "Colorful custom sticker sheet",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 123690
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 104076
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 30824
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/DTF-builder.jpg",
+      "sourceBytes": 3667122,
+      "slug": "dtf-builder",
+      "title": "Gang sheet builder canvas",
+      "collection": "Gang sheet builder",
+      "usage": [
+        "builder page",
+        "product card"
+      ],
+      "alt": "Gang sheet builder canvas with artwork arranged on a sheet",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 75302
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 62684
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 17010
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/DTF-builder1.jpg",
+      "sourceBytes": 4366600,
+      "slug": "dtf-builder1",
+      "title": "Gang sheet builder layout",
+      "collection": "Gang sheet builder",
+      "usage": [
+        "builder page"
+      ],
+      "alt": "Gang sheet builder layout preview for a wide format sheet",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-hero.webp",
+          "width": 1201,
+          "height": 880,
+          "bytes": 73108
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-card.webp",
+          "width": 900,
+          "height": 659,
+          "bytes": 50726
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-thumb.webp",
+          "width": 360,
+          "height": 264,
+          "bytes": 14988
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/DTF-printer.jpg",
+      "sourceBytes": 2340990,
+      "slug": "dtf-printer",
+      "title": "Wide format DTF printer",
+      "collection": "Software and RIP",
+      "usage": [
+        "product card",
+        "guides"
+      ],
+      "alt": "Wide format DTF printer printing film in the shop",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-hero.webp",
+          "width": 1264,
+          "height": 841,
+          "bytes": 96264
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-card.webp",
+          "width": 900,
+          "height": 599,
+          "bytes": 62424
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-thumb.webp",
+          "width": 360,
+          "height": 240,
+          "bytes": 17964
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Generated Image May 28, 2026 - 12_10PM.jpg",
+      "sourceBytes": 683952,
+      "slug": "tumbler-mascot-navy",
+      "title": "Navy tumbler (third-party collegiate marks \u2014 archive only)",
+      "collection": "Archive - third-party marks",
+      "usage": [
+        "archive"
+      ],
+      "alt": "Navy insulated tumbler with printed mascot graphic",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-mascot-navy-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 92060
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-mascot-navy-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 76134
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-mascot-navy-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 21978
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Generated Image May 28, 2026 - 2_46PM.jpg",
+      "sourceBytes": 663739,
+      "slug": "glitter-football-tee",
+      "title": "Glitter football tee",
+      "collection": "Specialty glitter",
+      "usage": [
+        "product card",
+        "apparel"
+      ],
+      "alt": "Red tee with sequin glitter football print in a flat lay",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-football-tee-hero.webp",
+          "width": 1128,
+          "height": 928,
+          "bytes": 113314
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-football-tee-card.webp",
+          "width": 900,
+          "height": 740,
+          "bytes": 75914
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-football-tee-thumb.webp",
+          "width": 360,
+          "height": 296,
+          "bytes": 14966
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Glitter-sticker.jpg",
+      "sourceBytes": 934032,
+      "slug": "glitter-sticker",
+      "title": "Glitter sticker",
+      "collection": "Stickers",
+      "usage": [
+        "product card"
+      ],
+      "alt": "Glitter UV DTF sticker close up with sparkle finish",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 244578
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 195382
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 39866
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/H-M-jersey.jpg",
+      "sourceBytes": 34885,
+      "slug": "h-m-jersey",
+      "title": "Custom team jersey",
+      "collection": "Sports and teams",
+      "usage": [
+        "product card",
+        "sports collection"
+      ],
+      "alt": "Custom team jersey front with DTF transfer print",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-hero.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 33964
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-card.webp",
+          "width": 414,
+          "height": 414,
+          "bytes": 33964
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 27294
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/H-M-storefront.jpg",
+      "sourceBytes": 239456,
+      "slug": "h-m-storefront",
+      "title": "Shop storefront",
+      "collection": "Brand",
+      "usage": [
+        "about",
+        "contact",
+        "local trust"
+      ],
+      "alt": "Hatfield McCoy DTF storefront in Logan West Virginia",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-hero.webp",
+          "width": 1600,
+          "height": 922,
+          "bytes": 149942
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-card.webp",
+          "width": 900,
+          "height": 519,
+          "bytes": 64890
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-thumb.webp",
+          "width": 360,
+          "height": 207,
+          "bytes": 15358
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Large-icon-gangsheet.jpg",
+      "sourceBytes": 1035142,
+      "slug": "large-icon-gangsheet",
+      "title": "Large icon gang sheet",
+      "collection": "Gang sheets",
+      "usage": [
+        "gang sheet collection"
+      ],
+      "alt": "Gang sheet with large icon artwork layout",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 170068
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 140908
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 34870
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Puff-transfers.png",
+      "sourceBytes": 4135200,
+      "slug": "puff-transfers",
+      "title": "3D puff transfer sheets",
+      "collection": "3D puff",
+      "usage": [
+        "product card"
+      ],
+      "alt": "3D puff transfer sheet samples",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-transfers-hero.webp",
+          "width": 1600,
+          "height": 1600,
+          "bytes": 223104
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-transfers-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 119128
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-transfers-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 34000
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Small-tumbler-engraved.jpg",
+      "sourceBytes": 613089,
+      "slug": "small-tumbler-engraved",
+      "title": "Engraved tumbler",
+      "collection": "Tumblers",
+      "usage": [
+        "product card"
+      ],
+      "alt": "Small engraved tumbler with custom design",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-hero.webp",
+          "width": 1055,
+          "height": 1008,
+          "bytes": 30956
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-card.webp",
+          "width": 900,
+          "height": 860,
+          "bytes": 22356
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-thumb.webp",
+          "width": 360,
+          "height": 344,
+          "bytes": 4960
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Softball.jpg",
+      "sourceBytes": 898627,
+      "slug": "softball",
+      "title": "Custom softball",
+      "collection": "Sports and teams",
+      "usage": [
+        "product card"
+      ],
+      "alt": "Custom printed softball",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-hero.webp",
+          "width": 1408,
+          "height": 768,
+          "bytes": 86184
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-card.webp",
+          "width": 900,
+          "height": 491,
+          "bytes": 45726
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-thumb.webp",
+          "width": 360,
+          "height": 196,
+          "bytes": 13182
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/Tumbler-WV.jpg",
+      "sourceBytes": 683952,
+      "slug": "tumbler-wv",
+      "title": "West Virginia tumbler",
+      "collection": "Tumblers",
+      "usage": [
+        "product card"
+      ],
+      "alt": "West Virginia themed personalized tumbler",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 92060
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 76134
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 21978
+        }
+      },
+      "status": "ready"
+    },
+    {
       "source": "Shopify-images-good/baseball.jpg",
       "sourceBytes": 579997,
       "slug": "baseball",
@@ -311,14 +778,20 @@
       "derivatives": {
         "hero": {
           "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-hero.webp",
+          "width": 1254,
+          "height": 1254,
           "bytes": 30672
         },
         "card": {
           "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-card.webp",
+          "width": 900,
+          "height": 900,
           "bytes": 20156
         },
         "thumb": {
           "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-thumb.webp",
+          "width": 360,
+          "height": 360,
           "bytes": 6636
         }
       },
@@ -372,214 +845,21 @@
       "derivatives": {
         "hero": {
           "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-hero.webp",
+          "width": 1013,
+          "height": 1600,
           "bytes": 137218
         },
         "card": {
           "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-card.webp",
+          "width": 570,
+          "height": 900,
           "bytes": 76770
         },
         "thumb": {
           "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-thumb.webp",
+          "width": 228,
+          "height": 360,
           "bytes": 20944
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/neon-print.jpg",
-      "sourceBytes": 3563935,
-      "slug": "custom-dtf-transfers",
-      "title": "Custom DTF transfers",
-      "collection": "DTF transfers",
-      "usage": [
-        "home hero",
-        "product detail",
-        "collection card"
-      ],
-      "alt": "Neon Hatfield McCoy DTF transfer print sample",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 213298
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 171328
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 36436
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/patches.jpg",
-      "sourceBytes": 1055164,
-      "slug": "custom-patches",
-      "title": "Custom patches",
-      "collection": "Patches",
-      "usage": [
-        "specialty product card"
-      ],
-      "alt": "Custom patch samples for apparel and merchandise",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 367178
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 291514
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 59658
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/Cute-sticker-sheet.jpg",
-      "sourceBytes": 5366784,
-      "slug": "cute-sticker-sheet",
-      "title": "Cute sticker sheet",
-      "collection": "Stickers",
-      "usage": [
-        "sticker product card"
-      ],
-      "alt": "Colorful custom sticker sheet",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 123690
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 104076
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/cute-sticker-sheet-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 30824
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/DTF-builder.jpg",
-      "sourceBytes": 3667122,
-      "slug": "dtf-builder",
-      "title": "Gang sheet builder canvas",
-      "collection": "Gang sheet builder",
-      "usage": [
-        "builder page",
-        "product card"
-      ],
-      "alt": "Gang sheet builder canvas with artwork arranged on a sheet",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 75302
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 62684
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 17010
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/DTF-builder1.jpg",
-      "sourceBytes": 4366600,
-      "slug": "dtf-builder1",
-      "title": "Gang sheet builder layout",
-      "collection": "Gang sheet builder",
-      "usage": [
-        "builder page"
-      ],
-      "alt": "Gang sheet builder layout preview for a wide format sheet",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-hero.webp",
-          "width": 1201,
-          "height": 880,
-          "bytes": 73108
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-card.webp",
-          "width": 900,
-          "height": 659,
-          "bytes": 50726
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-builder1-thumb.webp",
-          "width": 360,
-          "height": 264,
-          "bytes": 14988
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/DTF-printer.jpg",
-      "sourceBytes": 2340990,
-      "slug": "dtf-printer",
-      "title": "Wide format DTF printer",
-      "collection": "Software and RIP",
-      "usage": [
-        "product card",
-        "guides"
-      ],
-      "alt": "Wide format DTF printer printing film in the shop",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-hero.webp",
-          "width": 1264,
-          "height": 841,
-          "bytes": 96264
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-card.webp",
-          "width": 900,
-          "height": 599,
-          "bytes": 62424
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/dtf-printer-thumb.webp",
-          "width": 360,
-          "height": 240,
-          "bytes": 17964
         }
       },
       "status": "ready"
@@ -1417,73 +1697,6 @@
       "status": "ready"
     },
     {
-      "source": "Shopify-images-good/Generated Image May 28, 2026 - 2_46PM.jpg",
-      "sourceBytes": 663739,
-      "slug": "glitter-football-tee",
-      "title": "Glitter football tee",
-      "collection": "Specialty glitter",
-      "usage": [
-        "product card",
-        "apparel"
-      ],
-      "alt": "Red tee with sequin glitter football print in a flat lay",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-football-tee-hero.webp",
-          "width": 1128,
-          "height": 928,
-          "bytes": 113314
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-football-tee-card.webp",
-          "width": 900,
-          "height": 740,
-          "bytes": 75914
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-football-tee-thumb.webp",
-          "width": 360,
-          "height": 296,
-          "bytes": 14966
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/Glitter-sticker.jpg",
-      "sourceBytes": 934032,
-      "slug": "glitter-sticker",
-      "title": "Glitter sticker",
-      "collection": "Stickers",
-      "usage": [
-        "product card"
-      ],
-      "alt": "Glitter UV DTF sticker close up with sparkle finish",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 244578
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 195382
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/glitter-sticker-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 39866
-        }
-      },
-      "status": "ready"
-    },
-    {
       "source": "Shopify-images-good/guru-pack.jpg",
       "sourceBytes": 940097,
       "slug": "guru-pack",
@@ -1550,40 +1763,6 @@
       "status": "ready"
     },
     {
-      "source": "Shopify-images-good/H-M-jersey.jpg",
-      "sourceBytes": 34885,
-      "slug": "h-m-jersey",
-      "title": "Custom team jersey",
-      "collection": "Sports and teams",
-      "usage": [
-        "product card",
-        "sports collection"
-      ],
-      "alt": "Custom team jersey front with DTF transfer print",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-hero.webp",
-          "width": 414,
-          "height": 414,
-          "bytes": 33964
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-card.webp",
-          "width": 414,
-          "height": 414,
-          "bytes": 33964
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-jersey-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 27294
-        }
-      },
-      "status": "ready"
-    },
-    {
       "source": "Shopify-images-good/h-m-jersey-back.jpg",
       "sourceBytes": 33600,
       "slug": "h-m-jersey-back",
@@ -1620,7 +1799,7 @@
       "source": "Shopify-images-good/h-m-may4th.jpg",
       "sourceBytes": 41864,
       "slug": "h-m-may4th",
-      "title": "Customer artwork sample (third-party characters — archive only)",
+      "title": "Customer artwork sample (third-party characters \u2014 archive only)",
       "collection": "Archive - third-party marks",
       "usage": [
         "archive"
@@ -1645,41 +1824,6 @@
           "width": 360,
           "height": 360,
           "bytes": 27210
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/H-M-storefront.jpg",
-      "sourceBytes": 239456,
-      "slug": "h-m-storefront",
-      "title": "Shop storefront",
-      "collection": "Brand",
-      "usage": [
-        "about",
-        "contact",
-        "local trust"
-      ],
-      "alt": "Hatfield McCoy DTF storefront in Logan West Virginia",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-hero.webp",
-          "width": 1600,
-          "height": 922,
-          "bytes": 149942
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-card.webp",
-          "width": 900,
-          "height": 519,
-          "bytes": 64890
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/h-m-storefront-thumb.webp",
-          "width": 360,
-          "height": 207,
-          "bytes": 15358
         }
       },
       "status": "ready"
@@ -1852,39 +1996,6 @@
       "status": "ready"
     },
     {
-      "source": "Shopify-images-good/Large-icon-gangsheet.jpg",
-      "sourceBytes": 1035142,
-      "slug": "large-icon-gangsheet",
-      "title": "Large icon gang sheet",
-      "collection": "Gang sheets",
-      "usage": [
-        "gang sheet collection"
-      ],
-      "alt": "Gang sheet with large icon artwork layout",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 170068
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 140908
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/large-icon-gangsheet-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 34870
-        }
-      },
-      "status": "ready"
-    },
-    {
       "source": "Shopify-images-good/mermaid-patch.jpg",
       "sourceBytes": 1032887,
       "slug": "mermaid-patch",
@@ -1945,39 +2056,6 @@
           "width": 360,
           "height": 360,
           "bytes": 51580
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/neon-transfer-hoodie.jpg",
-      "sourceBytes": 579025,
-      "slug": "neon-hoodie-transfer",
-      "title": "Neon hoodie transfer",
-      "collection": "Apparel transfers",
-      "usage": [
-        "homepage route",
-        "PDP lifestyle"
-      ],
-      "alt": "Neon DTF transfer on a hoodie",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 86960
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 72414
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 18534
         }
       },
       "status": "ready"
@@ -2049,6 +2127,73 @@
       "status": "ready"
     },
     {
+      "source": "Shopify-images-good/neon-print.jpg",
+      "sourceBytes": 3563935,
+      "slug": "custom-dtf-transfers",
+      "title": "Custom DTF transfers",
+      "collection": "DTF transfers",
+      "usage": [
+        "home hero",
+        "product detail",
+        "collection card"
+      ],
+      "alt": "Neon Hatfield McCoy DTF transfer print sample",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 213298
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 171328
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-transfers-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 36436
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/neon-transfer-hoodie.jpg",
+      "sourceBytes": 579025,
+      "slug": "neon-hoodie-transfer",
+      "title": "Neon hoodie transfer",
+      "collection": "Apparel transfers",
+      "usage": [
+        "homepage route",
+        "PDP lifestyle"
+      ],
+      "alt": "Neon DTF transfer on a hoodie",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 86960
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 72414
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/neon-hoodie-transfer-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 18534
+        }
+      },
+      "status": "ready"
+    },
+    {
       "source": "Shopify-images-good/party-banner2.jpg",
       "sourceBytes": 689441,
       "slug": "party-banner2",
@@ -2110,6 +2255,38 @@
           "width": 360,
           "height": 360,
           "bytes": 20498
+        }
+      },
+      "status": "ready"
+    },
+    {
+      "source": "Shopify-images-good/patches.jpg",
+      "sourceBytes": 1055164,
+      "slug": "custom-patches",
+      "title": "Custom patches",
+      "collection": "Patches",
+      "usage": [
+        "specialty product card"
+      ],
+      "alt": "Custom patch samples for apparel and merchandise",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-hero.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 367178
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-card.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 291514
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-patches-thumb.webp",
+          "width": 360,
+          "height": 360,
+          "bytes": 59658
         }
       },
       "status": "ready"
@@ -2280,39 +2457,6 @@
       "status": "ready"
     },
     {
-      "source": "Shopify-images-good/Puff-transfers.png",
-      "sourceBytes": 4135200,
-      "slug": "puff-transfers",
-      "title": "3D puff transfer sheets",
-      "collection": "3D puff",
-      "usage": [
-        "product card"
-      ],
-      "alt": "3D puff transfer sheet samples",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-transfers-hero.webp",
-          "width": 1600,
-          "height": 1600,
-          "bytes": 223104
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-transfers-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 119128
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/puff-transfers-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 34000
-        }
-      },
-      "status": "ready"
-    },
-    {
       "source": "Shopify-images-good/quality-tags.jpg",
       "sourceBytes": 6341394,
       "slug": "quality-tags",
@@ -2379,72 +2523,6 @@
       "status": "ready"
     },
     {
-      "source": "Shopify-images-good/Small-tumbler-engraved.jpg",
-      "sourceBytes": 613089,
-      "slug": "small-tumbler-engraved",
-      "title": "Engraved tumbler",
-      "collection": "Tumblers",
-      "usage": [
-        "product card"
-      ],
-      "alt": "Small engraved tumbler with custom design",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-hero.webp",
-          "width": 1055,
-          "height": 1008,
-          "bytes": 30956
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-card.webp",
-          "width": 900,
-          "height": 860,
-          "bytes": 22356
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/small-tumbler-engraved-thumb.webp",
-          "width": 360,
-          "height": 344,
-          "bytes": 4960
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/Softball.jpg",
-      "sourceBytes": 898627,
-      "slug": "softball",
-      "title": "Custom softball",
-      "collection": "Sports and teams",
-      "usage": [
-        "product card"
-      ],
-      "alt": "Custom printed softball",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-hero.webp",
-          "width": 1408,
-          "height": 768,
-          "bytes": 86184
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-card.webp",
-          "width": 900,
-          "height": 491,
-          "bytes": 45726
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/softball-thumb.webp",
-          "width": 360,
-          "height": 196,
-          "bytes": 13182
-        }
-      },
-      "status": "ready"
-    },
-    {
       "source": "Shopify-images-good/sticker-rolls.jpg",
       "sourceBytes": 827592,
       "slug": "sticker-rolls",
@@ -2472,72 +2550,6 @@
           "width": 360,
           "height": 360,
           "bytes": 31506
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/Generated Image May 28, 2026 - 12_10PM.jpg",
-      "sourceBytes": 683952,
-      "slug": "tumbler-mascot-navy",
-      "title": "Navy tumbler (third-party collegiate marks — archive only)",
-      "collection": "Archive - third-party marks",
-      "usage": [
-        "archive"
-      ],
-      "alt": "Navy insulated tumbler with printed mascot graphic",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-mascot-navy-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 92060
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-mascot-navy-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 76134
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-mascot-navy-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 21978
-        }
-      },
-      "status": "ready"
-    },
-    {
-      "source": "Shopify-images-good/Tumbler-WV.jpg",
-      "sourceBytes": 683952,
-      "slug": "tumbler-wv",
-      "title": "West Virginia tumbler",
-      "collection": "Tumblers",
-      "usage": [
-        "product card"
-      ],
-      "alt": "West Virginia themed personalized tumbler",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-hero.webp",
-          "width": 1024,
-          "height": 1024,
-          "bytes": 92060
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 76134
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/tumbler-wv-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 21978
         }
       },
       "status": "ready"

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-28T04:45:25.122Z",
+    "generated_at": "2026-07-08T03:06:40.262Z",
     "shop": "zm1evm-rd.myshopify.com",
     "product_count": 79,
     "collection_count": 38,
@@ -11,7 +11,7 @@
     {
       "handle": "dtfva-42-custom-sublimation-gang-sheets-builder",
       "productId": "gid://shopify/Product/8804436050102",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-42_CUSTOM_SUBLIMATION_GANG_SHEETS_BUILDER-42_5_X24_HEIGHT_PAPER",
@@ -153,7 +153,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-fast-reliable-transfer-printing",
       "productId": "gid://shopify/Product/8804436082870",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_FAST_RELIABLE_TRANSFER_PRINTING-46_5_IN_X_12_IN",
@@ -391,7 +391,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-dtf-virginia",
       "productId": "gid://shopify/Product/8804436115638",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_DTF_VIRGINIA-46_5_IN_X_12_IN",
@@ -629,7 +629,7 @@
     {
       "handle": "dtfva-custom-dtf-transfers-by-size-1",
       "productId": "gid://shopify/Product/8804436181174",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_1-8_X_6_88_2_X_2",
@@ -4386,7 +4386,7 @@
     {
       "handle": "dtfva-america-s-250th-anniversary-patch-1-inch-circle",
       "productId": "gid://shopify/Product/8804436213942",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-AMERICA_S_250TH_ANNIVERSARY_PATCH_1_INCH_CIRCLE-1_X_1",
@@ -4404,7 +4404,7 @@
     {
       "handle": "dtfva-uv-printed-custom-leather-hat-patches",
       "productId": "gid://shopify/Product/8804436246710",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_HAT_PATCHES-2_56_X_3_41_REFLECTIVE_PINK_1_X_1",
@@ -4456,7 +4456,7 @@
     {
       "handle": "dtfva-uv-printed-custom-leather-patches",
       "productId": "gid://shopify/Product/8804436279478",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_PINK_1_X_1",
@@ -6443,7 +6443,7 @@
     {
       "handle": "dtfva-uv-printed-custom-tpu-patches",
       "productId": "gid://shopify/Product/8804436312246",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_WHITE",
@@ -6900,7 +6900,7 @@
     {
       "handle": "dtfva-custom-dtf-transfers-by-size",
       "productId": "gid://shopify/Product/8804436345014",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE-17_X_12_2_X_2",
@@ -10657,7 +10657,7 @@
     {
       "handle": "dtfva-uv-printed-custom-tpu-patches-1",
       "productId": "gid://shopify/Product/8804436377782",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES_1-5_74_X_7_76_WHITE_1_X1",
@@ -10769,7 +10769,7 @@
     {
       "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size-1",
       "productId": "gid://shopify/Product/8804436410550",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE_1-10_15_X_12_52_J5T4_2_X_2",
@@ -11016,7 +11016,7 @@
     {
       "handle": "dtfva-brand-starter-pack",
       "productId": "gid://shopify/Product/8804436443318",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-BRAND_STARTER_PACK-DEFAULT_TITLE",
@@ -11034,7 +11034,7 @@
     {
       "handle": "dtfva-brand-growth-pack",
       "productId": "gid://shopify/Product/8804436476086",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-BRAND_GROWTH_PACK-DEFAULT_TITLE",
@@ -11052,7 +11052,7 @@
     {
       "handle": "dtfva-brand-business-pack",
       "productId": "gid://shopify/Product/8804436508854",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-BRAND_BUSINESS_PACK-DEFAULT_TITLE",
@@ -11070,7 +11070,7 @@
     {
       "handle": "dtfva-custom-glitter-dtf-transfer-by-size-1",
       "productId": "gid://shopify/Product/8804436541622",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE_1-2_3_X_0_7_2_X_2",
@@ -13942,7 +13942,7 @@
     {
       "handle": "dtfva-custom-sublimation-transfers-by-size-1",
       "productId": "gid://shopify/Product/8804436574390",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_SUBLIMATION_TRANSFERS_BY_SIZE_1-11_6_X_5_33_POU7_2_X_2",
@@ -15644,7 +15644,7 @@
     {
       "handle": "dtfva-9-color-dtf-transfers-by-size-1",
       "productId": "gid://shopify/Product/8804436607158",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-9_COLOR_DTF_TRANSFERS_BY_SIZE_1-3_21_X_3_5_QTHH_2_X_2",
@@ -16221,7 +16221,7 @@
     {
       "handle": "dtfva-custom-sublimation-transfers-by-size",
       "productId": "gid://shopify/Product/8804436639926",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_SUBLIMATION_TRANSFERS_BY_SIZE-2_X_2",
@@ -16470,7 +16470,7 @@
     {
       "handle": "dtfva-custom-glitter-dtf-transfer-by-size",
       "productId": "gid://shopify/Product/8804436705462",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-2_X_2",
@@ -16631,7 +16631,7 @@
     {
       "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size",
       "productId": "gid://shopify/Product/8804436738230",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-2_X_2",
@@ -16792,7 +16792,7 @@
     {
       "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
       "productId": "gid://shopify/Product/8804436770998",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-22_INCH_UV_DTF_STICKER_SHEET_BUILDER-22_5X12",
@@ -17074,7 +17074,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-printing-service",
       "productId": "gid://shopify/Product/8804436803766",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_PRINTING_SERVICE-22_5_IN_X_24_IN",
@@ -17191,7 +17191,7 @@
     {
       "handle": "dtfva-fluorescent-dtf-printing-build-bold-bright-designs",
       "productId": "gid://shopify/Product/8804436836534",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-FLUORESCENT_DTF_PRINTING_BUILD_BOLD_BRIGHT_DESIGNS-22_5_X12",
@@ -17286,7 +17286,7 @@
     {
       "handle": "dtfva-glitter-dtf-transfers-builder",
       "productId": "gid://shopify/Product/8804436869302",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-GLITTER_DTF_TRANSFERS_BUILDER-22_5_IN_X_24_IN",
@@ -17403,7 +17403,7 @@
     {
       "handle": "dtfva-custom-woven-labels",
       "productId": "gid://shopify/Product/8804436934838",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_WOVEN_LABELS-1_X_1",
@@ -17520,7 +17520,7 @@
     {
       "handle": "dtfva-next-level-3600",
       "productId": "gid://shopify/Product/8804436967606",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-NEXT_LEVEL_3600-XS_BLACK",
@@ -18427,7 +18427,7 @@
     {
       "handle": "dtfva-gildan-64000",
       "productId": "gid://shopify/Product/8804437033142",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-GILDAN_64000-S_BLACK",
@@ -19034,7 +19034,7 @@
     {
       "handle": "dtfva-bella-canvas-3001",
       "productId": "gid://shopify/Product/8804437065910",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-BELLA_CANVAS_3001-XS_BLACK",
@@ -19851,7 +19851,7 @@
     {
       "handle": "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank",
       "productId": "gid://shopify/Product/8804437098678",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-S_BLACK",
@@ -20158,7 +20158,7 @@
     {
       "handle": "dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496",
       "productId": "gid://shopify/Product/8804437196982",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_WHITE",
@@ -21365,7 +21365,7 @@
     {
       "handle": "dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank",
       "productId": "gid://shopify/Product/8804437229750",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BLACK",
@@ -22092,7 +22092,7 @@
     {
       "handle": "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank",
       "productId": "gid://shopify/Product/8804437262518",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_SHAKA_WEAR_MAX_HEAVYWEIGHT_SHORT_SLEEVE_T_SHIRT_PREMIUM_BLANK-S_BLACK",
@@ -23809,7 +23809,7 @@
     {
       "handle": "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt",
       "productId": "gid://shopify/Product/8804437328054",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_BLACK",
@@ -24446,7 +24446,7 @@
     {
       "handle": "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
       "productId": "gid://shopify/Product/8804437360822",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_LOS_ANGELES_APPAREL_1865GD_GARMENT_DYE_SLEEVELESS_TEE-S_VINTAGE_BLACK",
@@ -24828,7 +24828,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-30-inches-builder",
       "productId": "gid://shopify/Product/8804437393590",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES_BUILDER-30_5_X12_INCHES",
@@ -25066,7 +25066,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-30-inches",
       "productId": "gid://shopify/Product/8804437459126",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_X12_INCHES",
@@ -25304,7 +25304,7 @@
     {
       "handle": "dtfva-party-banners-1",
       "productId": "gid://shopify/Product/8804437491894",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-PARTY_BANNERS_1-12_X_11_86_12_36",
@@ -25596,7 +25596,7 @@
     {
       "handle": "dtfva-party-banners",
       "productId": "gid://shopify/Product/8804437524662",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-PARTY_BANNERS-12_36",
@@ -25702,7 +25702,7 @@
     {
       "handle": "dtfva-uv-dtf-transfer-by-size-189",
       "productId": "gid://shopify/Product/8804437557430",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE_189-2_6_X_3_64_22X12",
@@ -29459,7 +29459,7 @@
     {
       "handle": "dtfva-uv-printed-custom-leather-hat-patches-7",
       "productId": "gid://shopify/Product/8804437655734",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_HAT_PATCHES_7-3_06_X_1_49_DEFAULT_TITLE",
@@ -31041,7 +31041,7 @@
     {
       "handle": "dtfva-photo-magnets-4",
       "productId": "gid://shopify/Product/8804437721270",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-PHOTO_MAGNETS_4-1_98_X_2_2X2",
@@ -31093,7 +31093,7 @@
     {
       "handle": "dtfva-car-magnets-2",
       "productId": "gid://shopify/Product/8804437754038",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CAR_MAGNETS_2-1_98_X_2_2_X_2",
@@ -31190,7 +31190,7 @@
     {
       "handle": "dtfva-business-magnets-2",
       "productId": "gid://shopify/Product/8804437786806",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-BUSINESS_MAGNETS_2-1_98_X_2_2_X_2",
@@ -31332,7 +31332,7 @@
     {
       "handle": "dtfva-perforated-window-vinyl-window-perf-graphics-3",
       "productId": "gid://shopify/Product/8804437819574",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-PERFORATED_WINDOW_VINYL_WINDOW_PERF_GRAPHICS_3-4_96_X_5_5_5",
@@ -31459,7 +31459,7 @@
     {
       "handle": "dtfva-custom-window-graphics-2",
       "productId": "gid://shopify/Product/8804437885110",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_WINDOW_GRAPHICS_2-3_97_X_4_4_4",
@@ -31616,7 +31616,7 @@
     {
       "handle": "dtfva-window-clings-6",
       "productId": "gid://shopify/Product/8804437917878",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-WINDOW_CLINGS_6-3_97_X_4_4_4",
@@ -31938,7 +31938,7 @@
     {
       "handle": "dtfva-truck-magnets-1",
       "productId": "gid://shopify/Product/8804437983414",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-TRUCK_MAGNETS_1-5_95_X_6_6_X_6",
@@ -31990,7 +31990,7 @@
     {
       "handle": "dtfva-indoor-floor-graphics-4",
       "productId": "gid://shopify/Product/8804438016182",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-INDOOR_FLOOR_GRAPHICS_4-5_95_X_6_6_6",
@@ -32132,7 +32132,7 @@
     {
       "handle": "dtfva-custom-posters-3",
       "productId": "gid://shopify/Product/8804438048950",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_POSTERS_3-8_X_8_06_8_10",
@@ -32244,7 +32244,7 @@
     {
       "handle": "dtfva-uv-printed-custom-tpu-patches-84",
       "productId": "gid://shopify/Product/8804438081718",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES_84-3_X_2_75_DEFAULT_TITLE",
@@ -33736,7 +33736,7 @@
     {
       "handle": "dtfva-3d-puff-transfers-best-in-virginia-42",
       "productId": "gid://shopify/Product/8804438114486",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS_BEST_IN_VIRGINIA_42-22_X_28_96_DSAH_YELLOW",
@@ -34448,7 +34448,7 @@
     {
       "handle": "dtfva-indoor-floor-graphics",
       "productId": "gid://shopify/Product/8804438147254",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-INDOOR_FLOOR_GRAPHICS-6_6",
@@ -34620,7 +34620,7 @@
     {
       "handle": "dtfva-window-clings",
       "productId": "gid://shopify/Product/8804438180022",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-WINDOW_CLINGS-4_4",
@@ -34781,7 +34781,7 @@
     {
       "handle": "dtfva-custom-window-graphics",
       "productId": "gid://shopify/Product/8804438212790",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_WINDOW_GRAPHICS-4_4",
@@ -34964,7 +34964,7 @@
     {
       "handle": "dtfva-perforated-window-vinyl",
       "productId": "gid://shopify/Product/8804438245558",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-PERFORATED_WINDOW_VINYL-5_5",
@@ -35136,7 +35136,7 @@
     {
       "handle": "dtfva-custom-softballs",
       "productId": "gid://shopify/Product/8804438278326",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_SOFTBALLS-SINGLE_BALL",
@@ -35165,7 +35165,7 @@
     {
       "handle": "dtfva-custom-baseballs",
       "productId": "gid://shopify/Product/8804438343862",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_BASEBALLS-SINGLE_BALL",
@@ -35194,7 +35194,7 @@
     {
       "handle": "dtfva-custom-hockey-pucks",
       "productId": "gid://shopify/Product/8804438409398",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_HOCKEY_PUCKS-SINGLE_PUCK",
@@ -35223,7 +35223,7 @@
     {
       "handle": "dtfva-custom-pickleballs",
       "productId": "gid://shopify/Product/8804438474934",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_PICKLEBALLS-SINGLE_BALL",
@@ -35263,7 +35263,7 @@
     {
       "handle": "dtfva-personalized-tumblers",
       "productId": "gid://shopify/Product/8804438507702",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-PERSONALIZED_TUMBLERS-240MM_X_204MM",
@@ -35281,7 +35281,7 @@
     {
       "handle": "dtfva-uv-dtf-transfer-by-size",
       "productId": "gid://shopify/Product/8804438540470",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X12",
@@ -35893,7 +35893,7 @@
     {
       "handle": "dtfva-upload-3d-puff-transfers",
       "productId": "gid://shopify/Product/8804438573238",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UPLOAD_3D_PUFF_TRANSFERS-22X15_WHITE",
@@ -36110,7 +36110,7 @@
     {
       "handle": "dtfva-3d-puff-transfers",
       "productId": "gid://shopify/Product/8804438606006",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_SILVER",
@@ -36327,7 +36327,7 @@
     {
       "handle": "dtfva-custom-dtf-transfers-by-size-virginia",
       "productId": "gid://shopify/Product/8804438638774",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-2_X_2",
@@ -38281,7 +38281,7 @@
     {
       "handle": "dtfva-dye-cut-stickers",
       "productId": "gid://shopify/Product/8804438671542",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-DYE_CUT_STICKERS-DEFAULT_SIZE",
@@ -38420,7 +38420,7 @@
     {
       "handle": "dtfva-glitter-dtf-gang-sheet",
       "productId": "gid://shopify/Product/8804438704310",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-GLITTER_DTF_GANG_SHEET-22_5X24_INCHES",
@@ -38603,7 +38603,7 @@
     {
       "handle": "dtfva-sublimation-gang-sheets-bulk-printing",
       "productId": "gid://shopify/Product/8804438737078",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-SUBLIMATION_GANG_SHEETS_BULK_PRINTING-22_5_X24_HEIGHT_PAPER",
@@ -38745,7 +38745,7 @@
     {
       "handle": "dtfva-custom-sublimation-gang-sheets",
       "productId": "gid://shopify/Product/8804438769846",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_SUBLIMATION_GANG_SHEETS-PAPER_42_5_X24_HEIGHT",
@@ -38887,7 +38887,7 @@
     {
       "handle": "dtfva-sublimation-gang-sheet-builder",
       "productId": "gid://shopify/Product/8804438802614",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-SUBLIMATION_GANG_SHEET_BUILDER-22_5_IN_X_12IN_SUBLIMATION",
@@ -39014,7 +39014,7 @@
     {
       "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
       "productId": "gid://shopify/Product/8804438835382",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-FLUORESCENT_DTF_PRINTING_BOLD_BRIGHT_STUNNING-22_5_X12_INCHES",
@@ -39109,7 +39109,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-your-colors-deserve-to-pop",
       "productId": "gid://shopify/Product/8804438900918",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_YOUR_COLORS_DESERVE_TO_POP-22_5X24_INCHES",
@@ -39292,7 +39292,7 @@
     {
       "handle": "dtfva-uv-dtf-stickers",
       "productId": "gid://shopify/Product/8804438933686",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-UV_DTF_STICKERS-22_5_X12_INCHES",
@@ -39574,7 +39574,7 @@
     {
       "handle": "dtfva-professional-vector-design-services",
       "productId": "gid://shopify/Product/8804438966454",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-PROFESSIONAL_VECTOR_DESIGN_SERVICES-DEFAULT_TITLE",
@@ -39592,7 +39592,7 @@
     {
       "handle": "dtfva-rush-fee",
       "productId": "gid://shopify/Product/8804438999222",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-RUSH_FEE-DEFAULT_TITLE",
@@ -39610,7 +39610,7 @@
     {
       "handle": "dtfva-digital-factory-dtf-desktop-edition",
       "productId": "gid://shopify/Product/8804439031990",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-DIGITAL_FACTORY_DTF_DESKTOP_EDITION-DEFAULT_TITLE",
@@ -39628,7 +39628,7 @@
     {
       "handle": "dtfva-add-driver-port-24-wide-or-larger",
       "productId": "gid://shopify/Product/8804439064758",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-ADD_DRIVER_PORT_24_WIDE_OR_LARGER-DEFAULT_TITLE",
@@ -39646,7 +39646,7 @@
     {
       "handle": "dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code",
       "productId": "gid://shopify/Product/8804439130294",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CADLINK_DIGITAL_FACTORY_10_FOR_WIDE_FORMAT_DTF_ACTIVATION_CODE-DEFAULT_TITLE",
@@ -39664,7 +39664,7 @@
     {
       "handle": "dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code",
       "productId": "gid://shopify/Product/8804439163062",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CADLINK_DIGITALFACTORY_10_FOR_DTF_W_ACTIVATION_CODE-DEFAULT_TITLE",
@@ -39682,7 +39682,7 @@
     {
       "handle": "dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format",
       "productId": "gid://shopify/Product/8804439228598",
-      "status": "DRAFT",
+      "status": "ACTIVE",
       "variants": [
         {
           "sku": "DTFVA-CADLINK_DIGITAL_FACTORY_10_DTF_PRINTING_15_DAYS_TRIAL_DESKTOP_WIDE_FORMAT-DEFAULT_TITLE",

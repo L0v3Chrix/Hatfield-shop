@@ -65,11 +65,56 @@
       </section>
       <aside class="form-card">
         <h2>Apply</h2>
-        <div class="field"><label for="name">Business name</label><input id="name" placeholder="Your business or organization"></div>
-        <div class="field"><label for="volume">Monthly volume</label><select id="volume"><option>Under 50 transfers</option><option>50-250 transfers</option><option>250+ transfers</option></select></div>
-        <div class="field"><label for="needs">What do you need?</label><textarea id="needs">Gang sheets, transfers, fulfillment questions...</textarea></div>
-        <a class="btn primary" href="/contact">Submit application</a>
+        <form id="wholesale-form" novalidate>
+          <div class="field"><label for="name">Business name</label><input id="name" name="business" required placeholder="Your business or organization"></div>
+          <div class="field"><label for="wholesale-email">Email</label><input id="wholesale-email" name="email" type="email" required placeholder="name@example.com"></div>
+          <div class="field"><label for="volume">Monthly volume</label><select id="volume" name="volume"><option>Under 50 transfers</option><option>50-250 transfers</option><option>250+ transfers</option></select></div>
+          <div class="field"><label for="needs">What do you need?</label><textarea id="needs" name="needs" placeholder="Gang sheets, transfers, fulfillment questions..."></textarea></div>
+          <button class="btn primary" id="wholesale-submit" type="submit">Submit application</button>
+          <p class="form-status" id="wholesale-status" role="status" aria-live="polite"></p>
+        </form>
       </aside>
+      <script id="wholesale-form-wiring">
+        (function () {
+          var form = document.getElementById('wholesale-form');
+          var status = document.getElementById('wholesale-status');
+          var button = document.getElementById('wholesale-submit');
+          if (!form || !status || !button) return;
+          form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            var business = (document.getElementById('name').value || '').trim();
+            var email = (document.getElementById('wholesale-email').value || '').trim();
+            var volume = document.getElementById('volume').value || '';
+            var needs = (document.getElementById('needs').value || '').trim();
+            if (!business) { status.textContent = 'Enter your business name.'; return; }
+            if (!email || email.indexOf('@') < 1) { status.textContent = 'Enter a valid email so we can reply.'; return; }
+            var content = ['New WHOLESALE application from hatfieldmccoydtf.com',
+              'Business: ' + business,
+              'Email: ' + email,
+              'Monthly volume: ' + volume,
+              needs ? 'Needs: ' + needs : ''].filter(Boolean).join('\n').slice(0, 1990);
+            button.disabled = true;
+            status.textContent = 'Sending…';
+            try {
+              var res = await fetch('/api/intake', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content: content })
+              });
+              var payload = await res.json().catch(function () { return null; });
+              if (res.ok && payload && payload.ok) {
+                status.textContent = 'Application sent. We will reply to ' + email + '.';
+                form.reset();
+              } else {
+                status.textContent = (payload && payload.error) || 'Could not send right now — email HatfieldandMcCoydtf@gmail.com instead.';
+              }
+            } catch (err) {
+              status.textContent = 'Could not send right now — email HatfieldandMcCoydtf@gmail.com instead.';
+            }
+            button.disabled = false;
+          });
+        })();
+      </script>
     </div>
   </main>
 <script id="mobile-menu-normalizer">

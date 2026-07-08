@@ -803,6 +803,9 @@ h3 { margin: 0; font-size: 1.55rem; }
   margin-bottom: 12px;
 }
 
+.form-status { margin: 10px 0 0; color: var(--soft); font-size: 0.9rem; line-height: 1.4; }
+.form-status:empty { display: none; }
+
 .field label { color: var(--muted); font-size: 0.78rem; font-weight: 950; text-transform: uppercase; letter-spacing: 0.08em; }
 
 .field input,

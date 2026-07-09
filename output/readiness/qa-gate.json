@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T17:55:53.927Z",
+  "generatedAt": "2026-07-09T17:00:41.032Z",
   "gate": "LOCAL_READY",
   "local": [
     {
@@ -12,6 +12,10 @@
     },
     {
       "name": "round-trip integrity",
+      "ok": true
+    },
+    {
+      "name": "offer-sheet conformance",
       "ok": true
     }
   ],

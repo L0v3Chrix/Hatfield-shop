@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T17:55:51.260Z",
+  "generatedAt": "2026-07-09T17:00:38.941Z",
   "endpointHost": "zm1evm-rd.myshopify.com",
   "visibility": [
     {
@@ -61,6 +61,390 @@
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45135059648694"
+    },
+    {
+      "handle": "dtfva-custom-dtf-transfers-by-size-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145019973814"
+    },
+    {
+      "handle": "dtfva-america-s-250th-anniversary-patch-1-inch-circle",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145028198582"
+    },
+    {
+      "handle": "dtfva-uv-printed-custom-leather-hat-patches",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145028264118"
+    },
+    {
+      "handle": "dtfva-uv-printed-custom-leather-patches",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45250599616694"
+    },
+    {
+      "handle": "dtfva-uv-printed-custom-tpu-patches",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145032753334"
+    },
+    {
+      "handle": "dtfva-custom-dtf-transfers-by-size",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145033769142"
+    },
+    {
+      "handle": "dtfva-uv-printed-custom-tpu-patches-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145041993910"
+    },
+    {
+      "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145042256054"
+    },
+    {
+      "handle": "dtfva-brand-starter-pack",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145042813110"
+    },
+    {
+      "handle": "dtfva-brand-growth-pack",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145042878646"
+    },
+    {
+      "handle": "dtfva-brand-business-pack",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145042944182"
+    },
+    {
+      "handle": "dtfva-custom-glitter-dtf-transfer-by-size-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145043009718"
+    },
+    {
+      "handle": "dtfva-custom-sublimation-transfers-by-size-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145049301174"
+    },
+    {
+      "handle": "dtfva-9-color-dtf-transfers-by-size-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145053036726"
+    },
+    {
+      "handle": "dtfva-custom-sublimation-transfers-by-size",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145054347446"
+    },
+    {
+      "handle": "dtfva-custom-glitter-dtf-transfer-by-size",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145055101110"
+    },
+    {
+      "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145055592630"
+    },
+    {
+      "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145056084150"
+    },
+    {
+      "handle": "dtfva-custom-woven-labels",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145059164342"
+    },
+    {
+      "handle": "dtfva-next-level-3600",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145059524790"
+    },
+    {
+      "handle": "dtfva-gildan-64000",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145061556406"
+    },
+    {
+      "handle": "dtfva-bella-canvas-3001",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145063948470"
+    },
+    {
+      "handle": "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145065783478"
+    },
+    {
+      "handle": "dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145067684022"
+    },
+    {
+      "handle": "dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145070338230"
+    },
+    {
+      "handle": "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145071976630"
+    },
+    {
+      "handle": "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145075876022"
+    },
+    {
+      "handle": "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145077285046"
+    },
+    {
+      "handle": "dtfva-custom-dtf-gang-sheets-30-inches",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145078956214"
+    },
+    {
+      "handle": "dtfva-party-banners-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145079677110"
+    },
+    {
+      "handle": "dtfva-party-banners",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45250599387318"
+    },
+    {
+      "handle": "dtfva-uv-dtf-transfer-by-size-189",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145080692918"
+    },
+    {
+      "handle": "dtfva-uv-printed-custom-leather-hat-patches-7",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145089048758"
+    },
+    {
+      "handle": "dtfva-photo-magnets-4",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145094029494"
+    },
+    {
+      "handle": "dtfva-car-magnets-2",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145094160566"
+    },
+    {
+      "handle": "dtfva-business-magnets-2",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145094389942"
+    },
+    {
+      "handle": "dtfva-perforated-window-vinyl-window-perf-graphics-3",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145094750390"
+    },
+    {
+      "handle": "dtfva-custom-window-graphics-2",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145096028342"
+    },
+    {
+      "handle": "dtfva-window-clings-6",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145096421558"
+    },
+    {
+      "handle": "dtfva-truck-magnets-1",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145098617014"
+    },
+    {
+      "handle": "dtfva-indoor-floor-graphics-4",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145098748086"
+    },
+    {
+      "handle": "dtfva-custom-posters-3",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145099075766"
+    },
+    {
+      "handle": "dtfva-uv-printed-custom-tpu-patches-84",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145099337910"
+    },
+    {
+      "handle": "dtfva-3d-puff-transfers-best-in-virginia-42",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145102614710"
+    },
+    {
+      "handle": "dtfva-indoor-floor-graphics",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145104187574"
+    },
+    {
+      "handle": "dtfva-window-clings",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145104711862"
+    },
+    {
+      "handle": "dtfva-custom-window-graphics",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145105203382"
+    },
+    {
+      "handle": "dtfva-perforated-window-vinyl",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145105760438"
+    },
+    {
+      "handle": "dtfva-custom-softballs",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145106317494"
+    },
+    {
+      "handle": "dtfva-custom-baseballs",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145106481334"
+    },
+    {
+      "handle": "dtfva-custom-hockey-pucks",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145106907318"
+    },
+    {
+      "handle": "dtfva-custom-pickleballs",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145107005622"
+    },
+    {
+      "handle": "dtfva-personalized-tumblers",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145107136694"
+    },
+    {
+      "handle": "dtfva-uv-dtf-transfer-by-size",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45250599714998"
+    },
+    {
+      "handle": "dtfva-upload-3d-puff-transfers",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145109037238"
+    },
+    {
+      "handle": "dtfva-3d-puff-transfers",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145109528758"
+    },
+    {
+      "handle": "dtfva-custom-dtf-transfers-by-size-virginia",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145110020278"
+    },
+    {
+      "handle": "dtfva-dye-cut-stickers",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45250599485622"
+    },
+    {
+      "handle": "dtfva-glitter-dtf-gang-sheet",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145116278966"
+    },
+    {
+      "handle": "dtfva-sublimation-gang-sheets-bulk-printing",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145116836022"
+    },
+    {
+      "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145117819062"
+    },
+    {
+      "handle": "dtfva-uv-dtf-stickers",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145118671030"
+    },
+    {
+      "handle": "dtfva-professional-vector-design-services",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145119522998"
+    },
+    {
+      "handle": "dtfva-rush-fee",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45145119588534"
     }
   ],
   "cartCreate": {

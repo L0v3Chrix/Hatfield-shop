@@ -117,7 +117,7 @@ export const PRODUCTS = [
   {
     handle: 'dtf-22-sheet',
     title: 'DTF 22" Sheet',
-    description: 'Custom 22-inch wide DTF transfers printed to order. Works on cotton, polyester, blends, nylon, and more. No pretreatment required.',
+    description: 'Custom 22-inch wide DTF transfers printed to order. Works on cotton, polyester, blends, nylon, and more. No pretreatment required. Warm peel: press, wait a few seconds, peel warm.',
     productType: 'DTF Transfer',
     vendor: 'Hatfield McCoy DTF',
     status: 'ACTIVE',
@@ -137,7 +137,7 @@ export const PRODUCTS = [
   {
     handle: 'glitter-dtf-22-sheet',
     title: 'Glitter DTF 22" Sheet',
-    description: '22-inch glitter DTF transfers available in Silver, Gold, and Multi. Designed for bold prints that need extra shine.',
+    description: '22-inch glitter DTF transfers available in Silver, Gold, and Multi. Designed for bold prints that need extra shine. COLD PEEL: let the transfer cool completely before peeling.',
     productType: 'Glitter DTF Transfer',
     vendor: 'Hatfield McCoy DTF',
     status: 'ACTIVE',
@@ -150,7 +150,7 @@ export const PRODUCTS = [
   {
     handle: 'glow-dtf-22-sheet',
     title: 'Glow DTF 22" Sheet',
-    description: 'Glow-in-the-dark 22-inch DTF transfers printed to order. Ideal for specialty designs, events, and high-visibility apparel.',
+    description: 'Glow-in-the-dark 22-inch DTF transfers printed to order. Ideal for specialty designs, events, and high-visibility apparel. COLD PEEL: let the transfer cool completely before peeling.',
     productType: 'Glow DTF Transfer',
     vendor: 'Hatfield McCoy DTF',
     status: 'ACTIVE',

@@ -765,39 +765,6 @@
       "status": "ready"
     },
     {
-      "source": "Shopify-images-good/cadlink-square-blue-background.png",
-      "sourceBytes": 1036641,
-      "slug": "cadlink-square-blue-background",
-      "title": "CADlink software",
-      "collection": "Software and RIP",
-      "usage": [
-        "product card"
-      ],
-      "alt": "CADlink Digital Factory software product graphic on blue background",
-      "focalPoint": "center",
-      "derivatives": {
-        "hero": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-hero.webp",
-          "width": 1254,
-          "height": 1254,
-          "bytes": 30672
-        },
-        "card": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-card.webp",
-          "width": 900,
-          "height": 900,
-          "bytes": 20156
-        },
-        "thumb": {
-          "file": "deliverables/brand-design-pack/assets/shopify-images/cadlink-square-blue-background-thumb.webp",
-          "width": 360,
-          "height": 360,
-          "bytes": 6636
-        }
-      },
-      "status": "ready"
-    },
-    {
       "source": "Shopify-images-good/car-gang-sheet.jpg",
       "sourceBytes": 868643,
       "slug": "car-gang-sheet",

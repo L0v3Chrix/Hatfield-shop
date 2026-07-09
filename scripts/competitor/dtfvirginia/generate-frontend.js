@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { buildFrontendCatalog, writeFrontendArtifacts } from './frontend-generator.js'
+import { applyCatalogEdits, loadEdits } from './apply-edits.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PROJECT_ROOT = join(__dirname, '..', '..', '..')
@@ -18,7 +19,7 @@ function main() {
   const normalizedPath = flags.normalizedPath || DEFAULT_NORMALIZED_PATH
   const outputDir = flags.outputDir || DEFAULT_OUTPUT_DIR
   if (!existsSync(normalizedPath)) throw new Error(`Normalized catalog not found: ${normalizedPath}`)
-  const normalized = JSON.parse(readFileSync(normalizedPath, 'utf8'))
+  const normalized = applyCatalogEdits(JSON.parse(readFileSync(normalizedPath, 'utf8')), loadEdits())
   const shopifyStatePath = flags.shopifyStatePath || DEFAULT_SHOPIFY_STATE_PATH
   const shopifyState = existsSync(shopifyStatePath) ? JSON.parse(readFileSync(shopifyStatePath, 'utf8')) : null
   const catalog = buildFrontendCatalog(normalized, { shopifyState })

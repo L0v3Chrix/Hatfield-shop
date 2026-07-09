@@ -798,6 +798,40 @@
       "status": "ready"
     },
     {
+      "source": "Shopify-images-good/custom-dtf-gang-sheets-22-screenshot-2026-06-09.png",
+      "sourceBytes": 2323139,
+      "slug": "custom-dtf-gang-sheets-22-screenshot",
+      "title": "22 inch DTF gang sheet screenshot",
+      "collection": "Gang sheets",
+      "usage": [
+        "product card",
+        "builder page"
+      ],
+      "alt": "22 inch custom DTF gang sheet builder screenshot",
+      "focalPoint": "center",
+      "derivatives": {
+        "hero": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-hero.webp",
+          "width": 1013,
+          "height": 1600,
+          "bytes": 137218
+        },
+        "card": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-card.webp",
+          "width": 570,
+          "height": 900,
+          "bytes": 76770
+        },
+        "thumb": {
+          "file": "deliverables/brand-design-pack/assets/shopify-images/custom-dtf-gang-sheets-22-screenshot-thumb.webp",
+          "width": 228,
+          "height": 360,
+          "bytes": 20944
+        }
+      },
+      "status": "ready"
+    },
+    {
       "source": "Shopify-images-good/dtf-process.jpg",
       "sourceBytes": 684408,
       "slug": "dtf-process",

@@ -1,17 +1,2911 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T03:06:40.262Z",
+    "generated_at": "2026-07-09T16:57:43.799Z",
     "shop": "zm1evm-rd.myshopify.com",
-    "product_count": 79,
+    "product_count": 89,
     "collection_count": 38,
     "missing_products": 0,
     "missing_collections": 0
   },
   "products": [
     {
+      "handle": "dtf-22-sheet",
+      "productId": "gid://shopify/Product/8780862292150",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "DTF-22-24",
+          "variantId": "gid://shopify/ProductVariant/45063581860022",
+          "price": "12.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-36",
+          "variantId": "gid://shopify/ProductVariant/45063581892790",
+          "price": "18.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-48",
+          "variantId": "gid://shopify/ProductVariant/45063581925558",
+          "price": "24.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-60",
+          "variantId": "gid://shopify/ProductVariant/45063581958326",
+          "price": "30.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-72",
+          "variantId": "gid://shopify/ProductVariant/45063581991094",
+          "price": "36.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-84",
+          "variantId": "gid://shopify/ProductVariant/45063582023862",
+          "price": "42.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-96",
+          "variantId": "gid://shopify/ProductVariant/45063582056630",
+          "price": "48.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-108",
+          "variantId": "gid://shopify/ProductVariant/45063582089398",
+          "price": "54.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-120",
+          "variantId": "gid://shopify/ProductVariant/45063582122166",
+          "price": "60.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-132",
+          "variantId": "gid://shopify/ProductVariant/45063582154934",
+          "price": "66.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-144",
+          "variantId": "gid://shopify/ProductVariant/45063582187702",
+          "price": "72.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-156",
+          "variantId": "gid://shopify/ProductVariant/45063582220470",
+          "price": "78.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-168",
+          "variantId": "gid://shopify/ProductVariant/45063582253238",
+          "price": "84.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-180",
+          "variantId": "gid://shopify/ProductVariant/45063582286006",
+          "price": "90.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-192",
+          "variantId": "gid://shopify/ProductVariant/45063582318774",
+          "price": "96.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-300",
+          "variantId": "gid://shopify/ProductVariant/45063582351542",
+          "price": "150.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "dtf-46-sheet",
+      "productId": "gid://shopify/Product/8780862324918",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "DTF-46-12",
+          "variantId": "gid://shopify/ProductVariant/45063582417078",
+          "price": "12.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-24",
+          "variantId": "gid://shopify/ProductVariant/45063582449846",
+          "price": "24.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-36",
+          "variantId": "gid://shopify/ProductVariant/45063582482614",
+          "price": "36.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-48",
+          "variantId": "gid://shopify/ProductVariant/45063582515382",
+          "price": "48.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-60",
+          "variantId": "gid://shopify/ProductVariant/45063582548150",
+          "price": "60.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-72",
+          "variantId": "gid://shopify/ProductVariant/45063582580918",
+          "price": "72.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-80",
+          "variantId": "gid://shopify/ProductVariant/45063582613686",
+          "price": "80.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "80"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-84",
+          "variantId": "gid://shopify/ProductVariant/45063582646454",
+          "price": "84.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-96",
+          "variantId": "gid://shopify/ProductVariant/45063582679222",
+          "price": "96.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-108",
+          "variantId": "gid://shopify/ProductVariant/45063582711990",
+          "price": "108.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-120",
+          "variantId": "gid://shopify/ProductVariant/45063582744758",
+          "price": "120.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-132",
+          "variantId": "gid://shopify/ProductVariant/45063582777526",
+          "price": "132.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-144",
+          "variantId": "gid://shopify/ProductVariant/45063582810294",
+          "price": "144.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-156",
+          "variantId": "gid://shopify/ProductVariant/45063582843062",
+          "price": "156.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-168",
+          "variantId": "gid://shopify/ProductVariant/45063582875830",
+          "price": "168.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-180",
+          "variantId": "gid://shopify/ProductVariant/45063582908598",
+          "price": "180.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-192",
+          "variantId": "gid://shopify/ProductVariant/45063582941366",
+          "price": "192.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-204",
+          "variantId": "gid://shopify/ProductVariant/45063582974134",
+          "price": "204.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "204"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-216",
+          "variantId": "gid://shopify/ProductVariant/45063583006902",
+          "price": "216.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "216"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-228",
+          "variantId": "gid://shopify/ProductVariant/45063583039670",
+          "price": "228.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "228"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-240",
+          "variantId": "gid://shopify/ProductVariant/45063583072438",
+          "price": "240.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "240"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "glitter-dtf-22-sheet",
+      "productId": "gid://shopify/Product/8780862357686",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "GLT-22-24-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583137974",
+          "price": "12.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-24-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583170742",
+          "price": "12.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-24-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583203510",
+          "price": "12.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-36-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583236278",
+          "price": "18.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-36-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583269046",
+          "price": "18.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-36-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583301814",
+          "price": "18.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-48-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583334582",
+          "price": "24.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-48-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583367350",
+          "price": "24.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-48-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583400118",
+          "price": "24.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-60-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583432886",
+          "price": "30.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-60-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583465654",
+          "price": "30.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-60-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583498422",
+          "price": "30.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-72-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583531190",
+          "price": "36.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-72-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583563958",
+          "price": "36.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-72-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583596726",
+          "price": "36.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-84-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583629494",
+          "price": "42.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-84-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583662262",
+          "price": "42.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-84-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583695030",
+          "price": "42.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-96-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583727798",
+          "price": "48.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-96-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583760566",
+          "price": "48.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-96-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583793334",
+          "price": "48.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-108-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583826102",
+          "price": "54.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-108-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583858870",
+          "price": "54.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-108-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583891638",
+          "price": "54.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-120-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063583924406",
+          "price": "60.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-120-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063583957174",
+          "price": "60.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-120-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063583989942",
+          "price": "60.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-132-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063584022710",
+          "price": "66.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-132-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063584055478",
+          "price": "66.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-132-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063584088246",
+          "price": "66.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-144-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063584121014",
+          "price": "72.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-144-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063584153782",
+          "price": "72.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-144-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063584186550",
+          "price": "72.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-156-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063584219318",
+          "price": "78.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-156-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063584252086",
+          "price": "78.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-156-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063584284854",
+          "price": "78.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-168-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063584317622",
+          "price": "84.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-168-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063584350390",
+          "price": "84.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-168-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063584383158",
+          "price": "84.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-180-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063584415926",
+          "price": "90.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-180-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063584448694",
+          "price": "90.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-180-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063584481462",
+          "price": "90.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-192-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063584514230",
+          "price": "96.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-192-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063584546998",
+          "price": "96.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-192-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063584579766",
+          "price": "96.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-300-SIL",
+          "variantId": "gid://shopify/ProductVariant/45063584612534",
+          "price": "150.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-300-GLD",
+          "variantId": "gid://shopify/ProductVariant/45063584645302",
+          "price": "150.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-300-MLT",
+          "variantId": "gid://shopify/ProductVariant/45063584678070",
+          "price": "150.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "glow-dtf-22-sheet",
+      "productId": "gid://shopify/Product/8780862390454",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "GID-22-24",
+          "variantId": "gid://shopify/ProductVariant/45063584743606",
+          "price": "18.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-36",
+          "variantId": "gid://shopify/ProductVariant/45063584776374",
+          "price": "27.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-48",
+          "variantId": "gid://shopify/ProductVariant/45063584809142",
+          "price": "36.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-60",
+          "variantId": "gid://shopify/ProductVariant/45063584841910",
+          "price": "45.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-72",
+          "variantId": "gid://shopify/ProductVariant/45063584874678",
+          "price": "54.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-84",
+          "variantId": "gid://shopify/ProductVariant/45063584907446",
+          "price": "63.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-96",
+          "variantId": "gid://shopify/ProductVariant/45063584940214",
+          "price": "72.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-108",
+          "variantId": "gid://shopify/ProductVariant/45063584972982",
+          "price": "81.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-120",
+          "variantId": "gid://shopify/ProductVariant/45063585005750",
+          "price": "90.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-132",
+          "variantId": "gid://shopify/ProductVariant/45063585038518",
+          "price": "99.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-144",
+          "variantId": "gid://shopify/ProductVariant/45063585071286",
+          "price": "108.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-156",
+          "variantId": "gid://shopify/ProductVariant/45063585104054",
+          "price": "117.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-168",
+          "variantId": "gid://shopify/ProductVariant/45063585136822",
+          "price": "126.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-180",
+          "variantId": "gid://shopify/ProductVariant/45063585169590",
+          "price": "135.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-192",
+          "variantId": "gid://shopify/ProductVariant/45063585202358",
+          "price": "144.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-300",
+          "variantId": "gid://shopify/ProductVariant/45063585235126",
+          "price": "225.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "sublimation-24",
+      "productId": "gid://shopify/Product/8780862423222",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "SUB-24-24",
+          "variantId": "gid://shopify/ProductVariant/45063585300662",
+          "price": "8.50",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-36",
+          "variantId": "gid://shopify/ProductVariant/45063585333430",
+          "price": "12.75",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-48",
+          "variantId": "gid://shopify/ProductVariant/45063585366198",
+          "price": "17.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-60",
+          "variantId": "gid://shopify/ProductVariant/45063585398966",
+          "price": "21.25",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-72",
+          "variantId": "gid://shopify/ProductVariant/45063585431734",
+          "price": "26.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-84",
+          "variantId": "gid://shopify/ProductVariant/45063585464502",
+          "price": "31.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-96",
+          "variantId": "gid://shopify/ProductVariant/45063585497270",
+          "price": "34.00",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "dtf-22-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801329938614",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "DTF-22-24-B",
+          "variantId": "gid://shopify/ProductVariant/45134982709430",
+          "price": "12.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-36-B",
+          "variantId": "gid://shopify/ProductVariant/45134982742198",
+          "price": "18.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-60-B",
+          "variantId": "gid://shopify/ProductVariant/45134982807734",
+          "price": "30.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-96-B",
+          "variantId": "gid://shopify/ProductVariant/45134982906038",
+          "price": "48.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-144-B",
+          "variantId": "gid://shopify/ProductVariant/45134983037110",
+          "price": "72.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-300-B",
+          "variantId": "gid://shopify/ProductVariant/45134983200950",
+          "price": "150.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-48-B",
+          "variantId": "gid://shopify/ProductVariant/45134982774966",
+          "price": "24.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-72-B",
+          "variantId": "gid://shopify/ProductVariant/45134982840502",
+          "price": "36.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-84-B",
+          "variantId": "gid://shopify/ProductVariant/45134982873270",
+          "price": "42.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-108-B",
+          "variantId": "gid://shopify/ProductVariant/45134982938806",
+          "price": "54.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-120-B",
+          "variantId": "gid://shopify/ProductVariant/45134982971574",
+          "price": "60.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-132-B",
+          "variantId": "gid://shopify/ProductVariant/45134983004342",
+          "price": "66.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-156-B",
+          "variantId": "gid://shopify/ProductVariant/45134983069878",
+          "price": "78.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-168-B",
+          "variantId": "gid://shopify/ProductVariant/45134983102646",
+          "price": "84.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-180-B",
+          "variantId": "gid://shopify/ProductVariant/45134983135414",
+          "price": "90.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-22-192-B",
+          "variantId": "gid://shopify/ProductVariant/45134983168182",
+          "price": "96.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            },
+            {
+              "name": "Size",
+              "value": "22in x 300in"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "dtf-46-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801338130614",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "DTF-46-12-B",
+          "variantId": "gid://shopify/ProductVariant/45135045198006",
+          "price": "12.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-24-B",
+          "variantId": "gid://shopify/ProductVariant/45135045230774",
+          "price": "24.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-36-B",
+          "variantId": "gid://shopify/ProductVariant/45135045263542",
+          "price": "36.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-48-B",
+          "variantId": "gid://shopify/ProductVariant/45135045296310",
+          "price": "48.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-60-B",
+          "variantId": "gid://shopify/ProductVariant/45135045329078",
+          "price": "60.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-72-B",
+          "variantId": "gid://shopify/ProductVariant/45135045361846",
+          "price": "72.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-80-B",
+          "variantId": "gid://shopify/ProductVariant/45135045394614",
+          "price": "80.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "80"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-84-B",
+          "variantId": "gid://shopify/ProductVariant/45135045427382",
+          "price": "84.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-96-B",
+          "variantId": "gid://shopify/ProductVariant/45135045460150",
+          "price": "96.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-108-B",
+          "variantId": "gid://shopify/ProductVariant/45135045492918",
+          "price": "108.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-120-B",
+          "variantId": "gid://shopify/ProductVariant/45135045525686",
+          "price": "120.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-132-B",
+          "variantId": "gid://shopify/ProductVariant/45135045558454",
+          "price": "132.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-144-B",
+          "variantId": "gid://shopify/ProductVariant/45135045591222",
+          "price": "144.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-156-B",
+          "variantId": "gid://shopify/ProductVariant/45135045623990",
+          "price": "156.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-168-B",
+          "variantId": "gid://shopify/ProductVariant/45135045656758",
+          "price": "168.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-180-B",
+          "variantId": "gid://shopify/ProductVariant/45135045689526",
+          "price": "180.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-192-B",
+          "variantId": "gid://shopify/ProductVariant/45135045722294",
+          "price": "192.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-204-B",
+          "variantId": "gid://shopify/ProductVariant/45135045755062",
+          "price": "204.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "204"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-216-B",
+          "variantId": "gid://shopify/ProductVariant/45135045787830",
+          "price": "216.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "216"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-228-B",
+          "variantId": "gid://shopify/ProductVariant/45135045820598",
+          "price": "228.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "228"
+            }
+          ]
+        },
+        {
+          "sku": "DTF-46-240-B",
+          "variantId": "gid://shopify/ProductVariant/45135045853366",
+          "price": "240.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "240"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "glitter-dtf-22-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801338327222",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "GLT-22-24-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135046344886",
+          "price": "12.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-24-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135046377654",
+          "price": "12.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-24-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135046410422",
+          "price": "12.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-36-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135046443190",
+          "price": "18.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-36-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135046475958",
+          "price": "18.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-36-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135046508726",
+          "price": "18.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-48-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135046541494",
+          "price": "24.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-48-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135046574262",
+          "price": "24.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-48-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135046607030",
+          "price": "24.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-60-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135046639798",
+          "price": "30.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-60-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135046672566",
+          "price": "30.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-60-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135046705334",
+          "price": "30.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-72-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135046738102",
+          "price": "36.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-72-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135046770870",
+          "price": "36.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-72-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135046803638",
+          "price": "36.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-84-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135046836406",
+          "price": "42.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-84-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135046869174",
+          "price": "42.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-84-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135046901942",
+          "price": "42.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-96-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135046934710",
+          "price": "48.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-96-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135046967478",
+          "price": "48.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-96-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047000246",
+          "price": "48.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-108-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047033014",
+          "price": "54.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-108-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047065782",
+          "price": "54.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-108-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047098550",
+          "price": "54.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-120-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047131318",
+          "price": "60.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-120-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047164086",
+          "price": "60.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-120-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047196854",
+          "price": "60.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-132-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047229622",
+          "price": "66.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-132-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047262390",
+          "price": "66.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-132-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047295158",
+          "price": "66.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-144-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047327926",
+          "price": "72.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-144-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047360694",
+          "price": "72.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-144-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047393462",
+          "price": "72.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-156-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047426230",
+          "price": "78.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-156-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047458998",
+          "price": "78.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-156-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047491766",
+          "price": "78.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-168-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047524534",
+          "price": "84.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-168-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047557302",
+          "price": "84.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-168-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047590070",
+          "price": "84.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-180-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047622838",
+          "price": "90.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-180-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047655606",
+          "price": "90.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-180-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047688374",
+          "price": "90.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-192-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047721142",
+          "price": "96.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-192-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047753910",
+          "price": "96.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-192-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047786678",
+          "price": "96.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-300-SIL-B",
+          "variantId": "gid://shopify/ProductVariant/45135047819446",
+          "price": "150.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            },
+            {
+              "name": "Color",
+              "value": "Silver"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-300-GLD-B",
+          "variantId": "gid://shopify/ProductVariant/45135047852214",
+          "price": "150.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            },
+            {
+              "name": "Color",
+              "value": "Gold"
+            }
+          ]
+        },
+        {
+          "sku": "GLT-22-300-MLT-B",
+          "variantId": "gid://shopify/ProductVariant/45135047884982",
+          "price": "150.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            },
+            {
+              "name": "Color",
+              "value": "Multi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "glow-dtf-22-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801338884278",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "GID-22-24-B",
+          "variantId": "gid://shopify/ProductVariant/45135055650998",
+          "price": "18.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-36-B",
+          "variantId": "gid://shopify/ProductVariant/45135055683766",
+          "price": "27.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-48-B",
+          "variantId": "gid://shopify/ProductVariant/45135055716534",
+          "price": "36.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-60-B",
+          "variantId": "gid://shopify/ProductVariant/45135055749302",
+          "price": "45.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-72-B",
+          "variantId": "gid://shopify/ProductVariant/45135055782070",
+          "price": "54.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-84-B",
+          "variantId": "gid://shopify/ProductVariant/45135055814838",
+          "price": "63.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-96-B",
+          "variantId": "gid://shopify/ProductVariant/45135055847606",
+          "price": "72.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-108-B",
+          "variantId": "gid://shopify/ProductVariant/45135055880374",
+          "price": "81.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "108"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-120-B",
+          "variantId": "gid://shopify/ProductVariant/45135055913142",
+          "price": "90.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "120"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-132-B",
+          "variantId": "gid://shopify/ProductVariant/45135055945910",
+          "price": "99.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "132"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-144-B",
+          "variantId": "gid://shopify/ProductVariant/45135055978678",
+          "price": "108.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "144"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-156-B",
+          "variantId": "gid://shopify/ProductVariant/45135056011446",
+          "price": "117.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "156"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-168-B",
+          "variantId": "gid://shopify/ProductVariant/45135056044214",
+          "price": "126.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "168"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-180-B",
+          "variantId": "gid://shopify/ProductVariant/45135056076982",
+          "price": "135.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-192-B",
+          "variantId": "gid://shopify/ProductVariant/45135056109750",
+          "price": "144.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "192"
+            }
+          ]
+        },
+        {
+          "sku": "GID-22-300-B",
+          "variantId": "gid://shopify/ProductVariant/45135056142518",
+          "price": "225.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "sublimation-24-gang-sheet-builder",
+      "productId": "gid://shopify/Product/8801339211958",
+      "status": "ACTIVE",
+      "variants": [
+        {
+          "sku": "SUB-24-24-B",
+          "variantId": "gid://shopify/ProductVariant/45135059648694",
+          "price": "9.10",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-36-B",
+          "variantId": "gid://shopify/ProductVariant/45135059681462",
+          "price": "13.35",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-48-B",
+          "variantId": "gid://shopify/ProductVariant/45135059714230",
+          "price": "17.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-60-B",
+          "variantId": "gid://shopify/ProductVariant/45135059746998",
+          "price": "21.85",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-72-B",
+          "variantId": "gid://shopify/ProductVariant/45135059779766",
+          "price": "26.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "72"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-84-B",
+          "variantId": "gid://shopify/ProductVariant/45135059812534",
+          "price": "31.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "84"
+            }
+          ]
+        },
+        {
+          "sku": "SUB-24-96-B",
+          "variantId": "gid://shopify/ProductVariant/45135059845302",
+          "price": "34.60",
+          "selectedOptions": [
+            {
+              "name": "Length",
+              "value": "96"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "handle": "dtfva-42-custom-sublimation-gang-sheets-builder",
       "productId": "gid://shopify/Product/8804436050102",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "variants": [
         {
           "sku": "DTFVA-42_CUSTOM_SUBLIMATION_GANG_SHEETS_BUILDER-42_5_X24_HEIGHT_PAPER",
@@ -153,7 +3047,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-fast-reliable-transfer-printing",
       "productId": "gid://shopify/Product/8804436082870",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_FAST_RELIABLE_TRANSFER_PRINTING-46_5_IN_X_12_IN",
@@ -391,7 +3285,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-dtf-virginia",
       "productId": "gid://shopify/Product/8804436115638",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_DTF_VIRGINIA-46_5_IN_X_12_IN",
@@ -4459,1982 +7353,24 @@
       "status": "ACTIVE",
       "variants": [
         {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_PINK_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145028395190",
-          "price": "0.98",
+          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-FULL_SHEET_12X24",
+          "variantId": "gid://shopify/ProductVariant/45250599616694",
+          "price": "75.00",
           "selectedOptions": [
             {
-              "name": "Color",
-              "value": "Reflective Pink"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_PINK_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145028427958",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Pink"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_PINK_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145028460726",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Pink"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_PINK_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145028493494",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Pink"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_PINK_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145028526262",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Pink"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_PINK_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145028559030",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Pink"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_BLACK_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145028591798",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Black"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_BLACK_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145028624566",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Black"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_BLACK_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145028657334",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Black"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_BLACK_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145028690102",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Black"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_BLACK_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145028722870",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Black"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_BLACK_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145028755638",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Black"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_SILVER_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145028788406",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Silver"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_SILVER_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145028821174",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Silver"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_SILVER_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145028853942",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Silver"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_SILVER_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145028886710",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Silver"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_SILVER_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145028919478",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Silver"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-REFLECTIVE_SILVER_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145028952246",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Reflective Silver"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145028985014",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145029017782",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145029050550",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145029083318",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145029116086",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145029148854",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_CARBON_FIBER_SILVER_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145029181622",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Carbon Fiber - Silver"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_CARBON_FIBER_SILVER_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145029214390",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Carbon Fiber - Silver"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_CARBON_FIBER_SILVER_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145029247158",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Carbon Fiber - Silver"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_CARBON_FIBER_SILVER_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145029279926",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Carbon Fiber - Silver"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_CARBON_FIBER_SILVER_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145029312694",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Carbon Fiber - Silver"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_CARBON_FIBER_SILVER_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145029345462",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Carbon Fiber - Silver"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-GOLD_CARBON_FIBER_BLACK_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145029378230",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Gold Carbon Fiber - Black"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-GOLD_CARBON_FIBER_BLACK_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145029410998",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Gold Carbon Fiber - Black"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-GOLD_CARBON_FIBER_BLACK_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145029443766",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Gold Carbon Fiber - Black"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-GOLD_CARBON_FIBER_BLACK_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145029476534",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Gold Carbon Fiber - Black"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-GOLD_CARBON_FIBER_BLACK_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145029509302",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Gold Carbon Fiber - Black"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-GOLD_CARBON_FIBER_BLACK_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145029542070",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Gold Carbon Fiber - Black"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_DENIM_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145029574838",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Denim"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_DENIM_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145029607606",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Denim"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_DENIM_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145029640374",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Denim"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_DENIM_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145029673142",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Denim"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_DENIM_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145029705910",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Denim"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-BLACK_DENIM_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145029738678",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Black Denim"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-COFFEE_DENIM_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145029771446",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Coffee Denim"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-COFFEE_DENIM_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145029804214",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Coffee Denim"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-COFFEE_DENIM_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145029836982",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Coffee Denim"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-COFFEE_DENIM_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145029869750",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Coffee Denim"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-COFFEE_DENIM_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145029902518",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Coffee Denim"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-COFFEE_DENIM_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145029935286",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Coffee Denim"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BLUE_DENIM_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145029968054",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BLUE_DENIM_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145030000822",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BLUE_DENIM_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145030033590",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BLUE_DENIM_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145030066358",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BLUE_DENIM_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145030099126",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BLUE_DENIM_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145030131894",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-LIGHT_BLUE_DENIM_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145030164662",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Light Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-LIGHT_BLUE_DENIM_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145030197430",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Light Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-LIGHT_BLUE_DENIM_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145030230198",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Light Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-LIGHT_BLUE_DENIM_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145030262966",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Light Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-LIGHT_BLUE_DENIM_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145030295734",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Light Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-LIGHT_BLUE_DENIM_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145030328502",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Light Blue Denim"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-CH_RED_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145030361270",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "CH Red"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-CH_RED_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145030394038",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "CH Red"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-CH_RED_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145030426806",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "CH Red"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-CH_RED_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145030459574",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "CH Red"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-CH_RED_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145030492342",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "CH Red"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-CH_RED_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145030525110",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "CH Red"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145030557878",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145030590646",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145030623414",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145030656182",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145030688950",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145030721718",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-MARBLE_WHITE_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145030754486",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Marble White"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-MARBLE_WHITE_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145030787254",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Marble White"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-MARBLE_WHITE_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145030820022",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Marble White"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-MARBLE_WHITE_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145030852790",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Marble White"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-MARBLE_WHITE_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145030885558",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Marble White"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-MARBLE_WHITE_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145030918326",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Marble White"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RAWHIDE_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145030951094",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Rawhide"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RAWHIDE_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145030983862",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Rawhide"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RAWHIDE_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145031016630",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Rawhide"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RAWHIDE_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145031049398",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Rawhide"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RAWHIDE_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145031082166",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Rawhide"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RAWHIDE_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145031114934",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Rawhide"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SILVER_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145031147702",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Silver"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SILVER_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145031180470",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Silver"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SILVER_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145031213238",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Silver"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SILVER_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145031246006",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Silver"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SILVER_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145031278774",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Silver"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SILVER_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145031311542",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Silver"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PINK_GOLF_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145031344310",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Pink Golf"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PINK_GOLF_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145031377078",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Pink Golf"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PINK_GOLF_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145031409846",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Pink Golf"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PINK_GOLF_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145031442614",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Pink Golf"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PINK_GOLF_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145031475382",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Pink Golf"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PINK_GOLF_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145031508150",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Pink Golf"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_GOLF_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145031540918",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White Golf"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_GOLF_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145031573686",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White Golf"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_GOLF_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145031606454",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White Golf"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_GOLF_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145031639222",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White Golf"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_GOLF_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145031671990",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White Golf"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-WHITE_GOLF_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145031704758",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "White Golf"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RED_GOLF_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145031737526",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Red Golf"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RED_GOLF_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145031770294",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Red Golf"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RED_GOLF_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145031803062",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Red Golf"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RED_GOLF_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145031835830",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Red Golf"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RED_GOLF_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145031868598",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Red Golf"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-RED_GOLF_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145031901366",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Red Golf"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PRINTED_BLACK_WOOD_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145031934134",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Printed Black Wood"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PRINTED_BLACK_WOOD_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145031966902",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Printed Black Wood"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PRINTED_BLACK_WOOD_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145031999670",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Printed Black Wood"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PRINTED_BLACK_WOOD_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145032032438",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Printed Black Wood"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PRINTED_BLACK_WOOD_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145032065206",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Printed Black Wood"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-PRINTED_BLACK_WOOD_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145032097974",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Printed Black Wood"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-HOLOGRAPHIC_FOIL_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145032130742",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Holographic Foil"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-HOLOGRAPHIC_FOIL_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145032163510",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Holographic Foil"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-HOLOGRAPHIC_FOIL_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145032196278",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Holographic Foil"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-HOLOGRAPHIC_FOIL_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145032229046",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Holographic Foil"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-HOLOGRAPHIC_FOIL_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145032261814",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Holographic Foil"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-HOLOGRAPHIC_FOIL_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145032294582",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Holographic Foil"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-TEAL_BASKETBALL_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145032327350",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Teal Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-TEAL_BASKETBALL_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145032360118",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Teal Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-TEAL_BASKETBALL_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145032392886",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Teal Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-TEAL_BASKETBALL_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145032425654",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Teal Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-TEAL_BASKETBALL_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145032458422",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Teal Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-TEAL_BASKETBALL_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145032491190",
-          "price": "22.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Teal Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "6\"x 6\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_BASKETBALL_1_X_1",
-          "variantId": "gid://shopify/ProductVariant/45145032523958",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "1\" x 1\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_BASKETBALL_2_X_2",
-          "variantId": "gid://shopify/ProductVariant/45145032556726",
-          "price": "1.60",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "2\" x 2\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_BASKETBALL_3_X_3",
-          "variantId": "gid://shopify/ProductVariant/45145032589494",
-          "price": "4.85",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "3\" x 3\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_BASKETBALL_4_X_4",
-          "variantId": "gid://shopify/ProductVariant/45145032622262",
-          "price": "9.40",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "4\"x 4\""
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_BASKETBALL_5_X_5",
-          "variantId": "gid://shopify/ProductVariant/45145032655030",
-          "price": "15.25",
-          "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown Basketball"
-            },
-            {
-              "name": "Size",
-              "value": "5\"x 5\""
+              "name": "Format",
+              "value": "Full sheet 12\" x 24\" (about 30 patches)"
             }
           ]
         },
         {
-          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-DARK_BROWN_BASKETBALL_6_X_6",
-          "variantId": "gid://shopify/ProductVariant/45145032687798",
-          "price": "22.40",
+          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SINGLE_PATCH",
+          "variantId": "gid://shopify/ProductVariant/45250599649462",
+          "price": "4.00",
           "selectedOptions": [
-            {
-              "name": "Color",
-              "value": "Dark Brown Basketball"
-            },
             {
-              "name": "Size",
-              "value": "6\"x 6\""
+              "name": "Format",
+              "value": "Single patch"
             }
           ]
         }
@@ -6448,7 +7384,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_WHITE",
           "variantId": "gid://shopify/ProductVariant/45145032753334",
-          "price": "0.98",
+          "price": "0.65",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6463,7 +7399,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145032786102",
-          "price": "0.98",
+          "price": "0.65",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6478,7 +7414,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145032818870",
-          "price": "0.98",
+          "price": "0.65",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6493,7 +7429,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145032851638",
-          "price": "0.98",
+          "price": "0.65",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6508,7 +7444,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145032884406",
-          "price": "0.98",
+          "price": "0.65",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6523,7 +7459,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_WHITE",
           "variantId": "gid://shopify/ProductVariant/45145032917174",
-          "price": "1.60",
+          "price": "2.60",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6538,7 +7474,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145032949942",
-          "price": "1.60",
+          "price": "2.60",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6553,7 +7489,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145032982710",
-          "price": "1.60",
+          "price": "2.60",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6568,7 +7504,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033015478",
-          "price": "1.60",
+          "price": "2.60",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6583,7 +7519,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033048246",
-          "price": "1.60",
+          "price": "2.60",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6598,7 +7534,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_WHITE",
           "variantId": "gid://shopify/ProductVariant/45145033081014",
-          "price": "4.85",
+          "price": "5.85",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6613,7 +7549,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033113782",
-          "price": "4.85",
+          "price": "5.85",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6628,7 +7564,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033146550",
-          "price": "4.85",
+          "price": "5.85",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6643,7 +7579,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033179318",
-          "price": "4.85",
+          "price": "5.85",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6658,7 +7594,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033212086",
-          "price": "4.85",
+          "price": "5.85",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6673,7 +7609,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_WHITE",
           "variantId": "gid://shopify/ProductVariant/45145033244854",
-          "price": "9.40",
+          "price": "10.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6688,7 +7624,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033277622",
-          "price": "9.40",
+          "price": "10.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6703,7 +7639,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033310390",
-          "price": "9.40",
+          "price": "10.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6718,7 +7654,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033343158",
-          "price": "9.40",
+          "price": "10.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6733,7 +7669,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033375926",
-          "price": "9.40",
+          "price": "10.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6748,7 +7684,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_WHITE",
           "variantId": "gid://shopify/ProductVariant/45145033408694",
-          "price": "15.25",
+          "price": "16.25",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6763,7 +7699,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033441462",
-          "price": "15.25",
+          "price": "16.25",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6778,7 +7714,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033474230",
-          "price": "15.25",
+          "price": "16.25",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6793,7 +7729,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033506998",
-          "price": "15.25",
+          "price": "16.25",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6808,7 +7744,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033539766",
-          "price": "15.25",
+          "price": "16.25",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6823,7 +7759,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_WHITE",
           "variantId": "gid://shopify/ProductVariant/45145033572534",
-          "price": "22.40",
+          "price": "23.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6838,7 +7774,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033605302",
-          "price": "22.40",
+          "price": "23.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6853,7 +7789,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033638070",
-          "price": "22.40",
+          "price": "23.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6868,7 +7804,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_SILVER",
           "variantId": "gid://shopify/ProductVariant/45145033670838",
-          "price": "22.40",
+          "price": "23.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -6883,7 +7819,7 @@
         {
           "sku": "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_GOLD",
           "variantId": "gid://shopify/ProductVariant/45145033703606",
-          "price": "22.40",
+          "price": "23.40",
           "selectedOptions": [
             {
               "name": "Sizes",
@@ -16636,7 +17572,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-2_X_2",
           "variantId": "gid://shopify/ProductVariant/45145055592630",
-          "price": "1.10",
+          "price": "2.10",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16647,7 +17583,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-3_X_3",
           "variantId": "gid://shopify/ProductVariant/45145055625398",
-          "price": "2.60",
+          "price": "3.60",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16658,7 +17594,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-4_X_4",
           "variantId": "gid://shopify/ProductVariant/45145055658166",
-          "price": "3.40",
+          "price": "4.40",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16669,7 +17605,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-5_X_5",
           "variantId": "gid://shopify/ProductVariant/45145055690934",
-          "price": "4.90",
+          "price": "5.90",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16680,7 +17616,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-6_X_6",
           "variantId": "gid://shopify/ProductVariant/45145055723702",
-          "price": "6.40",
+          "price": "7.40",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16691,7 +17627,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-7_X_7",
           "variantId": "gid://shopify/ProductVariant/45145055756470",
-          "price": "7.90",
+          "price": "8.90",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16702,7 +17638,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-8_X_8",
           "variantId": "gid://shopify/ProductVariant/45145055789238",
-          "price": "9.40",
+          "price": "10.40",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16713,7 +17649,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-9_X_9",
           "variantId": "gid://shopify/ProductVariant/45145055822006",
-          "price": "10.90",
+          "price": "11.90",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16724,7 +17660,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-9_X_11",
           "variantId": "gid://shopify/ProductVariant/45145055854774",
-          "price": "11.60",
+          "price": "12.60",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16735,7 +17671,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-10_X_10",
           "variantId": "gid://shopify/ProductVariant/45145055887542",
-          "price": "11.60",
+          "price": "12.60",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16746,7 +17682,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-11_X_11",
           "variantId": "gid://shopify/ProductVariant/45145055920310",
-          "price": "12.40",
+          "price": "13.40",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16757,7 +17693,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-11_X_14",
           "variantId": "gid://shopify/ProductVariant/45145055953078",
-          "price": "15.40",
+          "price": "16.40",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16768,7 +17704,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-12_X_14",
           "variantId": "gid://shopify/ProductVariant/45145055985846",
-          "price": "16.10",
+          "price": "17.10",
           "selectedOptions": [
             {
               "name": "Size",
@@ -16779,7 +17715,7 @@
         {
           "sku": "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-12_X_17",
           "variantId": "gid://shopify/ProductVariant/45145056018614",
-          "price": "20.60",
+          "price": "21.60",
           "selectedOptions": [
             {
               "name": "Size",
@@ -17074,7 +18010,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-printing-service",
       "productId": "gid://shopify/Product/8804436803766",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_PRINTING_SERVICE-22_5_IN_X_24_IN",
@@ -17191,7 +18127,7 @@
     {
       "handle": "dtfva-fluorescent-dtf-printing-build-bold-bright-designs",
       "productId": "gid://shopify/Product/8804436836534",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-FLUORESCENT_DTF_PRINTING_BUILD_BOLD_BRIGHT_DESIGNS-22_5_X12",
@@ -17286,7 +18222,7 @@
     {
       "handle": "dtfva-glitter-dtf-transfers-builder",
       "productId": "gid://shopify/Product/8804436869302",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-GLITTER_DTF_TRANSFERS_BUILDER-22_5_IN_X_24_IN",
@@ -24828,7 +25764,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-30-inches-builder",
       "productId": "gid://shopify/Product/8804437393590",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES_BUILDER-30_5_X12_INCHES",
@@ -25599,101 +26535,24 @@
       "status": "ACTIVE",
       "variants": [
         {
-          "sku": "DTFVA-PARTY_BANNERS-12_36",
-          "variantId": "gid://shopify/ProductVariant/45145080332470",
-          "price": "22.59",
+          "sku": "DTFVA-PARTY_BANNERS-24_X_36",
+          "variantId": "gid://shopify/ProductVariant/45250599387318",
+          "price": "30.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "12″ × 36″"
+              "value": "24\" x 36\""
             }
           ]
         },
         {
-          "sku": "DTFVA-PARTY_BANNERS-18_36",
-          "variantId": "gid://shopify/ProductVariant/45145080365238",
-          "price": "26.15",
+          "sku": "DTFVA-PARTY_BANNERS-48_X_72",
+          "variantId": "gid://shopify/ProductVariant/45250599420086",
+          "price": "100.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "18″ × 36″"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-PARTY_BANNERS-24_48",
-          "variantId": "gid://shopify/ProductVariant/45145080398006",
-          "price": "34.46",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "24″ × 48″"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-PARTY_BANNERS-24_60",
-          "variantId": "gid://shopify/ProductVariant/45145080430774",
-          "price": "39.20",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "24″ × 60″"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-PARTY_BANNERS-24_72",
-          "variantId": "gid://shopify/ProductVariant/45145080463542",
-          "price": "43.95",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "24″ × 72″"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-PARTY_BANNERS-36_72",
-          "variantId": "gid://shopify/ProductVariant/45145080496310",
-          "price": "58.19",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "36″ × 72″"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-PARTY_BANNERS-36_96",
-          "variantId": "gid://shopify/ProductVariant/45145080529078",
-          "price": "72.44",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "36″ × 96″"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-PARTY_BANNERS-48_96",
-          "variantId": "gid://shopify/ProductVariant/45145080561846",
-          "price": "91.42",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "48″ × 96″"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-PARTY_BANNERS-48_120",
-          "variantId": "gid://shopify/ProductVariant/45145080594614",
-          "price": "110.41",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "48″ × 120″"
+              "value": "48\" x 72\""
             }
           ]
         }
@@ -35285,606 +36144,276 @@
       "variants": [
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X12",
-          "variantId": "gid://shopify/ProductVariant/45145107202230",
-          "price": "0.40",
+          "variantId": "gid://shopify/ProductVariant/45250599714998",
+          "price": "12.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22x12"
+              "value": "22\" x 12\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X24",
-          "variantId": "gid://shopify/ProductVariant/45145107234998",
-          "price": "23.00",
+          "variantId": "gid://shopify/ProductVariant/45250599747766",
+          "price": "24.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22x24"
+              "value": "22\" x 24\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X36",
-          "variantId": "gid://shopify/ProductVariant/45145107267766",
-          "price": "35.00",
+          "variantId": "gid://shopify/ProductVariant/45250599780534",
+          "price": "36.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22x36"
+              "value": "22\" x 36\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X48",
-          "variantId": "gid://shopify/ProductVariant/45145107300534",
-          "price": "47.00",
+          "variantId": "gid://shopify/ProductVariant/45250599813302",
+          "price": "48.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22x48"
+              "value": "22\" x 48\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X60",
-          "variantId": "gid://shopify/ProductVariant/45145107333302",
-          "price": "59.00",
+          "variantId": "gid://shopify/ProductVariant/45250599846070",
+          "price": "60.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22x60"
+              "value": "22\" x 60\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_72",
-          "variantId": "gid://shopify/ProductVariant/45145107366070",
-          "price": "71.00",
+          "variantId": "gid://shopify/ProductVariant/45250599878838",
+          "price": "72.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×72"
+              "value": "22\" x 72\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_84",
-          "variantId": "gid://shopify/ProductVariant/45145107398838",
-          "price": "83.00",
+          "variantId": "gid://shopify/ProductVariant/45250599911606",
+          "price": "84.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×84"
+              "value": "22\" x 84\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_96",
-          "variantId": "gid://shopify/ProductVariant/45145107431606",
-          "price": "95.00",
+          "variantId": "gid://shopify/ProductVariant/45250599944374",
+          "price": "96.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×96"
+              "value": "22\" x 96\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_108",
-          "variantId": "gid://shopify/ProductVariant/45145107464374",
-          "price": "107.00",
+          "variantId": "gid://shopify/ProductVariant/45250599977142",
+          "price": "108.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×108"
+              "value": "22\" x 108\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_120",
-          "variantId": "gid://shopify/ProductVariant/45145107497142",
-          "price": "119.00",
+          "variantId": "gid://shopify/ProductVariant/45250600009910",
+          "price": "120.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×120"
+              "value": "22\" x 120\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_132",
-          "variantId": "gid://shopify/ProductVariant/45145107529910",
-          "price": "131.00",
+          "variantId": "gid://shopify/ProductVariant/45250600042678",
+          "price": "132.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×132"
+              "value": "22\" x 132\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_144",
-          "variantId": "gid://shopify/ProductVariant/45145107562678",
-          "price": "143.00",
+          "variantId": "gid://shopify/ProductVariant/45250600075446",
+          "price": "144.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×144"
+              "value": "22\" x 144\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_156",
-          "variantId": "gid://shopify/ProductVariant/45145107595446",
-          "price": "155.00",
+          "variantId": "gid://shopify/ProductVariant/45250600108214",
+          "price": "156.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×156"
+              "value": "22\" x 156\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_168",
-          "variantId": "gid://shopify/ProductVariant/45145107628214",
-          "price": "167.00",
+          "variantId": "gid://shopify/ProductVariant/45250600140982",
+          "price": "168.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×168"
+              "value": "22\" x 168\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_180",
-          "variantId": "gid://shopify/ProductVariant/45145107660982",
-          "price": "179.00",
+          "variantId": "gid://shopify/ProductVariant/45250600173750",
+          "price": "180.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×180"
+              "value": "22\" x 180\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_192",
-          "variantId": "gid://shopify/ProductVariant/45145107693750",
-          "price": "191.00",
+          "variantId": "gid://shopify/ProductVariant/45250600206518",
+          "price": "192.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×192"
+              "value": "22\" x 192\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_204",
-          "variantId": "gid://shopify/ProductVariant/45145107726518",
-          "price": "203.00",
+          "variantId": "gid://shopify/ProductVariant/45250600239286",
+          "price": "204.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×204"
+              "value": "22\" x 204\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_216",
-          "variantId": "gid://shopify/ProductVariant/45145107759286",
-          "price": "215.00",
+          "variantId": "gid://shopify/ProductVariant/45250600272054",
+          "price": "216.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×216"
+              "value": "22\" x 216\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_228",
-          "variantId": "gid://shopify/ProductVariant/45145107792054",
-          "price": "227.00",
+          "variantId": "gid://shopify/ProductVariant/45250600304822",
+          "price": "228.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×228"
+              "value": "22\" x 228\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_240",
-          "variantId": "gid://shopify/ProductVariant/45145107824822",
-          "price": "239.00",
+          "variantId": "gid://shopify/ProductVariant/45250600337590",
+          "price": "240.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×240"
+              "value": "22\" x 240\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_252",
-          "variantId": "gid://shopify/ProductVariant/45145107857590",
-          "price": "251.00",
+          "variantId": "gid://shopify/ProductVariant/45250600370358",
+          "price": "252.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×252"
+              "value": "22\" x 252\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_264",
-          "variantId": "gid://shopify/ProductVariant/45145107890358",
-          "price": "263.00",
+          "variantId": "gid://shopify/ProductVariant/45250600403126",
+          "price": "264.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×264"
+              "value": "22\" x 264\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_276",
-          "variantId": "gid://shopify/ProductVariant/45145107923126",
-          "price": "275.00",
+          "variantId": "gid://shopify/ProductVariant/45250600435894",
+          "price": "276.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×276"
+              "value": "22\" x 276\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_288",
-          "variantId": "gid://shopify/ProductVariant/45145107955894",
-          "price": "287.00",
+          "variantId": "gid://shopify/ProductVariant/45250600468662",
+          "price": "288.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×288"
+              "value": "22\" x 288\""
             }
           ]
         },
         {
           "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_300",
-          "variantId": "gid://shopify/ProductVariant/45145107988662",
-          "price": "299.00",
+          "variantId": "gid://shopify/ProductVariant/45250600501430",
+          "price": "300.00",
           "selectedOptions": [
             {
               "name": "Size",
-              "value": "22×300"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-18_75IN_X_8_16IN",
-          "variantId": "gid://shopify/ProductVariant/45145108021430",
-          "price": "52.55",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "18.75in x 8.16in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-8IN_X_10_36IN",
-          "variantId": "gid://shopify/ProductVariant/45145108054198",
-          "price": "28.01",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "8in x 10.36in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-3IN_X_3_89IN",
-          "variantId": "gid://shopify/ProductVariant/45145108086966",
-          "price": "3.08",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "3in x 3.89in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22IN_X_36IN",
-          "variantId": "gid://shopify/ProductVariant/45145108119734",
-          "price": "35.04",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "22in x 36in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-8_93IN_X_3_91IN",
-          "variantId": "gid://shopify/ProductVariant/45145108152502",
-          "price": "0.59",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "8.93in x 3.91in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-7_98IN_X_4_32IN",
-          "variantId": "gid://shopify/ProductVariant/45145108185270",
-          "price": "0.57",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "7.98in x 4.32in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-6_2IN_X_7_04IN",
-          "variantId": "gid://shopify/ProductVariant/45145108218038",
-          "price": "0.99",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "6.2in x 7.04in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-5_6IN_X_6_99IN",
-          "variantId": "gid://shopify/ProductVariant/45145108250806",
-          "price": "0.78",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "5.6in x 6.99in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-6_6IN_X_6_61IN",
-          "variantId": "gid://shopify/ProductVariant/45145108283574",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "6.6in x 6.61in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-4IN_X_4IN",
-          "variantId": "gid://shopify/ProductVariant/45145108316342",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "4in x 4in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-4IN_X_4_22IN",
-          "variantId": "gid://shopify/ProductVariant/45145108349110",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "4in x 4.22in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-4IN_X_4_42IN",
-          "variantId": "gid://shopify/ProductVariant/45145108381878",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "4in x 4.42in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-5IN_X_5_27IN",
-          "variantId": "gid://shopify/ProductVariant/45145108414646",
-          "price": "0.20",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "5in x 5.27in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-2IN_X_2_35IN",
-          "variantId": "gid://shopify/ProductVariant/45145108447414",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2in x 2.35in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-2IN_X_2_37IN",
-          "variantId": "gid://shopify/ProductVariant/45145108480182",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2in x 2.37in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-6IN_X_6_01IN",
-          "variantId": "gid://shopify/ProductVariant/45145108512950",
-          "price": "0.64",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "6in x 6.01in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-4IN_X_2_2IN",
-          "variantId": "gid://shopify/ProductVariant/45145108545718",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "4in x 2.2in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-4_5IN_X_4_5IN",
-          "variantId": "gid://shopify/ProductVariant/45145108578486",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "4.5in x 4.5in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-5IN_X_5_53IN",
-          "variantId": "gid://shopify/ProductVariant/45145108611254",
-          "price": "0.26",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "5in x 5.53in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-21_41IN_X_3_04IN",
-          "variantId": "gid://shopify/ProductVariant/45145108644022",
-          "price": "1.96",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "21.41in x 3.04in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-3_73IN_X_3_5IN",
-          "variantId": "gid://shopify/ProductVariant/45145108676790",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "3.73in x 3.5in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-2IN_X_4_75IN",
-          "variantId": "gid://shopify/ProductVariant/45145108709558",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2in x 4.75in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-2IN_X_6_96IN",
-          "variantId": "gid://shopify/ProductVariant/45145108742326",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2in x 6.96in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-2IN_X_5_53IN",
-          "variantId": "gid://shopify/ProductVariant/45145108775094",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2in x 5.53in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-2_5IN_X_6_88IN",
-          "variantId": "gid://shopify/ProductVariant/45145108807862",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2.5in x 6.88in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-8_38IN_X_3_64IN",
-          "variantId": "gid://shopify/ProductVariant/45145108840630",
-          "price": "0.39",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "8.38in x 3.64in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-21_82IN_X_41_47IN",
-          "variantId": "gid://shopify/ProductVariant/45145108873398",
-          "price": "40.17",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "21.82in x 41.47in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-5IN_X_7IN",
-          "variantId": "gid://shopify/ProductVariant/45145108906166",
-          "price": "0.59",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "5in x 7in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-3IN_X_2_13IN",
-          "variantId": "gid://shopify/ProductVariant/45145108938934",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "3in x 2.13in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-6IN_X_4_57IN",
-          "variantId": "gid://shopify/ProductVariant/45145108971702",
-          "price": "0.25",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "6in x 4.57in"
+              "value": "22\" x 300\""
             }
           ]
         }
@@ -38284,134 +38813,35 @@
       "status": "ACTIVE",
       "variants": [
         {
-          "sku": "DTFVA-DYE_CUT_STICKERS-DEFAULT_SIZE",
-          "variantId": "gid://shopify/ProductVariant/45145115852982",
-          "price": "0.98",
+          "sku": "DTFVA-DYE_CUT_STICKERS-100PK_3IN_ROUND",
+          "variantId": "gid://shopify/ProductVariant/45250599485622",
+          "price": "30.00",
           "selectedOptions": [
             {
-              "name": "Size",
-              "value": "Default Size"
+              "name": "Shape",
+              "value": "Round"
             }
           ]
         },
         {
-          "sku": "DTFVA-DYE_CUT_STICKERS-2_5_IN_X_2_5_IN",
-          "variantId": "gid://shopify/ProductVariant/45145115885750",
-          "price": "0.98",
+          "sku": "DTFVA-DYE_CUT_STICKERS-100PK_3IN_SQUARE",
+          "variantId": "gid://shopify/ProductVariant/45250599518390",
+          "price": "30.00",
           "selectedOptions": [
             {
-              "name": "Size",
-              "value": "2.5 in x 2.5 in"
+              "name": "Shape",
+              "value": "Square"
             }
           ]
         },
         {
-          "sku": "DTFVA-DYE_CUT_STICKERS-2_16_IN_X_1_19_IN",
-          "variantId": "gid://shopify/ProductVariant/45145115918518",
-          "price": "0.98",
+          "sku": "DTFVA-DYE_CUT_STICKERS-100PK_3IN_DIE_CUT",
+          "variantId": "gid://shopify/ProductVariant/45250599551158",
+          "price": "30.00",
           "selectedOptions": [
             {
-              "name": "Size",
-              "value": "2.16 in x 1.19 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-2_17_IN_X_1_18_IN",
-          "variantId": "gid://shopify/ProductVariant/45145115951286",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2.17 in x 1.18 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-4_5_IN_X_4_5_IN",
-          "variantId": "gid://shopify/ProductVariant/45145115984054",
-          "price": "2.04",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "4.5 in x 4.5 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-4_IN_X_4_07_IN",
-          "variantId": "gid://shopify/ProductVariant/45145116016822",
-          "price": "1.44",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "4 in x 4.07 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-1_5_IN_X_1_5_IN",
-          "variantId": "gid://shopify/ProductVariant/45145116049590",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "1.5 in x 1.5 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-2_5_IN_X_2_28_IN",
-          "variantId": "gid://shopify/ProductVariant/45145116082358",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2.5 in x 2.28 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-2_18_IN_X_2_03_IN",
-          "variantId": "gid://shopify/ProductVariant/45145116115126",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "2.18 in x 2.03 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-1_75_IN_X_1_75_IN",
-          "variantId": "gid://shopify/ProductVariant/45145116147894",
-          "price": "0.98",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "1.75 in x 1.75 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-6_IN_X_6_IN",
-          "variantId": "gid://shopify/ProductVariant/45145116180662",
-          "price": "4.40",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "6 in x 6 in"
-            }
-          ]
-        },
-        {
-          "sku": "DTFVA-DYE_CUT_STICKERS-8_IN_X_8_IN",
-          "variantId": "gid://shopify/ProductVariant/45145116213430",
-          "price": "8.60",
-          "selectedOptions": [
-            {
-              "name": "Size",
-              "value": "8 in x 8 in"
+              "name": "Shape",
+              "value": "Die-cut"
             }
           ]
         }
@@ -38745,7 +39175,7 @@
     {
       "handle": "dtfva-custom-sublimation-gang-sheets",
       "productId": "gid://shopify/Product/8804438769846",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_SUBLIMATION_GANG_SHEETS-PAPER_42_5_X24_HEIGHT",
@@ -38887,7 +39317,7 @@
     {
       "handle": "dtfva-sublimation-gang-sheet-builder",
       "productId": "gid://shopify/Product/8804438802614",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-SUBLIMATION_GANG_SHEET_BUILDER-22_5_IN_X_12IN_SUBLIMATION",
@@ -39109,7 +39539,7 @@
     {
       "handle": "dtfva-custom-dtf-gang-sheets-your-colors-deserve-to-pop",
       "productId": "gid://shopify/Product/8804438900918",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-CUSTOM_DTF_GANG_SHEETS_YOUR_COLORS_DESERVE_TO_POP-22_5X24_INCHES",
@@ -39579,7 +40009,7 @@
         {
           "sku": "DTFVA-PROFESSIONAL_VECTOR_DESIGN_SERVICES-DEFAULT_TITLE",
           "variantId": "gid://shopify/ProductVariant/45145119522998",
-          "price": "9.00",
+          "price": "10.00",
           "selectedOptions": [
             {
               "name": "Title",
@@ -39597,7 +40027,7 @@
         {
           "sku": "DTFVA-RUSH_FEE-DEFAULT_TITLE",
           "variantId": "gid://shopify/ProductVariant/45145119588534",
-          "price": "49.00",
+          "price": "50.00",
           "selectedOptions": [
             {
               "name": "Title",
@@ -39610,7 +40040,7 @@
     {
       "handle": "dtfva-digital-factory-dtf-desktop-edition",
       "productId": "gid://shopify/Product/8804439031990",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "variants": [
         {
           "sku": "DTFVA-DIGITAL_FACTORY_DTF_DESKTOP_EDITION-DEFAULT_TITLE",
@@ -39628,7 +40058,7 @@
     {
       "handle": "dtfva-add-driver-port-24-wide-or-larger",
       "productId": "gid://shopify/Product/8804439064758",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "variants": [
         {
           "sku": "DTFVA-ADD_DRIVER_PORT_24_WIDE_OR_LARGER-DEFAULT_TITLE",
@@ -39646,7 +40076,7 @@
     {
       "handle": "dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code",
       "productId": "gid://shopify/Product/8804439130294",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "variants": [
         {
           "sku": "DTFVA-CADLINK_DIGITAL_FACTORY_10_FOR_WIDE_FORMAT_DTF_ACTIVATION_CODE-DEFAULT_TITLE",
@@ -39664,7 +40094,7 @@
     {
       "handle": "dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code",
       "productId": "gid://shopify/Product/8804439163062",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "variants": [
         {
           "sku": "DTFVA-CADLINK_DIGITALFACTORY_10_FOR_DTF_W_ACTIVATION_CODE-DEFAULT_TITLE",
@@ -39682,7 +40112,7 @@
     {
       "handle": "dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format",
       "productId": "gid://shopify/Product/8804439228598",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "variants": [
         {
           "sku": "DTFVA-CADLINK_DIGITAL_FACTORY_10_DTF_PRINTING_15_DAYS_TRIAL_DESKTOP_WIDE_FORMAT-DEFAULT_TITLE",

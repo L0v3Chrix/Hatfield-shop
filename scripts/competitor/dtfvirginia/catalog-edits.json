@@ -1,0 +1,616 @@
+{
+  "version": "2026-07-08",
+  "source": "Owner offer sheet - Chrix x Jessie pricing meeting 2026-07-08 (transcript)",
+  "statusDefault": "ACTIVE",
+  "removals": [
+    {
+      "handle": "dtfva-digital-factory-dtf-desktop-edition",
+      "shopifyStatus": "ARCHIVED",
+      "reason": "software dropped (owner: take it off)"
+    },
+    {
+      "handle": "dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code",
+      "shopifyStatus": "ARCHIVED",
+      "reason": "software dropped"
+    },
+    {
+      "handle": "dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code",
+      "shopifyStatus": "ARCHIVED",
+      "reason": "software dropped"
+    },
+    {
+      "handle": "dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format",
+      "shopifyStatus": "ARCHIVED",
+      "reason": "software trial dropped"
+    },
+    {
+      "handle": "dtfva-add-driver-port-24-wide-or-larger",
+      "shopifyStatus": "ARCHIVED",
+      "reason": "software add-on dropped"
+    },
+    {
+      "handle": "dtfva-42-custom-sublimation-gang-sheets-builder",
+      "shopifyStatus": "ARCHIVED",
+      "reason": "no 42in sublimation printer (24in max)"
+    },
+    {
+      "handle": "dtfva-custom-sublimation-gang-sheets",
+      "shopifyStatus": "ARCHIVED",
+      "reason": "42in sublimation dupe"
+    },
+    {
+      "handle": "dtfva-custom-dtf-gang-sheets-printing-service",
+      "shopifyStatus": "DRAFT",
+      "reason": "22in gang sheet dupe; canonical = core dtf-22 products"
+    },
+    {
+      "handle": "dtfva-custom-dtf-gang-sheets-your-colors-deserve-to-pop",
+      "shopifyStatus": "DRAFT",
+      "reason": "22in gang sheet dupe"
+    },
+    {
+      "handle": "dtfva-custom-dtf-gang-sheets-30-inches-builder",
+      "shopifyStatus": "DRAFT",
+      "reason": "30in builder dupe; keep static 30in listing"
+    },
+    {
+      "handle": "dtfva-custom-dtf-gang-sheets-fast-reliable-transfer-printing",
+      "shopifyStatus": "DRAFT",
+      "reason": "46in dupe; canonical = core dtf-46"
+    },
+    {
+      "handle": "dtfva-custom-dtf-gang-sheets-dtf-virginia",
+      "shopifyStatus": "DRAFT",
+      "reason": "46in dupe"
+    },
+    {
+      "handle": "dtfva-sublimation-gang-sheet-builder",
+      "shopifyStatus": "DRAFT",
+      "reason": "sublimation dupe; canonical = core sublimation-24"
+    },
+    {
+      "handle": "dtfva-glitter-dtf-transfers-builder",
+      "shopifyStatus": "DRAFT",
+      "reason": "glitter dupe; canonical = core glitter-dtf-22-sheet"
+    },
+    {
+      "handle": "dtfva-fluorescent-dtf-printing-build-bold-bright-designs",
+      "shopifyStatus": "DRAFT",
+      "reason": "fluorescent same-product title dupe; keep by-size listing"
+    }
+  ],
+  "retitles": {
+    "dtfva-gildan-64000": "Gildan Softstyle Unisex T-Shirt"
+  },
+  "variantRestructures": {
+    "dtfva-party-banners": {
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "24\" x 36\"",
+            "48\" x 72\""
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "DTFVA-PARTY_BANNERS-24_X_36",
+          "title": "24\" x 36\"",
+          "options": {
+            "Size": "24\" x 36\""
+          },
+          "price": "30.00"
+        },
+        {
+          "sku": "DTFVA-PARTY_BANNERS-48_X_72",
+          "title": "48\" x 72\"",
+          "options": {
+            "Size": "48\" x 72\""
+          },
+          "price": "100.00"
+        }
+      ]
+    },
+    "dtfva-dye-cut-stickers": {
+      "options": [
+        {
+          "name": "Shape",
+          "values": [
+            "Round",
+            "Square",
+            "Die-cut"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "DTFVA-DYE_CUT_STICKERS-100PK_3IN_ROUND",
+          "title": "100 stickers (3\") - Round",
+          "options": {
+            "Shape": "Round"
+          },
+          "price": "30.00"
+        },
+        {
+          "sku": "DTFVA-DYE_CUT_STICKERS-100PK_3IN_SQUARE",
+          "title": "100 stickers (3\") - Square",
+          "options": {
+            "Shape": "Square"
+          },
+          "price": "30.00"
+        },
+        {
+          "sku": "DTFVA-DYE_CUT_STICKERS-100PK_3IN_DIE_CUT",
+          "title": "100 stickers (3\") - Die-cut",
+          "options": {
+            "Shape": "Die-cut"
+          },
+          "price": "30.00"
+        }
+      ]
+    },
+    "dtfva-uv-printed-custom-leather-patches": {
+      "options": [
+        {
+          "name": "Format",
+          "values": [
+            "Full sheet 12\" x 24\" (about 30 patches)",
+            "Single patch"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-FULL_SHEET_12X24",
+          "title": "Full sheet 12\" x 24\" (about 30 patches)",
+          "options": {
+            "Format": "Full sheet 12\" x 24\" (about 30 patches)"
+          },
+          "price": "75.00"
+        },
+        {
+          "sku": "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SINGLE_PATCH",
+          "title": "Single patch",
+          "options": {
+            "Format": "Single patch"
+          },
+          "price": "4.00"
+        }
+      ]
+    },
+    "dtfva-uv-dtf-transfer-by-size": {
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "22\" x 12\"",
+            "22\" x 24\"",
+            "22\" x 36\"",
+            "22\" x 48\"",
+            "22\" x 60\"",
+            "22\" x 72\"",
+            "22\" x 84\"",
+            "22\" x 96\"",
+            "22\" x 108\"",
+            "22\" x 120\"",
+            "22\" x 132\"",
+            "22\" x 144\"",
+            "22\" x 156\"",
+            "22\" x 168\"",
+            "22\" x 180\"",
+            "22\" x 192\"",
+            "22\" x 204\"",
+            "22\" x 216\"",
+            "22\" x 228\"",
+            "22\" x 240\"",
+            "22\" x 252\"",
+            "22\" x 264\"",
+            "22\" x 276\"",
+            "22\" x 288\"",
+            "22\" x 300\""
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X12",
+          "title": "22\" x 12\"",
+          "options": {
+            "Size": "22\" x 12\""
+          },
+          "price": "12.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X24",
+          "title": "22\" x 24\"",
+          "options": {
+            "Size": "22\" x 24\""
+          },
+          "price": "24.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X36",
+          "title": "22\" x 36\"",
+          "options": {
+            "Size": "22\" x 36\""
+          },
+          "price": "36.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X48",
+          "title": "22\" x 48\"",
+          "options": {
+            "Size": "22\" x 48\""
+          },
+          "price": "48.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X60",
+          "title": "22\" x 60\"",
+          "options": {
+            "Size": "22\" x 60\""
+          },
+          "price": "60.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_72",
+          "title": "22\" x 72\"",
+          "options": {
+            "Size": "22\" x 72\""
+          },
+          "price": "72.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_84",
+          "title": "22\" x 84\"",
+          "options": {
+            "Size": "22\" x 84\""
+          },
+          "price": "84.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_96",
+          "title": "22\" x 96\"",
+          "options": {
+            "Size": "22\" x 96\""
+          },
+          "price": "96.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_108",
+          "title": "22\" x 108\"",
+          "options": {
+            "Size": "22\" x 108\""
+          },
+          "price": "108.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_120",
+          "title": "22\" x 120\"",
+          "options": {
+            "Size": "22\" x 120\""
+          },
+          "price": "120.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_132",
+          "title": "22\" x 132\"",
+          "options": {
+            "Size": "22\" x 132\""
+          },
+          "price": "132.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_144",
+          "title": "22\" x 144\"",
+          "options": {
+            "Size": "22\" x 144\""
+          },
+          "price": "144.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_156",
+          "title": "22\" x 156\"",
+          "options": {
+            "Size": "22\" x 156\""
+          },
+          "price": "156.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_168",
+          "title": "22\" x 168\"",
+          "options": {
+            "Size": "22\" x 168\""
+          },
+          "price": "168.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_180",
+          "title": "22\" x 180\"",
+          "options": {
+            "Size": "22\" x 180\""
+          },
+          "price": "180.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_192",
+          "title": "22\" x 192\"",
+          "options": {
+            "Size": "22\" x 192\""
+          },
+          "price": "192.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_204",
+          "title": "22\" x 204\"",
+          "options": {
+            "Size": "22\" x 204\""
+          },
+          "price": "204.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_216",
+          "title": "22\" x 216\"",
+          "options": {
+            "Size": "22\" x 216\""
+          },
+          "price": "216.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_228",
+          "title": "22\" x 228\"",
+          "options": {
+            "Size": "22\" x 228\""
+          },
+          "price": "228.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_240",
+          "title": "22\" x 240\"",
+          "options": {
+            "Size": "22\" x 240\""
+          },
+          "price": "240.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_252",
+          "title": "22\" x 252\"",
+          "options": {
+            "Size": "22\" x 252\""
+          },
+          "price": "252.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_264",
+          "title": "22\" x 264\"",
+          "options": {
+            "Size": "22\" x 264\""
+          },
+          "price": "264.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_276",
+          "title": "22\" x 276\"",
+          "options": {
+            "Size": "22\" x 276\""
+          },
+          "price": "276.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_288",
+          "title": "22\" x 288\"",
+          "options": {
+            "Size": "22\" x 288\""
+          },
+          "price": "288.00"
+        },
+        {
+          "sku": "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_300",
+          "title": "22\" x 300\"",
+          "options": {
+            "Size": "22\" x 300\""
+          },
+          "price": "300.00"
+        }
+      ]
+    }
+  },
+  "priceOverrides": {
+    "DTFVA-RUSH_FEE-DEFAULT_TITLE": "50.00",
+    "DTFVA-PROFESSIONAL_VECTOR_DESIGN_SERVICES-DEFAULT_TITLE": "10.00",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-2_X_2": "2.10",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-3_X_3": "3.60",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-4_X_4": "4.40",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-5_X_5": "5.90",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-6_X_6": "7.40",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-7_X_7": "8.90",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-8_X_8": "10.40",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-9_X_9": "11.90",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-9_X_11": "12.60",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-10_X_10": "12.60",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-11_X_11": "13.40",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-11_X_14": "16.40",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-12_X_14": "17.10",
+    "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-12_X_17": "21.60",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_WHITE": "0.65",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_SILVER": "0.65",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GOLD": "0.65",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_SILVER": "0.65",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_GOLD": "0.65",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_WHITE": "2.60",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_SILVER": "2.60",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GOLD": "2.60",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_SILVER": "2.60",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_GOLD": "2.60",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_WHITE": "5.85",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_SILVER": "5.85",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GOLD": "5.85",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_SILVER": "5.85",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_GOLD": "5.85",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_WHITE": "10.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_SILVER": "10.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GOLD": "10.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_SILVER": "10.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_GOLD": "10.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_WHITE": "16.25",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_SILVER": "16.25",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GOLD": "16.25",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_SILVER": "16.25",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_GOLD": "16.25",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_WHITE": "23.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_SILVER": "23.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GOLD": "23.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_SILVER": "23.40",
+    "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_GOLD": "23.40"
+  },
+  "tagRemovals": {
+    "dtfva-custom-softballs": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-custom-baseballs": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-custom-hockey-pucks": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-custom-pickleballs": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-personalized-tumblers": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-party-banners": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-uv-printed-custom-leather-patches": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-uv-printed-custom-tpu-patches": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-professional-vector-design-services": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-gildan-64000": [
+      "needs-fulfillment-review"
+    ],
+    "dtfva-uv-dtf-transfer-by-size": [
+      "needs-fulfillment-review",
+      "fulfillment-needs-review"
+    ]
+  },
+  "notes": {
+    "dtfva-custom-glitter-dtf-transfer-by-size": {
+      "pdp": [
+        "Glitter transfers are COLD PEEL - let the transfer cool completely before peeling."
+      ],
+      "card": "Cold peel"
+    },
+    "dtfva-glitter-dtf-gang-sheet": {
+      "pdp": [
+        "Glitter transfers are COLD PEEL - let the transfer cool completely before peeling."
+      ],
+      "card": "Cold peel"
+    },
+    "dtfva-custom-dtf-transfers-by-size-virginia": {
+      "pdp": [
+        "Standard DTF transfers are warm peel - press, wait a few seconds, peel warm."
+      ],
+      "card": null
+    },
+    "dtfva-custom-dtf-gang-sheets-30-inches": {
+      "pdp": [
+        "Allow a 5-7 day lead time - 30\" material is ordered in per job.",
+        "Standard DTF transfers are warm peel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-custom-fluorescent-dtf-transfers-by-size": {
+      "pdp": [
+        "Fluorescent transfers glow under black light. Allow a 5-7 day lead time."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-gildan-64000": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-bella-canvas-3001": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-uv-printed-custom-leather-patches": {
+      "pdp": [
+        "Maximum 2-3 designs per full sheet.",
+        "Full sheet yields about 30 patches depending on size and shape."
+      ],
+      "card": "Max 3 designs/sheet"
+    },
+    "dtfva-dye-cut-stickers": {
+      "pdp": [
+        "Sold in packs of 100 (3-inch stickers) - no one-off stickers.",
+        "Choose round, square, or die-cut - same price."
+      ],
+      "card": "Packs of 100"
+    },
+    "dtfva-next-level-3600": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee": {
+      "pdp": [
+        "Allow a 5-7 day lead time on decorated apparel."
+      ],
+      "card": "5-7 day lead time"
+    },
+    "dtfva-uv-dtf-transfer-by-size": {
+      "pdp": [
+        "UV DTF is produced through our partner press - allow a 5-7 day lead time."
+      ],
+      "card": "5-7 day lead time"
+    }
+  },
+  "copyOverrides": {},
+  "directBuy": [
+    "dtfva-dye-cut-stickers",
+    "dtfva-uv-printed-custom-leather-patches",
+    "dtfva-uv-dtf-transfer-by-size"
+  ]
+}

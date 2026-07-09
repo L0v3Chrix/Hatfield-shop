@@ -626,14 +626,6 @@ IMAGE_ROLES = {
         "alt": "Print production workstation beside a wide format printer",
         "focalPoint": "center",
     },
-    "cadlink-square-blue-background.png": {
-        "slug": "cadlink-square-blue-background",
-        "title": "CADlink software",
-        "collection": "Software and RIP",
-        "usage": ["product card"],
-        "alt": "CADlink Digital Factory software product graphic on blue background",
-        "focalPoint": "center",
-    },
     "gen-hockey-puck.png": {
         "slug": "gen-hockey-puck",
         "title": "Printed hockey puck",

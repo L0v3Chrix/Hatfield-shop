@@ -11,7 +11,10 @@ const urlFlagIndex = process.argv.indexOf('--artwork-url')
 const ARTWORK_URL = urlFlagIndex > -1
   ? process.argv[urlFlagIndex + 1]
   : 'https://cdn.shopify.com/s/files/1/0719/9699/7814/files/hm-test-artwork_a908f331-54a2-46d5-8874-7ca317712bee.png?v=1783455121'
-const VARIANT_GID = 'gid://shopify/ProductVariant/45063581860022' // DTF-22-24 ($12)
+const variantFlagIndex = process.argv.indexOf('--variant-gid')
+const VARIANT_GID = variantFlagIndex > -1
+  ? process.argv[variantFlagIndex + 1]
+  : 'gid://shopify/ProductVariant/45063581860022' // default: DTF-22-24 ($12)
 
 const client = await createClient({
   shopDomain: process.env.SHOPIFY_SHOP_DOMAIN,

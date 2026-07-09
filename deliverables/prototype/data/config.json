@@ -5,7 +5,7 @@
   },
   "kicksy": {
     "mode": "redirect",
-    "redirect_url": "https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982709430&price=12.00&store=zm1evm-rd.myshopify.com&product=8801329938614&quantity=1&locale=en",
+    "redirect_url": "https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982709430&price=12.60&store=zm1evm-rd.myshopify.com&product=8801329938614&quantity=1&locale=en",
     "fallback_product_url": "https://hatfield-mccoy-dtf.myshopify.com/products/dtf-22-gang-sheet-builder",
     "button_label": "Build Your Gang Sheet",
     "open_in_new_tab": false,

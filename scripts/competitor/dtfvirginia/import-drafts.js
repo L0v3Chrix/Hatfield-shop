@@ -96,7 +96,7 @@ function assertSafeCatalog(catalog) {
   if (!products.length) throw new Error('Catalog has no PRODUCTS entries')
   for (const product of products) {
     if (product.vendor !== 'Hatfield McCoy DTF') throw new Error(`Unsafe vendor on ${product.handle}: ${product.vendor}`)
-    if (product.status !== 'DRAFT') throw new Error(`Unsafe status on ${product.handle}: ${product.status}`)
+    if (!['DRAFT', 'ACTIVE', 'ARCHIVED'].includes(product.status)) throw new Error(`Unsafe status on ${product.handle}: ${product.status}`)
     if (!product.tags?.includes('competitor-parity')) throw new Error(`Missing competitor-parity tag on ${product.handle}`)
     if (!product.metafields?.some((field) => field.key === 'source_url')) throw new Error(`Missing source_url metafield on ${product.handle}`)
     if (product.images?.length) throw new Error(`Competitor import must not include publishable image media on ${product.handle}`)

@@ -29,7 +29,15 @@ async function main() {
   const products = []
   const collections = []
 
-  for (const source of catalog.PRODUCTS ?? []) {
+  // Core storefront products (defined outside the competitor catalog) are part
+  // of the same state so QA can validate every merchandise-id on built pages.
+  const CORE_HANDLES = [
+    'dtf-22-sheet', 'dtf-46-sheet', 'glitter-dtf-22-sheet', 'glow-dtf-22-sheet', 'sublimation-24',
+    'dtf-22-gang-sheet-builder', 'dtf-46-gang-sheet-builder', 'glitter-dtf-22-gang-sheet-builder',
+    'glow-dtf-22-gang-sheet-builder', 'sublimation-24-gang-sheet-builder',
+  ]
+  const sources = [...CORE_HANDLES.map((handle) => ({ handle })), ...(catalog.PRODUCTS ?? [])]
+  for (const source of sources) {
     const product = await getProductByHandle(client, source.handle)
     if (!product) {
       products.push({ handle: source.handle, missing: true })

@@ -37,11 +37,25 @@ function walkHtml(dir, out = []) {
 // 1. Curated card overrides render on the shop page
 const shopHtml = readFileSync(join(PS, 'shop', 'index.html'), 'utf8')
 const overrideEntries = Object.entries(HANDLE_IMAGE_OVERRIDES)
+  .filter(([handle]) => existsSync(join(PS, 'products', handle, 'index.html')))
 const missingOverrides = overrideEntries.filter(([, img]) => !shopHtml.includes(img.src))
 check(
   `shop page renders all ${overrideEntries.length} curated card overrides`,
   missingOverrides.length === 0,
   missingOverrides.map(([h]) => h).join(', ')
+)
+
+// Card and PDP hero must show the same curated image (owner QA, 2026-07-08).
+// Only check overrides whose PDP is actually built (removed products have no PDP).
+const heroMismatches = overrideEntries.filter(([handle, img]) => {
+  const pdpPath = join(PS, 'products', handle, 'index.html')
+  if (!existsSync(pdpPath)) return false
+  return !readFileSync(pdpPath, 'utf8').includes(img.src)
+})
+check(
+  'curated override image appears on each product\'s own PDP (card == hero)',
+  heroMismatches.length === 0,
+  heroMismatches.map(([h]) => h).join(', ')
 )
 
 // 2. JS engine parity: prototype is the source of truth, production must match

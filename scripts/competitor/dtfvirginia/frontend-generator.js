@@ -31,7 +31,7 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
     const internalProxy = isInternalBuilderProxyProduct(product)
     const shopifyProduct = shopifyByHandle.get(product.handle)
     const variantIdBySku = new Map((shopifyProduct?.variants ?? []).map((variant) => [variant.sku, variant.variantId]))
-    const copy = rewriteProductCopy(displayProduct)
+    const copy = { ...rewriteProductCopy(displayProduct), ...(product.copyOverrides ?? {}) }
     const tags = unique([...(product.tags ?? []), ...copy.approvalTags])
     // Live Shopify status must win over the normalized snapshot's status —
     // otherwise products activated after import keep an 'unpublished' blocker.
@@ -72,7 +72,7 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
       vendor: product.vendor,
       url: `/products/${product.handle}`,
       internalProxy,
-      publicVisible: !internalProxy,
+      publicVisible: !internalProxy && product.publicVisible !== false,
       internalActionUrl: internalProxyProductActionUrl(product),
       status: product.status,
       tags,
@@ -80,6 +80,9 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
       publishable: approval.publishable,
       blockers: approval.blockers,
       copy,
+      forceDirectBuy: product.forceDirectBuy === true,
+      notes: product.notes ?? [],
+      cardNote: product.cardNote ?? '',
       seo,
       variants,
       images: [],
@@ -296,6 +299,7 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
           <aside class="notes-panel">
             <p class="eyebrow">Artwork and production notes</p>
             <ul>
+              ${(product.notes ?? []).map((note) => `<li class="offer-note"><strong>${escapeHtml(note)}</strong></li>`).join('\n              ')}
               <li>Upload clean artwork in the cart before checkout.</li>
               <li>Exact colors, placement, sizing, and material details travel with the order metadata.</li>
               <li>Local pickup and shipped order paths can be coordinated from Logan, WV.</li>
@@ -1054,7 +1058,7 @@ function productCardMarkup(product, { className = 'product-card' } = {}) {
               <span class="kicker">${escapeHtml(category.label)}</span>
               ${isCatalog ? `<h3>${escapeHtml(product.title)}</h3>` : `<strong>${escapeHtml(product.title)}</strong>`}
               <p>${escapeHtml(product.copy.shortDescription)}</p>
-              <div class="catalog-meta">${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}<span class="option-count">${variantCount} ${variantCount === 1 ? 'option' : 'options'}</span><span class="route-chip route-${escapeHtml(buyerRoute(product))}">${escapeHtml(action)}</span></div>
+              <div class="catalog-meta">${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}<span class="option-count">${variantCount} ${variantCount === 1 ? 'option' : 'options'}</span><span class="route-chip route-${escapeHtml(buyerRoute(product))}">${escapeHtml(action)}</span>${product.cardNote ? `<span class="card-note">${escapeHtml(product.cardNote)}</span>` : ''}</div>
               <em>View options</em>
             </div>`
   return `
@@ -1139,6 +1143,9 @@ function orderPathLabel(product) {
 }
 
 function isBuilderProduct(product) {
+  // Owner offer sheet can force a product onto the direct add-to-cart path
+  // even when its handle/tags look builder-ish (e.g. 100-pack stickers).
+  if (product.forceDirectBuy === true) return false
   const handle = String(product.handle ?? '').toLowerCase()
   const handleWithoutPrefix = handle.replace(/^dtfva-/, '')
   const title = String(product.title ?? '').toLowerCase()

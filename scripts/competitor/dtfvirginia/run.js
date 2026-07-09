@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 import { scrapeDtfVirginia } from './scrape.js'
 import { normalizeCatalog } from './normalize.js'
 import { writeExportArtifacts } from './export.js'
+import { applyCatalogEdits, loadEdits } from './apply-edits.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PROJECT_ROOT = join(__dirname, '..', '..', '..')
@@ -29,7 +30,7 @@ async function main() {
     console.log(`✓ Wrote raw scrape to ${DEFAULT_RAW_PATH}`)
   }
 
-  const normalized = normalizeCatalog(scrape)
+  const normalized = applyCatalogEdits(normalizeCatalog(scrape), loadEdits())
   const { paths, report } = writeExportArtifacts(normalized, { outputDir })
 
   console.log('\n━━━ DTF Virginia parity export ━━━')

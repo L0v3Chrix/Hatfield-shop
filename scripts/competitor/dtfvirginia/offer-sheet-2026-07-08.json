@@ -1,0 +1,94 @@
+{
+  "effective": "2026-07-08",
+  "source": "Chrix x Jessie pricing meeting transcript, 2026-07-08. Hand-authored assertions - independent of catalog-edits.json by design (double-entry).",
+  "removedHandles": [
+    "dtfva-digital-factory-dtf-desktop-edition",
+    "dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code",
+    "dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code",
+    "dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format",
+    "dtfva-add-driver-port-24-wide-or-larger",
+    "dtfva-42-custom-sublimation-gang-sheets-builder",
+    "dtfva-custom-sublimation-gang-sheets",
+    "dtfva-custom-dtf-gang-sheets-printing-service",
+    "dtfva-custom-dtf-gang-sheets-your-colors-deserve-to-pop",
+    "dtfva-custom-dtf-gang-sheets-30-inches-builder",
+    "dtfva-custom-dtf-gang-sheets-fast-reliable-transfer-printing",
+    "dtfva-custom-dtf-gang-sheets-dtf-virginia",
+    "dtfva-sublimation-gang-sheet-builder",
+    "dtfva-glitter-dtf-transfers-builder",
+    "dtfva-fluorescent-dtf-printing-build-bold-bright-designs"
+  ],
+  "protectedHandles": [
+    "dtf-22-gang-sheet-builder",
+    "dtf-46-gang-sheet-builder",
+    "glitter-dtf-22-gang-sheet-builder",
+    "glow-dtf-22-gang-sheet-builder",
+    "sublimation-24-gang-sheet-builder"
+  ],
+  "products": {
+    "dtfva-party-banners": {
+      "variantCount": 2,
+      "prices": { "DTFVA-PARTY_BANNERS-24_X_36": "30.00", "DTFVA-PARTY_BANNERS-48_X_72": "100.00" },
+      "buyable": true
+    },
+    "dtfva-dye-cut-stickers": {
+      "variantCount": 3,
+      "prices": {
+        "DTFVA-DYE_CUT_STICKERS-100PK_3IN_ROUND": "30.00",
+        "DTFVA-DYE_CUT_STICKERS-100PK_3IN_SQUARE": "30.00",
+        "DTFVA-DYE_CUT_STICKERS-100PK_3IN_DIE_CUT": "30.00"
+      },
+      "buyable": true
+    },
+    "dtfva-uv-printed-custom-leather-patches": {
+      "variantCount": 2,
+      "prices": {
+        "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-FULL_SHEET_12X24": "75.00",
+        "DTFVA-UV_PRINTED_CUSTOM_LEATHER_PATCHES-SINGLE_PATCH": "4.00"
+      },
+      "buyable": true
+    },
+    "dtfva-uv-dtf-transfer-by-size": {
+      "variantCount": 25,
+      "prices": {
+        "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X12": "12.00",
+        "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X24": "24.00",
+        "DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_300": "300.00"
+      },
+      "buyable": true
+    },
+    "dtfva-rush-fee": { "prices": { "DTFVA-RUSH_FEE-DEFAULT_TITLE": "50.00" }, "buyable": true },
+    "dtfva-professional-vector-design-services": { "prices": { "DTFVA-PROFESSIONAL_VECTOR_DESIGN_SERVICES-DEFAULT_TITLE": "10.00" }, "buyable": true },
+    "dtfva-custom-softballs": { "prices": { "DTFVA-CUSTOM_SOFTBALLS-SINGLE_BALL": "25.99" }, "buyable": true },
+    "dtfva-custom-baseballs": { "prices": { "DTFVA-CUSTOM_BASEBALLS-SINGLE_BALL": "23.99" }, "buyable": true },
+    "dtfva-custom-hockey-pucks": { "prices": { "DTFVA-CUSTOM_HOCKEY_PUCKS-SINGLE_PUCK": "18.99" }, "buyable": true },
+    "dtfva-custom-pickleballs": { "prices": { "DTFVA-CUSTOM_PICKLEBALLS-SINGLE_BALL": "15.99" }, "buyable": true },
+    "dtfva-personalized-tumblers": { "prices": { "DTFVA-PERSONALIZED_TUMBLERS-240MM_X_204MM": "19.00" }, "buyable": true },
+    "dtfva-custom-fluorescent-dtf-transfers-by-size": {
+      "prices": { "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-4_X_4": "4.40", "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-12_X_17": "21.60" }
+    },
+    "dtfva-uv-printed-custom-tpu-patches": {
+      "prices": { "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_WHITE": "2.60", "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_GOLD": "23.40" }
+    },
+    "dtfva-gildan-64000": { "buyable": true }
+  },
+  "builderUpcharge": {
+    "amount": 0.60,
+    "sentinels": { "DTF-22-24-B": "12.60", "DTF-46-12-B": "12.60", "GID-22-24-B": "18.60", "SUB-24-24-B": "9.10" }
+  },
+  "titles": {
+    "dtfva-gildan-64000": { "mustInclude": "Softstyle", "mustExclude": "64000" }
+  },
+  "notesRequired": {
+    "dtfva-gildan-64000": ["5-7 day lead time"],
+    "dtfva-uv-printed-custom-leather-patches": ["designs per full sheet"],
+    "dtfva-dye-cut-stickers": ["packs of 100"],
+    "dtfva-custom-glitter-dtf-transfer-by-size": ["COLD PEEL"],
+    "dtfva-glitter-dtf-gang-sheet": ["COLD PEEL"],
+    "dtfva-custom-dtf-gang-sheets-30-inches": ["5-7 day lead time"]
+  },
+  "contactRequirements": {
+    "phoneDisplay": "(304) 688-9970",
+    "phoneHref": "tel:+13046889970"
+  }
+}

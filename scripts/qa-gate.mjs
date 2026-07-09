@@ -25,6 +25,7 @@ const LOCAL_STEPS = [
   ...(skipBuild ? [] : [['production build', 'npm run --silent production:prepare']]),
   ['readiness audit + copy scanner', 'npm run --silent production:verify'],
   ['round-trip integrity', 'node scripts/verify-roundtrip.mjs'],
+  ['offer-sheet conformance', 'node scripts/verify-offer-sheet.mjs'],
 ]
 const NETWORK_STEPS = [
   ['shopify state audit', 'npm run --silent shopify:audit'],

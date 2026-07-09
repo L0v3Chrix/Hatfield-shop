@@ -4,6 +4,7 @@ import { copyFileSync, cpSync, existsSync, mkdirSync, readdirSync, readFileSync,
 import { dirname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { MOBILE_MENU_LINKS, buildFrontendCatalog, publicStorefrontProducts, writeFrontendArtifacts } from './competitor/dtfvirginia/frontend-generator.js'
+import { applyCatalogEdits, loadEdits } from './competitor/dtfvirginia/apply-edits.js'
 import { COLLECTIONS as SHOPIFY_COLLECTIONS, PRODUCTS as SHOPIFY_PRODUCTS } from './shopify/config/catalog.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -231,9 +232,12 @@ function buildGeneratedCatalogLayer() {
 }
 
 function buildFullStorefrontNormalizedCatalog() {
-  const normalized = existsSync(NORMALIZED_CATALOG_PATH)
-    ? JSON.parse(readFileSync(NORMALIZED_CATALOG_PATH, 'utf8'))
-    : { products: [], collections: [], pages: [] }
+  const normalized = applyCatalogEdits(
+    existsSync(NORMALIZED_CATALOG_PATH)
+      ? JSON.parse(readFileSync(NORMALIZED_CATALOG_PATH, 'utf8'))
+      : { products: [], collections: [], pages: [] },
+    loadEdits()
+  )
   const productsByHandle = new Map((normalized.products ?? []).map((product) => [product.handle, product]))
   for (const product of SHOPIFY_PRODUCTS) {
     productsByHandle.set(product.handle, {

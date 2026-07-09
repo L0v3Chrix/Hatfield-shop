@@ -86,7 +86,7 @@ test('an unmatchable prefixed handle falls through to the default fallback', () 
   assert.equal(family, 'custom-dtf-transfers')
 })
 
-test('curated overrides win the card slot and keep the rule-resolved hero', () => {
+test('curated overrides win BOTH the card and hero slots (card == hero on PDP)', () => {
   const handle = 'dtfva-bella-canvas-3001'
   const { card, hero, family } = resolveProductImages({
     handle,
@@ -94,5 +94,5 @@ test('curated overrides win the card slot and keep the rule-resolved hero', () =
   })
   assert.equal(card.src, HANDLE_IMAGE_OVERRIDES[handle].src)
   assert.equal(family, 'gen-apparel-samples-stack')
-  assert.notEqual(hero.src, card.src)
+  assert.equal(hero.src, card.src)
 })

@@ -92,7 +92,6 @@ export const HANDLE_IMAGE_OVERRIDES = {
   'dtfva-custom-dtf-gang-sheets-printing-service': { src: `${SHOPIFY_ASSET_BASE}/custome-22-gang-sheet-builder.png`, alt: 'Custom 22 inch gang sheet builder sample' },
   'dtfva-glitter-dtf-transfers-builder': { src: `${SHOPIFY_ASSET_BASE}/22-glitter-dtf-transfer-builder.png`, alt: '22 inch glitter DTF transfer builder sample' },
   'dtfva-next-level-3600': { src: `${SHOPIFY_ASSET_BASE}/next-level-3600-cotton-crew-t-shirt.png`, alt: 'Next Level 3600 cotton crew t-shirt sample' },
-  'dtfva-gildan-64000': { src: `${SHOPIFY_ASSET_BASE}/gildan-64000-unisex-softstyle-t-shirt.png`, alt: 'Gildan 64000 unisex softstyle t-shirt sample' },
   'dtfva-bella-canvas-3001': { src: `${SHOPIFY_ASSET_BASE}/bella-canvas-3001-unisex-jersey-tee.png`, alt: 'BELLA + CANVAS 3001 unisex jersey tee sample' },
   'dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank': { src: `${SHOPIFY_ASSET_BASE}/custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank.png`, alt: 'Custom Shaka Wear drop shoulder cropped t-shirt sample' },
   'dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank': { src: `${SHOPIFY_ASSET_BASE}/custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank.png`, alt: 'Custom Shaka Wear Max heavyweight short sleeve t-shirt sample' },
@@ -108,9 +107,6 @@ export const HANDLE_IMAGE_OVERRIDES = {
   'dtfva-fluorescent-dtf-printing-bold-bright-stunning': { src: `${SHOPIFY_ASSET_BASE}/fluorescent-dtf-printing-bold-bright-stunning.png`, alt: 'Fluorescent DTF printing bold bright and stunning sample' },
   'dtfva-digital-factory-dtf-desktop-edition': { src: `${SHOPIFY_ASSET_BASE}/digital-factory-12.png`, alt: 'Digital Factory 12 Direct to Film Edition icon' },
   'dtfva-add-driver-port-24-wide-or-larger': { src: `${SHOPIFY_ASSET_BASE}/add-driver-port-24-wide-or-larger.png`, alt: 'Add driver port 24 inch wide or larger sample' },
-  'dtfva-cadlink-digital-factory-10-for-wide-format-dtf-activation-code': { src: `${SHOPIFY_ASSET_BASE}/cadlink-digital-factory-direct-to-film-dtf-for-wide-format.png`, alt: 'CADlink Digital Factory DTF wide format sample' },
-  'dtfva-cadlink-digitalfactory-10-for-dtf-w-activation-code': { src: `${SHOPIFY_ASSET_BASE}/add-driver-port-23-wide-or-smaller.png`, alt: 'Add driver port 23 inch wide or smaller sample' },
-  'dtfva-cadlink-digital-factory-10-dtf-printing-15-days-trial-desktop-wide-format': { src: `${SHOPIFY_ASSET_BASE}/cadlink-square-blue-background.png`, alt: 'CADlink Digital Factory software product graphic' },
 }
 
 const PRODUCT_RULES = [
@@ -187,7 +183,9 @@ export function getAssetMapImages({ product = null, collection = null } = {}) {
 export function resolveProductImages(product = {}) {
   const family = resolveFamily(product, PRODUCT_RULES, IMAGE_FAMILIES.customDtfTransfers)
   const override = HANDLE_IMAGE_OVERRIDES[product?.handle ?? '']
-  if (override) return { family: family.slug, card: override, hero: family.hero }
+  // Curated override wins for BOTH slots — shop card and PDP hero must show
+  // the same product image (owner QA, 2026-07-08).
+  if (override) return { family: family.slug, card: override, hero: override }
   return { family: family.slug, card: family.card, hero: family.hero }
 }
 

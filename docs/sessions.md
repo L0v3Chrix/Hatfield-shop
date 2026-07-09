@@ -29,3 +29,18 @@
 - Review shipping profiles; decide indexing; glitter builder manual pass.
 
 Full report: `../../project-ops/2026-07-07-fable5-production-rescue-report.md`
+
+## Session: 2026-07-09 (catalog truth-up)
+
+### Accomplished
+- Applied Jessie's full offer sheet (2026-07-08 meeting transcript) via new catalog-edits layer: 15 removals, 4 variant restructures (productSet), outsourced-line reprice to competitor parity, +$0.60 builder upcharge, retitles, peel/lead-time notes, contact phone.
+- Fixed card-vs-PDP image mismatch structurally (asset-map hero honors curated overrides); dropped the competitor-branded Gildan photo.
+- New permanent QA: verify-offer-sheet.mjs in qa:gate + card==hero roundtrip check.
+- /shop 57 -> 48 cards, zero duplicate titles. Live test order #1007 on restructured banner variant with webhook manifest.
+
+### Decisions Made
+- Chrix: +$0.60 builder upcharge; approve competitor-parity pricing on outsourced lines (fluorescent/TPU/UV), $12 UV rung fix, junk variant deletion.
+- catalog-edits.json is the single edit surface for future catalog changes; offer-sheet JSON is the independent QA truth.
+
+### Next Session
+- Branding-pack copy drafts with Jessie (copyOverrides slot ready); real apparel photos; standing launch list (test mode off, shipping rates, Drip uninstall, git push, indexing, token rotation).

@@ -510,7 +510,7 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
     apparel: 'Blanks ready for your prints',
     signage: 'Signs, magnets, and graphics',
     promo: 'Tumblers, coins, and gifts',
-    services: 'Artwork help and shop software',
+    services: 'Artwork help, vector design, and rush service',
   }
   const featuredFamilies = categories.map((category) => {
     const image = productCardImage(category)
@@ -1032,7 +1032,7 @@ const FAMILY_LABELS = {
   apparel: 'Apparel & blanks',
   signage: 'Signs & graphics',
   promo: 'Promo & gifts',
-  services: 'Shop services & software',
+  services: 'Shop services',
 }
 
 function categorizeProduct(product) {

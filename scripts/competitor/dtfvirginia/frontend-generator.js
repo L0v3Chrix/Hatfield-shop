@@ -25,6 +25,7 @@ export const MOBILE_MENU_LINKS = [
 ]
 
 export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
+  const launched = process.env.HM_LAUNCHED === '1'
   const shopifyByHandle = new Map(readShopifyProducts(shopifyState).map((product) => [product.handle, product]))
   const products = (normalized.products ?? []).map((product) => {
     const displayProduct = { ...product, title: publicTitle(product.title), productType: publicProductType(product.productType) }
@@ -98,14 +99,14 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
       title: collection.title,
       description: copy.shortDescription,
       urlPath: `/collections/${collection.handle}`,
-      indexable: false,
+      indexable: launched,
     })
     return {
       handle: collection.handle,
       title: collection.title,
       url: `/collections/${collection.handle}`,
       description: collection.description,
-      indexable: false,
+      indexable: launched,
       copy,
       seo,
     }
@@ -119,13 +120,13 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
       title: copy.title,
       description: `${copy.title} from Hatfield McCoy DTF in Logan, WV with nationwide shipping and human-reviewed service details.`,
       urlPath: `/pages/${copy.handle}`,
-      indexable: false,
+      indexable: launched,
     })
     return {
       handle: copy.handle,
       title: copy.title,
       url: `/pages/${copy.handle}`,
-      indexable: false,
+      indexable: launched,
       copy,
       seo,
       sourceUrl: page.sourceUrl,

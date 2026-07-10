@@ -94,10 +94,11 @@ export function buildApprovalState(item) {
   if (String(item.productType || '').toLowerCase().includes('kixxl_rolling_canvas_product_hidden')) blockers.push('proxy')
   if (status && status !== 'ACTIVE') blockers.push('unpublished')
   const publishable = blockers.length === 0 && variants.length > 0
+  const launched = process.env.HM_LAUNCHED === '1'
   return {
     blockers,
     publishable,
-    indexable: false,
+    indexable: launched && publishable,
   }
 }
 

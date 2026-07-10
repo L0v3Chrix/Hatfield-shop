@@ -122,6 +122,7 @@ test('keeps draft products visible but out of public checkout', () => {
 })
 
 test('builds frontend catalog with SEO copy and checkout-safe variants', () => {
+  const prevLaunched = process.env.HM_LAUNCHED; delete process.env.HM_LAUNCHED
   const catalog = buildFrontendCatalog({
     products: [product],
     collections: [{ handle: 'dtfva-dtf-transfers', title: 'DTF Transfers', description: 'Transfers collection.' }],
@@ -146,9 +147,11 @@ test('builds frontend catalog with SEO copy and checkout-safe variants', () => {
   assert.equal(catalog.products[0].variants[0].checkoutEnabled, true)
   assert.equal(catalog.products[0].images.length, 0)
   assert.equal(catalog.collections[0].url, '/collections/dtfva-dtf-transfers')
+  if (prevLaunched !== undefined) process.env.HM_LAUNCHED = prevLaunched
 })
 
 test('renders crawlable product and collection pages with noindex for drafts', () => {
+  const prevLaunched = process.env.HM_LAUNCHED; delete process.env.HM_LAUNCHED
   const catalog = buildFrontendCatalog({
     products: [product],
     collections: [{ handle: 'dtfva-dtf-transfers', title: 'DTF Transfers', description: 'Transfers collection.' }],
@@ -166,6 +169,7 @@ test('renders crawlable product and collection pages with noindex for drafts', (
   assert.match(productHtml, /data-handle="dtfva-custom-dtf-transfers"/)
   assert.match(productHtml, /id="cart-summary"/)
   assert.match(productHtml, /id="cart-recommendations"/)
+  if (prevLaunched !== undefined) process.env.HM_LAUNCHED = prevLaunched
 })
 
 test('renders mobile navigation with live collection routes and builder-first PDP routing', () => {

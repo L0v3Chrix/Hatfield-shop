@@ -18,6 +18,8 @@ const NORMALIZED_CATALOG_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia'
 const SHOPIFY_STATE_PATH = join(ROOT, 'output', 'competitor', 'dtfvirginia', 'shopify-state.json')
 const LIVE_PRODUCTS_JSON_PATH = join(ROOT, 'deliverables', 'prototype', 'data', 'products.json')
 const SITE_URL = 'https://www.hatfieldmccoydtf.com'
+const LAUNCHED = process.env.HM_LAUNCHED === '1' || process.argv.includes('--launched')
+const ROBOTS_META = LAUNCHED ? 'index, follow' : 'noindex, nofollow'
 const SHOPIFY_HANDLE_TO_FRONTEND_SLUG = {
   'dtf-22-sheet': 'dtf-22',
   'dtf-46-sheet': 'dtf-46',
@@ -208,14 +210,17 @@ function buildProductionPreview() {
 
   const generatedCatalog = buildGeneratedCatalogLayer()
 
-  writeFileSync(join(PRODUCTION_DIR, 'robots.txt'), `User-agent: *\nDisallow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`)
-  writeFileSync(join(PRODUCTION_DIR, 'sitemap.xml'), renderSitemap([]))
-  writeFileSync(join(PRODUCTION_DIR, 'sitemap.launch-preview.xml'), renderSitemap([
+  writeFileSync(join(PRODUCTION_DIR, 'robots.txt'), LAUNCHED
+    ? `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`
+    : `User-agent: *\nDisallow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`)
+  const liveSitemapUrls = [
     ...ROUTES.map((route) => route.route),
     ...publicStorefrontProducts(generatedCatalog.products).map((item) => item.url),
     ...generatedCatalog.collections.map((item) => item.url),
     ...generatedCatalog.pages.map((item) => item.url),
-  ]))
+  ]
+  writeFileSync(join(PRODUCTION_DIR, 'sitemap.xml'), renderSitemap(LAUNCHED ? liveSitemapUrls : []))
+  writeFileSync(join(PRODUCTION_DIR, 'sitemap.launch-preview.xml'), renderSitemap(liveSitemapUrls))
   writeFileSync(join(PRODUCTION_DIR, 'vercel.json'), JSON.stringify(buildVercelConfig(), null, 2) + '\n')
 }
 
@@ -226,7 +231,7 @@ function buildGeneratedCatalogLayer() {
   writeFrontendArtifacts(catalog, {
     outputDir: PRODUCTION_DIR,
     siteUrl: SITE_URL,
-    launched: false,
+    launched: LAUNCHED,
   })
   return catalog
 }
@@ -348,7 +353,7 @@ function ensureMeta(html, route) {
   html = html.replace(/<title>.*?<\/title>/s, `<title>${escapeHtml(route.title)}</title>`)
   html = html.replace(/<meta name="description" content=".*?">/s, `<meta name="description" content="${escapeHtml(route.description)}">`)
   const extra = [
-    '  <meta name="robots" content="noindex, nofollow">',
+    `  <meta name="robots" content="${ROBOTS_META}">`,
     `  <link rel="canonical" href="${SITE_URL}${route.route === '/' ? '/' : route.route}">`,
     '  <meta property="og:site_name" content="Hatfield McCoy DTF">',
     `  <meta property="og:title" content="${escapeHtml(route.title)}">`,
@@ -495,7 +500,12 @@ function verifyProductionPreview() {
   for (const file of htmlFiles) {
     const html = readFileSync(file, 'utf8')
     const page = '/' + relative(PRODUCTION_DIR, file).replace(/\/index\.html$/, '').replace('index.html', '').replace(/\\/g, '/')
-    if (!html.includes('name="robots" content="noindex, nofollow"')) seoIssues.push(`${page || '/'} missing preview noindex`)
+    if (LAUNCHED) {
+      // Launched: per-page indexability is intentional (buyable products + key
+      // pages index; thin builder-proxy/quote pages stay noindex). Just require
+      // SOME valid robots directive.
+      if (!/name="robots" content="(index, follow|noindex, nofollow)"/.test(html)) seoIssues.push(`${page || '/'} missing robots directive`)
+    } else if (!html.includes(`name="robots" content="${ROBOTS_META}"`)) seoIssues.push(`${page || '/'} missing robots ${ROBOTS_META}`)
     if (!html.includes('application/ld+json')) seoIssues.push(`${page || '/'} missing JSON-LD`)
     if (!html.includes('rel="canonical"')) seoIssues.push(`${page || '/'} missing canonical`)
     for (const href of extractAttributes(html, 'href')) {
@@ -543,7 +553,7 @@ function verifyProductionPreview() {
     },
     gates: {
       buildCanProceedBeforeClientConfirmations: true,
-      previewNoindex: true,
+      previewNoindex: !LAUNCHED,
       sourceAssetsPreserved: true,
       shopifyDraftControlled: true,
       competitorCopyPublishBlocked: true,
@@ -593,7 +603,7 @@ function buildVercelConfig() {
       {
         source: '/(.*)',
         headers: [
-          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          ...(LAUNCHED ? [] : [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]),
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
@@ -604,14 +614,14 @@ function buildVercelConfig() {
         source: '/assets/(.*)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          ...(LAUNCHED ? [] : [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]),
         ],
       },
       {
         source: '/(.*).html',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
-          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          ...(LAUNCHED ? [] : [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]),
         ],
       },
     ],

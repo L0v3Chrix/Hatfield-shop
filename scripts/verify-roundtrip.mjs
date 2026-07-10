@@ -68,8 +68,9 @@ for (const file of ['cart.js', 'cart-helpers.js']) {
 
 // 3. Every generated HTML file carries noindex
 const htmlFiles = walkHtml(PS)
+const LAUNCHED = process.env.HM_LAUNCHED === '1'
 const unindexed = htmlFiles.filter((f) => !readFileSync(f, 'utf8').includes('noindex'))
-check(`noindex present in all ${htmlFiles.length} HTML files`, unindexed.length === 0,
+if (!LAUNCHED) check(`noindex present in all ${htmlFiles.length} HTML files`, unindexed.length === 0,
   unindexed.slice(0, 5).map((f) => f.replace(PS, '')).join(', '))
 
 // 3b. Honest buyer states: no fabricated floor price, no stock claims
@@ -93,7 +94,8 @@ check(`builder PDPs (${builderPdps.length}) render no buy-button markup`, builde
 
 // 4. robots.txt stays closed until the launch gate
 const robots = readFileSync(join(PS, 'robots.txt'), 'utf8')
-check('robots.txt disallows all crawling', /User-agent: \*\s*\nDisallow: \//.test(robots))
+if (!LAUNCHED) check('robots.txt disallows all crawling', /User-agent: \*\s*\nDisallow: \//.test(robots))
+else check('robots.txt allows crawling in launched mode', /User-agent: \*\s*\nAllow: \//.test(robots))
 
 // 5. Builder launch URLs intact with populated params
 const builderHtml = readFileSync(join(PS, 'gang-sheet-builder', 'index.html'), 'utf8')
@@ -148,7 +150,7 @@ check('builder page visible "From $" prices match launch-URL price params', pric
 const report = JSON.parse(readFileSync(join(ROOT, 'output', 'readiness', 'readiness-report.json'), 'utf8'))
 check('readiness report: 0 automated blockers', report.summary?.blockers === 0,
   `blockers=${report.summary?.blockers}`)
-check('readiness report: previewNoindex gate true', report.gates?.previewNoindex === true)
+check('readiness report: previewNoindex gate matches launch state', report.gates?.previewNoindex === (process.env.HM_LAUNCHED !== '1'))
 
 // 6b. No internal audit artifacts may ship in the deployable tree
 const INTERNAL_ARTIFACTS = [

@@ -95,7 +95,7 @@ test('exports Shopify-ready catalog config without competitor copy or image medi
 
   const exported = exportNormalizedCatalog(normalized)
 
-  assert.match(exported.PRODUCTS[0].description, /Hatfield McCoy DTF expanded catalog/)
+  assert.match(exported.PRODUCTS[0].description, /printed to order in Logan, West Virginia/)
   assert.equal(exported.PRODUCTS[0].status, 'DRAFT')
   assert.equal(exported.PRODUCTS[0].images, undefined)
   assert.ok(!exported.PRODUCTS[0].tags.includes('copy-needs-review'))

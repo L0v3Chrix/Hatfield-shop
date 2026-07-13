@@ -10,11 +10,14 @@ export function rewriteProductCopy(product, { sourceText = '' } = {}) {
   const heldBack = fulfillmentReview || product.tags?.includes('source-tag-kixxl-proxy-product')
   const displayTitle = String(product.title ?? '').trim()
   const safeTitle = escapeHtml(displayTitle)
-  const shortDescription = `${displayTitle} from ${BRAND}, produced in ${LOCATION} with nationwide shipping, direct checkout, and artwork upload attached to the order.`
+  // Fallback copy only — every public product carries an owner-approved
+  // copyOverride (catalog-edits.json / core-copy.json). This template feeds
+  // hidden proxy pages and any not-yet-reviewed product, and must never use
+  // the retired boilerplate pattern (QA Q5d bans it site-wide).
+  const shortDescription = `${displayTitle} — ${family.toLowerCase()} printed to order by ${BRAND} in ${LOCATION}.`
   const bodyHtml = [
-    `<p>${safeTitle} is part of the ${BRAND} expanded catalog for shops, creators, teams, and local businesses that need reliable custom print work without guesswork.</p>`,
-    `<p>This ${family.toLowerCase()} option keeps pricing, production notes, and ordering steps easy to compare before you commit.</p>`,
-    `<p>Choose a size or product option, add it to the cart, upload artwork, and move straight into Shopify checkout.</p>`,
+    `<p>${safeTitle} is printed to order in ${LOCATION}. Pricing and options for this ${family.toLowerCase()} are listed on this page.</p>`,
+    `<p>Pick the option that fits the job, attach your artwork, and check out — or send the details through the contact form and ${BRAND} will set it up with you.</p>`,
   ].join('\n')
 
   return {
@@ -103,7 +106,9 @@ export function buildApprovalState(item) {
 }
 
 export function createProductSeoDescription(product, copy) {
-  return `${product.title} from ${BRAND} in ${LOCATION}. ${copy.shortDescription.replace(/\.$/, '')}. Ships nationwide with direct checkout and artwork upload.`
+  // The lede is now real owner-approved copy — lead with it, then anchor
+  // brand + location once. No boilerplate tail (QA Q5d).
+  return `${copy.shortDescription.replace(/\.$/, '')}. ${BRAND}, ${LOCATION} — ships nationwide.`.slice(0, 320)
 }
 
 export function stripSourceCopy(html) {

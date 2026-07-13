@@ -1,0 +1,44 @@
+{
+  "dtf-22-sheet": {
+    "copyOverrides": {
+      "shortDescription": "The workhorse sheet for shirt printing: full-color DTF transfers, 22 inches wide, cut to the length you order.",
+      "bodyHtml": "<p>Every sheet prints 22 inches wide, to order. Pick the length that matches the job: 24 inches runs $12, 60 inches is $30, 120 inches is $60, and the longest option — a full 300 inches — is $150. There is no minimum; a single short sheet is a perfectly good order.</p>\n<p>Ordering happens right on this page. Upload your artwork as PNG, JPG, PDF, AI, or EPS (up to 50MB), choose a length, add to cart, and pay through Shopify checkout. The file stays attached to your order the whole way, and there's a second upload spot in the cart if you need it.</p>\n<p>These are warm-peel transfers: press, wait a few seconds, peel while it's still warm. They go on cotton, polyester, blends, and nylon with no pretreatment. We ship nationwide from Logan, West Virginia, and local pickup can be arranged if you're close by.</p>"
+    },
+    "offerCopy": "Sold by the sheet, priced by length — $12 for 22\" x 24\", $24 for 22\" x 48\", and on up to $150 for a full 22\" x 300\" roll."
+  },
+  "dtf-46-sheet": {
+    "copyOverrides": {
+      "shortDescription": "When a design outgrows the standard sheet, this is the format for it. Large-format DTF at 46 inches wide, made for oversized graphics and bigger production runs.",
+      "bodyHtml": "<p>At 46 inches wide, one sheet holds an oversized back print or a whole run of ganged designs. Length is the only variable: 12 inches for $12, 60 for $60, 120 for $120, all the way to 240 inches for $240 — printed to order with durable color and clean detail.</p>\n<p>To buy, drop your art into the uploader on this page — PNG, JPG, PDF, AI, or EPS, 50MB max — then select a length and check out. Your artwork travels with the order into production. Missed the upload? The cart has one too.</p>\n<p>Standard DTF rules apply here: warm peel (press, pause a few seconds, peel), works on cotton, polyester, blends, and nylon, no pretreatment, no minimum. Everything ships nationwide; if you're near Logan, West Virginia, we can set up a pickup instead.</p>"
+    },
+    "offerCopy": "Priced by length at a dollar an inch on the 46-inch-wide roll — from $12 for 46\" x 12\" to $240 for a full 46\" x 240\" sheet."
+  },
+  "glitter-dtf-22-sheet": {
+    "copyOverrides": {
+      "shortDescription": "Glitter DTF is built for bold prints that need real shine. It runs in the same 22-inch sheet format as our standard transfers, just with a different peel.",
+      "bodyHtml": "<p>Three finishes are stocked — multi-color, silver, and gold — and every size costs the same regardless of finish. Length sets the price: $18 at 36 inches, $36 at 72, $54 at 108, and $66 for the longest 132-inch sheet. Not sure which finish fits the design? Call (304) 688-9970 and talk it through.</p>\n<p>Order straight from this page: pick a finish and length, attach your design (PNG, JPG, PDF, AI, or EPS files up to 50MB), and pay at checkout. We print from the exact file on your order.</p>\n<p>Glitter is a COLD PEEL product — the opposite of our standard sheets. Press it, then let the transfer cool completely before lifting the film. Orders ship nationwide, and pickup in Logan, West Virginia can be arranged.</p>"
+    },
+    "offerCopy": "Pick multi-color, silver, or gold at the same price for any size — $12 for a 22\" x 24\" sheet, $30 at 60 inches, up to $66 for 22\" x 132\"."
+  },
+  "glow-dtf-22-sheet": {
+    "copyOverrides": {
+      "shortDescription": "These sheets keep working after the lights go out. Glow-in-the-dark DTF transfers, 22 inches wide, printed to order for event shirts, specialty designs, and high-visibility apparel.",
+      "bodyHtml": "<p>Sheets print 22 inches wide with your art run down the length you choose. A 48-inch sheet is $36, 96 inches is $72, 192 inches is $144, and the 300-inch maximum is $225.</p>\n<p>Upload the artwork right here on the page — PNG, JPG, PDF, AI, and EPS all accepted, up to 50MB — set your length, add to cart, and finish through checkout. You can also attach the file from inside the cart.</p>\n<p>Glow film is COLD PEEL, same as our glitter sheets: after pressing, give the transfer time to cool all the way down before peeling. We ship anywhere in the US, and if you're local to Logan, West Virginia, call (304) 688-9970 to arrange a pickup.</p>"
+    },
+    "offerCopy": "Glow sheets run $18 for 22\" x 24\", $45 at 60 inches, $90 at 120, and $225 for the full 22\" x 300\" length."
+  },
+  "sublimation-24": {
+    "copyOverrides": {
+      "shortDescription": "Sublimation transfers printed on a 24-inch-wide roll and sold by the length. These go on polyester fabric and hard goods, not cotton.",
+      "bodyHtml": "<p>You're buying printed transfer paper, sized by length on a 24-inch-wide roll. Seven lengths cover most jobs — $12.75 at 36 inches, $21.25 at 60, $31 at 84, with $8.50 and $34 bookending the range. Run one big graphic or gang several designs onto a single sheet.</p>\n<p>The order flow lives on this page: send us the file through the uploader (PNG, JPG, PDF, AI, or EPS, up to 50MB), pick a sheet length, add to cart, and pay through checkout — the artwork rides along with your order.</p>\n<p>If the job is a cotton shirt, our DTF sheets are the better route. Orders ship nationwide out of Logan, West Virginia, and local pickup can be arranged.</p>"
+    },
+    "offerCopy": "Seven lengths on the 24-inch roll: $8.50 for 24\" x 24\", $17 at 48 inches, $26 at 72, and $34 for the longest 24\" x 96\" sheet."
+  },
+  "custom-gang-sheet": {
+    "copyOverrides": {
+      "shortDescription": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout, your sheet.",
+      "bodyHtml": "<p>The button on this page opens the gang sheet builder. Pick a sheet size, then arrange your designs across it — mix sizes, mix artwork, pack it as tight as you like. The builder totals your sheet as you go, and checkout happens right inside it.</p>\n<p>Builder sheets run $0.60 over the flat sheet price. If your job doesn't fit the fixed sheet sizes — odd dimensions, bulk runs, or a layout you'd rather hand off — the contact form still gets you a setup plan and a firm price before anything prints. Prefer to talk it through? Call (304) 688-9970.</p>\n<p>Either way these are standard DTF, warm-peel transfers — press, wait a few seconds, peel while warm — and finished sheets ship nationwide or wait for pickup in Logan, West Virginia.</p>"
+    },
+    "offerCopy": "Lay the sheet out yourself in the gang sheet builder for $0.60 over the flat sheet price; jobs the fixed sheet sizes can't handle can still be quoted per job through the contact form."
+  }
+}

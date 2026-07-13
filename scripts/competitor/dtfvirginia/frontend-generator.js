@@ -189,7 +189,9 @@ export function writeFrontendArtifacts(frontendCatalog, { outputDir, siteUrl = D
     mkdirSync(cleanDir, { recursive: true })
     writeFileSync(join(cleanDir, 'index.html'), html)
   }
-  for (const product of frontendCatalog.products.filter((item) => item.internalProxy)) {
+  // Proxy stubs only for live products — owner removals (status DRAFT/ARCHIVED
+  // via catalog-edits) must not leave orphaned pages behind.
+  for (const product of frontendCatalog.products.filter((item) => item.internalProxy && String(item.shopifyStatus ?? item.status ?? '').toUpperCase() === 'ACTIVE')) {
     const html = renderProductPage(product, { siteUrl })
     writeFileSync(join(productsDir, `${product.handle}.html`), html)
     const cleanDir = join(productsDir, product.handle)

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T22:06:16.392Z",
+  "generatedAt": "2026-07-13T22:18:18.194Z",
   "endpointHost": "zm1evm-rd.myshopify.com",
   "visibility": [
     {
@@ -313,12 +313,6 @@
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45145099337910"
-    },
-    {
-      "handle": "dtfva-3d-puff-transfers-best-in-virginia-42",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145102614710"
     },
     {
       "handle": "dtfva-indoor-floor-graphics",

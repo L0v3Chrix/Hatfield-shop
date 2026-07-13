@@ -52,7 +52,7 @@ test('rewrites product copy in Hatfield McCoy voice without competitor phrasing'
 
   assert.equal(rewritten.status, 'launch-ready')
   assert.match(rewritten.shortDescription, /Logan, West Virginia/)
-  assert.match(rewritten.shortDescription, /artwork upload attached to the order/i)
+  assert.match(rewritten.shortDescription, /printed to order by Hatfield McCoy DTF/i)
   assert.match(rewritten.bodyHtml, /Hatfield McCoy DTF/)
   assert.doesNotMatch(rewritten.bodyHtml, /Original DTF Virginia phrase/)
   assert.doesNotMatch(rewritten.bodyHtml, /kixxl_rolling_canvas_product_hidden/)
@@ -413,7 +413,7 @@ test('does not route non-transfer products into the builder just because the imp
   const catalog = buildFrontendCatalog({ products: [signageProduct], collections: [], pages: [] })
   const html = renderProductPage(catalog.products[0], { siteUrl: 'https://www.hatfieldmccoydtf.com' })
 
-  assert.match(html, /Choose a size or product option, add it to the cart, upload artwork, and move straight into Shopify checkout/i)
+  assert.match(html, /Pick the option that fits the job, attach your artwork, and check out/i)
   assert.match(html, /Add selected option<\/button>/)
   assert.doesNotMatch(html, /class="btn primary feature-cta" href="\/gang-sheet-builder">Open builder<\/a>/)
 })

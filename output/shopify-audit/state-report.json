@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T22:06:06.521Z",
+  "generatedAt": "2026-07-13T22:18:07.739Z",
   "shop": {
     "name": "Hatfield Mccoy DTF",
     "domain": "zm1evm-rd.myshopify.com",
@@ -12,8 +12,8 @@
   "counts": {
     "products": 93,
     "byStatus": {
-      "DRAFT": 17,
-      "ACTIVE": 69,
+      "DRAFT": 18,
+      "ACTIVE": 68,
       "ARCHIVED": 7
     },
     "collections": 45,
@@ -10994,7 +10994,7 @@
       "id": "gid://shopify/Product/8804438114486",
       "handle": "dtfva-3d-puff-transfers-best-in-virginia-42",
       "title": "3D Puff Transfers - West Virginia Specialty",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -11252,11 +11252,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438147254",

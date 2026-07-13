@@ -149,7 +149,14 @@
     .quote-link{color:var(--cyan);font-weight:900;text-align:center}
     .cart-item-upload{display:grid;gap:6px;margin-top:8px}
     .cart-upload-input{display:none}
-    .cart-upload-btn{width:max-content;min-height:40px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.42);background:rgba(0,229,255,.08);color:var(--cyan);border-radius:999px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
+    .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
+    .pdp-upload-input{display:none}
+    .pdp-upload-btn{min-height:46px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--cyan),#2bb8d8);color:#04252b;font-weight:950;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+    .pdp-upload-btn:disabled{opacity:.6;cursor:wait}
+    .pdp-upload-status{margin:0;color:var(--soft);font-size:.82rem;line-height:1.4}
+    .pdp-upload.has-file .pdp-upload-status{color:#b8ffb0}
     .cart-upload-btn:disabled{opacity:.6;cursor:wait}
     .cart-upload-status{color:var(--muted);font-size:.78rem;line-height:1.3}
     .cart-recommendations{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
@@ -221,9 +228,10 @@
             <span class="price">From $44.00</span>
             <p>Send the artwork and details — the shop will quote the right setup and turnaround.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BLACK">XS / Black - Size: XS · Color: Black - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_ASPHALT">XS / Asphalt - Size: XS · Color: Asphalt - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_BONE">XS / Bone - Size: XS · Color: Bone - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_HEATHER_GREY">XS / Heather Grey - Size: XS · Color: Heather Grey - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_LIEUTENANT">XS / Lieutenant - Size: XS · Color: Lieutenant - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XS_SEA_BLUE">XS / Sea Blue - Size: XS · Color: Sea Blue - $44.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_BLACK">S / Black - Size: S · Color: Black - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_ASPHALT">S / Asphalt - Size: S · Color: Asphalt - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_BONE">S / Bone - Size: S · Color: Bone - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_HEATHER_GREY">S / Heather Grey - Size: S · Color: Heather Grey - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_LIEUTENANT">S / Lieutenant - Size: S · Color: Lieutenant - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-S_SEA_BLUE">S / Sea Blue - Size: S · Color: Sea Blue - $45.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_BLACK">M / Black - Size: M · Color: Black - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_ASPHALT">M / Asphalt - Size: M · Color: Asphalt - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_BONE">M / Bone - Size: M · Color: Bone - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_HEATHER_GREY">M / Heather Grey - Size: M · Color: Heather Grey - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_LIEUTENANT">M / Lieutenant - Size: M · Color: Lieutenant - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-M_SEA_BLUE">M / Sea Blue - Size: M · Color: Sea Blue - $46.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_BLACK">L / Black - Size: L · Color: Black - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_ASPHALT">L / Asphalt - Size: L · Color: Asphalt - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_BONE">L / Bone - Size: L · Color: Bone - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_HEATHER_GREY">L / Heather Grey - Size: L · Color: Heather Grey - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_LIEUTENANT">L / Lieutenant - Size: L · Color: Lieutenant - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-L_SEA_BLUE">L / Sea Blue - Size: L · Color: Sea Blue - $47.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_BLACK">XL / Black - Size: XL · Color: Black - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_ASPHALT">XL / Asphalt - Size: XL · Color: Asphalt - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_BONE">XL / Bone - Size: XL · Color: Bone - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_HEATHER_GREY">XL / Heather Grey - Size: XL · Color: Heather Grey - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_LIEUTENANT">XL / Lieutenant - Size: XL · Color: Lieutenant - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-XL_SEA_BLUE">XL / Sea Blue - Size: XL · Color: Sea Blue - $48.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_BLACK">2XL / Black - Size: 2XL · Color: Black - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_ASPHALT">2XL / Asphalt - Size: 2XL · Color: Asphalt - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_BONE">2XL / Bone - Size: 2XL · Color: Bone - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_HEATHER_GREY">2XL / Heather Grey - Size: 2XL · Color: Heather Grey - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_LIEUTENANT">2XL / Lieutenant - Size: 2XL · Color: Lieutenant - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-2XL_SEA_BLUE">2XL / Sea Blue - Size: 2XL · Color: Sea Blue - $49.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_BLACK">3XL / Black - Size: 3XL · Color: Black - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_ASPHALT">3XL / Asphalt - Size: 3XL · Color: Asphalt - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_BONE">3XL / Bone - Size: 3XL · Color: Bone - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_HEATHER_GREY">3XL / Heather Grey - Size: 3XL · Color: Heather Grey - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_LIEUTENANT">3XL / Lieutenant - Size: 3XL · Color: Lieutenant - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-3XL_SEA_BLUE">3XL / Sea Blue - Size: 3XL · Color: Sea Blue - $50.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_BLACK">4XL / Black - Size: 4XL · Color: Black - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_ASPHALT">4XL / Asphalt - Size: 4XL · Color: Asphalt - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_BONE">4XL / Bone - Size: 4XL · Color: Bone - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_HEATHER_GREY">4XL / Heather Grey - Size: 4XL · Color: Heather Grey - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_LIEUTENANT">4XL / Lieutenant - Size: 4XL · Color: Lieutenant - $51.00</option><option value="DTFVA-CUSTOM_HEAVY_FLEECE_HOODIE_SWEATSHIRT_RETAIL_BLANK-4XL_SEA_BLUE">4XL / Sea Blue - Size: 4XL · Color: Sea Blue - $51.00</option></select></label>
+            
             <a class="quote-button feature-cta" href="/contact?product=dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank">Request a quote</a>
             <div class="approval-list">
-              <span>Artwork upload in cart</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
+              <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
           </div>
         </section>
@@ -626,10 +634,40 @@
   })();
 </script>
 <script>
+  var pdpArtwork = null;
+  (function () {
+    var input = document.getElementById('pdp-artwork-input');
+    var trigger = document.getElementById('pdp-upload-btn');
+    var status = document.getElementById('pdp-upload-status');
+    if (!input || !trigger || !status) return;
+    trigger.addEventListener('click', function () { input.click(); });
+    input.addEventListener('change', function () {
+      var file = input.files && input.files[0];
+      if (!file || !window.Cart || !window.Cart.uploadArtwork) return;
+      trigger.disabled = true;
+      status.textContent = 'Uploading ' + file.name + '…';
+      window.Cart.uploadArtwork(file).then(function (uploaded) {
+        pdpArtwork = { fileName: uploaded.fileName || file.name, url: uploaded.url };
+        status.textContent = '✓ ' + pdpArtwork.fileName + ' attached — now pick a size and add to cart.';
+        document.getElementById('pdp-upload').classList.add('has-file');
+        trigger.textContent = 'Replace artwork';
+        trigger.disabled = false;
+      }).catch(function (err) {
+        status.textContent = (err && err.message) || 'Upload failed — you can also upload in the cart before checkout.';
+        trigger.disabled = false;
+      });
+    });
+  })();
   document.addEventListener('click', function(event) {
     var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
     event.preventDefault();
+    var attributes = [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }];
+    if (pdpArtwork) {
+      attributes.push({ key: 'Artwork file', value: pdpArtwork.fileName });
+      attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
+      attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
+    }
     window.Cart.add({
       sku: button.dataset.sku || button.dataset.merchandiseId || 'custom-item',
       handle: button.dataset.handle || '',
@@ -640,7 +678,9 @@
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
-      attributes: [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }]
+      file: pdpArtwork ? pdpArtwork.fileName : null,
+      artworkUrl: pdpArtwork ? pdpArtwork.url : '',
+      attributes: attributes
     });
     if (window.openCart) window.openCart();
   });

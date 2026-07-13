@@ -7,6 +7,10 @@
       "source": "/(.*)",
       "headers": [
         {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
           "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
         },
@@ -28,6 +32,10 @@
       "source": "/assets/(.*)",
       "headers": [
         {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
         }
@@ -36,6 +44,10 @@
     {
       "source": "/(.*).html",
       "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"

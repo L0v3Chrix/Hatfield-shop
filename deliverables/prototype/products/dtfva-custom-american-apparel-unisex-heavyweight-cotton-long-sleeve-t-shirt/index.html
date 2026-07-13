@@ -149,7 +149,14 @@
     .quote-link{color:var(--cyan);font-weight:900;text-align:center}
     .cart-item-upload{display:grid;gap:6px;margin-top:8px}
     .cart-upload-input{display:none}
-    .cart-upload-btn{width:max-content;min-height:40px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.42);background:rgba(0,229,255,.08);color:var(--cyan);border-radius:999px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
+    .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
+    .pdp-upload-input{display:none}
+    .pdp-upload-btn{min-height:46px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--cyan),#2bb8d8);color:#04252b;font-weight:950;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+    .pdp-upload-btn:disabled{opacity:.6;cursor:wait}
+    .pdp-upload-status{margin:0;color:var(--soft);font-size:.82rem;line-height:1.4}
+    .pdp-upload.has-file .pdp-upload-status{color:#b8ffb0}
     .cart-upload-btn:disabled{opacity:.6;cursor:wait}
     .cart-upload-status{color:var(--muted);font-size:.78rem;line-height:1.3}
     .cart-recommendations{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
@@ -221,9 +228,10 @@
             <span class="price">From $34.00</span>
             <p>Send the artwork and details — the shop will quote the right setup and turnaround.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_BLACK">S / Black - Size: S · Color: Black - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_WHITE">S / White - Size: S · Color: White - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_HEATHER_GREY">S / Heather Grey - Size: S · Color: Heather Grey - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_CELADON">S / Celadon - Size: S · Color: Celadon - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_ORANGE">S / Orange - Size: S · Color: Orange - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_SAND">S / Sand - Size: S · Color: Sand - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-S_TRUE_NAVY">S / True Navy - Size: S · Color: True Navy - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-M_BLACK">M / Black - Size: M · Color: Black - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-M_WHITE">M / White - Size: M · Color: White - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-M_HEATHER_GREY">M / Heather Grey - Size: M · Color: Heather Grey - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-M_CELADON">M / Celadon - Size: M · Color: Celadon - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-M_ORANGE">M / Orange - Size: M · Color: Orange - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-M_SAND">M / Sand - Size: M · Color: Sand - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-M_TRUE_NAVY">M / True Navy - Size: M · Color: True Navy - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-L_BLACK">L / Black - Size: L · Color: Black - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-L_WHITE">L / White - Size: L · Color: White - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-L_HEATHER_GREY">L / Heather Grey - Size: L · Color: Heather Grey - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-L_CELADON">L / Celadon - Size: L · Color: Celadon - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-L_ORANGE">L / Orange - Size: L · Color: Orange - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-L_SAND">L / Sand - Size: L · Color: Sand - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-L_TRUE_NAVY">L / True Navy - Size: L · Color: True Navy - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-XL_BLACK">XL / Black - Size: XL · Color: Black - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-XL_WHITE">XL / White - Size: XL · Color: White - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-XL_HEATHER_GREY">XL / Heather Grey - Size: XL · Color: Heather Grey - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-XL_CELADON">XL / Celadon - Size: XL · Color: Celadon - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-XL_ORANGE">XL / Orange - Size: XL · Color: Orange - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-XL_SAND">XL / Sand - Size: XL · Color: Sand - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-XL_TRUE_NAVY">XL / True Navy - Size: XL · Color: True Navy - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-2XL_BLACK">2XL / Black - Size: 2XL · Color: Black - $38.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-2XL_WHITE">2XL / White - Size: 2XL · Color: White - $38.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-2XL_HEATHER_GREY">2XL / Heather Grey - Size: 2XL · Color: Heather Grey - $38.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-2XL_CELADON">2XL / Celadon - Size: 2XL · Color: Celadon - $38.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-2XL_ORANGE">2XL / Orange - Size: 2XL · Color: Orange - $38.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-2XL_SAND">2XL / Sand - Size: 2XL · Color: Sand - $38.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-2XL_TRUE_NAVY">2XL / True Navy - Size: 2XL · Color: True Navy - $38.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-3XL_BLACK">3XL / Black - Size: 3XL · Color: Black - $39.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-3XL_WHITE">3XL / White - Size: 3XL · Color: White - $39.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-3XL_HEATHER_GREY">3XL / Heather Grey - Size: 3XL · Color: Heather Grey - $39.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-3XL_CELADON">3XL / Celadon - Size: 3XL · Color: Celadon - $39.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-3XL_ORANGE">3XL / Orange - Size: 3XL · Color: Orange - $39.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-3XL_SAND">3XL / Sand - Size: 3XL · Color: Sand - $39.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_HEAVYWEIGHT_COTTON_LONG_SLEEVE_T_SHIRT-3XL_TRUE_NAVY">3XL / True Navy - Size: 3XL · Color: True Navy - $39.00</option></select></label>
+            
             <a class="quote-button feature-cta" href="/contact?product=dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt">Request a quote</a>
             <div class="approval-list">
-              <span>Artwork upload in cart</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
+              <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
           </div>
         </section>
@@ -590,10 +598,40 @@
   })();
 </script>
 <script>
+  var pdpArtwork = null;
+  (function () {
+    var input = document.getElementById('pdp-artwork-input');
+    var trigger = document.getElementById('pdp-upload-btn');
+    var status = document.getElementById('pdp-upload-status');
+    if (!input || !trigger || !status) return;
+    trigger.addEventListener('click', function () { input.click(); });
+    input.addEventListener('change', function () {
+      var file = input.files && input.files[0];
+      if (!file || !window.Cart || !window.Cart.uploadArtwork) return;
+      trigger.disabled = true;
+      status.textContent = 'Uploading ' + file.name + '…';
+      window.Cart.uploadArtwork(file).then(function (uploaded) {
+        pdpArtwork = { fileName: uploaded.fileName || file.name, url: uploaded.url };
+        status.textContent = '✓ ' + pdpArtwork.fileName + ' attached — now pick a size and add to cart.';
+        document.getElementById('pdp-upload').classList.add('has-file');
+        trigger.textContent = 'Replace artwork';
+        trigger.disabled = false;
+      }).catch(function (err) {
+        status.textContent = (err && err.message) || 'Upload failed — you can also upload in the cart before checkout.';
+        trigger.disabled = false;
+      });
+    });
+  })();
   document.addEventListener('click', function(event) {
     var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
     event.preventDefault();
+    var attributes = [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }];
+    if (pdpArtwork) {
+      attributes.push({ key: 'Artwork file', value: pdpArtwork.fileName });
+      attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
+      attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
+    }
     window.Cart.add({
       sku: button.dataset.sku || button.dataset.merchandiseId || 'custom-item',
       handle: button.dataset.handle || '',
@@ -604,7 +642,9 @@
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
-      attributes: [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }]
+      file: pdpArtwork ? pdpArtwork.fileName : null,
+      artworkUrl: pdpArtwork ? pdpArtwork.url : '',
+      attributes: attributes
     });
     if (window.openCart) window.openCart();
   });

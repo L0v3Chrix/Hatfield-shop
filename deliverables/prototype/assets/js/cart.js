@@ -276,6 +276,8 @@
   });
 
   window.Cart = Cart;
+  // PDP pages upload before add-to-cart; expose the same uploader the drawer uses.
+  Cart.uploadArtwork = uploadArtworkFile;
 
   /* --- Drawer UI wiring (all DOM built with createElement/textContent) --- */
   function money(n) {

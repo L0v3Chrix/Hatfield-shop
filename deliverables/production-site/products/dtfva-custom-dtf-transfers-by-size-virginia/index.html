@@ -149,7 +149,14 @@
     .quote-link{color:var(--cyan);font-weight:900;text-align:center}
     .cart-item-upload{display:grid;gap:6px;margin-top:8px}
     .cart-upload-input{display:none}
-    .cart-upload-btn{width:max-content;min-height:40px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.42);background:rgba(0,229,255,.08);color:var(--cyan);border-radius:999px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
+    .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
+    .pdp-upload-input{display:none}
+    .pdp-upload-btn{min-height:46px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--cyan),#2bb8d8);color:#04252b;font-weight:950;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+    .pdp-upload-btn:disabled{opacity:.6;cursor:wait}
+    .pdp-upload-status{margin:0;color:var(--soft);font-size:.82rem;line-height:1.4}
+    .pdp-upload.has-file .pdp-upload-status{color:#b8ffb0}
     .cart-upload-btn:disabled{opacity:.6;cursor:wait}
     .cart-upload-status{color:var(--muted);font-size:.78rem;line-height:1.3}
     .cart-recommendations{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
@@ -221,9 +228,10 @@
             <span class="price">From $0.40</span>
             <p>Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-2_X_2">2&quot; x 2&quot; - Size: 2&quot; x 2&quot; - $0.40</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-3_X_3">3&quot; x 3&quot; - Size: 3&quot; x 3&quot; - $1.40</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-4_X_2">4&quot; x 2&quot; - Size: 4&quot; x 2&quot; - $0.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-4_X_4">4&quot; x 4&quot; - Size: 4&quot; x 4&quot; - $1.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-4_X_14">4&quot; x 14&quot; - Size: 4&quot; x 14&quot; - $4.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-5_X_3">5&quot; x 3&quot; - Size: 5&quot; x 3&quot; - $1.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-5_X_5">5&quot; x 5&quot; - Size: 5&quot; x 5&quot; - $2.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-6_X_4">6&quot; x 4&quot; - Size: 6&quot; x 4&quot; - $2.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-6_X_6">6&quot; x 6&quot; - Size: 6&quot; x 6&quot; - $3.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-7_X_7">7&quot; x 7&quot; - Size: 7&quot; x 7&quot; - $4.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-8_X_8">8&quot; x 8&quot; - Size: 8&quot; x 8&quot; - $5.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-9_X_9">9&quot; x 9&quot; - Size: 9&quot; x 9&quot; - $6.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-9_X_11">9&quot; x 11&quot; - Size: 9&quot; x 11&quot; - $7.40</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-10_X_10">10&quot; x 10&quot; - Size: 10&quot; x 10&quot; - $7.40</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-11_X_5">11&quot; x 5&quot; - Size: 11&quot; x 5&quot; - $4.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-11_X_11">11&quot; x 11&quot; - Size: 11&quot; x 11&quot; - $7.90</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-12_X_14">12&quot; x 14&quot; - Size: 12&quot; x 14&quot; - $10.40</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-12_X_17">12&quot; x 17&quot; - Size: 12&quot; x 17&quot; - $13.40</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-4IN_X_4IN">4in x 4in - Size: 4in x 4in</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-10_5IN_X_7_55IN">10.5in x 7.55in - Size: 10.5in x 7.55in - $26.75</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-11_9IN_X_6_99IN">11.9in x 6.99in - Size: 11.9in x 6.99in - $28.11</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-10_86IN_X_11_93IN">10.86in x 11.93in - Size: 10.86in x 11.93in - $44.35</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-14_35IN_X_13_39IN">14.35in x 13.39in - Size: 14.35in x 13.39in - $66.25</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-9IN_X_9_56IN">9in x 9.56in - Size: 9in x 9.56in - $29.11</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-10IN_X_14IN">10in x 14in - Size: 10in x 14in - $48.00</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-3IN_X_3IN">3in x 3in - Size: 3in x 3in</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-11_25IN_X_14IN">11.25in x 14in - Size: 11.25in x 14in - $2.58</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-10_05IN_X_14IN">10.05in x 14in - Size: 10.05in x 14in - $2.19</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-10_76IN_X_15IN">10.76in x 15in - Size: 10.76in x 15in - $2.66</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-4IN_X_2_33IN">4in x 2.33in - Size: 4in x 2.33in</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-22_3IN_X_12_98IN">22.3in x 12.98in - Size: 22.3in x 12.98in - $5.57</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-13_76IN_X_13_76IN">13.76in x 13.76in - Size: 13.76in x 13.76in - $3.30</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-8IN_X_8IN">8in x 8in - Size: 8in x 8in - $0.45</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-3_37IN_X_3_39IN">3.37in x 3.39in - Size: 3.37in x 3.39in</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-11IN_X_11IN">11in x 11in - Size: 11in x 11in - $1.75</option><option value="DTFVA-CUSTOM_DTF_TRANSFERS_BY_SIZE_VIRGINIA-5IN_X_7_5IN">5in x 7.5in - Size: 5in x 7.5in</option></select></label>
+            
             <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
             <div class="approval-list">
-              <span>Artwork upload in cart</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
+              <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
           </div>
         </section>
@@ -554,10 +562,40 @@
   })();
 </script>
 <script>
+  var pdpArtwork = null;
+  (function () {
+    var input = document.getElementById('pdp-artwork-input');
+    var trigger = document.getElementById('pdp-upload-btn');
+    var status = document.getElementById('pdp-upload-status');
+    if (!input || !trigger || !status) return;
+    trigger.addEventListener('click', function () { input.click(); });
+    input.addEventListener('change', function () {
+      var file = input.files && input.files[0];
+      if (!file || !window.Cart || !window.Cart.uploadArtwork) return;
+      trigger.disabled = true;
+      status.textContent = 'Uploading ' + file.name + '…';
+      window.Cart.uploadArtwork(file).then(function (uploaded) {
+        pdpArtwork = { fileName: uploaded.fileName || file.name, url: uploaded.url };
+        status.textContent = '✓ ' + pdpArtwork.fileName + ' attached — now pick a size and add to cart.';
+        document.getElementById('pdp-upload').classList.add('has-file');
+        trigger.textContent = 'Replace artwork';
+        trigger.disabled = false;
+      }).catch(function (err) {
+        status.textContent = (err && err.message) || 'Upload failed — you can also upload in the cart before checkout.';
+        trigger.disabled = false;
+      });
+    });
+  })();
   document.addEventListener('click', function(event) {
     var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
     event.preventDefault();
+    var attributes = [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }];
+    if (pdpArtwork) {
+      attributes.push({ key: 'Artwork file', value: pdpArtwork.fileName });
+      attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
+      attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
+    }
     window.Cart.add({
       sku: button.dataset.sku || button.dataset.merchandiseId || 'custom-item',
       handle: button.dataset.handle || '',
@@ -568,7 +606,9 @@
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
-      attributes: [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }]
+      file: pdpArtwork ? pdpArtwork.fileName : null,
+      artworkUrl: pdpArtwork ? pdpArtwork.url : '',
+      attributes: attributes
     });
     if (window.openCart) window.openCart();
   });

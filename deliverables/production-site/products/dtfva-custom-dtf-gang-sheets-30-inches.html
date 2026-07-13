@@ -149,7 +149,14 @@
     .quote-link{color:var(--cyan);font-weight:900;text-align:center}
     .cart-item-upload{display:grid;gap:6px;margin-top:8px}
     .cart-upload-input{display:none}
-    .cart-upload-btn{width:max-content;min-height:40px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.42);background:rgba(0,229,255,.08);color:var(--cyan);border-radius:999px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
+    .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
+    .pdp-upload-input{display:none}
+    .pdp-upload-btn{min-height:46px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--cyan),#2bb8d8);color:#04252b;font-weight:950;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+    .pdp-upload-btn:disabled{opacity:.6;cursor:wait}
+    .pdp-upload-status{margin:0;color:var(--soft);font-size:.82rem;line-height:1.4}
+    .pdp-upload.has-file .pdp-upload-status{color:#b8ffb0}
     .cart-upload-btn:disabled{opacity:.6;cursor:wait}
     .cart-upload-status{color:var(--muted);font-size:.78rem;line-height:1.3}
     .cart-recommendations{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:12px}
@@ -221,9 +228,10 @@
             <span class="price">From $7.04</span>
             <p>Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_X12_INCHES">30.5 x12 inches - Size: 30.5 x12 inches - $7.04</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_24_INCHES">30.5 ×24 inches - Size: 30.5 ×24 inches - $15.08</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_36_INCHES">30.5 ×36 inches - Size: 30.5 ×36 inches - $23.12</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_48_INCHES">30.5 ×48 inches - Size: 30.5 ×48 inches - $31.16</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_60_INCHES">30.5 ×60 inches - Size: 30.5 ×60 inches - $39.20</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_72_INCHES">30.5 ×72 inches - Size: 30.5 ×72 inches - $47.24</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_80_INCHES">30.5 ×80 inches - Size: 30.5 ×80 inches - $52.60</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_84_INCHES">30.5 ×84 inches - Size: 30.5 ×84 inches - $55.28</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_96_INCHES">30.5 ×96 inches - Size: 30.5 ×96 inches - $63.32</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_108_INCHES">30.5 ×108 inches - Size: 30.5 ×108 inches - $71.36</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_120_INCHES">30.5 ×120 inches - Size: 30.5 ×120 inches - $79.40</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_132_INCHES">30.5 ×132 inches - Size: 30.5 ×132 inches - $87.44</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_144_INCHES">30.5 ×144 inches - Size: 30.5 ×144 inches - $95.48</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_156_INCHES">30.5 ×156 inches - Size: 30.5 ×156 inches - $103.52</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_168_INCHES">30.5 ×168 inches - Size: 30.5 ×168 inches - $111.56</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_180_INCHES">30.5 ×180 inches - Size: 30.5 ×180 inches - $119.60</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_192_INCHES">30.5 ×192 inches - Size: 30.5 ×192 inches - $127.64</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_204_INCHES">30.5 ×204 inches - Size: 30.5 ×204 inches - $135.68</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_216_INCHES">30.5 ×216 inches - Size: 30.5 ×216 inches - $143.72</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_228_INCHES">30.5 ×228 inches - Size: 30.5 ×228 inches - $151.76</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_240_INCHES">30.5×240 inches - Size: 30.5×240 inches - $159.80</option></select></label>
+            
             <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
             <div class="approval-list">
-              <span>Artwork upload in cart</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
+              <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
           </div>
         </section>
@@ -465,10 +473,40 @@
   })();
 </script>
 <script>
+  var pdpArtwork = null;
+  (function () {
+    var input = document.getElementById('pdp-artwork-input');
+    var trigger = document.getElementById('pdp-upload-btn');
+    var status = document.getElementById('pdp-upload-status');
+    if (!input || !trigger || !status) return;
+    trigger.addEventListener('click', function () { input.click(); });
+    input.addEventListener('change', function () {
+      var file = input.files && input.files[0];
+      if (!file || !window.Cart || !window.Cart.uploadArtwork) return;
+      trigger.disabled = true;
+      status.textContent = 'Uploading ' + file.name + '…';
+      window.Cart.uploadArtwork(file).then(function (uploaded) {
+        pdpArtwork = { fileName: uploaded.fileName || file.name, url: uploaded.url };
+        status.textContent = '✓ ' + pdpArtwork.fileName + ' attached — now pick a size and add to cart.';
+        document.getElementById('pdp-upload').classList.add('has-file');
+        trigger.textContent = 'Replace artwork';
+        trigger.disabled = false;
+      }).catch(function (err) {
+        status.textContent = (err && err.message) || 'Upload failed — you can also upload in the cart before checkout.';
+        trigger.disabled = false;
+      });
+    });
+  })();
   document.addEventListener('click', function(event) {
     var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
     event.preventDefault();
+    var attributes = [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }];
+    if (pdpArtwork) {
+      attributes.push({ key: 'Artwork file', value: pdpArtwork.fileName });
+      attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
+      attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
+    }
     window.Cart.add({
       sku: button.dataset.sku || button.dataset.merchandiseId || 'custom-item',
       handle: button.dataset.handle || '',
@@ -479,7 +517,9 @@
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
-      attributes: [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }]
+      file: pdpArtwork ? pdpArtwork.fileName : null,
+      artworkUrl: pdpArtwork ? pdpArtwork.url : '',
+      attributes: attributes
     });
     if (window.openCart) window.openCart();
   });

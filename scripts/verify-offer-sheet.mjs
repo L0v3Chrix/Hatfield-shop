@@ -107,6 +107,26 @@ for (const [handle, needles] of Object.entries(OFFER.notesRequired ?? {})) {
   }
 }
 
+// Q5b — offer pricing appears in PDP PROSE (not just the variant selector)
+for (const [handle, needles] of Object.entries(OFFER.offerCopyRequired ?? {})) {
+  const pdpPath = join(PS, 'products', handle, 'index.html')
+  const pdp = existsSync(pdpPath) ? readFileSync(pdpPath, 'utf8') : ''
+  const summaryBlocks = pdp.match(/class="offer-summary"[^>]*>([^<]*)</g)?.join(' ') ?? ''
+  for (const needle of needles) {
+    check(`${handle} offer copy states "${needle}"`, summaryBlocks.includes(needle))
+  }
+}
+// Q5c — every buyable PDP carries an offer-summary prose block
+{
+  const missing = []
+  for (const product of CATALOG.products.filter((p) => p.publicVisible && p.publishable)) {
+    const pdpPath = join(PS, 'products', product.handle, 'index.html')
+    if (!existsSync(pdpPath)) continue
+    if (!readFileSync(pdpPath, 'utf8').includes('class="offer-summary"')) missing.push(product.handle)
+  }
+  check('every buyable PDP has offer-summary prose', missing.length === 0, missing.slice(0, 5).join(', '))
+}
+
 // Q6 — every data-merchandise-id in built HTML exists in current shopify-state with matching price
 {
   const offenders = []

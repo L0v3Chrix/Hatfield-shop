@@ -84,6 +84,9 @@ export function applyCatalogEdits(normalized, edits) {
     const copyOverride = edits.copyOverrides?.[handle]
     if (copyOverride) product.copyOverrides = { ...copyOverride }
 
+    const offerCopy = edits.offerCopy?.[handle]
+    if (offerCopy) product.offerCopy = offerCopy
+
     if ((edits.directBuy ?? []).includes(handle)) product.forceDirectBuy = true
 
     return product
@@ -105,6 +108,7 @@ export function validateEdits(normalized, edits) {
     ...Object.keys(edits.notes ?? {}),
     ...Object.keys(edits.copyOverrides ?? {}),
     ...(edits.directBuy ?? []),
+    ...Object.keys(edits.offerCopy ?? {}),
   ]
   for (const handle of referencedHandles) {
     if (!handles.has(handle)) problems.push(`edits reference unknown handle: ${handle}`)

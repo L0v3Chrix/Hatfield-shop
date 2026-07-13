@@ -28,7 +28,10 @@
   "products": {
     "dtfva-party-banners": {
       "variantCount": 2,
-      "prices": { "DTFVA-PARTY_BANNERS-24_X_36": "30.00", "DTFVA-PARTY_BANNERS-48_X_72": "100.00" },
+      "prices": {
+        "DTFVA-PARTY_BANNERS-24_X_36": "30.00",
+        "DTFVA-PARTY_BANNERS-48_X_72": "100.00"
+      },
       "buyable": true
     },
     "dtfva-dye-cut-stickers": {
@@ -57,38 +60,124 @@
       },
       "buyable": true
     },
-    "dtfva-rush-fee": { "prices": { "DTFVA-RUSH_FEE-DEFAULT_TITLE": "50.00" }, "buyable": true },
-    "dtfva-professional-vector-design-services": { "prices": { "DTFVA-PROFESSIONAL_VECTOR_DESIGN_SERVICES-DEFAULT_TITLE": "10.00" }, "buyable": true },
-    "dtfva-custom-softballs": { "prices": { "DTFVA-CUSTOM_SOFTBALLS-SINGLE_BALL": "25.99" }, "buyable": true },
-    "dtfva-custom-baseballs": { "prices": { "DTFVA-CUSTOM_BASEBALLS-SINGLE_BALL": "23.99" }, "buyable": true },
-    "dtfva-custom-hockey-pucks": { "prices": { "DTFVA-CUSTOM_HOCKEY_PUCKS-SINGLE_PUCK": "18.99" }, "buyable": true },
-    "dtfva-custom-pickleballs": { "prices": { "DTFVA-CUSTOM_PICKLEBALLS-SINGLE_BALL": "15.99" }, "buyable": true },
-    "dtfva-personalized-tumblers": { "prices": { "DTFVA-PERSONALIZED_TUMBLERS-240MM_X_204MM": "19.00" }, "buyable": true },
+    "dtfva-rush-fee": {
+      "prices": {
+        "DTFVA-RUSH_FEE-DEFAULT_TITLE": "50.00"
+      },
+      "buyable": true
+    },
+    "dtfva-professional-vector-design-services": {
+      "prices": {
+        "DTFVA-PROFESSIONAL_VECTOR_DESIGN_SERVICES-DEFAULT_TITLE": "10.00"
+      },
+      "buyable": true
+    },
+    "dtfva-custom-softballs": {
+      "prices": {
+        "DTFVA-CUSTOM_SOFTBALLS-SINGLE_BALL": "25.99"
+      },
+      "buyable": true
+    },
+    "dtfva-custom-baseballs": {
+      "prices": {
+        "DTFVA-CUSTOM_BASEBALLS-SINGLE_BALL": "23.99"
+      },
+      "buyable": true
+    },
+    "dtfva-custom-hockey-pucks": {
+      "prices": {
+        "DTFVA-CUSTOM_HOCKEY_PUCKS-SINGLE_PUCK": "18.99"
+      },
+      "buyable": true
+    },
+    "dtfva-custom-pickleballs": {
+      "prices": {
+        "DTFVA-CUSTOM_PICKLEBALLS-SINGLE_BALL": "15.99"
+      },
+      "buyable": true
+    },
+    "dtfva-personalized-tumblers": {
+      "prices": {
+        "DTFVA-PERSONALIZED_TUMBLERS-240MM_X_204MM": "19.00"
+      },
+      "buyable": true
+    },
     "dtfva-custom-fluorescent-dtf-transfers-by-size": {
-      "prices": { "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-4_X_4": "4.40", "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-12_X_17": "21.60" }
+      "prices": {
+        "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-4_X_4": "4.40",
+        "DTFVA-CUSTOM_FLUORESCENT_DTF_TRANSFERS_BY_SIZE-12_X_17": "21.60"
+      }
     },
     "dtfva-uv-printed-custom-tpu-patches": {
-      "prices": { "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_WHITE": "2.60", "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_GOLD": "23.40" }
+      "prices": {
+        "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_WHITE": "2.60",
+        "DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_GOLD": "23.40"
+      }
     },
-    "dtfva-gildan-64000": { "buyable": true }
+    "dtfva-gildan-64000": {
+      "buyable": true
+    }
   },
   "builderUpcharge": {
-    "amount": 0.60,
-    "sentinels": { "DTF-22-24-B": "12.60", "DTF-46-12-B": "12.60", "GID-22-24-B": "18.60", "SUB-24-24-B": "9.10" }
+    "amount": 0.6,
+    "sentinels": {
+      "DTF-22-24-B": "12.60",
+      "DTF-46-12-B": "12.60",
+      "GID-22-24-B": "18.60",
+      "SUB-24-24-B": "9.10"
+    }
   },
   "titles": {
-    "dtfva-gildan-64000": { "mustInclude": "Softstyle", "mustExclude": "64000" }
+    "dtfva-gildan-64000": {
+      "mustInclude": "Softstyle",
+      "mustExclude": "64000"
+    }
   },
   "notesRequired": {
-    "dtfva-gildan-64000": ["5-7 day lead time"],
-    "dtfva-uv-printed-custom-leather-patches": ["designs per full sheet"],
-    "dtfva-dye-cut-stickers": ["packs of 100"],
-    "dtfva-custom-glitter-dtf-transfer-by-size": ["COLD PEEL"],
-    "dtfva-glitter-dtf-gang-sheet": ["COLD PEEL"],
-    "dtfva-custom-dtf-gang-sheets-30-inches": ["5-7 day lead time"]
+    "dtfva-gildan-64000": [
+      "5-7 day lead time"
+    ],
+    "dtfva-uv-printed-custom-leather-patches": [
+      "designs per full sheet"
+    ],
+    "dtfva-dye-cut-stickers": [
+      "packs of 100"
+    ],
+    "dtfva-custom-glitter-dtf-transfer-by-size": [
+      "COLD PEEL"
+    ],
+    "dtfva-glitter-dtf-gang-sheet": [
+      "COLD PEEL"
+    ],
+    "dtfva-custom-dtf-gang-sheets-30-inches": [
+      "5-7 day lead time"
+    ]
   },
   "contactRequirements": {
     "phoneDisplay": "(304) 688-9970",
     "phoneHref": "tel:+13046889970"
+  },
+  "offerCopyRequired": {
+    "dtfva-uv-printed-custom-leather-patches": [
+      "$75",
+      "$4 each"
+    ],
+    "dtfva-party-banners": [
+      "$30",
+      "$100"
+    ],
+    "dtfva-dye-cut-stickers": [
+      "100 three-inch stickers for $30"
+    ],
+    "dtfva-rush-fee": [
+      "$50 rush fee"
+    ],
+    "dtfva-professional-vector-design-services": [
+      "$10 per design"
+    ],
+    "dtfva-custom-softballs": [
+      "$25.99",
+      "$68.99"
+    ]
   }
 }

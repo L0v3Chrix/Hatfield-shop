@@ -81,6 +81,7 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
       publishable: approval.publishable,
       blockers: approval.blockers,
       copy,
+      offerCopy: product.offerCopy ?? '',
       forceDirectBuy: product.forceDirectBuy === true,
       notes: product.notes ?? [],
       cardNote: product.cardNote ?? '',
@@ -269,6 +270,7 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
             <p class="eyebrow">${escapeHtml(category.label)} · Logan, WV production</p>
             <h1>${escapeHtml(product.title)}</h1>
             <p class="lede">${escapeHtml(product.copy.shortDescription)}</p>
+            ${buildOfferSummary(product) ? `<p class="offer-summary">${escapeHtml(buildOfferSummary(product))}</p>` : ''}
             <div class="status-strip" aria-label="Ordering path">
               <span class="route-chip route-${escapeHtml(buyerRoute(product))}">${escapeHtml(orderLabel)}</span>
               ${firstPrice ? `<span>From $${escapeHtml(firstPrice)}</span>` : ''}
@@ -301,6 +303,7 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
           <article>
             <p class="eyebrow">Product details</p>
             <h2>Built for clear ordering.</h2>
+            ${buildOfferSummary(product) ? `<p class="offer-summary">${escapeHtml(buildOfferSummary(product))}</p>` : ''}
             ${product.copy.bodyHtml}
           </article>
           <aside class="notes-panel">
@@ -1023,6 +1026,7 @@ function pageCss() {
     .cart-item-upload{display:grid;gap:6px;margin-top:8px}
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
+    .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -1186,6 +1190,39 @@ export function buyerRoute(product) {
 
 function orderPathLabel(product) {
   return BUYER_ROUTE_LABELS[buyerRoute(product)]
+}
+
+
+// Plain-English offer summary derived from the live variant set, so pricing
+// lives in the product COPY, not only in the variant selector (owner QA,
+// 2026-07-10). Hand-written product.offerCopy (catalog-edits) wins over this.
+export function buildOfferSummary(product) {
+  if (product.offerCopy) return product.offerCopy
+  const priced = (product.variants ?? []).filter((v) => Number(v.price) > 0)
+  if (!priced.length) return ''
+  const money = (v) => `$${Number(v).toFixed(2).replace(/\.00$/, '')}`
+  const label = (v) => {
+    const opts = v.options && typeof v.options === 'object' ? Object.entries(v.options) : []
+    if (opts.length) return opts.map(([name, value]) => (/title/i.test(name) ? String(value) : `${name} ${value}`)).join(', ')
+    return String(v.title || v.sku || '').trim()
+  }
+  if (priced.length === 1) {
+    const only = priced[0]
+    const l = label(only)
+    return `Pricing: ${money(only.price)}${l && !/default/i.test(l) ? ` (${l})` : ''}.`
+  }
+  if (priced.length <= 4) {
+    return `Pricing: ${priced.map((v) => `${label(v)} — ${money(v.price)}`).join(' · ')}.`
+  }
+  const sorted = [...priced].sort((a, b) => Number(a.price) - Number(b.price))
+  const min = sorted[0]
+  const max = sorted[sorted.length - 1]
+  if (Number(min.price) === Number(max.price)) {
+    return `Pricing: every option is ${money(min.price)} (${priced.length} options).`
+  }
+  const optionNames = (product.options ?? []).map((o) => o.name).filter(Boolean)
+  const axis = optionNames.length ? ` by ${optionNames.join(' and ').toLowerCase()}` : ''
+  return `Pricing${axis}: from ${money(min.price)} (${label(min)}) to ${money(max.price)} (${label(max)}) — ${priced.length} options, every price shown in the table below.`
 }
 
 function isBuilderProduct(product) {

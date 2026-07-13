@@ -60,3 +60,23 @@ Full report: `../../project-ops/2026-07-07-fable5-production-rescue-report.md`
 
 ### Next
 - Confirm test mode off + delete test orders #1001-#1007; rotate private admin token; shipping rates; git push; Jessie photos; Search Console submission (optional).
+
+## Session: 2026-07-13 (evening) — functionality truth-up
+
+### Accomplished
+- Cart→checkout dead end fixed and proven (owner screenshot reproduced exactly): order lines own the drawer, honest "Needs artwork" summary/badges, checkout button never dead (guides to the blocked line), upsells only when nothing is blocked. Root causes: flex space theft by recommendations, contradictory summary copy, and a phantom-line bug — every Checkout click on a PDP silently added a sku-less "custom-item" line (buy-button delegation matched the checkout button). localStorage sanitizer purges legacy phantoms.
+- Full copy rewrite: all 43 public products carry owner-grounded copy (what it is, exact offer with dollars, how to order on that page, peel type, lead times, WV shipping/pickup). Multi-agent write→fact-check→fix→critic pipeline; 9 entries redone after reclassification. QA Q5d bans the old boilerplate site-wide.
+- Route truth-up (owner: "builders where we don't need them, no quantity where we do"): 8 variant products moved to direct-buy with on-page QUANTITY stepper; 6 duplicate/dead pages removed (incl. "Best in Virginia 42"); core custom-gang-sheet routes to the builder; honest product-type labels (softballs are not "Gang Sheet"); source-tag-gang-sheet stripped from 17 mislabeled products.
+- /products listing removed — /shop is canonical (308 redirect at the edge).
+- New mandatory post-deploy QA: `npm run qa:journeys` (scripts/qa/e2e-journeys.mjs) — real buyer journeys for every public product incl. the blocked→resolve cart scenario and a mobile pass. Final run: 48/48 PASS on production.
+- Shopify SEO descriptions re-synced to the new copy (58 products).
+
+### Decisions Made
+- Only the 5 Kixxl gang-sheet builders are "builders"; every dtfva variant product is direct-buy or quote.
+- Deploy gate now includes the boilerplate ban + journey suite; a deploy is not done until N/N journeys pass on the deployed URL.
+
+### Blockers/Issues
+- Payments still in TEST mode; site dark (noindex) by design until owner sign-off.
+
+### Next Session
+- Owner sign-off gate per OPERATORS-MANUAL §8: Chrix human test order (phone+desktop), shipping rates, test orders cleanup, token rotation, git push, payments live → indexing flip.

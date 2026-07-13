@@ -73,11 +73,13 @@ const record = (handle, journey, ok, detail = '') => {
 }
 
 function watchErrors(page, sink) {
-  page.on('pageerror', (error) => sink.push(`pageerror: ${error.message}`))
+  // Only errors on OUR pages count — once the journey hands off to Shopify's
+  // checkout, its third-party console noise is not our verdict.
+  const onSite = () => page.url().startsWith(BASE)
+  page.on('pageerror', (error) => { if (onSite()) sink.push(`pageerror: ${error.message}`) })
   page.on('console', (message) => {
-    if (message.type() !== 'error') return
+    if (message.type() !== 'error' || !onSite()) return
     const text = message.text()
-    // Third-party noise we don't own (Shopify web pixels etc.) stays out of the verdict.
     if (/web-pixel|monorail|shopify\.com\/cdn/i.test(text)) return
     sink.push(`console: ${text}`)
   })

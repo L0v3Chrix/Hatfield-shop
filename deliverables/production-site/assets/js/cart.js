@@ -105,7 +105,10 @@
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return [];
       const parsed = JSON.parse(raw);
-      return Array.isArray(parsed) ? parsed : [];
+      if (!Array.isArray(parsed)) return [];
+      // Purge phantom lines a pre-2026-07-13 bug injected on Checkout clicks
+      // (dataset-less .buy-button delegation produced sku 'custom-item').
+      return parsed.filter((item) => item && item.sku && item.sku !== 'custom-item');
     } catch (err) {
       console.warn('[cart] failed to parse cart storage', err);
       return [];

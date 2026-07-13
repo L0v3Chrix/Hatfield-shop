@@ -601,6 +601,12 @@
   document.addEventListener('click', function(event) {
     var button = event.target.closest('.buy-button:not(:disabled)');
     if (!button || !window.Cart) return;
+    // Only real add-to-cart buttons carry a data-sku. The drawer's Checkout
+    // button also has .buy-button — without these guards every Checkout click
+    // silently added a phantom "custom-item" line and re-rendered the drawer
+    // (owner-found dead end, 2026-07-13).
+    if (!button.dataset.sku) return;
+    if (button.closest('.cart-drawer')) return;
     event.preventDefault();
     var attributes = [{ key: 'Source', value: 'Hatfield McCoy DTF catalog page' }];
     if (pdpArtwork) {
@@ -609,7 +615,7 @@
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
     window.Cart.add({
-      sku: button.dataset.sku || button.dataset.merchandiseId || 'custom-item',
+      sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',

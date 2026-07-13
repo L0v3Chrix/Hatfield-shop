@@ -62,7 +62,8 @@ const TEST_PNG = Buffer.from(
 )
 const uploadPayload = { name: 'hm-e2e-artwork.png', mimeType: 'image/png', buffer: TEST_PNG }
 
-const catalog = JSON.parse(readFileSync(resolve('deliverables/prototype/catalog.json'), 'utf8'))
+// production-site catalog includes the core (non-dtfva) products; prototype's does not.
+const catalog = JSON.parse(readFileSync(resolve('deliverables/production-site/catalog.json'), 'utf8'))
 let products = catalog.products.filter((product) => product.publicVisible !== false)
 if (ONLY_PRODUCT) products = products.filter((product) => product.handle === ONLY_PRODUCT)
 

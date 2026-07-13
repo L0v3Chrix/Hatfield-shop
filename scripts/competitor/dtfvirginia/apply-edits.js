@@ -48,6 +48,9 @@ export function applyCatalogEdits(normalized, edits) {
     const retitle = edits.retitles?.[handle]
     if (retitle) product.title = retitle
 
+    const productType = edits.productTypes?.[handle]
+    if (productType) product.productType = productType
+
     const restructure = edits.variantRestructures?.[handle]
     if (restructure) {
       product.options = restructure.options.map((o) => ({ name: o.name, values: [...o.values] }))
@@ -103,6 +106,7 @@ export function validateEdits(normalized, edits) {
   const referencedHandles = [
     ...(edits.removals ?? []).map((r) => r.handle),
     ...Object.keys(edits.retitles ?? {}),
+    ...Object.keys(edits.productTypes ?? {}),
     ...Object.keys(edits.variantRestructures ?? {}),
     ...Object.keys(edits.tagRemovals ?? {}),
     ...Object.keys(edits.notes ?? {}),

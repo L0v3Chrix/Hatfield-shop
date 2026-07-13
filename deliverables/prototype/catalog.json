@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-13T22:17:40.994Z",
+    "generated_at": "2026-07-13T22:35:07.979Z",
     "source": "dtfvirginia.com",
     "product_count": 79,
     "public_product_count": 37,
@@ -4548,8 +4548,8 @@
       "shopifyProductId": "gid://shopify/Product/8804436279478",
       "shopifyStatus": "ACTIVE",
       "title": "UV-Printed Custom Leather Hat Patches",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Leather Patches",
+      "rawProductType": "Leather Patches",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-uv-printed-custom-leather-patches",
       "internalProxy": false,
@@ -4558,8 +4558,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -4643,8 +4642,8 @@
       "shopifyProductId": "gid://shopify/Product/8804436312246",
       "shopifyStatus": "ACTIVE",
       "title": "UV-Printed Custom TPU Patches",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "TPU Patches",
+      "rawProductType": "TPU Patches",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-uv-printed-custom-tpu-patches",
       "internalProxy": false,
@@ -4653,8 +4652,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -14413,8 +14411,8 @@
       "shopifyProductId": "gid://shopify/Product/8804436639926",
       "shopifyStatus": "ACTIVE",
       "title": "Custom Sublimation Transfers by Size",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Sublimation Transfer",
+      "rawProductType": "Sublimation Transfer",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-sublimation-transfers-by-size",
       "internalProxy": false,
@@ -14424,7 +14422,6 @@
       "tags": [
         "competitor-parity",
         "source-dtf-virginia",
-        "source-tag-gang-sheet",
         "pricing-needs-review"
       ],
       "indexable": false,
@@ -14994,8 +14991,8 @@
       "shopifyProductId": "gid://shopify/Product/8804436738230",
       "shopifyStatus": "ACTIVE",
       "title": "Custom Fluorescent DTF Transfers by Size",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Fluorescent DTF Transfer",
+      "rawProductType": "Fluorescent DTF Transfer",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-fluorescent-dtf-transfers-by-size",
       "internalProxy": false,
@@ -15004,8 +15001,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -24373,8 +24369,8 @@
       "shopifyProductId": "gid://shopify/Product/8804437524662",
       "shopifyStatus": "ACTIVE",
       "title": "Party Banners",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Banners",
+      "rawProductType": "Banners",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-party-banners",
       "internalProxy": false,
@@ -24383,8 +24379,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -33365,8 +33360,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438147254",
       "shopifyStatus": "ACTIVE",
       "title": "Indoor Floor Graphics",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Floor Graphics",
+      "rawProductType": "Floor Graphics",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-indoor-floor-graphics",
       "internalProxy": false,
@@ -33375,8 +33370,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -33613,8 +33607,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438180022",
       "shopifyStatus": "ACTIVE",
       "title": "Window Clings",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Window Clings",
+      "rawProductType": "Window Clings",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-window-clings",
       "internalProxy": false,
@@ -33623,8 +33617,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -33849,8 +33842,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438212790",
       "shopifyStatus": "ACTIVE",
       "title": "Custom Window Graphics",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Window Graphics",
+      "rawProductType": "Window Graphics",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-window-graphics",
       "internalProxy": false,
@@ -33859,8 +33852,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -34109,8 +34101,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438245558",
       "shopifyStatus": "ACTIVE",
       "title": "Perforated Window Vinyl (Window Perf Graphics)",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Window Vinyl",
+      "rawProductType": "Window Vinyl",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-perforated-window-vinyl",
       "internalProxy": false,
@@ -34119,8 +34111,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -34357,8 +34348,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438278326",
       "shopifyStatus": "ACTIVE",
       "title": "Custom Softballs",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "UV-Printed Softballs",
+      "rawProductType": "UV-Printed Softballs",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-softballs",
       "internalProxy": false,
@@ -34367,8 +34358,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -34449,8 +34439,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438343862",
       "shopifyStatus": "ACTIVE",
       "title": "Custom Baseballs",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "UV-Printed Baseballs",
+      "rawProductType": "UV-Printed Baseballs",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-baseballs",
       "internalProxy": false,
@@ -34459,8 +34449,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -34541,8 +34530,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438409398",
       "shopifyStatus": "ACTIVE",
       "title": "Custom Hockey Pucks",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "UV-Printed Hockey Pucks",
+      "rawProductType": "UV-Printed Hockey Pucks",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-hockey-pucks",
       "internalProxy": false,
@@ -34551,8 +34540,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -34633,8 +34621,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438474934",
       "shopifyStatus": "ACTIVE",
       "title": "Custom Pickleballs",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "UV-Printed Pickleballs",
+      "rawProductType": "UV-Printed Pickleballs",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-pickleballs",
       "internalProxy": false,
@@ -34643,8 +34631,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,
@@ -34816,8 +34803,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438540470",
       "shopifyStatus": "ACTIVE",
       "title": "UV DTF Transfer By Size",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "UV DTF Transfer",
+      "rawProductType": "UV DTF Transfer",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-uv-dtf-transfer-by-size",
       "internalProxy": false,
@@ -34839,7 +34826,6 @@
         "source-tag-dtf-transfer",
         "source-tag-dtf-virginia",
         "source-tag-fabric-print",
-        "source-tag-gang-sheet",
         "source-tag-graphic-fabric-prints",
         "source-tag-heat-press",
         "source-tag-no-minimums",
@@ -35212,8 +35198,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438573238",
       "shopifyStatus": "ACTIVE",
       "title": "3D Puff Transfers",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "3D Puff Transfer",
+      "rawProductType": "3D Puff Transfer",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-upload-3d-puff-transfers",
       "internalProxy": false,
@@ -35226,8 +35212,7 @@
         "source-tag-apparel-printing",
         "source-tag-custom-apparel",
         "source-tag-digital-print",
-        "source-tag-direct-to-film",
-        "source-tag-gang-sheet"
+        "source-tag-direct-to-film"
       ],
       "indexable": false,
       "publishable": true,
@@ -35722,8 +35707,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438638774",
       "shopifyStatus": "ACTIVE",
       "title": "Custom DTF Transfers by Size",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "DTF Transfer",
+      "rawProductType": "DTF Transfer",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-custom-dtf-transfers-by-size-virginia",
       "internalProxy": false,
@@ -35733,7 +35718,6 @@
       "tags": [
         "competitor-parity",
         "source-dtf-virginia",
-        "source-tag-gang-sheet",
         "pricing-needs-review"
       ],
       "indexable": false,
@@ -37969,8 +37953,8 @@
       "shopifyProductId": "gid://shopify/Product/8804438671542",
       "shopifyStatus": "ACTIVE",
       "title": "Custom DTF Dye-Cut Stickers",
-      "productType": "Gang Sheet",
-      "rawProductType": "Gang Sheet",
+      "productType": "Die-Cut Stickers",
+      "rawProductType": "Die-Cut Stickers",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-dye-cut-stickers",
       "internalProxy": false,
@@ -37979,8 +37963,7 @@
       "status": "ACTIVE",
       "tags": [
         "competitor-parity",
-        "source-dtf-virginia",
-        "source-tag-gang-sheet"
+        "source-dtf-virginia"
       ],
       "indexable": false,
       "publishable": true,

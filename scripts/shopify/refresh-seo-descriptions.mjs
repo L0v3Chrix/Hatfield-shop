@@ -7,14 +7,19 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { createShopifyClient } from './lib/shopify-client.js'
+import 'dotenv/config'
+import { createClient } from './lib/shopify-client.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const execute = process.argv.includes('--execute')
 const catalog = JSON.parse(readFileSync(join(ROOT, 'deliverables', 'prototype', 'catalog.json'), 'utf8'))
 const copyByHandle = new Map(catalog.products.map((p) => [p.handle, p.copy?.shortDescription || '']))
 
-const client = await createShopifyClient()
+const client = await createClient({
+  shopDomain: process.env.SHOPIFY_SHOP_DOMAIN,
+  clientId: process.env.SHOPIFY_ADMIN_CLIENT_ID,
+  clientSecret: process.env.SHOPIFY_ADMIN_CLIENT_SECRET,
+})
 const QUERY = `query Products($cursor: String) {
   products(first: 100, after: $cursor, query: "status:ACTIVE") {
     pageInfo { hasNextPage endCursor }

@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated_at": "2026-07-13T21:38:39.721Z",
+    "generated_at": "2026-07-13T22:05:27.820Z",
     "source": "dtfvirginia.com",
     "product_count": 79,
-    "public_product_count": 42,
+    "public_product_count": 37,
     "internal_proxy_product_count": 22,
     "variant_count": 2592,
-    "public_variant_count": 990,
+    "public_variant_count": 902,
     "collection_count": 38,
     "page_count": 15
   },
@@ -4667,7 +4667,7 @@
         "approvalTags": []
       },
       "offerCopy": "Priced by size and color — from $0.65 for a 1\" patch to $23.40 for 6\" x 6\". All 30 combinations are listed below.",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [],
       "cardNote": "",
       "seo": {
@@ -14440,7 +14440,7 @@
         ]
       },
       "offerCopy": "",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [],
       "cardNote": "",
       "seo": {
@@ -14780,7 +14780,7 @@
         "approvalTags": []
       },
       "offerCopy": "",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [
         "Glitter transfers are COLD PEEL - let the transfer cool completely before peeling."
       ],
@@ -15018,7 +15018,7 @@
         "approvalTags": []
       },
       "offerCopy": "Priced by size, from $2.10 for 2\" x 2\" to $21.60 for 12\" x 17\" — every size and price is in the table below.",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [
         "Fluorescent transfers glow under black light. Allow a 5-7 day lead time."
       ],
@@ -15230,16 +15230,16 @@
     {
       "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
       "shopifyProductId": "gid://shopify/Product/8804436770998",
-      "shopifyStatus": "ACTIVE",
+      "shopifyStatus": "DRAFT",
       "title": "22\" UV DTF Sticker Sheet Builder",
       "productType": "Gang Sheet",
       "rawProductType": "Gang Sheet",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-22-inch-uv-dtf-sticker-sheet-builder",
       "internalProxy": false,
-      "publicVisible": true,
+      "publicVisible": false,
       "internalActionUrl": "/gang-sheet-builder",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "tags": [
         "competitor-parity",
         "source-dtf-virginia",
@@ -15278,7 +15278,8 @@
       "indexable": false,
       "publishable": false,
       "blockers": [
-        "fulfillment"
+        "fulfillment",
+        "unpublished"
       ],
       "copy": {
         "status": "launch-hold",
@@ -23746,7 +23747,7 @@
         "approvalTags": []
       },
       "offerCopy": "30-inch-wide gang sheets priced by length — every length and price is in the table below. Allow 5-7 days; 30\" material is ordered per job.",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [
         "Allow a 5-7 day lead time - 30\" material is ordered in per job.",
         "Standard DTF transfers are warm peel."
@@ -35209,7 +35210,7 @@
       "handle": "dtfva-upload-3d-puff-transfers",
       "shopifyProductId": "gid://shopify/Product/8804438573238",
       "shopifyStatus": "ACTIVE",
-      "title": "3D Puff Transfers - Hatfield McCoy DTF",
+      "title": "3D Puff Transfers",
       "productType": "Gang Sheet",
       "rawProductType": "Gang Sheet",
       "vendor": "Hatfield McCoy DTF",
@@ -35232,32 +35233,32 @@
       "blockers": [],
       "copy": {
         "status": "launch-ready",
-        "shortDescription": "3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.",
-        "bodyHtml": "<p>3D Puff Transfers - Hatfield McCoy DTF is part of the Hatfield McCoy DTF expanded catalog for shops, creators, teams, and local businesses that need reliable custom print work without guesswork.</p>\n<p>This gang sheet option keeps pricing, production notes, and ordering steps easy to compare before you commit.</p>\n<p>Choose a size or product option, add it to the cart, upload artwork, and move straight into Shopify checkout.</p>",
+        "shortDescription": "3D Puff Transfers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.",
+        "bodyHtml": "<p>3D Puff Transfers is part of the Hatfield McCoy DTF expanded catalog for shops, creators, teams, and local businesses that need reliable custom print work without guesswork.</p>\n<p>This gang sheet option keeps pricing, production notes, and ordering steps easy to compare before you commit.</p>\n<p>Choose a size or product option, add it to the cart, upload artwork, and move straight into Shopify checkout.</p>",
         "sourceTextReferenceLength": 0,
         "approvalTags": []
       },
       "offerCopy": "",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [],
       "cardNote": "",
       "seo": {
-        "title": "3D Puff Transfers - Hatfield McCoy DTF | Hatfield McCoy DTF",
-        "description": "3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF in Logan, West Virginia. 3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF, produ…",
+        "title": "3D Puff Transfers | Hatfield McCoy DTF",
+        "description": "3D Puff Transfers from Hatfield McCoy DTF in Logan, West Virginia. 3D Puff Transfers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwid…",
         "canonicalUrl": "https://www.hatfieldmccoydtf.com/products/dtfva-upload-3d-puff-transfers",
         "robots": "noindex, nofollow",
         "openGraph": {
           "type": "product",
-          "title": "3D Puff Transfers - Hatfield McCoy DTF | Hatfield McCoy DTF",
-          "description": "3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF in Logan, West Virginia. 3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF, produ…",
+          "title": "3D Puff Transfers | Hatfield McCoy DTF",
+          "description": "3D Puff Transfers from Hatfield McCoy DTF in Logan, West Virginia. 3D Puff Transfers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwid…",
           "url": "https://www.hatfieldmccoydtf.com/products/dtfva-upload-3d-puff-transfers",
           "siteName": "Hatfield McCoy DTF"
         },
         "schema": {
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "3D Puff Transfers - Hatfield McCoy DTF",
-          "description": "3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF in Logan, West Virginia. 3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF, produ…",
+          "name": "3D Puff Transfers",
+          "description": "3D Puff Transfers from Hatfield McCoy DTF in Logan, West Virginia. 3D Puff Transfers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwid…",
           "brand": {
             "@type": "Brand",
             "name": "Hatfield McCoy DTF"
@@ -35462,16 +35463,16 @@
     {
       "handle": "dtfva-3d-puff-transfers",
       "shopifyProductId": "gid://shopify/Product/8804438606006",
-      "shopifyStatus": "ACTIVE",
+      "shopifyStatus": "DRAFT",
       "title": "3D Puff Transfers Builder",
       "productType": "Gang Sheet",
       "rawProductType": "Gang Sheet",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-3d-puff-transfers",
       "internalProxy": false,
-      "publicVisible": true,
+      "publicVisible": false,
       "internalActionUrl": "/gang-sheet-builder",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "tags": [
         "competitor-parity",
         "source-dtf-virginia",
@@ -35482,8 +35483,10 @@
         "source-tag-gang-sheet"
       ],
       "indexable": false,
-      "publishable": true,
-      "blockers": [],
+      "publishable": false,
+      "blockers": [
+        "unpublished"
+      ],
       "copy": {
         "status": "launch-ready",
         "shortDescription": "3D Puff Transfers Builder from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.",
@@ -35521,7 +35524,7 @@
             "url": "https://www.hatfieldmccoydtf.com/products/dtfva-3d-puff-transfers",
             "priceCurrency": "USD",
             "price": "13.99",
-            "availability": "https://schema.org/InStock",
+            "availability": "https://schema.org/PreOrder",
             "itemCondition": "https://schema.org/NewCondition"
           }
         }
@@ -35538,7 +35541,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109528758",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_ROYAL_BLUE",
@@ -35551,7 +35554,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109561526",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_ORANGE",
@@ -35564,7 +35567,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109594294",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_DEEP_PINK",
@@ -35577,7 +35580,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109627062",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_YELLOW",
@@ -35590,7 +35593,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109659830",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_GREEN",
@@ -35603,7 +35606,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109692598",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_PURPLE",
@@ -35616,7 +35619,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109725366",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_FLUORESCENT_YELLOW",
@@ -35629,7 +35632,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109758134",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_GREEN_LIGHT",
@@ -35642,7 +35645,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109790902",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_ORANGE_LIGHT",
@@ -35655,7 +35658,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109823670",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_PINK",
@@ -35668,7 +35671,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109856438",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_WHITE",
@@ -35681,7 +35684,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109889206",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_BLACK",
@@ -35694,7 +35697,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109921974",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         },
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_RED",
@@ -35707,7 +35710,7 @@
           "sourcePrice": "14.99",
           "flags": [],
           "merchandiseId": "gid://shopify/ProductVariant/45145109954742",
-          "checkoutEnabled": true
+          "checkoutEnabled": false
         }
       ],
       "images": [],
@@ -35745,7 +35748,7 @@
         ]
       },
       "offerCopy": "",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [
         "Standard DTF transfers are warm peel - press, wait a few seconds, peel warm."
       ],
@@ -38070,16 +38073,16 @@
     {
       "handle": "dtfva-glitter-dtf-gang-sheet",
       "shopifyProductId": "gid://shopify/Product/8804438704310",
-      "shopifyStatus": "ACTIVE",
+      "shopifyStatus": "DRAFT",
       "title": "Glitter DTF Gang Sheet 22\"",
       "productType": "Gang Sheet",
       "rawProductType": "Gang Sheet",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-glitter-dtf-gang-sheet",
       "internalProxy": false,
-      "publicVisible": true,
+      "publicVisible": false,
       "internalActionUrl": "/gang-sheet-builder",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "tags": [
         "competitor-parity",
         "source-dtf-virginia",
@@ -38113,7 +38116,8 @@
       "indexable": false,
       "publishable": false,
       "blockers": [
-        "fulfillment"
+        "fulfillment",
+        "unpublished"
       ],
       "copy": {
         "status": "launch-hold",
@@ -38387,7 +38391,7 @@
         "approvalTags": []
       },
       "offerCopy": "",
-      "forceDirectBuy": false,
+      "forceDirectBuy": true,
       "notes": [],
       "cardNote": "",
       "seo": {
@@ -38908,16 +38912,16 @@
     {
       "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
       "shopifyProductId": "gid://shopify/Product/8804438835382",
-      "shopifyStatus": "ACTIVE",
+      "shopifyStatus": "DRAFT",
       "title": "Fluorescent DTF Printing - Bold, Bright, and Stunning",
       "productType": "Gang Sheet",
       "rawProductType": "Gang Sheet",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-fluorescent-dtf-printing-bold-bright-stunning",
       "internalProxy": false,
-      "publicVisible": true,
+      "publicVisible": false,
       "internalActionUrl": "/gang-sheet-builder",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "tags": [
         "competitor-parity",
         "source-dtf-virginia",
@@ -38955,7 +38959,8 @@
       "indexable": false,
       "publishable": false,
       "blockers": [
-        "fulfillment"
+        "fulfillment",
+        "unpublished"
       ],
       "copy": {
         "status": "launch-hold",
@@ -39395,16 +39400,16 @@
     {
       "handle": "dtfva-uv-dtf-stickers",
       "shopifyProductId": "gid://shopify/Product/8804438933686",
-      "shopifyStatus": "ACTIVE",
+      "shopifyStatus": "DRAFT",
       "title": "22\" UV DTF Stickers",
       "productType": "Gang Sheet",
       "rawProductType": "Gang Sheet",
       "vendor": "Hatfield McCoy DTF",
       "url": "/products/dtfva-uv-dtf-stickers",
       "internalProxy": false,
-      "publicVisible": true,
+      "publicVisible": false,
       "internalActionUrl": "/gang-sheet-builder",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "tags": [
         "competitor-parity",
         "source-dtf-virginia",
@@ -39441,7 +39446,8 @@
       "indexable": false,
       "publishable": false,
       "blockers": [
-        "fulfillment"
+        "fulfillment",
+        "unpublished"
       ],
       "copy": {
         "status": "launch-hold",

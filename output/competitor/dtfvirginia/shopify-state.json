@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T16:57:43.799Z",
+    "generated_at": "2026-07-13T22:07:48.232Z",
     "shop": "zm1evm-rd.myshopify.com",
     "product_count": 89,
     "collection_count": 38,
@@ -17728,7 +17728,7 @@
     {
       "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
       "productId": "gid://shopify/Product/8804436770998",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-22_INCH_UV_DTF_STICKER_SHEET_BUILDER-22_5X12",
@@ -34595,7 +34595,7 @@
     {
       "handle": "dtfva-3d-puff-transfers-best-in-virginia-42",
       "productId": "gid://shopify/Product/8804438114486",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS_BEST_IN_VIRGINIA_42-22_X_28_96_DSAH_YELLOW",
@@ -36639,7 +36639,7 @@
     {
       "handle": "dtfva-3d-puff-transfers",
       "productId": "gid://shopify/Product/8804438606006",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-3D_PUFF_TRANSFERS-22IN_X_15IN_SILVER",
@@ -38850,7 +38850,7 @@
     {
       "handle": "dtfva-glitter-dtf-gang-sheet",
       "productId": "gid://shopify/Product/8804438704310",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-GLITTER_DTF_GANG_SHEET-22_5X24_INCHES",
@@ -39444,7 +39444,7 @@
     {
       "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
       "productId": "gid://shopify/Product/8804438835382",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-FLUORESCENT_DTF_PRINTING_BOLD_BRIGHT_STUNNING-22_5_X12_INCHES",
@@ -39722,7 +39722,7 @@
     {
       "handle": "dtfva-uv-dtf-stickers",
       "productId": "gid://shopify/Product/8804438933686",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "variants": [
         {
           "sku": "DTFVA-UV_DTF_STICKERS-22_5_X12_INCHES",

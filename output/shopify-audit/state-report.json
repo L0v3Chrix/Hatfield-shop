@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T21:39:06.691Z",
+  "generatedAt": "2026-07-13T22:06:06.521Z",
   "shop": {
     "name": "Hatfield Mccoy DTF",
     "domain": "zm1evm-rd.myshopify.com",
@@ -12,8 +12,8 @@
   "counts": {
     "products": 93,
     "byStatus": {
-      "DRAFT": 12,
-      "ACTIVE": 74,
+      "DRAFT": 17,
+      "ACTIVE": 69,
       "ARCHIVED": 7
     },
     "collections": 45,
@@ -5161,7 +5161,7 @@
       "id": "gid://shopify/Product/8804436770998",
       "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
       "title": "22\" UV DTF Sticker Sheet Builder",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
@@ -5334,11 +5334,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436803766",
@@ -12045,7 +12041,7 @@
     {
       "id": "gid://shopify/Product/8804438573238",
       "handle": "dtfva-upload-3d-puff-transfers",
-      "title": "3D Puff Transfers - Hatfield McCoy DTF",
+      "title": "3D Puff Transfers",
       "status": "ACTIVE",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
@@ -12148,7 +12144,7 @@
       "id": "gid://shopify/Product/8804438606006",
       "handle": "dtfva-3d-puff-transfers",
       "title": "3D Puff Transfers Builder",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
@@ -12240,11 +12236,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438638774",
@@ -12822,7 +12814,7 @@
       "id": "gid://shopify/Product/8804438704310",
       "handle": "dtfva-glitter-dtf-gang-sheet",
       "title": "Glitter DTF Gang Sheet 22\"",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
@@ -12945,11 +12937,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438737078",
@@ -13162,7 +13150,7 @@
       "id": "gid://shopify/Product/8804438835382",
       "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
       "title": "Fluorescent DTF Printing - Bold, Bright, and Stunning",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
@@ -13249,11 +13237,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438900918",
@@ -13388,7 +13372,7 @@
       "id": "gid://shopify/Product/8804438933686",
       "handle": "dtfva-uv-dtf-stickers",
       "title": "22\" UV DTF Stickers",
-      "status": "ACTIVE",
+      "status": "DRAFT",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
@@ -13559,11 +13543,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438966454",

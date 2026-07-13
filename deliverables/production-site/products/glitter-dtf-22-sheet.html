@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -234,6 +239,15 @@
             <span class="price">From $12.00</span>
             <p>Upload your artwork right here, pick a size, and add it to the cart — checkout is direct through Shopify.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="GLT-22-24-SIL">GLT-22-24-SIL - Length: 24 · Color: Silver - $12.00</option><option value="GLT-22-24-GLD">GLT-22-24-GLD - Length: 24 · Color: Gold - $12.00</option><option value="GLT-22-24-MLT">GLT-22-24-MLT - Length: 24 · Color: Multi - $12.00</option><option value="GLT-22-36-SIL">GLT-22-36-SIL - Length: 36 · Color: Silver - $18.00</option><option value="GLT-22-36-GLD">GLT-22-36-GLD - Length: 36 · Color: Gold - $18.00</option><option value="GLT-22-36-MLT">GLT-22-36-MLT - Length: 36 · Color: Multi - $18.00</option><option value="GLT-22-48-SIL">GLT-22-48-SIL - Length: 48 · Color: Silver - $24.00</option><option value="GLT-22-48-GLD">GLT-22-48-GLD - Length: 48 · Color: Gold - $24.00</option><option value="GLT-22-48-MLT">GLT-22-48-MLT - Length: 48 · Color: Multi - $24.00</option><option value="GLT-22-60-SIL">GLT-22-60-SIL - Length: 60 · Color: Silver - $30.00</option><option value="GLT-22-60-GLD">GLT-22-60-GLD - Length: 60 · Color: Gold - $30.00</option><option value="GLT-22-60-MLT">GLT-22-60-MLT - Length: 60 · Color: Multi - $30.00</option><option value="GLT-22-72-SIL">GLT-22-72-SIL - Length: 72 · Color: Silver - $36.00</option><option value="GLT-22-72-GLD">GLT-22-72-GLD - Length: 72 · Color: Gold - $36.00</option><option value="GLT-22-72-MLT">GLT-22-72-MLT - Length: 72 · Color: Multi - $36.00</option><option value="GLT-22-84-SIL">GLT-22-84-SIL - Length: 84 · Color: Silver - $42.00</option><option value="GLT-22-84-GLD">GLT-22-84-GLD - Length: 84 · Color: Gold - $42.00</option><option value="GLT-22-84-MLT">GLT-22-84-MLT - Length: 84 · Color: Multi - $42.00</option><option value="GLT-22-96-SIL">GLT-22-96-SIL - Length: 96 · Color: Silver - $48.00</option><option value="GLT-22-96-GLD">GLT-22-96-GLD - Length: 96 · Color: Gold - $48.00</option><option value="GLT-22-96-MLT">GLT-22-96-MLT - Length: 96 · Color: Multi - $48.00</option><option value="GLT-22-108-SIL">GLT-22-108-SIL - Length: 108 · Color: Silver - $54.00</option><option value="GLT-22-108-GLD">GLT-22-108-GLD - Length: 108 · Color: Gold - $54.00</option><option value="GLT-22-108-MLT">GLT-22-108-MLT - Length: 108 · Color: Multi - $54.00</option><option value="GLT-22-120-SIL">GLT-22-120-SIL - Length: 120 · Color: Silver - $60.00</option><option value="GLT-22-120-GLD">GLT-22-120-GLD - Length: 120 · Color: Gold - $60.00</option><option value="GLT-22-120-MLT">GLT-22-120-MLT - Length: 120 · Color: Multi - $60.00</option><option value="GLT-22-132-SIL">GLT-22-132-SIL - Length: 132 · Color: Silver - $66.00</option><option value="GLT-22-132-GLD">GLT-22-132-GLD - Length: 132 · Color: Gold - $66.00</option><option value="GLT-22-132-MLT">GLT-22-132-MLT - Length: 132 · Color: Multi - $66.00</option><option value="GLT-22-144-SIL">GLT-22-144-SIL - Length: 144 · Color: Silver - $72.00</option><option value="GLT-22-144-GLD">GLT-22-144-GLD - Length: 144 · Color: Gold - $72.00</option><option value="GLT-22-144-MLT">GLT-22-144-MLT - Length: 144 · Color: Multi - $72.00</option><option value="GLT-22-156-SIL">GLT-22-156-SIL - Length: 156 · Color: Silver - $78.00</option><option value="GLT-22-156-GLD">GLT-22-156-GLD - Length: 156 · Color: Gold - $78.00</option><option value="GLT-22-156-MLT">GLT-22-156-MLT - Length: 156 · Color: Multi - $78.00</option><option value="GLT-22-168-SIL">GLT-22-168-SIL - Length: 168 · Color: Silver - $84.00</option><option value="GLT-22-168-GLD">GLT-22-168-GLD - Length: 168 · Color: Gold - $84.00</option><option value="GLT-22-168-MLT">GLT-22-168-MLT - Length: 168 · Color: Multi - $84.00</option><option value="GLT-22-180-SIL">GLT-22-180-SIL - Length: 180 · Color: Silver - $90.00</option><option value="GLT-22-180-GLD">GLT-22-180-GLD - Length: 180 · Color: Gold - $90.00</option><option value="GLT-22-180-MLT">GLT-22-180-MLT - Length: 180 · Color: Multi - $90.00</option><option value="GLT-22-192-SIL">GLT-22-192-SIL - Length: 192 · Color: Silver - $96.00</option><option value="GLT-22-192-GLD">GLT-22-192-GLD - Length: 192 · Color: Gold - $96.00</option><option value="GLT-22-192-MLT">GLT-22-192-MLT - Length: 192 · Color: Multi - $96.00</option><option value="GLT-22-300-SIL">GLT-22-300-SIL - Length: 300 · Color: Silver - $150.00</option><option value="GLT-22-300-GLD">GLT-22-300-GLD - Length: 300 · Color: Gold - $150.00</option><option value="GLT-22-300-MLT">GLT-22-300-MLT - Length: 300 · Color: Multi - $150.00</option></select></label>
+            
+            <div class="pdp-qty" aria-label="Quantity">
+              <span>Quantity</span>
+              <div class="pdp-qty-stepper">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" id="pdp-qty" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
             
             <div class="pdp-upload" id="pdp-upload">
               <input type="file" id="pdp-artwork-input" class="pdp-upload-input" accept=".png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript">
@@ -688,13 +702,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -704,6 +720,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

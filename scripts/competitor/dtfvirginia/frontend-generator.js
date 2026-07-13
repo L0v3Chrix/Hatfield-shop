@@ -288,6 +288,15 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
             <p>${builderProduct ? 'Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.' : buyerRoute(product) === 'order-online' ? 'Upload your artwork right here, pick a size, and add it to the cart — checkout is direct through Shopify.' : 'Send the artwork and details — the shop will quote the right setup and turnaround.'}</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select">${selectorOptions}</select></label>
             ${!builderProduct && buyerRoute(product) === 'order-online' ? `
+            <div class="pdp-qty" aria-label="Quantity">
+              <span>Quantity</span>
+              <div class="pdp-qty-stepper">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" id="pdp-qty" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+            </div>` : ''}
+            ${!builderProduct && buyerRoute(product) === 'order-online' ? `
             <div class="pdp-upload" id="pdp-upload">
               <input type="file" id="pdp-artwork-input" class="pdp-upload-input" accept=".png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript">
               <button type="button" class="pdp-upload-btn" id="pdp-upload-btn"><span aria-hidden="true">&#128206;</span> Upload your artwork</button>
@@ -799,13 +808,15 @@ ${mobileMenuScript()}
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -815,6 +826,16 @@ ${mobileMenuScript()}
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>
@@ -1031,6 +1052,11 @@ function pageCss() {
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -1233,6 +1259,9 @@ function isBuilderProduct(product) {
   // Owner offer sheet can force a product onto the direct add-to-cart path
   // even when its handle/tags look builder-ish (e.g. 100-pack stickers).
   if (product.forceDirectBuy === true) return false
+  // The core catch-all gang sheet page IS the builder entry point — its copy
+  // says "handled through the Kixxl builder", so route it there, not to quote.
+  if (String(product.handle ?? '') === 'custom-gang-sheet') return true
   const handle = String(product.handle ?? '').toLowerCase()
   const handleWithoutPrefix = handle.replace(/^dtfva-/, '')
   const title = String(product.title ?? '').toLowerCase()

@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -234,6 +239,15 @@
             <span class="price">From $12.00</span>
             <p>Upload your artwork right here, pick a size, and add it to the cart — checkout is direct through Shopify.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X12">22&quot; x 12&quot; - Size: 22&quot; x 12&quot; - $12.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X24">22&quot; x 24&quot; - Size: 22&quot; x 24&quot; - $24.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X36">22&quot; x 36&quot; - Size: 22&quot; x 36&quot; - $36.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X48">22&quot; x 48&quot; - Size: 22&quot; x 48&quot; - $48.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22X60">22&quot; x 60&quot; - Size: 22&quot; x 60&quot; - $60.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_72">22&quot; x 72&quot; - Size: 22&quot; x 72&quot; - $72.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_84">22&quot; x 84&quot; - Size: 22&quot; x 84&quot; - $84.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_96">22&quot; x 96&quot; - Size: 22&quot; x 96&quot; - $96.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_108">22&quot; x 108&quot; - Size: 22&quot; x 108&quot; - $108.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_120">22&quot; x 120&quot; - Size: 22&quot; x 120&quot; - $120.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_132">22&quot; x 132&quot; - Size: 22&quot; x 132&quot; - $132.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_144">22&quot; x 144&quot; - Size: 22&quot; x 144&quot; - $144.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_156">22&quot; x 156&quot; - Size: 22&quot; x 156&quot; - $156.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_168">22&quot; x 168&quot; - Size: 22&quot; x 168&quot; - $168.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_180">22&quot; x 180&quot; - Size: 22&quot; x 180&quot; - $180.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_192">22&quot; x 192&quot; - Size: 22&quot; x 192&quot; - $192.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_204">22&quot; x 204&quot; - Size: 22&quot; x 204&quot; - $204.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_216">22&quot; x 216&quot; - Size: 22&quot; x 216&quot; - $216.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_228">22&quot; x 228&quot; - Size: 22&quot; x 228&quot; - $228.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_240">22&quot; x 240&quot; - Size: 22&quot; x 240&quot; - $240.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_252">22&quot; x 252&quot; - Size: 22&quot; x 252&quot; - $252.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_264">22&quot; x 264&quot; - Size: 22&quot; x 264&quot; - $264.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_276">22&quot; x 276&quot; - Size: 22&quot; x 276&quot; - $276.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_288">22&quot; x 288&quot; - Size: 22&quot; x 288&quot; - $288.00</option><option value="DTFVA-UV_DTF_TRANSFER_BY_SIZE-22_300">22&quot; x 300&quot; - Size: 22&quot; x 300&quot; - $300.00</option></select></label>
+            
+            <div class="pdp-qty" aria-label="Quantity">
+              <span>Quantity</span>
+              <div class="pdp-qty-stepper">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" id="pdp-qty" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
             
             <div class="pdp-upload" id="pdp-upload">
               <input type="file" id="pdp-artwork-input" class="pdp-upload-input" accept=".png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript">
@@ -550,13 +564,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -566,6 +582,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -234,6 +239,7 @@
             <span class="price">From $29.00</span>
             <p>Send the artwork and details — the shop will quote the right setup and turnaround.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-S_BLACK">S / Black - Size: S · Color: Black - $29.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-S_OFF_WHITE">S / Off White - Size: S · Color: Off White - $29.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-S_WHITE">S / White - Size: S · Color: White - $29.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-S_OFF_BLACK">S / Off Black - Size: S · Color: Off Black - $29.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-M_BLACK">M / Black - Size: M · Color: Black - $30.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-M_OFF_WHITE">M / Off White - Size: M · Color: Off White - $30.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-M_WHITE">M / White - Size: M · Color: White - $30.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-M_OFF_BLACK">M / Off Black - Size: M · Color: Off Black - $30.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-L_BLACK">L / Black - Size: L · Color: Black - $31.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-L_OFF_WHITE">L / Off White - Size: L · Color: Off White - $31.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-L_WHITE">L / White - Size: L · Color: White - $31.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-L_OFF_BLACK">L / Off Black - Size: L · Color: Off Black - $31.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-XL_BLACK">XL / Black - Size: XL · Color: Black - $32.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-XL_OFF_WHITE">XL / Off White - Size: XL · Color: Off White - $32.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-XL_WHITE">XL / White - Size: XL · Color: White - $32.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-XL_OFF_BLACK">XL / Off Black - Size: XL · Color: Off Black - $32.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-2XL_BLACK">2XL / Black - Size: 2XL · Color: Black - $33.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-2XL_OFF_WHITE">2XL / Off White - Size: 2XL · Color: Off White - $33.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-2XL_WHITE">2XL / White - Size: 2XL · Color: White - $33.00</option><option value="DTFVA-CUSTOM_SHAKA_WEAR_DROP_SHOULDER_CROPPED_T_SHIRT_PREMIUM_BLANK-2XL_OFF_BLACK">2XL / Off Black - Size: 2XL · Color: Off Black - $33.00</option></select></label>
+            
             
             <a class="quote-button feature-cta" href="/contact?product=dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank">Request a quote</a>
             <div class="approval-list">
@@ -515,13 +521,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -531,6 +539,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

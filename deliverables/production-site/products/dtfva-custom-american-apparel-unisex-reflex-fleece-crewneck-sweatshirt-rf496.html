@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -234,6 +239,7 @@
             <span class="price">From $34.00</span>
             <p>Send the artwork and details — the shop will quote the right setup and turnaround.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_WHITE">XS / White - Size: XS · Color: White - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_BLACK">XS / Black - Size: XS · Color: Black - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_ARCTIC">XS / Arctic - Size: XS · Color: Arctic - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_ASPHALT">XS / Asphalt - Size: XS · Color: Asphalt - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_BLUSH">XS / Blush - Size: XS · Color: Blush - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_BONE">XS / Bone - Size: XS · Color: Bone - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_BROWN">XS / Brown - Size: XS · Color: Brown - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_HEATHER_GREY">XS / Heather Grey - Size: XS · Color: Heather Grey - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_LIEUTENANT">XS / Lieutenant - Size: XS · Color: Lieutenant - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-XS_SEA_BLUE">XS / Sea Blue - Size: XS · Color: Sea Blue - $34.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_WHITE">S / White - Size: S · Color: White - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_BLACK">S / Black - Size: S · Color: Black - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_ARCTIC">S / Arctic - Size: S · Color: Arctic - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_ASPHALT">S / Asphalt - Size: S · Color: Asphalt - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_BLUSH">S / Blush - Size: S · Color: Blush - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_BONE">S / Bone - Size: S · Color: Bone - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_BROWN">S / Brown - Size: S · Color: Brown - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_HEATHER_GREY">S / Heather Grey - Size: S · Color: Heather Grey - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_LIEUTENANT">S / Lieutenant - Size: S · Color: Lieutenant - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-S_SEA_BLUE">S / Sea Blue - Size: S · Color: Sea Blue - $35.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_WHITE">M / White - Size: M · Color: White - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_BLACK">M / Black - Size: M · Color: Black - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_ARCTIC">M / Arctic - Size: M · Color: Arctic - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_ASPHALT">M / Asphalt - Size: M · Color: Asphalt - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_BLUSH">M / Blush - Size: M · Color: Blush - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_BONE">M / Bone - Size: M · Color: Bone - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_BROWN">M / Brown - Size: M · Color: Brown - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_HEATHER_GREY">M / Heather Grey - Size: M · Color: Heather Grey - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_LIEUTENANT">M / Lieutenant - Size: M · Color: Lieutenant - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-M_SEA_BLUE">M / Sea Blue - Size: M · Color: Sea Blue - $36.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-L_WHITE">L / White - Size: L · Color: White - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-L_BLACK">L / Black - Size: L · Color: Black - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-L_ARCTIC">L / Arctic - Size: L · Color: Arctic - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-L_ASPHALT">L / Asphalt - Size: L · Color: Asphalt - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-L_BLUSH">L / Blush - Size: L · Color: Blush - $37.00</option><option value="DTFVA-CUSTOM_AMERICAN_APPAREL_UNISEX_REFLEX_FLEECE_CREWNECK_SWEATSHIRT_RF496-L_BONE">L / Bone - Size: L · Color: Bone - $37.00</option></select></label>
+            
             
             <a class="quote-button feature-cta" href="/contact?product=dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496">Request a quote</a>
             <div class="approval-list">
@@ -611,13 +617,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -627,6 +635,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

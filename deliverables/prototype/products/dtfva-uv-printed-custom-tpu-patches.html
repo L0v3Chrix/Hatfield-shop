@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -214,28 +219,42 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/shop">Shop</a><span>/</span><span>UV-Printed Custom TPU Patches</span></nav>
         <section class="product-hero">
           <div>
-            <p class="eyebrow">Gang sheet builders · Logan, WV production</p>
+            <p class="eyebrow">UV DTF &amp; stickers · Logan, WV production</p>
             <h1>UV-Printed Custom TPU Patches</h1>
             <p class="lede">UV-Printed Custom TPU Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
             <p class="offer-summary">Priced by size and color — from $0.65 for a 1&quot; patch to $23.40 for 6&quot; x 6&quot;. All 30 combinations are listed below.</p>
             <div class="status-strip" aria-label="Ordering path">
-              <span class="route-chip route-builder">Customize in builder</span>
+              <span class="route-chip route-order-online">Order online</span>
               <span>From $0.65</span>
               <span>30 options</span>
               <span>Gang Sheet</span>
             </div>
             <div class="hero-actions">
-              <a class="btn primary" href="/gang-sheet-builder">Open builder</a>
+              <a class="btn primary" href="#variants">Choose options</a>
               <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
             </div>
           </div>
           <div class="purchase-panel">
             <img src="/assets/shopify-images/custom-patches-hero.webp" width="900" height="900" alt="Custom patch samples for apparel and merchandise" loading="eager" decoding="async">
             <span class="price">From $0.65</span>
-            <p>Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.</p>
+            <p>Upload your artwork right here, pick a size, and add it to the cart — checkout is direct through Shopify.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_WHITE">1&quot;x1&quot; / White - Sizes: 1&quot;x1&quot; · Color: White - $0.65</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_SILVER">1&quot;x1&quot; / Silver - Sizes: 1&quot;x1&quot; · Color: Silver - $0.65</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GOLD">1&quot;x1&quot; / Gold - Sizes: 1&quot;x1&quot; · Color: Gold - $0.65</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_SILVER">1&quot;x1&quot; / Glittery Silver - Sizes: 1&quot;x1&quot; · Color: Glittery Silver - $0.65</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_GOLD">1&quot;x1&quot; / Glittery Gold - Sizes: 1&quot;x1&quot; · Color: Glittery Gold - $0.65</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_WHITE">2&quot;x2&quot; / White - Sizes: 2&quot;x2&quot; · Color: White - $2.60</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_SILVER">2&quot;x2&quot; / Silver - Sizes: 2&quot;x2&quot; · Color: Silver - $2.60</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GOLD">2&quot;x2&quot; / Gold - Sizes: 2&quot;x2&quot; · Color: Gold - $2.60</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_SILVER">2&quot;x2&quot; / Glittery Silver - Sizes: 2&quot;x2&quot; · Color: Glittery Silver - $2.60</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_GOLD">2&quot;x2&quot; / Glittery Gold - Sizes: 2&quot;x2&quot; · Color: Glittery Gold - $2.60</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_WHITE">3&quot;x3&quot; / White - Sizes: 3&quot;x3&quot; · Color: White - $5.85</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_SILVER">3&quot;x3&quot; / Silver - Sizes: 3&quot;x3&quot; · Color: Silver - $5.85</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GOLD">3&quot;x3&quot; / Gold - Sizes: 3&quot;x3&quot; · Color: Gold - $5.85</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_SILVER">3&quot;x3&quot; / Glittery Silver - Sizes: 3&quot;x3&quot; · Color: Glittery Silver - $5.85</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_GOLD">3&quot;x3&quot; / Glittery Gold - Sizes: 3&quot;x3&quot; · Color: Glittery Gold - $5.85</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_WHITE">4&quot;x4&quot; / White - Sizes: 4&quot;x4&quot; · Color: White - $10.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_SILVER">4&quot;x4&quot; / Silver - Sizes: 4&quot;x4&quot; · Color: Silver - $10.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GOLD">4&quot;x4&quot; / Gold - Sizes: 4&quot;x4&quot; · Color: Gold - $10.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_SILVER">4&quot;x4&quot; / Glittery Silver - Sizes: 4&quot;x4&quot; · Color: Glittery Silver - $10.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_GOLD">4&quot;x4&quot; / Glittery Gold - Sizes: 4&quot;x4&quot; · Color: Glittery Gold - $10.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_WHITE">5&quot;x5&quot; / White - Sizes: 5&quot;x5&quot; · Color: White - $16.25</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_SILVER">5&quot;x5&quot; / Silver - Sizes: 5&quot;x5&quot; · Color: Silver - $16.25</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GOLD">5&quot;x5&quot; / Gold - Sizes: 5&quot;x5&quot; · Color: Gold - $16.25</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_SILVER">5&quot;x5&quot; / Glittery Silver - Sizes: 5&quot;x5&quot; · Color: Glittery Silver - $16.25</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_GOLD">5&quot;x5&quot; / Glittery Gold - Sizes: 5&quot;x5&quot; · Color: Glittery Gold - $16.25</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_WHITE">6&quot;x6&quot; / White - Sizes: 6&quot;x6&quot; · Color: White - $23.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_SILVER">6&quot;x6&quot; / Silver - Sizes: 6&quot;x6&quot; · Color: Silver - $23.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GOLD">6&quot;x6&quot; / Gold - Sizes: 6&quot;x6&quot; · Color: Gold - $23.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_SILVER">6&quot;x6&quot; / Glittery Silver - Sizes: 6&quot;x6&quot; · Color: Glittery Silver - $23.40</option><option value="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_GOLD">6&quot;x6&quot; / Glittery Gold - Sizes: 6&quot;x6&quot; · Color: Glittery Gold - $23.40</option></select></label>
             
-            <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
+            <div class="pdp-qty" aria-label="Quantity">
+              <span>Quantity</span>
+              <div class="pdp-qty-stepper">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" id="pdp-qty" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            
+            <div class="pdp-upload" id="pdp-upload">
+              <input type="file" id="pdp-artwork-input" class="pdp-upload-input" accept=".png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript">
+              <button type="button" class="pdp-upload-btn" id="pdp-upload-btn"><span aria-hidden="true">&#128206;</span> Upload your artwork</button>
+              <p class="pdp-upload-status" id="pdp-upload-status">PNG, JPG, PDF, AI, or EPS &middot; up to 50MB &middot; attaches to your order</p>
+            </div>
+            <button class="buy-button feature-cta" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_WHITE" data-name="UV-Printed Custom TPU Patches" data-variant="1&quot;x1&quot; / White" data-price="0.65" data-merchandise-id="gid://shopify/ProductVariant/45145032753334" data-checkout-ready="true" data-requires-artwork="true">Add selected option</button>
             <div class="approval-list">
               <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
@@ -275,181 +294,181 @@
               <td>1&quot;x1&quot; / White</td>
               <td>Sizes: 1&quot;x1&quot; · Color: White</td>
               <td>$0.65</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_WHITE" data-name="UV-Printed Custom TPU Patches" data-variant="1&quot;x1&quot; / White" data-price="0.65" data-merchandise-id="gid://shopify/ProductVariant/45145032753334" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>1&quot;x1&quot; / Silver</td>
               <td>Sizes: 1&quot;x1&quot; · Color: Silver</td>
               <td>$0.65</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="1&quot;x1&quot; / Silver" data-price="0.65" data-merchandise-id="gid://shopify/ProductVariant/45145032786102" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>1&quot;x1&quot; / Gold</td>
               <td>Sizes: 1&quot;x1&quot; · Color: Gold</td>
               <td>$0.65</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="1&quot;x1&quot; / Gold" data-price="0.65" data-merchandise-id="gid://shopify/ProductVariant/45145032818870" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>1&quot;x1&quot; / Glittery Silver</td>
               <td>Sizes: 1&quot;x1&quot; · Color: Glittery Silver</td>
               <td>$0.65</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="1&quot;x1&quot; / Glittery Silver" data-price="0.65" data-merchandise-id="gid://shopify/ProductVariant/45145032851638" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>1&quot;x1&quot; / Glittery Gold</td>
               <td>Sizes: 1&quot;x1&quot; · Color: Glittery Gold</td>
               <td>$0.65</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-1_X1_GLITTERY_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="1&quot;x1&quot; / Glittery Gold" data-price="0.65" data-merchandise-id="gid://shopify/ProductVariant/45145032884406" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>2&quot;x2&quot; / White</td>
               <td>Sizes: 2&quot;x2&quot; · Color: White</td>
               <td>$2.60</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_WHITE" data-name="UV-Printed Custom TPU Patches" data-variant="2&quot;x2&quot; / White" data-price="2.60" data-merchandise-id="gid://shopify/ProductVariant/45145032917174" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>2&quot;x2&quot; / Silver</td>
               <td>Sizes: 2&quot;x2&quot; · Color: Silver</td>
               <td>$2.60</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="2&quot;x2&quot; / Silver" data-price="2.60" data-merchandise-id="gid://shopify/ProductVariant/45145032949942" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>2&quot;x2&quot; / Gold</td>
               <td>Sizes: 2&quot;x2&quot; · Color: Gold</td>
               <td>$2.60</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="2&quot;x2&quot; / Gold" data-price="2.60" data-merchandise-id="gid://shopify/ProductVariant/45145032982710" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>2&quot;x2&quot; / Glittery Silver</td>
               <td>Sizes: 2&quot;x2&quot; · Color: Glittery Silver</td>
               <td>$2.60</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="2&quot;x2&quot; / Glittery Silver" data-price="2.60" data-merchandise-id="gid://shopify/ProductVariant/45145033015478" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>2&quot;x2&quot; / Glittery Gold</td>
               <td>Sizes: 2&quot;x2&quot; · Color: Glittery Gold</td>
               <td>$2.60</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-2_X2_GLITTERY_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="2&quot;x2&quot; / Glittery Gold" data-price="2.60" data-merchandise-id="gid://shopify/ProductVariant/45145033048246" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>3&quot;x3&quot; / White</td>
               <td>Sizes: 3&quot;x3&quot; · Color: White</td>
               <td>$5.85</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_WHITE" data-name="UV-Printed Custom TPU Patches" data-variant="3&quot;x3&quot; / White" data-price="5.85" data-merchandise-id="gid://shopify/ProductVariant/45145033081014" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>3&quot;x3&quot; / Silver</td>
               <td>Sizes: 3&quot;x3&quot; · Color: Silver</td>
               <td>$5.85</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="3&quot;x3&quot; / Silver" data-price="5.85" data-merchandise-id="gid://shopify/ProductVariant/45145033113782" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>3&quot;x3&quot; / Gold</td>
               <td>Sizes: 3&quot;x3&quot; · Color: Gold</td>
               <td>$5.85</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="3&quot;x3&quot; / Gold" data-price="5.85" data-merchandise-id="gid://shopify/ProductVariant/45145033146550" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>3&quot;x3&quot; / Glittery Silver</td>
               <td>Sizes: 3&quot;x3&quot; · Color: Glittery Silver</td>
               <td>$5.85</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="3&quot;x3&quot; / Glittery Silver" data-price="5.85" data-merchandise-id="gid://shopify/ProductVariant/45145033179318" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>3&quot;x3&quot; / Glittery Gold</td>
               <td>Sizes: 3&quot;x3&quot; · Color: Glittery Gold</td>
               <td>$5.85</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-3_X3_GLITTERY_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="3&quot;x3&quot; / Glittery Gold" data-price="5.85" data-merchandise-id="gid://shopify/ProductVariant/45145033212086" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>4&quot;x4&quot; / White</td>
               <td>Sizes: 4&quot;x4&quot; · Color: White</td>
               <td>$10.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_WHITE" data-name="UV-Printed Custom TPU Patches" data-variant="4&quot;x4&quot; / White" data-price="10.40" data-merchandise-id="gid://shopify/ProductVariant/45145033244854" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>4&quot;x4&quot; / Silver</td>
               <td>Sizes: 4&quot;x4&quot; · Color: Silver</td>
               <td>$10.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="4&quot;x4&quot; / Silver" data-price="10.40" data-merchandise-id="gid://shopify/ProductVariant/45145033277622" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>4&quot;x4&quot; / Gold</td>
               <td>Sizes: 4&quot;x4&quot; · Color: Gold</td>
               <td>$10.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="4&quot;x4&quot; / Gold" data-price="10.40" data-merchandise-id="gid://shopify/ProductVariant/45145033310390" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>4&quot;x4&quot; / Glittery Silver</td>
               <td>Sizes: 4&quot;x4&quot; · Color: Glittery Silver</td>
               <td>$10.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="4&quot;x4&quot; / Glittery Silver" data-price="10.40" data-merchandise-id="gid://shopify/ProductVariant/45145033343158" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>4&quot;x4&quot; / Glittery Gold</td>
               <td>Sizes: 4&quot;x4&quot; · Color: Glittery Gold</td>
               <td>$10.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-4_X4_GLITTERY_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="4&quot;x4&quot; / Glittery Gold" data-price="10.40" data-merchandise-id="gid://shopify/ProductVariant/45145033375926" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>5&quot;x5&quot; / White</td>
               <td>Sizes: 5&quot;x5&quot; · Color: White</td>
               <td>$16.25</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_WHITE" data-name="UV-Printed Custom TPU Patches" data-variant="5&quot;x5&quot; / White" data-price="16.25" data-merchandise-id="gid://shopify/ProductVariant/45145033408694" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>5&quot;x5&quot; / Silver</td>
               <td>Sizes: 5&quot;x5&quot; · Color: Silver</td>
               <td>$16.25</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="5&quot;x5&quot; / Silver" data-price="16.25" data-merchandise-id="gid://shopify/ProductVariant/45145033441462" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>5&quot;x5&quot; / Gold</td>
               <td>Sizes: 5&quot;x5&quot; · Color: Gold</td>
               <td>$16.25</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="5&quot;x5&quot; / Gold" data-price="16.25" data-merchandise-id="gid://shopify/ProductVariant/45145033474230" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>5&quot;x5&quot; / Glittery Silver</td>
               <td>Sizes: 5&quot;x5&quot; · Color: Glittery Silver</td>
               <td>$16.25</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="5&quot;x5&quot; / Glittery Silver" data-price="16.25" data-merchandise-id="gid://shopify/ProductVariant/45145033506998" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>5&quot;x5&quot; / Glittery Gold</td>
               <td>Sizes: 5&quot;x5&quot; · Color: Glittery Gold</td>
               <td>$16.25</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-5_X5_GLITTERY_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="5&quot;x5&quot; / Glittery Gold" data-price="16.25" data-merchandise-id="gid://shopify/ProductVariant/45145033539766" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>6&quot;x6&quot; / White</td>
               <td>Sizes: 6&quot;x6&quot; · Color: White</td>
               <td>$23.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_WHITE" data-name="UV-Printed Custom TPU Patches" data-variant="6&quot;x6&quot; / White" data-price="23.40" data-merchandise-id="gid://shopify/ProductVariant/45145033572534" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>6&quot;x6&quot; / Silver</td>
               <td>Sizes: 6&quot;x6&quot; · Color: Silver</td>
               <td>$23.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="6&quot;x6&quot; / Silver" data-price="23.40" data-merchandise-id="gid://shopify/ProductVariant/45145033605302" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>6&quot;x6&quot; / Gold</td>
               <td>Sizes: 6&quot;x6&quot; · Color: Gold</td>
               <td>$23.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="6&quot;x6&quot; / Gold" data-price="23.40" data-merchandise-id="gid://shopify/ProductVariant/45145033638070" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>6&quot;x6&quot; / Glittery Silver</td>
               <td>Sizes: 6&quot;x6&quot; · Color: Glittery Silver</td>
               <td>$23.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_SILVER" data-name="UV-Printed Custom TPU Patches" data-variant="6&quot;x6&quot; / Glittery Silver" data-price="23.40" data-merchandise-id="gid://shopify/ProductVariant/45145033670838" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>6&quot;x6&quot; / Glittery Gold</td>
               <td>Sizes: 6&quot;x6&quot; · Color: Glittery Gold</td>
               <td>$23.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-uv-printed-custom-tpu-patches" data-sku="DTFVA-UV_PRINTED_CUSTOM_TPU_PATCHES-6_X6_GLITTERY_GOLD" data-name="UV-Printed Custom TPU Patches" data-variant="6&quot;x6&quot; / Glittery Gold" data-price="23.40" data-merchandise-id="gid://shopify/ProductVariant/45145033703606" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr></tbody></table></div>
         </section>
       </main>
@@ -575,13 +594,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -591,6 +612,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -214,28 +219,42 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/shop">Shop</a><span>/</span><span>Custom Glitter DTF Transfer by Size</span></nav>
         <section class="product-hero">
           <div>
-            <p class="eyebrow">Gang sheet builders · Logan, WV production</p>
+            <p class="eyebrow">Transfers by size · Logan, WV production</p>
             <h1>Custom Glitter DTF Transfer by Size</h1>
             <p class="lede">Custom Glitter DTF Transfer by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
             <p class="offer-summary">Pricing: from $0.40 (Size 2&quot; x 2&quot;) to $13.40 (Size 12&quot; x 17&quot;) — 14 options, every price shown in the table below.</p>
             <div class="status-strip" aria-label="Ordering path">
-              <span class="route-chip route-builder">Customize in builder</span>
+              <span class="route-chip route-order-online">Order online</span>
               <span>From $0.40</span>
               <span>14 options</span>
               <span>Custom Print Product</span>
             </div>
             <div class="hero-actions">
-              <a class="btn primary" href="/gang-sheet-builder">Open builder</a>
+              <a class="btn primary" href="#variants">Choose options</a>
               <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
             </div>
           </div>
           <div class="purchase-panel">
             <img src="/assets/shopify-images/custom-glitter-dtf-transfer-by-size.png" width="900" height="900" alt="Custom glitter DTF transfer by size sample" loading="eager" decoding="async">
             <span class="price">From $0.40</span>
-            <p>Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.</p>
+            <p>Upload your artwork right here, pick a size, and add it to the cart — checkout is direct through Shopify.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-2_X_2">2&quot; x 2&quot; - Size: 2&quot; x 2&quot; - $0.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-3_X_3">3&quot; x 3&quot; - Size: 3&quot; x 3&quot; - $1.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-4_X_4">4&quot; x 4&quot; - Size: 4&quot; x 4&quot; - $1.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-5_X_5">5&quot; x 5&quot; - Size: 5&quot; x 5&quot; - $2.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-6_X_6">6&quot; x 6&quot; - Size: 6&quot; x 6&quot; - $3.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-7_X_7">7&quot; x 7&quot; - Size: 7&quot; x 7&quot; - $4.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-8_X_8">8&quot; x 8&quot; - Size: 8&quot; x 8&quot; - $5.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-9_X_9">9&quot; x 9&quot; - Size: 9&quot; x 9&quot; - $6.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-9_X_11">9&quot; x 11&quot; - Size: 9&quot; x 11&quot; - $7.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-10_X_10">10&quot; x 10&quot; - Size: 10&quot; x 10&quot; - $7.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-11_X_11">11&quot; x 11&quot; - Size: 11&quot; x 11&quot; - $7.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-11_X_14">11&quot; x 14&quot; - Size: 11&quot; x 14&quot; - $9.90</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-12_X_14">12&quot; x 14&quot; - Size: 12&quot; x 14&quot; - $10.40</option><option value="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-12_X_17">12&quot; x 17&quot; - Size: 12&quot; x 17&quot; - $13.40</option></select></label>
             
-            <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
+            <div class="pdp-qty" aria-label="Quantity">
+              <span>Quantity</span>
+              <div class="pdp-qty-stepper">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" id="pdp-qty" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            
+            <div class="pdp-upload" id="pdp-upload">
+              <input type="file" id="pdp-artwork-input" class="pdp-upload-input" accept=".png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript">
+              <button type="button" class="pdp-upload-btn" id="pdp-upload-btn"><span aria-hidden="true">&#128206;</span> Upload your artwork</button>
+              <p class="pdp-upload-status" id="pdp-upload-status">PNG, JPG, PDF, AI, or EPS &middot; up to 50MB &middot; attaches to your order</p>
+            </div>
+            <button class="buy-button feature-cta" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-2_X_2" data-name="Custom Glitter DTF Transfer by Size" data-variant="2&quot; x 2&quot;" data-price="0.40" data-merchandise-id="gid://shopify/ProductVariant/45145055101110" data-checkout-ready="true" data-requires-artwork="true">Add selected option</button>
             <div class="approval-list">
               <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
@@ -275,85 +294,85 @@
               <td>2&quot; x 2&quot;</td>
               <td>Size: 2&quot; x 2&quot;</td>
               <td>$0.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-2_X_2" data-name="Custom Glitter DTF Transfer by Size" data-variant="2&quot; x 2&quot;" data-price="0.40" data-merchandise-id="gid://shopify/ProductVariant/45145055101110" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>3&quot; x 3&quot;</td>
               <td>Size: 3&quot; x 3&quot;</td>
               <td>$1.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-3_X_3" data-name="Custom Glitter DTF Transfer by Size" data-variant="3&quot; x 3&quot;" data-price="1.40" data-merchandise-id="gid://shopify/ProductVariant/45145055133878" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>4&quot; x 4&quot;</td>
               <td>Size: 4&quot; x 4&quot;</td>
               <td>$1.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-4_X_4" data-name="Custom Glitter DTF Transfer by Size" data-variant="4&quot; x 4&quot;" data-price="1.90" data-merchandise-id="gid://shopify/ProductVariant/45145055166646" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>5&quot; x 5&quot;</td>
               <td>Size: 5&quot; x 5&quot;</td>
               <td>$2.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-5_X_5" data-name="Custom Glitter DTF Transfer by Size" data-variant="5&quot; x 5&quot;" data-price="2.90" data-merchandise-id="gid://shopify/ProductVariant/45145055199414" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>6&quot; x 6&quot;</td>
               <td>Size: 6&quot; x 6&quot;</td>
               <td>$3.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-6_X_6" data-name="Custom Glitter DTF Transfer by Size" data-variant="6&quot; x 6&quot;" data-price="3.90" data-merchandise-id="gid://shopify/ProductVariant/45145055232182" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>7&quot; x 7&quot;</td>
               <td>Size: 7&quot; x 7&quot;</td>
               <td>$4.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-7_X_7" data-name="Custom Glitter DTF Transfer by Size" data-variant="7&quot; x 7&quot;" data-price="4.90" data-merchandise-id="gid://shopify/ProductVariant/45145055264950" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>8&quot; x 8&quot;</td>
               <td>Size: 8&quot; x 8&quot;</td>
               <td>$5.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-8_X_8" data-name="Custom Glitter DTF Transfer by Size" data-variant="8&quot; x 8&quot;" data-price="5.90" data-merchandise-id="gid://shopify/ProductVariant/45145055297718" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>9&quot; x 9&quot;</td>
               <td>Size: 9&quot; x 9&quot;</td>
               <td>$6.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-9_X_9" data-name="Custom Glitter DTF Transfer by Size" data-variant="9&quot; x 9&quot;" data-price="6.90" data-merchandise-id="gid://shopify/ProductVariant/45145055330486" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>9&quot; x 11&quot;</td>
               <td>Size: 9&quot; x 11&quot;</td>
               <td>$7.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-9_X_11" data-name="Custom Glitter DTF Transfer by Size" data-variant="9&quot; x 11&quot;" data-price="7.40" data-merchandise-id="gid://shopify/ProductVariant/45145055363254" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>10&quot; x 10&quot;</td>
               <td>Size: 10&quot; x 10&quot;</td>
               <td>$7.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-10_X_10" data-name="Custom Glitter DTF Transfer by Size" data-variant="10&quot; x 10&quot;" data-price="7.40" data-merchandise-id="gid://shopify/ProductVariant/45145055396022" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>11&quot; x 11&quot;</td>
               <td>Size: 11&quot; x 11&quot;</td>
               <td>$7.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-11_X_11" data-name="Custom Glitter DTF Transfer by Size" data-variant="11&quot; x 11&quot;" data-price="7.90" data-merchandise-id="gid://shopify/ProductVariant/45145055428790" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>11&quot; x 14&quot;</td>
               <td>Size: 11&quot; x 14&quot;</td>
               <td>$9.90</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-11_X_14" data-name="Custom Glitter DTF Transfer by Size" data-variant="11&quot; x 14&quot;" data-price="9.90" data-merchandise-id="gid://shopify/ProductVariant/45145055461558" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>12&quot; x 14&quot;</td>
               <td>Size: 12&quot; x 14&quot;</td>
               <td>$10.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-12_X_14" data-name="Custom Glitter DTF Transfer by Size" data-variant="12&quot; x 14&quot;" data-price="10.40" data-merchandise-id="gid://shopify/ProductVariant/45145055494326" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>12&quot; x 17&quot;</td>
               <td>Size: 12&quot; x 17&quot;</td>
               <td>$13.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-glitter-dtf-transfer-by-size" data-sku="DTFVA-CUSTOM_GLITTER_DTF_TRANSFER_BY_SIZE-12_X_17" data-name="Custom Glitter DTF Transfer by Size" data-variant="12&quot; x 17&quot;" data-price="13.40" data-merchandise-id="gid://shopify/ProductVariant/45145055527094" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr></tbody></table></div>
         </section>
       </main>
@@ -479,13 +498,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -495,6 +516,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

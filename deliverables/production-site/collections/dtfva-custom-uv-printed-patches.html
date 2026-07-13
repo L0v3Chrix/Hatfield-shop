@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -218,14 +223,14 @@
             <h1>Custom UV Printed Patches</h1>
             <p class="lede">Custom UV Printed Patches from Hatfield McCoy DTF, organized so customers can compare product families, materials, prices, and direct-order paths quickly.</p>
             <div class="status-strip" aria-label="Collection stats">
-              <span>8 matching products</span>
-              <span>2 product families</span>
+              <span>6 matching products</span>
+              <span>1 product family</span>
               <span>Artwork upload in cart</span>
             </div>
           </div>
           <img src="/assets/shopify-images/custom-patches-hero.webp" width="900" height="900" alt="Custom patch samples for apparel and merchandise" loading="eager" decoding="async">
         </section>
-        <section class="collection-subnav" aria-label="Collection filters"><button class="filter-tab active" type="button" data-filter="all">All <span>8</span></button><button class="filter-tab" type="button" data-filter="stickers">UV DTF &amp; stickers <span>5</span></button><button class="filter-tab" type="button" data-filter="builders">Gang sheet builders <span>3</span></button></section>
+        <section class="collection-subnav" aria-label="Collection filters"><button class="filter-tab active" type="button" data-filter="all">All <span>6</span></button><button class="filter-tab" type="button" data-filter="stickers">UV DTF &amp; stickers <span>6</span></button></section>
         <section class="link-band" aria-label="Collection links"><a href="/collections">All collections</a><a href="/shop">Shop catalog</a><a href="/guides#artwork">Artwork guide</a></section>
         <section class="product-grid filtered-grid" id="collection-grid">
           <a class="product-card commerce-card" href="/products/dtfva-america-s-250th-anniversary-patch-1-inch-circle" data-category="stickers" data-title="america’s 250th anniversary patch – 1&quot; circle custom print product dtfva-america-s-250th-anniversary-patch-1-inch-circle">
@@ -248,23 +253,13 @@
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-uv-printed-custom-tpu-patches" data-category="builders" data-title="uv-printed custom tpu patches gang sheet dtfva-uv-printed-custom-tpu-patches">
+          <a class="product-card commerce-card" href="/products/dtfva-uv-printed-custom-tpu-patches" data-category="stickers" data-title="uv-printed custom tpu patches gang sheet dtfva-uv-printed-custom-tpu-patches">
             <img src="/assets/shopify-images/custom-patches-card.webp" width="900" height="900" alt="Custom patch samples for apparel and merchandise" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">UV DTF &amp; stickers</span>
               <strong>UV-Printed Custom TPU Patches</strong>
               <p>UV-Printed Custom TPU Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $0.65</span><span class="option-count">30 options</span><span class="route-chip route-builder">Customize in builder</span></div>
-              <em>View options</em>
-            </div>
-          </a>
-          <a class="product-card commerce-card" href="/products/dtfva-22-inch-uv-dtf-sticker-sheet-builder" data-category="builders" data-title="22&quot; uv dtf sticker sheet builder gang sheet dtfva-22-inch-uv-dtf-sticker-sheet-builder">
-            <img src="/assets/shopify-images/cute-sticker-sheet-card.webp" width="900" height="900" alt="Colorful custom sticker sheet" loading="lazy" decoding="async">
-            <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>22&quot; UV DTF Sticker Sheet Builder</strong>
-              <p>22&quot; UV DTF Sticker Sheet Builder from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $11.60</span><span class="option-count">25 options</span><span class="route-chip route-builder">Customize in builder</span></div>
+              <div class="catalog-meta"><span>From $0.65</span><span class="option-count">30 options</span><span class="route-chip route-order-online">Order online</span></div>
               <em>View options</em>
             </div>
           </a>
@@ -295,16 +290,6 @@
               <strong>Custom DTF Dye-Cut Stickers</strong>
               <p>Custom DTF Dye-Cut Stickers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
               <div class="catalog-meta"><span>From $30.00</span><span class="option-count">3 options</span><span class="route-chip route-order-online">Order online</span><span class="card-note">Packs of 100</span></div>
-              <em>View options</em>
-            </div>
-          </a>
-          <a class="product-card commerce-card" href="/products/dtfva-uv-dtf-stickers" data-category="builders" data-title="22&quot; uv dtf stickers gang sheet dtfva-uv-dtf-stickers">
-            <img src="/assets/shopify-images/cute-sticker-sheet-card.webp" width="900" height="900" alt="Colorful custom sticker sheet" loading="lazy" decoding="async">
-            <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>22&quot; UV DTF Stickers</strong>
-              <p>22&quot; UV DTF Stickers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $11.00</span><span class="option-count">25 options</span><span class="route-chip route-builder">Customize in builder</span></div>
               <em>View options</em>
             </div>
           </a></section>
@@ -411,13 +396,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -427,6 +414,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

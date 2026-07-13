@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -218,14 +223,14 @@
             <h1>CADLINK Digital Factory DTF Software &amp; RIP Solutions</h1>
             <p class="lede">CADLINK Digital Factory DTF Software &amp;amp; RIP Solutions from Hatfield McCoy DTF, organized so customers can compare product families, materials, prices, and direct-order paths quickly.</p>
             <div class="status-strip" aria-label="Collection stats">
-              <span>25 matching products</span>
+              <span>20 matching products</span>
               <span>4 product families</span>
               <span>Artwork upload in cart</span>
             </div>
           </div>
           <img src="/assets/shopify-images/dtf-printer-hero.webp" width="900" height="900" alt="Wide format DTF printer printing film in the shop" loading="eager" decoding="async">
         </section>
-        <section class="collection-subnav" aria-label="Collection filters"><button class="filter-tab active" type="button" data-filter="all">All <span>25</span></button><button class="filter-tab" type="button" data-filter="builders">Gang sheet builders <span>13</span></button><button class="filter-tab" type="button" data-filter="signage">Signs &amp; graphics <span>5</span></button><button class="filter-tab" type="button" data-filter="promo">Promo &amp; gifts <span>4</span></button><button class="filter-tab" type="button" data-filter="stickers">UV DTF &amp; stickers <span>3</span></button></section>
+        <section class="collection-subnav" aria-label="Collection filters"><button class="filter-tab active" type="button" data-filter="all">All <span>20</span></button><button class="filter-tab" type="button" data-filter="transfers">Transfers by size <span>7</span></button><button class="filter-tab" type="button" data-filter="signage">Signs &amp; graphics <span>5</span></button><button class="filter-tab" type="button" data-filter="stickers">UV DTF &amp; stickers <span>4</span></button><button class="filter-tab" type="button" data-filter="promo">Promo &amp; gifts <span>4</span></button></section>
         <section class="link-band" aria-label="Collection links"><a href="/collections">All collections</a><a href="/shop">Shop catalog</a><a href="/guides#artwork">Artwork guide</a></section>
         <section class="product-grid filtered-grid" id="collection-grid">
           <a class="product-card commerce-card" href="/products/dtfva-uv-printed-custom-leather-patches" data-category="stickers" data-title="uv-printed custom leather hat patches gang sheet dtfva-uv-printed-custom-leather-patches">
@@ -238,63 +243,53 @@
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-uv-printed-custom-tpu-patches" data-category="builders" data-title="uv-printed custom tpu patches gang sheet dtfva-uv-printed-custom-tpu-patches">
+          <a class="product-card commerce-card" href="/products/dtfva-uv-printed-custom-tpu-patches" data-category="stickers" data-title="uv-printed custom tpu patches gang sheet dtfva-uv-printed-custom-tpu-patches">
             <img src="/assets/shopify-images/custom-patches-card.webp" width="900" height="900" alt="Custom patch samples for apparel and merchandise" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">UV DTF &amp; stickers</span>
               <strong>UV-Printed Custom TPU Patches</strong>
               <p>UV-Printed Custom TPU Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $0.65</span><span class="option-count">30 options</span><span class="route-chip route-builder">Customize in builder</span></div>
+              <div class="catalog-meta"><span>From $0.65</span><span class="option-count">30 options</span><span class="route-chip route-order-online">Order online</span></div>
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-custom-sublimation-transfers-by-size" data-category="builders" data-title="custom sublimation transfers by size gang sheet dtfva-custom-sublimation-transfers-by-size">
+          <a class="product-card commerce-card" href="/products/dtfva-custom-sublimation-transfers-by-size" data-category="transfers" data-title="custom sublimation transfers by size gang sheet dtfva-custom-sublimation-transfers-by-size">
             <img src="/assets/shopify-images/custom-sublimation-transfers-by-size.png" width="900" height="900" alt="Custom sublimation transfers by size sample" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">Transfers by size</span>
               <strong>Custom Sublimation Transfers by Size</strong>
               <p>Custom Sublimation Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $0.30</span><span class="option-count">22 options</span><span class="route-chip route-builder">Customize in builder</span></div>
+              <div class="catalog-meta"><span>From $0.30</span><span class="option-count">22 options</span><span class="route-chip route-order-online">Order online</span></div>
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-custom-glitter-dtf-transfer-by-size" data-category="builders" data-title="custom glitter dtf transfer by size custom print product dtfva-custom-glitter-dtf-transfer-by-size">
+          <a class="product-card commerce-card" href="/products/dtfva-custom-glitter-dtf-transfer-by-size" data-category="transfers" data-title="custom glitter dtf transfer by size custom print product dtfva-custom-glitter-dtf-transfer-by-size">
             <img src="/assets/shopify-images/custom-glitter-dtf-transfer-by-size.png" width="900" height="900" alt="Custom glitter DTF transfer by size sample" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">Transfers by size</span>
               <strong>Custom Glitter DTF Transfer by Size</strong>
               <p>Custom Glitter DTF Transfer by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $0.40</span><span class="option-count">14 options</span><span class="route-chip route-builder">Customize in builder</span><span class="card-note">Cold peel</span></div>
+              <div class="catalog-meta"><span>From $0.40</span><span class="option-count">14 options</span><span class="route-chip route-order-online">Order online</span><span class="card-note">Cold peel</span></div>
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-custom-fluorescent-dtf-transfers-by-size" data-category="builders" data-title="custom fluorescent dtf transfers by size gang sheet dtfva-custom-fluorescent-dtf-transfers-by-size">
+          <a class="product-card commerce-card" href="/products/dtfva-custom-fluorescent-dtf-transfers-by-size" data-category="transfers" data-title="custom fluorescent dtf transfers by size gang sheet dtfva-custom-fluorescent-dtf-transfers-by-size">
             <img src="/assets/shopify-images/custom-flouresent-dtf-transfers-by-size.png" width="900" height="900" alt="Custom fluorescent DTF transfers by size sample" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">Transfers by size</span>
               <strong>Custom Fluorescent DTF Transfers by Size</strong>
               <p>Custom Fluorescent DTF Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $2.10</span><span class="option-count">14 options</span><span class="route-chip route-builder">Customize in builder</span><span class="card-note">5-7 day lead time</span></div>
+              <div class="catalog-meta"><span>From $2.10</span><span class="option-count">14 options</span><span class="route-chip route-order-online">Order online</span><span class="card-note">5-7 day lead time</span></div>
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-22-inch-uv-dtf-sticker-sheet-builder" data-category="builders" data-title="22&quot; uv dtf sticker sheet builder gang sheet dtfva-22-inch-uv-dtf-sticker-sheet-builder">
-            <img src="/assets/shopify-images/cute-sticker-sheet-card.webp" width="900" height="900" alt="Colorful custom sticker sheet" loading="lazy" decoding="async">
-            <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>22&quot; UV DTF Sticker Sheet Builder</strong>
-              <p>22&quot; UV DTF Sticker Sheet Builder from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $11.60</span><span class="option-count">25 options</span><span class="route-chip route-builder">Customize in builder</span></div>
-              <em>View options</em>
-            </div>
-          </a>
-          <a class="product-card commerce-card" href="/products/dtfva-custom-dtf-gang-sheets-30-inches" data-category="builders" data-title="custom dtf gang sheets 30&quot; gang sheet dtfva-custom-dtf-gang-sheets-30-inches">
+          <a class="product-card commerce-card" href="/products/dtfva-custom-dtf-gang-sheets-30-inches" data-category="transfers" data-title="custom dtf gang sheets 30&quot; gang sheet dtfva-custom-dtf-gang-sheets-30-inches">
             <img src="/assets/shopify-images/dtf-gang-sheets-30.png" width="900" height="900" alt="DTF gang sheets 30 inch sample" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">Transfers by size</span>
               <strong>Custom DTF Gang Sheets 30&quot;</strong>
               <p>Custom DTF Gang Sheets 30&quot; from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $7.04</span><span class="option-count">21 options</span><span class="route-chip route-builder">Customize in builder</span><span class="card-note">5-7 day lead time</span></div>
+              <div class="catalog-meta"><span>From $7.04</span><span class="option-count">21 options</span><span class="route-chip route-order-online">Order online</span><span class="card-note">5-7 day lead time</span></div>
               <em>View options</em>
             </div>
           </a>
@@ -398,33 +393,23 @@
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-upload-3d-puff-transfers" data-category="builders" data-title="3d puff transfers - hatfield mccoy dtf gang sheet dtfva-upload-3d-puff-transfers">
+          <a class="product-card commerce-card" href="/products/dtfva-upload-3d-puff-transfers" data-category="transfers" data-title="3d puff transfers gang sheet dtfva-upload-3d-puff-transfers">
             <img src="/assets/shopify-images/puff-shirt-card.webp" width="900" height="900" alt="Raised puff transfer on apparel" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>3D Puff Transfers - Hatfield McCoy DTF</strong>
-              <p>3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $13.99</span><span class="option-count">14 options</span><span class="route-chip route-builder">Customize in builder</span></div>
+              <span class="kicker">Transfers by size</span>
+              <strong>3D Puff Transfers</strong>
+              <p>3D Puff Transfers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
+              <div class="catalog-meta"><span>From $13.99</span><span class="option-count">14 options</span><span class="route-chip route-order-online">Order online</span></div>
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-3d-puff-transfers" data-category="builders" data-title="3d puff transfers builder gang sheet dtfva-3d-puff-transfers">
-            <img src="/assets/shopify-images/puff-shirt2.png" width="900" height="900" alt="3D puff transfer shirt sample" loading="lazy" decoding="async">
-            <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>3D Puff Transfers Builder</strong>
-              <p>3D Puff Transfers Builder from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $13.99</span><span class="option-count">14 options</span><span class="route-chip route-builder">Customize in builder</span></div>
-              <em>View options</em>
-            </div>
-          </a>
-          <a class="product-card commerce-card" href="/products/dtfva-custom-dtf-transfers-by-size-virginia" data-category="builders" data-title="custom dtf transfers by size gang sheet dtfva-custom-dtf-transfers-by-size-virginia">
+          <a class="product-card commerce-card" href="/products/dtfva-custom-dtf-transfers-by-size-virginia" data-category="transfers" data-title="custom dtf transfers by size gang sheet dtfva-custom-dtf-transfers-by-size-virginia">
             <img src="/assets/shopify-images/custom-dtf-transfers-by-size.png" width="900" height="900" alt="Custom DTF transfers by size sample" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">Transfers by size</span>
               <strong>Custom DTF Transfers by Size</strong>
               <p>Custom DTF Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $0.40</span><span class="option-count">177 options</span><span class="route-chip route-builder">Customize in builder</span></div>
+              <div class="catalog-meta"><span>From $0.40</span><span class="option-count">177 options</span><span class="route-chip route-order-online">Order online</span></div>
               <em>View options</em>
             </div>
           </a>
@@ -438,43 +423,13 @@
               <em>View options</em>
             </div>
           </a>
-          <a class="product-card commerce-card" href="/products/dtfva-glitter-dtf-gang-sheet" data-category="builders" data-title="glitter dtf gang sheet 22&quot; gang sheet dtfva-glitter-dtf-gang-sheet">
-            <img src="/assets/shopify-images/gen-glitter-film-sheet-card.webp" width="900" height="900" alt="Glitter transfer sheet close up with sparkling flake" loading="lazy" decoding="async">
-            <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>Glitter DTF Gang Sheet 22&quot;</strong>
-              <p>Glitter DTF Gang Sheet 22&quot; from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $11.00</span><span class="option-count">16 options</span><span class="route-chip route-builder">Customize in builder</span><span class="card-note">Cold peel</span></div>
-              <em>View options</em>
-            </div>
-          </a>
-          <a class="product-card commerce-card" href="/products/dtfva-sublimation-gang-sheets-bulk-printing" data-category="builders" data-title="22&quot; sublimation gang sheets gang sheet dtfva-sublimation-gang-sheets-bulk-printing">
+          <a class="product-card commerce-card" href="/products/dtfva-sublimation-gang-sheets-bulk-printing" data-category="transfers" data-title="22&quot; sublimation gang sheets gang sheet dtfva-sublimation-gang-sheets-bulk-printing">
             <img src="/assets/shopify-images/42-and-22-sublimation-gangsheet.png" width="900" height="900" alt="42 and 22 inch sublimation gang sheet sample" loading="lazy" decoding="async">
             <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
+              <span class="kicker">Transfers by size</span>
               <strong>22&quot; Sublimation Gang Sheets</strong>
               <p>22&quot; Sublimation Gang Sheets from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $7.50</span><span class="option-count">9 options</span><span class="route-chip route-builder">Customize in builder</span></div>
-              <em>View options</em>
-            </div>
-          </a>
-          <a class="product-card commerce-card" href="/products/dtfva-fluorescent-dtf-printing-bold-bright-stunning" data-category="builders" data-title="fluorescent dtf printing - bold, bright, and stunning gang sheet dtfva-fluorescent-dtf-printing-bold-bright-stunning">
-            <img src="/assets/shopify-images/fluorescent-dtf-printing-bold-bright-stunning.png" width="900" height="900" alt="Fluorescent DTF printing bold bright and stunning sample" loading="lazy" decoding="async">
-            <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>Fluorescent DTF Printing - Bold, Bright, and Stunning</strong>
-              <p>Fluorescent DTF Printing - Bold, Bright, and Stunning from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $8.00</span><span class="option-count">8 options</span><span class="route-chip route-builder">Customize in builder</span></div>
-              <em>View options</em>
-            </div>
-          </a>
-          <a class="product-card commerce-card" href="/products/dtfva-uv-dtf-stickers" data-category="builders" data-title="22&quot; uv dtf stickers gang sheet dtfva-uv-dtf-stickers">
-            <img src="/assets/shopify-images/cute-sticker-sheet-card.webp" width="900" height="900" alt="Colorful custom sticker sheet" loading="lazy" decoding="async">
-            <div class="card-copy">
-              <span class="kicker">Gang sheet builders</span>
-              <strong>22&quot; UV DTF Stickers</strong>
-              <p>22&quot; UV DTF Stickers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
-              <div class="catalog-meta"><span>From $11.00</span><span class="option-count">25 options</span><span class="route-chip route-builder">Customize in builder</span></div>
+              <div class="catalog-meta"><span>From $7.50</span><span class="option-count">9 options</span><span class="route-chip route-order-online">Order online</span></div>
               <em>View options</em>
             </div>
           </a></section>
@@ -581,13 +536,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -597,6 +554,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

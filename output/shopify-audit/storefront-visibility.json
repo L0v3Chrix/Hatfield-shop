@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T21:39:16.458Z",
+  "generatedAt": "2026-07-13T22:06:16.392Z",
   "endpointHost": "zm1evm-rd.myshopify.com",
   "visibility": [
     {
@@ -163,12 +163,6 @@
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45145055592630"
-    },
-    {
-      "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145056084150"
     },
     {
       "handle": "dtfva-custom-woven-labels",
@@ -393,12 +387,6 @@
       "sampleVariant": "gid://shopify/ProductVariant/45145109037238"
     },
     {
-      "handle": "dtfva-3d-puff-transfers",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145109528758"
-    },
-    {
       "handle": "dtfva-custom-dtf-transfers-by-size-virginia",
       "visible": true,
       "availableForSale": true,
@@ -411,28 +399,10 @@
       "sampleVariant": "gid://shopify/ProductVariant/45250599485622"
     },
     {
-      "handle": "dtfva-glitter-dtf-gang-sheet",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145116278966"
-    },
-    {
       "handle": "dtfva-sublimation-gang-sheets-bulk-printing",
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45145116836022"
-    },
-    {
-      "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145117819062"
-    },
-    {
-      "handle": "dtfva-uv-dtf-stickers",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145118671030"
     },
     {
       "handle": "dtfva-professional-vector-design-services",

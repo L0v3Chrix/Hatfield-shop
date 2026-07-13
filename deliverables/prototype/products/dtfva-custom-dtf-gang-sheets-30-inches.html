@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -214,28 +219,42 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/shop">Shop</a><span>/</span><span>Custom DTF Gang Sheets 30&quot;</span></nav>
         <section class="product-hero">
           <div>
-            <p class="eyebrow">Gang sheet builders · Logan, WV production</p>
+            <p class="eyebrow">Transfers by size · Logan, WV production</p>
             <h1>Custom DTF Gang Sheets 30&quot;</h1>
             <p class="lede">Custom DTF Gang Sheets 30&quot; from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order.</p>
             <p class="offer-summary">30-inch-wide gang sheets priced by length — every length and price is in the table below. Allow 5-7 days; 30&quot; material is ordered per job.</p>
             <div class="status-strip" aria-label="Ordering path">
-              <span class="route-chip route-builder">Customize in builder</span>
+              <span class="route-chip route-order-online">Order online</span>
               <span>From $7.04</span>
               <span>21 options</span>
               <span>Gang Sheet</span>
             </div>
             <div class="hero-actions">
-              <a class="btn primary" href="/gang-sheet-builder">Open builder</a>
+              <a class="btn primary" href="#variants">Choose options</a>
               <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
             </div>
           </div>
           <div class="purchase-panel">
             <img src="/assets/shopify-images/dtf-gang-sheets-30.png" width="900" height="900" alt="DTF gang sheets 30 inch sample" loading="eager" decoding="async">
             <span class="price">From $7.04</span>
-            <p>Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.</p>
+            <p>Upload your artwork right here, pick a size, and add it to the cart — checkout is direct through Shopify.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_X12_INCHES">30.5 x12 inches - Size: 30.5 x12 inches - $7.04</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_24_INCHES">30.5 ×24 inches - Size: 30.5 ×24 inches - $15.08</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_36_INCHES">30.5 ×36 inches - Size: 30.5 ×36 inches - $23.12</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_48_INCHES">30.5 ×48 inches - Size: 30.5 ×48 inches - $31.16</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_60_INCHES">30.5 ×60 inches - Size: 30.5 ×60 inches - $39.20</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_72_INCHES">30.5 ×72 inches - Size: 30.5 ×72 inches - $47.24</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_80_INCHES">30.5 ×80 inches - Size: 30.5 ×80 inches - $52.60</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_84_INCHES">30.5 ×84 inches - Size: 30.5 ×84 inches - $55.28</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_96_INCHES">30.5 ×96 inches - Size: 30.5 ×96 inches - $63.32</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_108_INCHES">30.5 ×108 inches - Size: 30.5 ×108 inches - $71.36</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_120_INCHES">30.5 ×120 inches - Size: 30.5 ×120 inches - $79.40</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_132_INCHES">30.5 ×132 inches - Size: 30.5 ×132 inches - $87.44</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_144_INCHES">30.5 ×144 inches - Size: 30.5 ×144 inches - $95.48</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_156_INCHES">30.5 ×156 inches - Size: 30.5 ×156 inches - $103.52</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_168_INCHES">30.5 ×168 inches - Size: 30.5 ×168 inches - $111.56</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_180_INCHES">30.5 ×180 inches - Size: 30.5 ×180 inches - $119.60</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_192_INCHES">30.5 ×192 inches - Size: 30.5 ×192 inches - $127.64</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_204_INCHES">30.5 ×204 inches - Size: 30.5 ×204 inches - $135.68</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_216_INCHES">30.5 ×216 inches - Size: 30.5 ×216 inches - $143.72</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_228_INCHES">30.5 ×228 inches - Size: 30.5 ×228 inches - $151.76</option><option value="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_240_INCHES">30.5×240 inches - Size: 30.5×240 inches - $159.80</option></select></label>
             
-            <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
+            <div class="pdp-qty" aria-label="Quantity">
+              <span>Quantity</span>
+              <div class="pdp-qty-stepper">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" id="pdp-qty" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            
+            <div class="pdp-upload" id="pdp-upload">
+              <input type="file" id="pdp-artwork-input" class="pdp-upload-input" accept=".png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript">
+              <button type="button" class="pdp-upload-btn" id="pdp-upload-btn"><span aria-hidden="true">&#128206;</span> Upload your artwork</button>
+              <p class="pdp-upload-status" id="pdp-upload-status">PNG, JPG, PDF, AI, or EPS &middot; up to 50MB &middot; attaches to your order</p>
+            </div>
+            <button class="buy-button feature-cta" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_X12_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 x12 inches" data-price="7.04" data-merchandise-id="gid://shopify/ProductVariant/45145078956214" data-checkout-ready="true" data-requires-artwork="true">Add selected option</button>
             <div class="approval-list">
               <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
             </div>
@@ -276,127 +295,127 @@
               <td>30.5 x12 inches</td>
               <td>Size: 30.5 x12 inches</td>
               <td>$7.04</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_X12_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 x12 inches" data-price="7.04" data-merchandise-id="gid://shopify/ProductVariant/45145078956214" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×24 inches</td>
               <td>Size: 30.5 ×24 inches</td>
               <td>$15.08</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_24_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×24 inches" data-price="15.08" data-merchandise-id="gid://shopify/ProductVariant/45145078988982" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×36 inches</td>
               <td>Size: 30.5 ×36 inches</td>
               <td>$23.12</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_36_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×36 inches" data-price="23.12" data-merchandise-id="gid://shopify/ProductVariant/45145079021750" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×48 inches</td>
               <td>Size: 30.5 ×48 inches</td>
               <td>$31.16</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_48_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×48 inches" data-price="31.16" data-merchandise-id="gid://shopify/ProductVariant/45145079054518" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×60 inches</td>
               <td>Size: 30.5 ×60 inches</td>
               <td>$39.20</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_60_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×60 inches" data-price="39.20" data-merchandise-id="gid://shopify/ProductVariant/45145079087286" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×72 inches</td>
               <td>Size: 30.5 ×72 inches</td>
               <td>$47.24</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_72_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×72 inches" data-price="47.24" data-merchandise-id="gid://shopify/ProductVariant/45145079120054" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×80 inches</td>
               <td>Size: 30.5 ×80 inches</td>
               <td>$52.60</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_80_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×80 inches" data-price="52.60" data-merchandise-id="gid://shopify/ProductVariant/45145079152822" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×84 inches</td>
               <td>Size: 30.5 ×84 inches</td>
               <td>$55.28</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_84_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×84 inches" data-price="55.28" data-merchandise-id="gid://shopify/ProductVariant/45145079185590" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×96 inches</td>
               <td>Size: 30.5 ×96 inches</td>
               <td>$63.32</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_96_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×96 inches" data-price="63.32" data-merchandise-id="gid://shopify/ProductVariant/45145079218358" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×108 inches</td>
               <td>Size: 30.5 ×108 inches</td>
               <td>$71.36</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_108_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×108 inches" data-price="71.36" data-merchandise-id="gid://shopify/ProductVariant/45145079251126" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×120 inches</td>
               <td>Size: 30.5 ×120 inches</td>
               <td>$79.40</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_120_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×120 inches" data-price="79.40" data-merchandise-id="gid://shopify/ProductVariant/45145079283894" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×132 inches</td>
               <td>Size: 30.5 ×132 inches</td>
               <td>$87.44</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_132_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×132 inches" data-price="87.44" data-merchandise-id="gid://shopify/ProductVariant/45145079316662" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×144 inches</td>
               <td>Size: 30.5 ×144 inches</td>
               <td>$95.48</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_144_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×144 inches" data-price="95.48" data-merchandise-id="gid://shopify/ProductVariant/45145079349430" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×156 inches</td>
               <td>Size: 30.5 ×156 inches</td>
               <td>$103.52</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_156_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×156 inches" data-price="103.52" data-merchandise-id="gid://shopify/ProductVariant/45145079382198" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×168 inches</td>
               <td>Size: 30.5 ×168 inches</td>
               <td>$111.56</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_168_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×168 inches" data-price="111.56" data-merchandise-id="gid://shopify/ProductVariant/45145079414966" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×180 inches</td>
               <td>Size: 30.5 ×180 inches</td>
               <td>$119.60</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_180_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×180 inches" data-price="119.60" data-merchandise-id="gid://shopify/ProductVariant/45145079447734" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×192 inches</td>
               <td>Size: 30.5 ×192 inches</td>
               <td>$127.64</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_192_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×192 inches" data-price="127.64" data-merchandise-id="gid://shopify/ProductVariant/45145079480502" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×204 inches</td>
               <td>Size: 30.5 ×204 inches</td>
               <td>$135.68</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_204_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×204 inches" data-price="135.68" data-merchandise-id="gid://shopify/ProductVariant/45145079513270" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×216 inches</td>
               <td>Size: 30.5 ×216 inches</td>
               <td>$143.72</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_216_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×216 inches" data-price="143.72" data-merchandise-id="gid://shopify/ProductVariant/45145079546038" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5 ×228 inches</td>
               <td>Size: 30.5 ×228 inches</td>
               <td>$151.76</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_228_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5 ×228 inches" data-price="151.76" data-merchandise-id="gid://shopify/ProductVariant/45145079578806" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr>
             <tr>
               <td>30.5×240 inches</td>
               <td>Size: 30.5×240 inches</td>
               <td>$159.80</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td><button class="buy-button" data-handle="dtfva-custom-dtf-gang-sheets-30-inches" data-sku="DTFVA-CUSTOM_DTF_GANG_SHEETS_30_INCHES-30_5_240_INCHES" data-name="Custom DTF Gang Sheets 30&quot;" data-variant="30.5×240 inches" data-price="159.80" data-merchandise-id="gid://shopify/ProductVariant/45145079611574" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button></td>
             </tr></tbody></table></div>
         </section>
       </main>
@@ -522,13 +541,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -538,6 +559,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

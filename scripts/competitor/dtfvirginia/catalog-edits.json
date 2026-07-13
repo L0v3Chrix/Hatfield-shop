@@ -77,10 +77,41 @@
       "handle": "dtfva-fluorescent-dtf-printing-build-bold-bright-designs",
       "shopifyStatus": "DRAFT",
       "reason": "fluorescent same-product title dupe; keep by-size listing"
+    },
+    {
+      "handle": "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
+      "shopifyStatus": "DRAFT",
+      "reason": "duplicate of the UV DTF by-size ladder; zero purchasable variants (owner 2026-07-13: builders only where they belong)"
+    },
+    {
+      "handle": "dtfva-uv-dtf-stickers",
+      "shopifyStatus": "DRAFT",
+      "reason": "duplicate of the UV DTF by-size ladder; zero purchasable variants"
+    },
+    {
+      "handle": "dtfva-glitter-dtf-gang-sheet",
+      "shopifyStatus": "DRAFT",
+      "reason": "duplicate of glitter by-size + the Kixxl glitter builder; zero purchasable variants"
+    },
+    {
+      "handle": "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
+      "shopifyStatus": "DRAFT",
+      "reason": "duplicate of fluorescent by-size; zero purchasable variants"
+    },
+    {
+      "handle": "dtfva-3d-puff-transfers",
+      "shopifyStatus": "DRAFT",
+      "reason": "duplicate of dtfva-upload-3d-puff-transfers (identical $13.99 ladder)"
+    },
+    {
+      "handle": "dtfva-3d-puff-transfers-best-in-virginia-42",
+      "shopifyStatus": "DRAFT",
+      "reason": "competitor branding in title (\"Best in Virginia\"), 42-inch width not offered; duplicate of 3D Puff Transfers"
     }
   ],
   "retitles": {
-    "dtfva-gildan-64000": "Gildan Softstyle Unisex T-Shirt"
+    "dtfva-gildan-64000": "Gildan Softstyle Unisex T-Shirt",
+    "dtfva-upload-3d-puff-transfers": "3D Puff Transfers"
   },
   "variantRestructures": {
     "dtfva-party-banners": {
@@ -611,7 +642,15 @@
   "directBuy": [
     "dtfva-dye-cut-stickers",
     "dtfva-uv-printed-custom-leather-patches",
-    "dtfva-uv-dtf-transfer-by-size"
+    "dtfva-uv-dtf-transfer-by-size",
+    "dtfva-uv-printed-custom-tpu-patches",
+    "dtfva-custom-sublimation-transfers-by-size",
+    "dtfva-custom-glitter-dtf-transfer-by-size",
+    "dtfva-custom-fluorescent-dtf-transfers-by-size",
+    "dtfva-custom-dtf-gang-sheets-30-inches",
+    "dtfva-upload-3d-puff-transfers",
+    "dtfva-custom-dtf-transfers-by-size-virginia",
+    "dtfva-sublimation-gang-sheets-bulk-printing"
   ],
   "offerCopy": {
     "dtfva-uv-printed-custom-leather-patches": "Two ways to buy: a full 12\" x 24\" sheet \u2014 about 30 patches, up to 3 designs \u2014 for $75, or single patches at $4 each plus shipping.",

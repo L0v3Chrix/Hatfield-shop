@@ -155,6 +155,11 @@
     .cart-upload-input{display:none}
     .cart-upload-btn{width:100%;justify-content:center;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(0,229,255,.62);background:rgba(0,229,255,.14);color:#c9f6ff;border-radius:8px;padding:6px 14px;font-weight:950;text-transform:uppercase}
     .offer-summary{margin:10px 0 0;padding:10px 14px;border-left:3px solid var(--lime);background:rgba(57,255,20,.06);color:#d8ffd2;font-weight:800;line-height:1.5;border-radius:0 8px 8px 0}
+    .pdp-qty{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pdp-qty>span{font-weight:950;text-transform:uppercase;font-size:.72rem;color:var(--soft)}
+    .pdp-qty-stepper{display:flex;align-items:center;gap:6px}
+    .pdp-qty-btn{width:44px;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.1rem;cursor:pointer}
+    #pdp-qty{width:64px;min-height:44px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
     .pdp-upload{display:grid;gap:6px;border:2px dashed rgba(0,229,255,.5);border-radius:10px;padding:14px;background:rgba(0,229,255,.06);margin:2px 0}
     .pdp-upload.has-file{border-color:rgba(57,255,20,.6);background:rgba(57,255,20,.07)}
     .pdp-upload-input{display:none}
@@ -234,6 +239,15 @@
             <span class="price">From $7.49</span>
             <p>Upload your artwork right here, pick a size, and add it to the cart — checkout is direct through Shopify.</p>
             <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="DTFVA-WINDOW_CLINGS-4_4">4″ × 4″ - Size: 4″ × 4″ - $7.49</option><option value="DTFVA-WINDOW_CLINGS-5_5">5″ × 5″ - Size: 5″ × 5″ - $8.09</option><option value="DTFVA-WINDOW_CLINGS-6_6">6″ × 6″ - Size: 6″ × 6″ - $8.59</option><option value="DTFVA-WINDOW_CLINGS-8_8">8″ × 8″ - Size: 8″ × 8″ - $9.99</option><option value="DTFVA-WINDOW_CLINGS-8_5_11">8.5″ × 11″ - Size: 8.5″ × 11″ - $11.39</option><option value="DTFVA-WINDOW_CLINGS-10_10">10″ × 10″ - Size: 10″ × 10″ - $11.69</option><option value="DTFVA-WINDOW_CLINGS-11_17">11″ × 17″ - Size: 11″ × 17″ - $15.89</option><option value="DTFVA-WINDOW_CLINGS-12_12">12″ × 12″ - Size: 12″ × 12″ - $13.79</option><option value="DTFVA-WINDOW_CLINGS-12_18">12″ × 18″ - Size: 12″ × 18″ - $17.29</option><option value="DTFVA-WINDOW_CLINGS-12_24">12″ × 24″ - Size: 12″ × 24″ - $20.79</option><option value="DTFVA-WINDOW_CLINGS-18_24">18″ × 24″ - Size: 18″ × 24″ - $27.69</option><option value="DTFVA-WINDOW_CLINGS-24_36">24″ × 36″ - Size: 24″ × 36″ - $48.49</option><option value="DTFVA-WINDOW_CLINGS-24_48">24″ × 48″ - Size: 24″ × 48″ - $62.39</option><option value="DTFVA-WINDOW_CLINGS-36_48">36″ × 48″ - Size: 36″ × 48″ - $90.19</option></select></label>
+            
+            <div class="pdp-qty" aria-label="Quantity">
+              <span>Quantity</span>
+              <div class="pdp-qty-stepper">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" id="pdp-qty" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" class="pdp-qty-btn" id="pdp-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
             
             <div class="pdp-upload" id="pdp-upload">
               <input type="file" id="pdp-artwork-input" class="pdp-upload-input" accept=".png,.jpg,.jpeg,.pdf,.ai,.eps,image/png,image/jpeg,application/pdf,application/postscript">
@@ -484,13 +498,15 @@
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
+    var qtyInput = document.getElementById('pdp-qty');
+    var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
       handle: button.dataset.handle || '',
       name: button.dataset.name || 'Hatfield McCoy DTF product',
       variant: button.dataset.variant || '',
       price: Number(button.dataset.price || 0),
-      qty: 1,
+      qty: qty,
       merchandiseId: button.dataset.merchandiseId || '',
       checkoutReady: button.dataset.checkoutReady === 'true',
       requiresArtwork: button.dataset.requiresArtwork !== 'false',
@@ -500,6 +516,16 @@
     });
     if (window.openCart) window.openCart();
   });
+  (function(){
+    var qty = document.getElementById('pdp-qty');
+    if (!qty) return;
+    var clamp = function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1))); };
+    qty.addEventListener('change', clamp);
+    var dec = document.getElementById('pdp-qty-dec');
+    var inc = document.getElementById('pdp-qty-inc');
+    if (dec) dec.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) - 1)); });
+    if (inc) inc.addEventListener('click', function(){ qty.value = String(Math.max(1, Math.floor(Number(qty.value) || 1) + 1)); });
+  })();
 </script>
 </body>
 </html>

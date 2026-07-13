@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-13T21:39:17.963Z",
-  "gate": "LOCAL_READY",
+  "generatedAt": "2026-07-13T22:06:17.914Z",
+  "gate": "BLOCKED",
   "local": [
     {
       "name": "unit + generator tests",
@@ -16,7 +16,7 @@
     },
     {
       "name": "offer-sheet conformance",
-      "ok": true
+      "ok": false
     }
   ],
   "network": [

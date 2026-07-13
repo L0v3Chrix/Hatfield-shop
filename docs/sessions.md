@@ -44,3 +44,19 @@ Full report: `../../project-ops/2026-07-07-fable5-production-rescue-report.md`
 
 ### Next Session
 - Branding-pack copy drafts with Jessie (copyOverrides slot ready); real apparel photos; standing launch list (test mode off, shipping rates, Drip uninstall, git push, indexing, token rotation).
+
+## Session: 2026-07-09 (LAUNCH)
+
+### Accomplished
+- Theme surgery: pink disc (zoom-button caught broad magenta button rule) + transparent cart drawer (invalid --color-background triple) fixed in hm-builder-brand-match-r2.css via themeFilesUpsert; backups in project-ops/theme-backup-2026-07-09/.
+- Kixxl-only: 5 builders templateSuffix->null (default template carries Kixxl block), Drip template deleted, Chrix uninstalled Drip app (monitor confirmed).
+- 64 ACTIVE products backfilled with media+SEO in Shopify (0 gaps, all READY).
+- Full visual sweep: 49 pages, 0 broken images, 0 console errors, correct CTAs; stale 'Software' family label retired.
+- GO-LIVE EXECUTED: HM_LAUNCHED build deployed; robots Allow, sitemap 113 URLs, index/follow meta, X-Robots noindex headers removed from ROOT vercel.json (the live config — generated production-site/vercel.json is vestigial). Security headers intact.
+
+### Notes
+- Root vercel.json is the header source of truth for the deployment; HM_LAUNCHED flips everything else. To go dark again: re-add X-Robots noindex to root vercel.json + rebuild without HM_LAUNCHED.
+- Test mode: not API-verifiable; Chrix instructed to flip off as step 1 of his dashboard pass (Drip uninstall = step 2 was observed done).
+
+### Next
+- Confirm test mode off + delete test orders #1001-#1007; rotate private admin token; shipping rates; git push; Jessie photos; Search Console submission (optional).

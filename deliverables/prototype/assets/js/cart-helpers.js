@@ -80,35 +80,38 @@
     }
 
     const checkoutBlocked = builderLineCount > 0 || reviewLineCount > 0 || artworkPendingLineCount > 0
+    const readyLineCount = checkoutReadyLineCount - artworkPendingLineCount
+    // Blockers lead; never call anything "ready for checkout" while checkout is blocked.
     const messageParts = []
-    if (checkoutReadyQuantity > 0) {
-      messageParts.push(`${pluralize(checkoutReadyQuantity, 'item is', 'items are')} ready for checkout`)
-    }
     if (artworkPendingLineCount > 0) {
-      messageParts.push(`${pluralize(artworkPendingLineCount, 'line still needs', 'lines still need')} artwork uploaded`)
+      messageParts.push(`Upload artwork on ${pluralize(artworkPendingLineCount, 'line', 'lines')} below to unlock checkout`)
     }
     if (builderLineCount > 0) {
       messageParts.push(`${pluralize(builderLineCount, 'builder item needs', 'builder items need')} a saved design`)
     }
     if (reviewLineCount > 0) {
-      messageParts.push(`${pluralize(reviewLineCount, 'line is unavailable', 'lines are unavailable')} for online checkout`)
+      messageParts.push(`${pluralize(reviewLineCount, 'line needs', 'lines need')} a quote instead of online checkout`)
     }
-    if (!messageParts.length) {
+    if (!safeItems.length) {
       messageParts.push('Your cart is empty.')
     } else if (!checkoutBlocked) {
-      messageParts.push('Ready for secure Shopify checkout.')
+      messageParts.push('Everything has what it needs — checkout opens Shopify secure payment.')
+    } else if (readyLineCount > 0) {
+      messageParts.push(`${pluralize(readyLineCount, 'other line is', 'other lines are')} good to go`)
     }
 
+    const joinedMessage = messageParts.join('. ')
     return {
       subtotal,
       totalQuantity,
       checkoutReadyQuantity,
       checkoutReadyLineCount,
+      readyLineCount,
       artworkPendingLineCount,
       builderLineCount,
       reviewLineCount,
       checkoutBlocked,
-      statusMessage: `${messageParts.join('. ')}${messageParts.length ? '.' : ''}`,
+      statusMessage: joinedMessage.endsWith('.') ? joinedMessage : `${joinedMessage}.`,
     }
   }
 

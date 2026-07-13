@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:00:28.753Z",
+  "generatedAt": "2026-07-13T21:25:11.970Z",
   "shop": {
     "name": "Hatfield Mccoy DTF",
     "domain": "zm1evm-rd.myshopify.com",
@@ -30,139 +30,9 @@
   },
   "analysis": {
     "duplicateSkus": [],
-    "activeZeroMedia": [
-      "dtfva-custom-dtf-transfers-by-size-1",
-      "dtfva-america-s-250th-anniversary-patch-1-inch-circle",
-      "dtfva-uv-printed-custom-leather-hat-patches",
-      "dtfva-uv-printed-custom-leather-patches",
-      "dtfva-uv-printed-custom-tpu-patches",
-      "dtfva-custom-dtf-transfers-by-size",
-      "dtfva-uv-printed-custom-tpu-patches-1",
-      "dtfva-custom-fluorescent-dtf-transfers-by-size-1",
-      "dtfva-brand-starter-pack",
-      "dtfva-brand-growth-pack",
-      "dtfva-brand-business-pack",
-      "dtfva-custom-glitter-dtf-transfer-by-size-1",
-      "dtfva-custom-sublimation-transfers-by-size-1",
-      "dtfva-9-color-dtf-transfers-by-size-1",
-      "dtfva-custom-sublimation-transfers-by-size",
-      "dtfva-custom-glitter-dtf-transfer-by-size",
-      "dtfva-custom-fluorescent-dtf-transfers-by-size",
-      "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
-      "dtfva-custom-woven-labels",
-      "dtfva-next-level-3600",
-      "dtfva-gildan-64000",
-      "dtfva-bella-canvas-3001",
-      "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank",
-      "dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496",
-      "dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank",
-      "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank",
-      "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt",
-      "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
-      "dtfva-custom-dtf-gang-sheets-30-inches",
-      "dtfva-party-banners-1",
-      "dtfva-party-banners",
-      "dtfva-uv-dtf-transfer-by-size-189",
-      "dtfva-uv-printed-custom-leather-hat-patches-7",
-      "dtfva-photo-magnets-4",
-      "dtfva-car-magnets-2",
-      "dtfva-business-magnets-2",
-      "dtfva-perforated-window-vinyl-window-perf-graphics-3",
-      "dtfva-custom-window-graphics-2",
-      "dtfva-window-clings-6",
-      "dtfva-truck-magnets-1",
-      "dtfva-indoor-floor-graphics-4",
-      "dtfva-custom-posters-3",
-      "dtfva-uv-printed-custom-tpu-patches-84",
-      "dtfva-3d-puff-transfers-best-in-virginia-42",
-      "dtfva-indoor-floor-graphics",
-      "dtfva-window-clings",
-      "dtfva-custom-window-graphics",
-      "dtfva-perforated-window-vinyl",
-      "dtfva-custom-softballs",
-      "dtfva-custom-baseballs",
-      "dtfva-custom-hockey-pucks",
-      "dtfva-custom-pickleballs",
-      "dtfva-personalized-tumblers",
-      "dtfva-uv-dtf-transfer-by-size",
-      "dtfva-upload-3d-puff-transfers",
-      "dtfva-3d-puff-transfers",
-      "dtfva-custom-dtf-transfers-by-size-virginia",
-      "dtfva-dye-cut-stickers",
-      "dtfva-glitter-dtf-gang-sheet",
-      "dtfva-sublimation-gang-sheets-bulk-printing",
-      "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
-      "dtfva-uv-dtf-stickers",
-      "dtfva-professional-vector-design-services",
-      "dtfva-rush-fee"
-    ],
+    "activeZeroMedia": [],
     "activeZeroPriced": [],
-    "activeMissingSeo": [
-      "dtfva-custom-dtf-transfers-by-size-1",
-      "dtfva-america-s-250th-anniversary-patch-1-inch-circle",
-      "dtfva-uv-printed-custom-leather-hat-patches",
-      "dtfva-uv-printed-custom-leather-patches",
-      "dtfva-uv-printed-custom-tpu-patches",
-      "dtfva-custom-dtf-transfers-by-size",
-      "dtfva-uv-printed-custom-tpu-patches-1",
-      "dtfva-custom-fluorescent-dtf-transfers-by-size-1",
-      "dtfva-brand-starter-pack",
-      "dtfva-brand-growth-pack",
-      "dtfva-brand-business-pack",
-      "dtfva-custom-glitter-dtf-transfer-by-size-1",
-      "dtfva-custom-sublimation-transfers-by-size-1",
-      "dtfva-9-color-dtf-transfers-by-size-1",
-      "dtfva-custom-sublimation-transfers-by-size",
-      "dtfva-custom-glitter-dtf-transfer-by-size",
-      "dtfva-custom-fluorescent-dtf-transfers-by-size",
-      "dtfva-22-inch-uv-dtf-sticker-sheet-builder",
-      "dtfva-custom-woven-labels",
-      "dtfva-next-level-3600",
-      "dtfva-gildan-64000",
-      "dtfva-bella-canvas-3001",
-      "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank",
-      "dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496",
-      "dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank",
-      "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank",
-      "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt",
-      "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
-      "dtfva-custom-dtf-gang-sheets-30-inches",
-      "dtfva-party-banners-1",
-      "dtfva-party-banners",
-      "dtfva-uv-dtf-transfer-by-size-189",
-      "dtfva-uv-printed-custom-leather-hat-patches-7",
-      "dtfva-photo-magnets-4",
-      "dtfva-car-magnets-2",
-      "dtfva-business-magnets-2",
-      "dtfva-perforated-window-vinyl-window-perf-graphics-3",
-      "dtfva-custom-window-graphics-2",
-      "dtfva-window-clings-6",
-      "dtfva-truck-magnets-1",
-      "dtfva-indoor-floor-graphics-4",
-      "dtfva-custom-posters-3",
-      "dtfva-uv-printed-custom-tpu-patches-84",
-      "dtfva-3d-puff-transfers-best-in-virginia-42",
-      "dtfva-indoor-floor-graphics",
-      "dtfva-window-clings",
-      "dtfva-custom-window-graphics",
-      "dtfva-perforated-window-vinyl",
-      "dtfva-custom-softballs",
-      "dtfva-custom-baseballs",
-      "dtfva-custom-hockey-pucks",
-      "dtfva-custom-pickleballs",
-      "dtfva-personalized-tumblers",
-      "dtfva-uv-dtf-transfer-by-size",
-      "dtfva-upload-3d-puff-transfers",
-      "dtfva-3d-puff-transfers",
-      "dtfva-custom-dtf-transfers-by-size-virginia",
-      "dtfva-dye-cut-stickers",
-      "dtfva-glitter-dtf-gang-sheet",
-      "dtfva-sublimation-gang-sheets-bulk-printing",
-      "dtfva-fluorescent-dtf-printing-bold-bright-stunning",
-      "dtfva-uv-dtf-stickers",
-      "dtfva-professional-vector-design-services",
-      "dtfva-rush-fee"
-    ],
+    "activeMissingSeo": [],
     "configProductsMissingLive": [],
     "configCollectionsMissingLive": [],
     "collectionsWithoutImage": [
@@ -2059,10 +1929,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom DTF Transfers by Size | Hatfield McCoy DTF",
+        "description": "Custom DTF Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 250,
       "variants": [
         {
@@ -2589,10 +2459,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "America’s 250th Anniversary Patch – 1\" Circle | Hatfield McCo…",
+        "description": "America’s 250th Anniversary Patch – 1\" Circle from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 1,
       "variants": [
         {
@@ -2624,10 +2494,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV-Printed Custom Leather Hat Patches | Hatfield McCoy DTF",
+        "description": "UV-Printed Custom Leather Hat Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 3,
       "variants": [
         {
@@ -2667,10 +2537,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV-Printed Custom Leather Hat Patches | Hatfield McCoy DTF",
+        "description": "UV-Printed Custom Leather Hat Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 2,
       "variants": [
         {
@@ -2705,10 +2575,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV-Printed Custom TPU Patches | Hatfield McCoy DTF",
+        "description": "UV-Printed Custom TPU Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 30,
       "variants": [
         {
@@ -2884,10 +2754,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom DTF Transfers by Size | Hatfield McCoy DTF",
+        "description": "Custom DTF Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 250,
       "variants": [
         {
@@ -3414,10 +3284,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV-Printed Custom TPU Patches | Hatfield McCoy DTF",
+        "description": "UV-Printed Custom TPU Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 7,
       "variants": [
         {
@@ -3478,10 +3348,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Fluorescent DTF Transfers by Size | Hatfield McCoy DTF",
+        "description": "Custom Fluorescent DTF Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 16,
       "variants": [
         {
@@ -3587,10 +3457,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "PRO Branding Kit - Starter Pack | Hatfield McCoy DTF",
+        "description": "PRO Branding Kit - Starter Pack from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 1,
       "variants": [
         {
@@ -3621,10 +3491,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "GURU Branding Kit - Brand Growth Pack | Hatfield McCoy DTF",
+        "description": "GURU Branding Kit - Brand Growth Pack from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 1,
       "variants": [
         {
@@ -3655,10 +3525,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Merch Branding Kit - Brand Business Pack | Hatfield McCoy DTF",
+        "description": "Merch Branding Kit - Brand Business Pack from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 1,
       "variants": [
         {
@@ -3689,10 +3559,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Glitter DTF Transfer by Size | Hatfield McCoy DTF",
+        "description": "Custom Glitter DTF Transfer by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 191,
       "variants": [
         {
@@ -4218,10 +4088,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Sublimation Transfers by Size | Hatfield McCoy DTF",
+        "description": "Custom Sublimation Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 113,
       "variants": [
         {
@@ -4747,10 +4617,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "9 Color DTF Transfers By Size | Hatfield McCoy DTF",
+        "description": "9 Color DTF Transfers By Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 38,
       "variants": [
         {
@@ -4966,10 +4836,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Sublimation Transfers by Size | Hatfield McCoy DTF",
+        "description": "Custom Sublimation Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 22,
       "variants": [
         {
@@ -5104,10 +4974,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Glitter DTF Transfer by Size | Hatfield McCoy DTF",
+        "description": "Custom Glitter DTF Transfer by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 14,
       "variants": [
         {
@@ -5202,10 +5072,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Fluorescent DTF Transfers by Size | Hatfield McCoy DTF",
+        "description": "Custom Fluorescent DTF Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 14,
       "variants": [
         {
@@ -5330,10 +5200,10 @@
         "source-tag-wide-format-printing"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "22\" UV DTF Sticker Sheet Builder | Hatfield McCoy DTF",
+        "description": "22\" UV DTF Sticker Sheet Builder from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 25,
       "variants": [
         {
@@ -5779,10 +5649,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Woven Labels ( UV - Printed ) | Hatfield McCoy DTF",
+        "description": "Custom Woven Labels ( UV - Printed ) from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 10,
       "variants": [
         {
@@ -5858,10 +5728,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Next Level 3600 - Cotton Crew T-Shirt | Hatfield McCoy DTF",
+        "description": "Next Level 3600 - Cotton Crew T-Shirt from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 60,
       "variants": [
         {
@@ -6185,10 +6055,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Gildan Softstyle Unisex T-Shirt | Hatfield McCoy DTF",
+        "description": "Gildan Softstyle Unisex T-Shirt from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 40,
       "variants": [
         {
@@ -6412,10 +6282,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "BELLA + CANVAS 3001 - Unisex Jersey Tee | Hatfield McCoy DTF",
+        "description": "BELLA + CANVAS 3001 - Unisex Jersey Tee from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 54,
       "variants": [
         {
@@ -6711,10 +6581,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Shaka Wear Drop Shoulder Cropped T-Shirt - Premium Bla…",
+        "description": "Custom Shaka Wear Drop Shoulder Cropped T-Shirt - Premium Blank from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 20,
       "variants": [
         {
@@ -6840,10 +6710,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom American Apparel Unisex ReFlex Fleece Crewneck Sweatsh…",
+        "description": "Custom American Apparel Unisex ReFlex Fleece Crewneck Sweatshirt - RF496 from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 80,
       "variants": [
         {
@@ -7269,10 +7139,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank | Hatfie…",
+        "description": "Custom Heavy Fleece Hoodie Sweatshirt - Retail Blank from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 48,
       "variants": [
         {
@@ -7538,10 +7408,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Shaka Wear Max Heavyweight Short Sleeve T-Shirt - Prem…",
+        "description": "Custom Shaka Wear Max Heavyweight Short Sleeve T-Shirt - Premium Blank from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 114,
       "variants": [
         {
@@ -8067,10 +7937,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom American Apparel Unisex Heavyweight Cotton Long Sleeve…",
+        "description": "Custom American Apparel Unisex Heavyweight Cotton Long Sleeve T-Shirt from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 42,
       "variants": [
         {
@@ -8304,10 +8174,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Los Angeles Apparel 1865GD – Garment Dye Sleeveless Te…",
+        "description": "Custom Los Angeles Apparel 1865GD – Garment Dye Sleeveless Tee from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 25,
       "variants": [
         {
@@ -8585,10 +8455,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom DTF Gang Sheets 30\" | Hatfield McCoy DTF",
+        "description": "Custom DTF Gang Sheets 30\" from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 21,
       "variants": [
         {
@@ -8721,10 +8591,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Party Banners | Hatfield McCoy DTF",
+        "description": "Party Banners from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 19,
       "variants": [
         {
@@ -8844,10 +8714,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Party Banners | Hatfield McCoy DTF",
+        "description": "Party Banners from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 2,
       "variants": [
         {
@@ -8911,10 +8781,10 @@
         "source-tag-wide-format-printing"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV DTF Transfer By Size | Hatfield McCoy DTF",
+        "description": "UV DTF Transfer By Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 250,
       "variants": [
         {
@@ -9441,10 +9311,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV-Printed Custom Leather Hat Patches | Hatfield McCoy DTF",
+        "description": "UV-Printed Custom Leather Hat Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 105,
       "variants": [
         {
@@ -9971,10 +9841,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Photo Magnets | Hatfield McCoy DTF",
+        "description": "Photo Magnets from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 3,
       "variants": [
         {
@@ -10016,10 +9886,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Car Magnets | Hatfield McCoy DTF",
+        "description": "Car Magnets from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 6,
       "variants": [
         {
@@ -10077,10 +9947,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Business Magnets | Hatfield McCoy DTF",
+        "description": "Business Magnets from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 9,
       "variants": [
         {
@@ -10150,10 +10020,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Perforated Window Vinyl (Window Perf Graphics) | Hatfield McC…",
+        "description": "Perforated Window Vinyl (Window Perf Graphics) from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 8,
       "variants": [
         {
@@ -10218,10 +10088,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Window Graphics | Hatfield McCoy DTF",
+        "description": "Custom Window Graphics from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 10,
       "variants": [
         {
@@ -10296,10 +10166,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Window Clings | Hatfield McCoy DTF",
+        "description": "Window Clings from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 21,
       "variants": [
         {
@@ -10431,10 +10301,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Truck Magnets | Hatfield McCoy DTF",
+        "description": "Truck Magnets from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 3,
       "variants": [
         {
@@ -10474,10 +10344,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Indoor Floor Graphics | Hatfield McCoy DTF",
+        "description": "Indoor Floor Graphics from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 9,
       "variants": [
         {
@@ -10548,10 +10418,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Posters | Hatfield McCoy DTF",
+        "description": "Custom Posters from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 7,
       "variants": [
         {
@@ -10614,10 +10484,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV-Printed Custom TPU Patches | Hatfield McCoy DTF",
+        "description": "UV-Printed Custom TPU Patches from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 99,
       "variants": [
         {
@@ -11142,10 +11012,10 @@
         "source-tag-kixxl-proxy-product"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "3D Puff Transfers - West Virginia Specialty | Hatfield McCoy…",
+        "description": "3D Puff Transfers - West Virginia Specialty from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 47,
       "variants": [
         {
@@ -11405,10 +11275,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Indoor Floor Graphics | Hatfield McCoy DTF",
+        "description": "Indoor Floor Graphics from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 15,
       "variants": [
         {
@@ -11508,10 +11378,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Window Clings | Hatfield McCoy DTF",
+        "description": "Window Clings from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 14,
       "variants": [
         {
@@ -11606,10 +11476,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Window Graphics | Hatfield McCoy DTF",
+        "description": "Custom Window Graphics from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 16,
       "variants": [
         {
@@ -11714,10 +11584,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Perforated Window Vinyl (Window Perf Graphics) | Hatfield McC…",
+        "description": "Perforated Window Vinyl (Window Perf Graphics) from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 15,
       "variants": [
         {
@@ -11817,10 +11687,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Softballs | Hatfield McCoy DTF",
+        "description": "Custom Softballs from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 2,
       "variants": [
         {
@@ -11855,10 +11725,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Baseballs | Hatfield McCoy DTF",
+        "description": "Custom Baseballs from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 2,
       "variants": [
         {
@@ -11893,10 +11763,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Hockey Pucks | Hatfield McCoy DTF",
+        "description": "Custom Hockey Pucks from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 2,
       "variants": [
         {
@@ -11931,10 +11801,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom Pickleballs | Hatfield McCoy DTF",
+        "description": "Custom Pickleballs from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 3,
       "variants": [
         {
@@ -11973,10 +11843,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Personalized Tumblers | Hatfield McCoy DTF",
+        "description": "Personalized Tumblers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 1,
       "variants": [
         {
@@ -12032,10 +11902,10 @@
         "source-tag-wide-format-printing"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "UV DTF Transfer By Size | Hatfield McCoy DTF",
+        "description": "UV DTF Transfer By Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 25,
       "variants": [
         {
@@ -12189,10 +12059,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "3D Puff Transfers - Hatfield McCoy DTF | Hatfield McCoy DTF",
+        "description": "3D Puff Transfers - Hatfield McCoy DTF from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 14,
       "variants": [
         {
@@ -12291,10 +12161,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "3D Puff Transfers Builder | Hatfield McCoy DTF",
+        "description": "3D Puff Transfers Builder from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 14,
       "variants": [
         {
@@ -12390,10 +12260,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom DTF Transfers by Size | Hatfield McCoy DTF",
+        "description": "Custom DTF Transfers by Size from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 177,
       "variants": [
         {
@@ -12918,10 +12788,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Custom DTF Dye-Cut Stickers | Hatfield McCoy DTF",
+        "description": "Custom DTF Dye-Cut Stickers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 3,
       "variants": [
         {
@@ -12986,10 +12856,10 @@
         "source-tag-wide-format-printing"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Glitter DTF Gang Sheet 22\" | Hatfield McCoy DTF",
+        "description": "Glitter DTF Gang Sheet 22\" from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 16,
       "variants": [
         {
@@ -13094,10 +12964,10 @@
         "source-tag-gang-sheet"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "22\" Sublimation Gang Sheets | Hatfield McCoy DTF",
+        "description": "22\" Sublimation Gang Sheets from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 9,
       "variants": [
         {
@@ -13330,10 +13200,10 @@
         "source-tag-wide-format-printing"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Fluorescent DTF Printing - Bold, Bright, and Stunning | Hatfi…",
+        "description": "Fluorescent DTF Printing - Bold, Bright, and Stunning from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 8,
       "variants": [
         {
@@ -13555,10 +13425,10 @@
         "source-tag-wide-format-printing"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "22\" UV DTF Stickers | Hatfield McCoy DTF",
+        "description": "22\" UV DTF Stickers from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 25,
       "variants": [
         {
@@ -13708,10 +13578,10 @@
         "source-tag-artwork-services"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Professional Vector Design Services | Hatfield McCoy DTF",
+        "description": "Professional Vector Design Services from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 1,
       "variants": [
         {
@@ -13740,10 +13610,10 @@
         "source-dtf-virginia"
       ],
       "seo": {
-        "title": null,
-        "description": null
+        "title": "RUSH FEE - for same-day or expedited Printing | Hatfield McCo…",
+        "description": "RUSH FEE - for same-day or expedited Printing from Hatfield McCoy DTF, produced in Logan, West Virginia with nationwide shipping, direct checkout, and artwork upload attached to the order."
       },
-      "mediaCount": 0,
+      "mediaCount": 1,
       "variantsCount": 1,
       "variants": [
         {

@@ -52,6 +52,7 @@
         totalQuantity: 0,
         checkoutReadyQuantity: 0,
         checkoutReadyLineCount: 0,
+        readyLineCount: 0,
         artworkPendingLineCount: 0,
         builderLineCount: 0,
         reviewLineCount: 0,
@@ -74,13 +75,14 @@
         }
       });
       summary.checkoutBlocked = summary.builderLineCount > 0 || summary.reviewLineCount > 0 || summary.artworkPendingLineCount > 0;
+      summary.readyLineCount = summary.checkoutReadyLineCount - summary.artworkPendingLineCount;
       const bits = [];
-      if (summary.checkoutReadyQuantity > 0) bits.push(summary.checkoutReadyQuantity + ' item' + (summary.checkoutReadyQuantity === 1 ? ' is' : 's are') + ' ready for checkout');
-      if (summary.artworkPendingLineCount > 0) bits.push(summary.artworkPendingLineCount + ' line' + (summary.artworkPendingLineCount === 1 ? ' still needs' : 's still need') + ' artwork uploaded');
+      if (summary.artworkPendingLineCount > 0) bits.push('Upload artwork on ' + summary.artworkPendingLineCount + ' line' + (summary.artworkPendingLineCount === 1 ? '' : 's') + ' below to unlock checkout');
       if (summary.builderLineCount > 0) bits.push(summary.builderLineCount + ' builder item' + (summary.builderLineCount === 1 ? ' needs' : 's need') + ' a saved design');
-      if (summary.reviewLineCount > 0) bits.push(summary.reviewLineCount + ' line' + (summary.reviewLineCount === 1 ? ' is unavailable' : 's are unavailable') + ' for online checkout');
-      if (!bits.length) bits.push('Your cart is empty');
-      else if (!summary.checkoutBlocked) bits.push('Ready for secure Shopify checkout');
+      if (summary.reviewLineCount > 0) bits.push(summary.reviewLineCount + ' line' + (summary.reviewLineCount === 1 ? ' needs' : 's need') + ' a quote instead of online checkout');
+      if (!safeItems.length) bits.push('Your cart is empty');
+      else if (!summary.checkoutBlocked) bits.push('Everything has what it needs — checkout opens Shopify secure payment');
+      else if (summary.readyLineCount > 0) bits.push(summary.readyLineCount + ' other line' + (summary.readyLineCount === 1 ? ' is' : 's are') + ' good to go');
       summary.statusMessage = bits.join('. ') + '.';
       return summary;
     }
@@ -124,10 +126,6 @@
 
   function findIndex(items, sku, variant) {
     return items.findIndex(i => i.sku === sku && (i.variant || '') === (variant || ''));
-  }
-
-  function hasCheckoutOnlyItems(items) {
-    return cartHelpers.summarizeCart(items).checkoutBlocked;
   }
 
   function normalizeKey(value) {
@@ -400,7 +398,7 @@
       button.textContent = message || 'Opening secure checkout…';
     } else {
       const items = Cart.getItems();
-      button.disabled = items.length === 0 || hasCheckoutOnlyItems(items);
+      button.disabled = items.length === 0;
       button.textContent = button.dataset.originalText || 'Checkout';
     }
   }
@@ -458,12 +456,15 @@
     if (item.variant) body.appendChild(el('div', { class: 'cart-item-variant', text: item.variant }));
     if (item.file) body.appendChild(el('div', { class: 'cart-item-file', text: 'Artwork: ' + item.file }));
     const lineState = cartHelpers.classifyCartItem(item);
-    const lineBadgeText = lineState === 'checkout-ready'
-      ? 'Checkout ready'
-      : lineState === 'builder-required'
-        ? 'Builder item'
-        : 'Review required';
-    body.appendChild(el('div', { class: 'cart-item-state cart-item-state-' + lineState, text: lineBadgeText }));
+    const lineNeedsArt = lineState === 'checkout-ready' && cartHelpers.itemNeedsArtwork(item) && !cartHelpers.itemHasArtwork(item);
+    const lineBadgeText = lineNeedsArt
+      ? 'Needs artwork'
+      : lineState === 'checkout-ready'
+        ? 'Ready'
+        : lineState === 'builder-required'
+          ? 'Builder item'
+          : 'Quote required';
+    body.appendChild(el('div', { class: 'cart-item-state cart-item-state-' + (lineNeedsArt ? 'needs-artwork' : lineState), text: lineBadgeText }));
 
     if (lineState === 'builder-required') {
       body.appendChild(el('a', { class: 'cart-item-next', href: '/gang-sheet-builder', text: 'Finish in builder' }));
@@ -559,10 +560,12 @@
       el('span', { text: 'Subtotal' }),
       el('strong', { text: money(summaryData.subtotal) })
     ]));
-    summary.appendChild(el('div', { class: 'cart-summary-row' }, [
-      el('span', { text: 'Checkout-ready' }),
-      el('strong', { text: String(summaryData.checkoutReadyQuantity) })
-    ]));
+    if (summaryData.readyLineCount > 0) {
+      summary.appendChild(el('div', { class: 'cart-summary-row' }, [
+        el('span', { text: 'Ready lines' }),
+        el('strong', { text: String(summaryData.readyLineCount) })
+      ]));
+    }
     if (summaryData.builderLineCount > 0) {
       summary.appendChild(el('div', { class: 'cart-summary-row' }, [
         el('span', { text: 'Builder lines' }),
@@ -570,8 +573,8 @@
       ]));
     }
     if (summaryData.artworkPendingLineCount > 0) {
-      summary.appendChild(el('div', { class: 'cart-summary-row' }, [
-        el('span', { text: 'Artwork pending' }),
+      summary.appendChild(el('div', { class: 'cart-summary-row cart-summary-row-pending' }, [
+        el('span', { text: 'Needs artwork' }),
         el('strong', { text: String(summaryData.artworkPendingLineCount) })
       ]));
     }
@@ -631,6 +634,46 @@
     return wrap;
   }
 
+  function blockedNoteText(summary) {
+    if (summary.artworkPendingLineCount > 0) {
+      return 'Almost there — tap "Upload artwork" on the highlighted line' + (summary.artworkPendingLineCount === 1 ? '' : 's') + '. Checkout opens the moment every line has art.';
+    }
+    if (summary.builderLineCount > 0) return 'Builder lines need a saved design — tap "Finish in builder" on that line.';
+    return 'One or more lines need a quote — tap "Request a quote" on that line, or remove it to check out the rest.';
+  }
+
+  function itemIsBlocked(item) {
+    const state = cartHelpers.classifyCartItem(item);
+    if (state !== 'checkout-ready') return true;
+    return cartHelpers.itemNeedsArtwork(item) && !cartHelpers.itemHasArtwork(item);
+  }
+
+  function guideToFirstBlockedLine(items) {
+    const rows = Array.prototype.slice.call(document.querySelectorAll('#cart-items .cart-item'));
+    const blocked = items.filter(itemIsBlocked);
+    let firstRow = null;
+    blocked.forEach(function (item, index) {
+      const row = rows.find(function (r) {
+        return r.dataset.sku === String(item.sku) && (r.dataset.variant || '') === String(item.variant || '');
+      });
+      if (!row) return;
+      if (!firstRow) firstRow = row;
+      row.classList.remove('cart-item-flash');
+      void row.offsetWidth;
+      row.classList.add('cart-item-flash');
+    });
+    if (firstRow) {
+      firstRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const uploadBtn = firstRow.querySelector('.cart-upload-btn');
+      if (uploadBtn) uploadBtn.focus({ preventScroll: true });
+    }
+    const note = document.getElementById('cart-note');
+    if (note) {
+      note.hidden = false;
+      note.textContent = blockedNoteText(cartHelpers.summarizeCart(items));
+    }
+  }
+
   function renderDrawer() {
     const list = document.getElementById('cart-items');
     const totalEl = document.getElementById('cart-total');
@@ -662,22 +705,18 @@
       summaryEl.appendChild(buildCartSummary(items));
     }
     if (recommendationsEl) {
-      const recommendations = buildRecommendations(items);
+      // Upsells only when the customer's own lines are all clear — they must
+      // never compete for attention with a line that still needs artwork.
+      const allClear = !cartHelpers.summarizeCart(items).checkoutBlocked;
+      const recommendations = allClear ? buildRecommendations(items) : null;
       recommendationsEl.hidden = !recommendations;
       if (recommendations) recommendationsEl.appendChild(recommendations);
     }
     const cartSummary = cartHelpers.summarizeCart(items);
-    const hasQuoteOnlyItems = cartSummary.checkoutBlocked;
-    if (checkout) checkout.disabled = hasQuoteOnlyItems;
+    if (checkout) checkout.disabled = false;
     if (note) {
-      note.hidden = !hasQuoteOnlyItems;
-      note.textContent = hasQuoteOnlyItems
-        ? cartSummary.builderLineCount > 0
-          ? 'Builder lines need a saved design before Shopify checkout can open.'
-          : cartSummary.artworkPendingLineCount > 0
-            ? 'Upload artwork on each direct-order line before Shopify checkout can open.'
-            : 'One or more lines in this cart are currently sold out or unavailable for online checkout.'
-        : '';
+      note.hidden = !cartSummary.checkoutBlocked;
+      note.textContent = cartSummary.checkoutBlocked ? blockedNoteText(cartSummary) : '';
     }
 
     items.forEach(i => list.appendChild(buildItemRow(i)));
@@ -700,6 +739,8 @@
     drawer.classList.add('open');
     drawer.setAttribute('aria-hidden', 'false');
     drawer.removeAttribute('inert');
+    const scroll = document.getElementById('cart-scroll');
+    if (scroll) scroll.scrollTop = 0;
     if (scrim) scrim.classList.add('open');
     document.body.classList.add('cart-open');
     const close = drawer.querySelector('.cart-close');
@@ -751,6 +792,10 @@
       checkout.addEventListener('click', async () => {
         const items = Cart.getItems();
         if (!items.length) return;
+        if (cartHelpers.summarizeCart(items).checkoutBlocked) {
+          guideToFirstBlockedLine(items);
+          return;
+        }
         setCheckoutState(checkout, 'loading', 'Opening secure Shopify checkout…');
         try {
           const checkoutUrl = await createShopifyCheckout(items);

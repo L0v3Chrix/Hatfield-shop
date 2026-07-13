@@ -28,3 +28,4 @@ yarn-debug.log*
 
 # Image-curation candidates (only approved images enter Shopify-images-good/)
 tmp/
+.env*

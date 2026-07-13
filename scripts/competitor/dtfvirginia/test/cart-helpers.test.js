@@ -92,14 +92,61 @@ test('summarizeCart reports mixed-cart truthfully and blocks checkout when any n
   assert.equal(summary.checkoutReadyQuantity, 2)
   assert.equal(summary.checkoutReadyLineCount, 1)
   assert.equal(summary.artworkPendingLineCount, 1)
+  assert.equal(summary.readyLineCount, 0)
   assert.equal(summary.builderLineCount, 1)
   assert.equal(summary.reviewLineCount, 1)
   assert.equal(summary.subtotal, 49)
   assert.equal(summary.checkoutBlocked, true)
-  assert.match(summary.statusMessage, /2 items are ready for checkout/i)
-  assert.match(summary.statusMessage, /1 line still needs artwork uploaded/i)
+  assert.match(summary.statusMessage, /upload artwork on 1 line below to unlock checkout/i)
   assert.match(summary.statusMessage, /1 builder item needs a saved design/i)
-  assert.match(summary.statusMessage, /1 line is unavailable for online checkout/i)
+  assert.match(summary.statusMessage, /1 line needs a quote/i)
+  // Regression (owner-found 2026-07-13): a blocked cart must NEVER claim
+  // anything is "ready for checkout" — that contradiction hid the dead end.
+  assert.doesNotMatch(summary.statusMessage, /ready for checkout/i)
+})
+
+test('summarizeCart never says "ready" while artwork is pending (owner screenshot regression)', () => {
+  const helpers = loadCartHelpers()
+
+  // Exactly the 2026-07-13 screenshot state: 4 checkout-ready lines, zero artwork.
+  const summary = helpers.summarizeCart([1, 2, 3, 4].map((n) => ({
+    handle: `product-${n}`,
+    name: `Product ${n}`,
+    merchandiseId: `gid://shopify/ProductVariant/${n}`,
+    price: 25,
+    qty: 1,
+  })))
+
+  assert.equal(summary.checkoutBlocked, true)
+  assert.equal(summary.artworkPendingLineCount, 4)
+  assert.equal(summary.readyLineCount, 0)
+  assert.match(summary.statusMessage, /upload artwork on 4 lines below to unlock checkout/i)
+  assert.doesNotMatch(summary.statusMessage, /ready for checkout/i)
+})
+
+test('summarizeCart reports remaining ready lines while others wait on artwork', () => {
+  const helpers = loadCartHelpers()
+
+  const summary = helpers.summarizeCart([
+    {
+      handle: 'dtf-22-sheet',
+      merchandiseId: 'gid://shopify/ProductVariant/1',
+      price: 12,
+      qty: 1,
+      artworkUrl: 'https://blob.example/art.png',
+    },
+    {
+      handle: 'dtf-46-sheet',
+      merchandiseId: 'gid://shopify/ProductVariant/2',
+      price: 12,
+      qty: 1,
+    },
+  ])
+
+  assert.equal(summary.checkoutBlocked, true)
+  assert.equal(summary.readyLineCount, 1)
+  assert.match(summary.statusMessage, /upload artwork on 1 line below to unlock checkout/i)
+  assert.match(summary.statusMessage, /1 other line is good to go/i)
 })
 
 test('summarizeCart marks fully buyable carts as checkout-ready', () => {
@@ -120,7 +167,7 @@ test('summarizeCart marks fully buyable carts as checkout-ready', () => {
   assert.equal(summary.checkoutReadyQuantity, 1)
   assert.equal(summary.builderLineCount, 0)
   assert.equal(summary.reviewLineCount, 0)
-  assert.match(summary.statusMessage, /ready for secure shopify checkout/i)
+  assert.match(summary.statusMessage, /checkout opens shopify secure payment/i)
 })
 
 test('itemHasArtwork and itemNeedsArtwork reflect direct-order upload state', () => {

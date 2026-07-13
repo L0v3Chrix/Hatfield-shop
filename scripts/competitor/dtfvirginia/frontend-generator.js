@@ -233,7 +233,7 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
     ? `<p class="variant-limit-note">This product has ${product.variants.length} available configurations. We show a focused starting set here — ask the shop if you need a size or option you don't see.</p>`
     : ''
   const relatedLinks = [
-    ['Shop all products', '/products'],
+    ['Shop all products', '/shop'],
     ['DTF transfer collections', '/collections/dtf-transfers'],
     ['Gang sheet options', '/gang-sheet-builder'],
     ['Pressing guide', '/guides'],
@@ -264,7 +264,7 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
     siteUrl,
     body: `
       <main class="seo-page product-page">
-        ${breadcrumb([{ label: 'Shop', url: '/shop' }, { label: 'Products', url: '/products' }, { label: product.title }])}
+        ${breadcrumb([{ label: 'Shop', url: '/shop' }, { label: product.title }])}
         <section class="product-hero">
           <div>
             <p class="eyebrow">${escapeHtml(category.label)} · Logan, WV production</p>
@@ -377,7 +377,7 @@ function renderInternalProxyProductPage(product, { siteUrl = DEFAULT_SITE_URL } 
     siteUrl,
     body: `
       <main class="seo-page product-page internal-proxy-page">
-        ${breadcrumb([{ label: 'Shop', url: '/shop' }, { label: 'Products', url: '/products' }, { label: product.title }])}
+        ${breadcrumb([{ label: 'Shop', url: '/shop' }, { label: product.title }])}
         <section class="product-hero">
           <div>
             <p class="eyebrow">${escapeHtml(category.label)} · ordering path</p>
@@ -421,7 +421,6 @@ export function renderCollectionPage(collection, products, { siteUrl = DEFAULT_S
   ].map(([id, label, count], index) => `<button class="filter-tab${index === 0 ? ' active' : ''}" type="button" data-filter="${escapeHtml(id)}">${escapeHtml(label)} <span>${count}</span></button>`).join('')
   const cards = scopedProducts.slice(0, 80).map((product) => productCardMarkup(product, { className: 'product-card commerce-card' })).join('')
   const links = [
-    ['All products', '/products'],
     ['All collections', '/collections'],
     ['Shop catalog', '/shop'],
     ['Artwork guide', '/guides#artwork'],
@@ -617,29 +616,22 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
 }
 
 export function renderProductIndexPage(products, { siteUrl = DEFAULT_SITE_URL } = {}) {
-  const seo = buildSeoRecord({
-    kind: 'collection',
-    handle: 'products',
-    title: 'All Products',
-    description: 'Browse every Hatfield McCoy DTF product for transfers, stickers, apparel, signage, builders, and specialty print products.',
-    urlPath: '/products',
-    indexable: false,
-  })
-  const cards = products.map((product) => productCardMarkup(product, { className: 'product-card commerce-card' })).join('')
-  return renderShell({
-    seo,
-    siteUrl,
-    body: `
-      <main class="seo-page collection-page">
-        ${breadcrumb([{ label: 'Home', url: '/' }, { label: 'Products' }])}
-        <section class="collection-hero">
-          <p class="eyebrow">All products</p>
-          <h1>Every product, organized for fast ordering.</h1>
-          <p class="lede">${products.length} product pages with visible pricing, product-family routing, and a clear next step for checkout or builder ordering.</p>
-        </section>
-        <section class="product-grid">${cards}</section>
-      </main>`,
-  })
+  // Owner decision 2026-07-13: /shop is the one canonical listing. This route
+  // only exists as a safety net — vercel.json 308s /products → /shop at the edge;
+  // this stub covers local preview and any non-Vercel host.
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shop | Hatfield McCoy DTF</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0; url=/shop">
+<link rel="canonical" href="${escapeHtml(siteUrl)}/shop">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Shop | Hatfield McCoy DTF","url":"${escapeHtml(siteUrl)}/shop"}</script>
+</head>
+<body><p>The full catalog lives on <a href="/shop">the shop page</a>.</p></body>
+</html>
+`
 }
 
 export function renderCollectionIndexPage(collections, products = [], { siteUrl = DEFAULT_SITE_URL } = {}) {
@@ -758,7 +750,7 @@ function renderShell({ seo, body }) {
     ${mobileMenuButtonMarkup()}
     <div class="nav-actions"><button class="btn secondary cart-btn" type="button" aria-label="Cart, 0 items"><span class="cart-btn-label">Cart</span><span class="cart-count-badge" id="cart-count">0</span></button><a class="btn primary" href="/gang-sheet-builder">Start order</a></div>
   </div>
-  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/products">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/guides#artwork">Artwork guide</a></div></nav>
+  <nav class="support-nav" aria-label="Catalog navigation"><div class="wrap"><a class="mini-link" href="/collections">Collections</a><a class="mini-link" href="/shop">All products</a><a class="mini-link" href="/pages">Support pages</a><a class="mini-link" href="/guides#artwork">Artwork guide</a></div></nav>
   ${mobileMenuMarkup()}
 </header>
 ${body}
@@ -880,10 +872,12 @@ function cartDrawerMarkup() {
     <div><span class="eyebrow">Order cart</span><h2>Cart</h2></div>
     <button class="cart-close" type="button" aria-label="Close cart">Close</button>
   </div>
-  <p class="cart-empty" id="cart-empty">Add products to start your order. Upload artwork inside the cart before checkout.</p>
+  <p class="cart-empty" id="cart-empty">Add products to start your order. Artwork uploads happen right on the product page — or here in the cart.</p>
   <div class="cart-summary-slot" id="cart-summary" hidden></div>
-  <div class="cart-items" id="cart-items"></div>
-  <div class="cart-recommendations-slot" id="cart-recommendations" hidden></div>
+  <div class="cart-scroll" id="cart-scroll">
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-recommendations-slot" id="cart-recommendations" hidden></div>
+  </div>
   <div class="cart-footer">
     <div class="cart-total-row"><span>Total</span><strong id="cart-total">$0.00</strong></div>
     <p class="cart-note" id="cart-note" hidden></p>
@@ -982,12 +976,13 @@ function pageCss() {
     .product-card em,.catalog-card em{font-style:normal;color:var(--cyan);font-weight:950;text-transform:uppercase;font-size:.75rem}
     .cart-scrim{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.58);opacity:0;pointer-events:none;transition:opacity .18s ease}
     .cart-scrim.open{opacity:1;pointer-events:auto}
-    /* Flex column, not a fixed-row grid: the drawer has six children (head, empty,
-       summary, items, recommendations, footer) and extra grid rows pushed the footer
-       below small viewports. Items scroll; head/footer stay pinned on screen. */
+    /* Flex column: head/summary/footer pinned, ONE scroll region (#cart-scroll)
+       holding the order lines first and recommendations after them — the customer's
+       own lines always own the drawer; upsells can never push them out of view. */
     .cart-drawer{position:fixed;top:0;right:0;z-index:31;width:min(420px,100vw);height:100dvh;background:#101018;border-left:1px solid var(--line);box-shadow:-24px 0 80px rgba(0,0,0,.48);padding:18px;transform:translateX(102%);transition:transform .22s ease;display:flex;flex-direction:column;gap:16px}
     .cart-head,.cart-empty,.cart-summary-slot,.cart-footer{flex:0 0 auto}
-    .cart-recommendations-slot{flex:0 1 auto;min-height:0;overflow-y:auto;max-height:32dvh}
+    .cart-scroll{flex:1 1 0;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin}
+    .cart-items,.cart-recommendations-slot{flex:0 0 auto}
     .cart-footer .buy-button{min-height:48px}
     .cart-drawer.open{transform:translateX(0)}
     .cart-head{display:flex;align-items:start;justify-content:space-between;gap:14px}
@@ -998,7 +993,7 @@ function pageCss() {
     .cart-summary-row{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--soft);font-size:.9rem}
     .cart-summary-row strong{color:var(--lime)}
     .cart-summary p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.4}
-    .cart-items{display:grid;gap:10px;align-content:start;flex:1 1 0;min-height:0;overflow-y:auto}
+    .cart-items{display:grid;gap:10px;align-content:start}
     .cart-item{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:start;border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(255,255,255,.04)}
     .cart-item-thumb{width:40px;height:40px;border-radius:6px;background:linear-gradient(135deg,var(--magenta),var(--cyan))}
     .cart-item-next{display:inline-flex;align-items:center;min-height:32px;margin-top:6px;padding:0 10px;border:1px solid rgba(0,229,255,.5);border-radius:6px;color:#aef0ff;font-weight:950;text-transform:uppercase;font-size:.66rem;text-decoration:none}
@@ -1013,6 +1008,9 @@ function pageCss() {
     .cart-item-name{font-weight:950}
     .cart-item-state{width:max-content;margin-top:6px;border-radius:999px;padding:4px 8px;font-size:.68rem;font-weight:950;text-transform:uppercase}
     .cart-item-state-checkout-ready{border:1px solid rgba(57,255,20,.32);background:rgba(57,255,20,.08);color:var(--lime)}
+    .cart-item-state-needs-artwork{border:1px solid rgba(255,184,77,.55);background:rgba(255,184,77,.1);color:#ffd399}
+    .cart-item-flash{animation:hmCartFlash 1.4s ease 2;border-color:rgba(255,184,77,.9)!important}
+    @keyframes hmCartFlash{0%,100%{box-shadow:none}50%{box-shadow:0 0 0 3px rgba(255,184,77,.55)}}
     .cart-item-state-builder-required{border:1px solid rgba(0,229,255,.3);background:rgba(0,229,255,.08);color:var(--cyan)}
     .cart-item-state-review-required{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--soft)}
     .cart-item-variant,.cart-item-file{color:var(--muted);font-size:.82rem;margin-top:3px}

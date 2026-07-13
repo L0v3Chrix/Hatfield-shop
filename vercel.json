@@ -54,5 +54,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/products",
+      "destination": "/shop",
+      "permanent": true
+    }
   ]
 }

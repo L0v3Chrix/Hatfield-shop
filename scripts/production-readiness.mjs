@@ -244,9 +244,15 @@ function buildFullStorefrontNormalizedCatalog() {
     loadEdits()
   )
   const productsByHandle = new Map((normalized.products ?? []).map((product) => [product.handle, product]))
+  // Owner-authored copy for the core (non-dtfva) products — same shape as the
+  // dtfva copyOverrides/offerCopy edit layer, kept in JSON so copy edits never
+  // touch this script. See docs/OPERATORS-MANUAL.md §3.
+  const coreCopyPath = join(__dirname, 'shopify', 'config', 'core-copy.json')
+  const coreCopy = existsSync(coreCopyPath) ? JSON.parse(readFileSync(coreCopyPath, 'utf8')) : {}
   for (const product of SHOPIFY_PRODUCTS) {
     productsByHandle.set(product.handle, {
       ...product,
+      ...(coreCopy[product.handle] ?? {}),
       tags: [
         'shopify-launch-catalog',
         product.status === 'ACTIVE' ? 'launch-approved' : 'launch-held',

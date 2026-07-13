@@ -4,6 +4,16 @@ Run `npm run qa:gate` for the deterministic verdict (evidence in
 `output/readiness/qa-gate.json`). Both halves of the combined rule apply at every
 rung: an API pass without a browser pass is not done, and vice versa.
 
+**Post-deploy, MANDATORY:** `npm run qa:journeys -- --base <deployed-url>`
+(`scripts/qa/e2e-journeys.mjs`; needs Playwright — `npm i playwright` once, or
+`HM_PLAYWRIGHT_DIR=<dir with node_modules/playwright>`). It walks real buyer
+journeys: add-without-artwork -> guided (never a dead checkout button) -> upload in
+cart -> Shopify checkout reached; pre-upload -> checkout reached for EVERY buyable;
+builder + quote routing; a 390x844 mobile pass; console errors fail the product.
+This suite exists because selector-level smoke tests passed for a week while the
+human cart->checkout path was dead (owner-found, 2026-07-13). A deploy is not done
+until it prints `N/N journeys passed` against the deployed URL.
+
 | Gate | Conditions | Owner | Evidence |
 |---|---|---|---|
 | **BLOCKED** | Any local step red (tests, build, readiness audit, copy scanner, round-trip) | build | `qa-gate.json` |

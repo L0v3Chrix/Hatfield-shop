@@ -9,7 +9,7 @@
 // a current output/competitor/dtfvirginia/shopify-state.json.
 
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
-import { dirname, join } from 'node:path'
+import { dirname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -125,6 +125,17 @@ for (const [handle, needles] of Object.entries(OFFER.offerCopyRequired ?? {})) {
     if (!readFileSync(pdpPath, 'utf8').includes('class="offer-summary"')) missing.push(product.handle)
   }
   check('every buyable PDP has offer-summary prose', missing.length === 0, missing.slice(0, 5).join(', '))
+}
+
+// Q5d — the lazy boilerplate template is banned from product copy (owner, 2026-07-13:
+// "rewrite every product with the information that the user needs")
+{
+  const BOILERPLATE = 'with nationwide shipping, direct checkout, and artwork upload attached to the order'
+  const offenders = []
+  for (const file of htmlFiles) {
+    if (readFileSync(file, 'utf8').includes(BOILERPLATE)) offenders.push(relative(PS, file))
+  }
+  check('no page uses the retired boilerplate product lede', offenders.length === 0, `${offenders.length} pages, e.g. ${offenders.slice(0, 3).join(', ')}`)
 }
 
 // Q6 — every data-merchandise-id in built HTML exists in current shopify-state with matching price

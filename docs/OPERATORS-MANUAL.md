@@ -1,6 +1,6 @@
 # Hatfield McCoy DTF — Operator's Manual
 
-Last updated: 2026-07-10. The one document for how the store works, how to change it, and how to launch/rollback. Written for Chrix (and future maintainers).
+Last updated: 2026-07-13. The one document for how the store works, how to change it, and how to launch/rollback. Written for Chrix (and future maintainers).
 
 ---
 
@@ -27,9 +27,11 @@ Last updated: 2026-07-10. The one document for how the store works, how to chang
 
 The public site (www.hatfieldmccoydtf.com) is a static storefront + serverless APIs deployed from `deliverables/Hatfield-shop` (repo root) to Vercel project **`enterweb-guru/production-site`** via CLI (`npx vercel deploy --prod`) — git pushes do NOT deploy. Static pages are generated: `catalog-edits.json` (owner truth) patches the scraped catalog → `competitor:dtfva:frontend` writes pages into `deliverables/prototype` → `production:prepare` promotes into `deliverables/production-site` → deploy. Checkout runs on Shopify (Storefront API cartCreate); the myshopify Online Store theme ("Builder Brand Match Test") only serves the Kixxl pass-through pages (builder PDPs, cart).
 
+**Routing note:** `/shop` is the one canonical listing (owner decision 2026-07-13). `/products` 308-redirects to `/shop` via root `vercel.json`; product detail pages stay at `/products/<handle>`.
+
 ## 3. Changing prices / products (the only sanctioned way)
 
-Edit **`scripts/competitor/dtfvirginia/catalog-edits.json`** (removals, retitles, variant restructures, per-SKU priceOverrides, PDP notes, directBuy list). Then:
+Edit **`scripts/competitor/dtfvirginia/catalog-edits.json`** (removals, retitles, variant restructures, per-SKU priceOverrides, PDP notes, directBuy list, and the copy layer: `copyOverrides` = per-product `{shortDescription, bodyHtml}`, `offerCopy` = the one-sentence pricing offer shown in the lime block). Core non-dtfva products (dtf-22-sheet etc.) take the same copy shape from **`scripts/shopify/config/core-copy.json`**. Then:
 ```bash
 node scripts/competitor/dtfvirginia/apply-edits.js --write     # sync Shopify-side artifacts
 node scripts/shopify/offer-sheet-sync.mjs --execute            # statuses/restructures/builder upcharge (dry-run first without --execute)
@@ -38,12 +40,16 @@ npm run competitor:dtfva:shopify-state                         # ALWAYS re-expor
 npm run competitor:dtfva:frontend && npm run production:prepare
 npm run qa:gate -- --skip-build                                # must print LOCAL_READY
 npx vercel deploy --prod
+npm run qa:journeys -- --base https://www.hatfieldmccoydtf.com # must print N/N journeys passed
 ```
+After copy changes also run `node scripts/shopify/refresh-seo-descriptions.mjs --execute` so Shopify admin SEO descriptions match the site.
 Update `offer-sheet-2026-07-08.json` when prices change so QA asserts the new truth. Never run import-drafts before offer-sheet-sync restructures. Never hand-edit `public/` or `deliverables/production-site` pages (regenerated every build).
 
 ## 4. QA — what runs automatically
 
 `npm run qa:gate -- --skip-build` runs: unit/generator tests (48), readiness + copy compliance, round-trip integrity (JS mirror parity, curated image = card AND PDP hero, robots state), **offer-sheet conformance** (prices/variants/removals/buyability/live merchandise-IDs/duplicate titles/competitor-branding sweep/Kixxl protection), Shopify audit, storefront cartCreate, Kixxl live check. All must be green before any deploy.
+
+**Buyer-journey E2E (post-deploy, mandatory):** `npm run qa:journeys -- --base <url>` — real Playwright journeys for every public product: direct-buy add→(guided if artwork missing)→upload→Shopify checkout reached, builder routing, quote routing, mobile 390×844 pass, zero console errors. Built 2026-07-13 after the cart→checkout dead end shipped past selector-level tests.
 
 Test order without touching a card: `node scripts/shopify/qa-test-order.mjs [--variant-gid gid://…]` — creates a payment-pending order with artwork attributes, verifies the webhook manifest, auto-cancels.
 

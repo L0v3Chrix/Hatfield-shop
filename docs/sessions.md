@@ -80,3 +80,22 @@ Full report: `../../project-ops/2026-07-07-fable5-production-rescue-report.md`
 
 ### Next Session
 - Owner sign-off gate per OPERATORS-MANUAL §8: Chrix human test order (phone+desktop), shipping rates, test orders cleanup, token rotation, git push, payments live → indexing flip.
+
+## Session: 2026-07-14 — senior-audit remediation
+
+### Accomplished
+Actioned an independent senior-dev review. Fixed & deployed:
+- **Cart artwork identity (HIGH):** same sku+variant with different artwork collapsed to one line, first artwork lost at fulfillment. Rekeyed cart to stable lineId; merge only on identical artwork (or no-artwork products). Verified live: two designs = two lines. Legacy carts migrate losslessly.
+- **Anonymous upload abuse (HIGH):** /api/upload-artwork now origin-allowlists, magic-byte sniffs (rejects renamed non-images — verified 400 live), generic 500. Rate limiting flagged as owner infra (Vercel KV).
+- **API version (MED):** 2025-01 → 2026-07 across Storefront + Admin + webhook tooling; gate cartCreate/audit pass on new version.
+- **Token print (MED):** capture-admin-token.js → 0600 .env.local + masked preview.
+- **Card image weight (MED):** 6.4MB card JPG → 284KB; 20 -card.webp derivatives generated, overrides repointed, new QA cap (Q5e) fails build >500KB.
+- **Low/spec:** cart storage-key drift aligned; webhook 2MB body cap before HMAC; intake allowed_mentions:{parse:[]}.
+All: 50/50 unit tests, gate LOCAL_READY, 48/48 journeys green post-deploy.
+
+### Not done (owner decisions)
+- Upload rate limiting / CAPTCHA (needs Vercel KV or WAF; CAPTCHA can't be auto-completed).
+- Single-builder/catalog-unification plan (2026-07-14) — validated separately; theme half sound, "archive all dtfva" would nuke live catalog, needs explicit scope decision.
+
+### Next Session
+Owner sign-off gate unchanged: human test order (phone+desktop), test-order cleanup, token rotation, git push, payments off-test → indexing flip.

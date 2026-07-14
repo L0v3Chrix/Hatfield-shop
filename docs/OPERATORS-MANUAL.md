@@ -25,7 +25,7 @@ Last updated: 2026-07-13. The one document for how the store works, how to chang
 
 ## 2. Architecture in one paragraph
 
-The public site (www.hatfieldmccoydtf.com) is a static storefront + serverless APIs deployed from `deliverables/Hatfield-shop` (repo root) to Vercel project **`enterweb-guru/production-site`** via CLI (`npx vercel deploy --prod`) — git pushes do NOT deploy. Static pages are generated: `catalog-edits.json` (owner truth) patches the scraped catalog → `competitor:dtfva:frontend` writes pages into `deliverables/prototype` → `production:prepare` promotes into `deliverables/production-site` → deploy. Checkout runs on Shopify (Storefront API cartCreate); the myshopify Online Store theme ("Builder Brand Match Test") only serves the Kixxl pass-through pages (builder PDPs, cart).
+The public site (www.hatfieldmccoydtf.com) is a static storefront + serverless APIs on Vercel project **`enterweb-guru/production-site`**. **The Vercel project is connected to GitHub (`L0v3Chrix/Hatfield-shop`): a push to `main` triggers a production deploy** (confirmed 2026-07-14). The Vercel build (`scripts/vercel-build.mjs`) is deterministic — it copies the committed `deliverables/production-site/` into `public/` and injects the storefront token from env; it does NOT regenerate from source. So the deployed site is exactly whatever `deliverables/production-site/` was committed. `npx vercel deploy --prod` from the repo root produces the identical result (same build) and is the fallback when you want to deploy without a push. **Discipline: always regenerate + commit `deliverables/production-site/` before pushing**, or the deploy serves stale HTML. Static pages are generated: `catalog-edits.json` (owner truth) patches the scraped catalog → `competitor:dtfva:frontend` writes pages into `deliverables/prototype` → `production:prepare` promotes into `deliverables/production-site` → commit → push (or CLI deploy). Checkout runs on Shopify (Storefront API cartCreate); the myshopify Online Store theme ("Builder Brand Match Test") only serves the Kixxl pass-through pages (builder PDPs, cart).
 
 **Routing note:** `/shop` is the one canonical listing (owner decision 2026-07-13). `/products` 308-redirects to `/shop` via root `vercel.json`; product detail pages stay at `/products/<handle>`.
 
@@ -39,8 +39,9 @@ node scripts/competitor/dtfvirginia/import-drafts.js --execute --update --sync-m
 npm run competitor:dtfva:shopify-state                         # ALWAYS re-export before regenerating pages
 npm run competitor:dtfva:frontend && npm run production:prepare
 npm run qa:gate -- --skip-build                                # must print LOCAL_READY
-npx vercel deploy --prod
-npm run qa:journeys -- --base https://www.hatfieldmccoydtf.com # must print N/N journeys passed
+git add -A && git commit -m "..." && git push origin main       # push = production deploy (Vercel auto-builds from main)
+# (or `npx vercel deploy --prod` for a deploy without a push — identical build)
+npm run qa:journeys -- --base https://www.hatfieldmccoydtf.com # must print N/N journeys passed (after the deploy goes live)
 ```
 After copy changes also run `node scripts/shopify/refresh-seo-descriptions.mjs --execute` so Shopify admin SEO descriptions match the site.
 Update `offer-sheet-2026-07-08.json` when prices change so QA asserts the new truth. Never run import-drafts before offer-sheet-sync restructures. Never hand-edit `public/` or `deliverables/production-site` pages (regenerated every build).
@@ -60,7 +61,7 @@ Test order without touching a card: `node scripts/shopify/qa-test-order.mjs [--v
 - **Go live to Google** (only after payments are live):
   1. `python3 - <<'E'` … or simply: remove the three `X-Robots-Tag` entries from the repo-root **`vercel.json`** (this root file is the live header config — the generated copy inside production-site is NOT used).
   2. `HM_LAUNCHED=1 npm run production:prepare` (flips robots.txt → Allow, populates sitemap.xml with ~113 URLs, sets `index, follow` meta on buyable products/collections/key pages; thin quote/proxy pages intentionally stay noindex).
-  3. `HM_LAUNCHED=1 npm run qa:gate -- --skip-build` → LOCAL_READY → `npx vercel deploy --prod`.
+  3. `HM_LAUNCHED=1 npm run qa:gate -- --skip-build` → LOCAL_READY → commit + `git push origin main` (Vercel deploys), or `npx vercel deploy --prod`.
 - **Go dark**: re-add the noindex headers to root `vercel.json`, rebuild *without* `HM_LAUNCHED`, deploy. (Current state as of 2026-07-10: **dark**, awaiting payments-live.)
 
 ## 6. Shopify state (as left on 2026-07-10)

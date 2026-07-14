@@ -24,7 +24,7 @@ if (!shopDomain || !token) {
   console.error('Missing SHOPIFY_SHOP_DOMAIN or SHOPIFY_STOREFRONT_PUBLIC_TOKEN — storefront checks blocked.')
   process.exit(1)
 }
-const endpoint = `https://${shopDomain}/api/2025-01/graphql.json`
+const endpoint = `https://${shopDomain}/api/2026-07/graphql.json`
 
 async function sf(query, variables = {}) {
   const res = await fetch(endpoint, {

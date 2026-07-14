@@ -139,10 +139,13 @@ async function forwardToDiscord(url, payload) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT_MS);
   try {
+    // Neutralize mention-injection: a submitted "@everyone" in content must never
+    // ping. Force parse:[] and drop any client-supplied allowed_mentions override.
+    const safePayload = { ...payload, allowed_mentions: { parse: [] } };
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(safePayload),
       signal: controller.signal
     });
     clearTimeout(timeoutId);

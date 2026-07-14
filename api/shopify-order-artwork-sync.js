@@ -145,10 +145,23 @@ async function attachArtworkManifestToOrder(order, uploadedFiles) {
   return { attached: true, reason: '' }
 }
 
+// Cap the buffered body before HMAC so an unauthenticated caller can't stream an
+// unbounded payload into memory. Shopify order webhooks are well under 1MB.
+const MAX_WEBHOOK_BYTES = Number(process.env.WEBHOOK_MAX_BYTES || 2 * 1024 * 1024)
+
 function readRawBody(request) {
   return new Promise((resolve, reject) => {
     const chunks = []
-    request.on('data', (chunk) => chunks.push(Buffer.from(chunk)))
+    let total = 0
+    request.on('data', (chunk) => {
+      total += chunk.length
+      if (total > MAX_WEBHOOK_BYTES) {
+        reject(new Error('Webhook body too large.'))
+        request.destroy()
+        return
+      }
+      chunks.push(Buffer.from(chunk))
+    })
     request.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')))
     request.on('error', reject)
   })

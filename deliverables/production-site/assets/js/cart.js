@@ -3,8 +3,8 @@
    ============================================================
    Contract:
      Cart.add(item)       -> item: {sku, name, variant, price, qty, thumb?, file?, merchandiseId?, attributes?}
-     Cart.remove(sku, variant)
-     Cart.updateQty(sku, variant, qty)
+     Cart.remove(lineId)
+     Cart.updateQty(lineId, qty)
      Cart.getItems()      -> [item, ...]
      Cart.getTotal()      -> number
      Cart.getCount()      -> number (total qty across items)
@@ -108,7 +108,9 @@
       if (!Array.isArray(parsed)) return [];
       // Purge phantom lines a pre-2026-07-13 bug injected on Checkout clicks
       // (dataset-less .buy-button delegation produced sku 'custom-item').
-      return parsed.filter((item) => item && item.sku && item.sku !== 'custom-item');
+      const cleaned = parsed.filter((item) => item && item.sku && item.sku !== 'custom-item');
+      cleaned.forEach((item) => { if (!item.lineId) item.lineId = migrateLineId(item); });
+      return cleaned;
     } catch (err) {
       console.warn('[cart] failed to parse cart storage', err);
       return [];
@@ -127,8 +129,39 @@
     window.dispatchEvent(new CustomEvent('cart:changed', { detail: Cart.getItems() }));
   }
 
-  function findIndex(items, sku, variant) {
-    return items.findIndex(i => i.sku === sku && (i.variant || '') === (variant || ''));
+  let lineSeq = 0;
+  function makeLineId() {
+    lineSeq += 1;
+    return 'ln-' + Date.now().toString(36) + '-' + lineSeq.toString(36);
+  }
+  // Deterministic id for legacy lines lacking one — stable across reloads without
+  // a write, and collision-free because the old merge-by-sku+variant code never
+  // produced two lines with the same sku+variant.
+  function migrateLineId(item) {
+    return 'ln-legacy-' + String([item.sku, item.variant, item.artworkUrl].filter(Boolean).join('|'))
+      .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+  function findById(items, lineId) {
+    return items.findIndex(i => i.lineId === lineId);
+  }
+  function requiresArtworkValue(item) {
+    return !(item && (item.requiresArtwork === false || item.requiresArtwork === 'false'));
+  }
+  // A new add() merges into an existing line ONLY when it is unambiguously the
+  // same order line: same sku+variant AND either the product needs no artwork
+  // (rush fee, vector design) or the two carry the identical uploaded artwork.
+  // Different artwork on the same sheet size => a distinct line (each physical
+  // sheet keeps its own file; qty-of-one-design is the PDP quantity stepper).
+  function findMergeIndex(items, incoming) {
+    const needsArt = requiresArtworkValue(incoming);
+    const inUrl = incoming.artworkUrl || '';
+    return items.findIndex((i) => {
+      if (i.sku !== incoming.sku) return false;
+      if ((i.variant || '') !== (incoming.variant || '')) return false;
+      if (!needsArt) return true;
+      const exUrl = i.artworkUrl || '';
+      return exUrl && inUrl && exUrl === inUrl;
+    });
   }
 
   function normalizeKey(value) {
@@ -188,7 +221,7 @@
       const items = load();
       const checkoutReady = item.checkoutReady === undefined ? true : isCheckoutReadyValue(item.checkoutReady);
       const merchandiseId = checkoutReady ? (item.merchandiseId || item.storefront_variant_id || '') : '';
-      const idx = findIndex(items, item.sku, item.variant);
+      const idx = findMergeIndex(items, item);
       const qty = Math.max(1, Math.floor(Number(item.qty) || 1));
       if (idx >= 0) {
         items[idx].qty += qty;
@@ -219,24 +252,25 @@
           merchandiseId,
           attributes: Array.isArray(item.attributes) ? item.attributes : [],
           uploadedAt: item.uploadedAt || '',
+          lineId: makeLineId(),
           addedAt: Date.now()
         });
       }
       save(items);
       notify();
     },
-    remove(sku, variant) {
+    remove(lineId) {
       const items = load();
-      const idx = findIndex(items, sku, variant);
+      const idx = findById(items, lineId);
       if (idx >= 0) {
         items.splice(idx, 1);
         save(items);
         notify();
       }
     },
-    updateQty(sku, variant, qty) {
+    updateQty(lineId, qty) {
       const items = load();
-      const idx = findIndex(items, sku, variant);
+      const idx = findById(items, lineId);
       if (idx < 0) return;
       const next = Math.max(0, Math.floor(Number(qty) || 0));
       if (next === 0) {
@@ -260,11 +294,12 @@
       save([]);
       notify();
     },
-    updateLine(sku, variant, patch) {
+    updateLine(lineId, patch) {
       const items = load();
-      const idx = findIndex(items, sku, variant);
+      const idx = findById(items, lineId);
       if (idx < 0) return;
       const next = typeof patch === 'function' ? patch({ ...items[idx] }) : { ...items[idx], ...(patch || {}) };
+      next.lineId = items[idx].lineId;
       items[idx] = next;
       save(items);
       notify();
@@ -326,7 +361,7 @@
     const cfg = await loadRuntimeConfig();
     const shopify = cfg.shopify || {};
     const domain = shopify.store_domain;
-    const apiVersion = shopify.storefront_api_version || '2025-01';
+    const apiVersion = shopify.storefront_api_version || '2026-07';
     const token = shopify.storefront_access_token;
     if (!domain || !token) throw new Error('Shopify checkout is not configured yet.');
     const res = await fetch('https://' + domain + '/api/' + apiVersion + '/graphql.json', {
@@ -451,7 +486,7 @@
   }
 
   function buildItemRow(item) {
-    const row = el('div', { class: 'cart-item', dataset: { sku: item.sku, variant: item.variant || '' } });
+    const row = el('div', { class: 'cart-item', dataset: { lineId: item.lineId || '', sku: item.sku, variant: item.variant || '' } });
 
     const thumb = el('div', { class: 'cart-item-thumb', 'aria-hidden': 'true' });
     const body = el('div', { class: 'cart-item-body' });
@@ -502,7 +537,7 @@
         uploadStatus.textContent = 'Uploading artwork…';
         try {
           const uploaded = await uploadArtworkFile(file);
-          Cart.updateLine(item.sku, item.variant, (current) => ({
+          Cart.updateLine(item.lineId, (current) => ({
             ...current,
             file: uploaded.fileName || file.name,
             artworkUrl: uploaded.url,
@@ -526,16 +561,16 @@
 
     const controls = el('div', { class: 'cart-item-controls' });
     const dec = el('button', { class: 'qty-btn', 'aria-label': 'Decrease quantity', text: '−',
-      onclick: () => Cart.updateQty(item.sku, item.variant, item.qty - 1) });
+      onclick: () => Cart.updateQty(item.lineId, item.qty - 1) });
     const qtyInput = el('input', { class: 'qty-input', type: 'number', min: '1', value: String(item.qty), 'aria-label': 'Quantity' });
     qtyInput.addEventListener('change', (e) => {
       const n = parseInt(e.target.value, 10);
-      Cart.updateQty(item.sku, item.variant, isNaN(n) ? 1 : n);
+      Cart.updateQty(item.lineId, isNaN(n) ? 1 : n);
     });
     const inc = el('button', { class: 'qty-btn', 'aria-label': 'Increase quantity', text: '+',
-      onclick: () => Cart.updateQty(item.sku, item.variant, item.qty + 1) });
+      onclick: () => Cart.updateQty(item.lineId, item.qty + 1) });
     const remove = el('button', { class: 'cart-remove', 'aria-label': 'Remove item', text: 'Remove',
-      onclick: () => Cart.remove(item.sku, item.variant) });
+      onclick: () => Cart.remove(item.lineId) });
 
     controls.appendChild(dec);
     controls.appendChild(qtyInput);
@@ -657,7 +692,7 @@
     let firstRow = null;
     blocked.forEach(function (item, index) {
       const row = rows.find(function (r) {
-        return r.dataset.sku === String(item.sku) && (r.dataset.variant || '') === String(item.variant || '');
+        return r.dataset.lineId === String(item.lineId || '');
       });
       if (!row) return;
       if (!firstRow) firstRow = row;

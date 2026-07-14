@@ -39,7 +39,7 @@
     "comment": "Set preview_flag_enabled=true via URL param ?preview=true on any page to show the .proto-flag watermark."
   },
   "cart": {
-    "storage_key": "hmdtf_cart_v1",
+    "storage_key": "hm_cart_v1",
     "max_quantity_per_line": 99,
     "comment": "Shopify Storefront Cart API checkout enabled for Storefront-visible products. localStorage remains a display cache; checkout source of truth is Shopify cart checkoutUrl.",
     "mode": "shopify_storefront_cart_api",
@@ -68,7 +68,7 @@
   "collaborator_email_comment": "Operational collaborator email for Shopify setup instructions only; not public storefront customer-support copy.",
   "shopify": {
     "store_domain": "hatfield-mccoy-dtf.myshopify.com",
-    "storefront_api_version": "2025-01",
+    "storefront_api_version": "2026-07",
     "storefront_access_token": "__SHOPIFY_STOREFRONT_PUBLIC_TOKEN__",
     "comment": "Public Storefront API token only. Do not place Admin API tokens or private Storefront tokens in this static config."
   }

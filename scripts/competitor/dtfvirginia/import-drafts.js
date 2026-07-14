@@ -108,7 +108,7 @@ async function initShopifyClient(verbose) {
   const accessToken = process.env.SHOPIFY_ADMIN_ACCESS_TOKEN
   const clientId = process.env.SHOPIFY_ADMIN_CLIENT_ID
   const clientSecret = process.env.SHOPIFY_ADMIN_CLIENT_SECRET
-  const apiVersion = process.env.SHOPIFY_API_VERSION || '2025-01'
+  const apiVersion = process.env.SHOPIFY_API_VERSION || '2026-07'
 
   try {
     return await createClient({ shopDomain, accessToken, clientId, clientSecret, apiVersion, verbose })

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T22:35:34.739Z",
+  "generatedAt": "2026-07-14T21:38:58.636Z",
   "shop": {
     "name": "Hatfield Mccoy DTF",
     "domain": "zm1evm-rd.myshopify.com",
@@ -7,7 +7,7 @@
   },
   "auth": {
     "source": "client_credentials",
-    "apiVersion": "2025-01"
+    "apiVersion": "2026-07"
   },
   "counts": {
     "products": 93,

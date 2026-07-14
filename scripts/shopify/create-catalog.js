@@ -11,7 +11,7 @@
 //     (A) SHOPIFY_ADMIN_ACCESS_TOKEN   static shpat_ token (admin-created Custom App)
 //     (B) SHOPIFY_ADMIN_CLIENT_ID
 //         SHOPIFY_ADMIN_CLIENT_SECRET  Dev Dashboard app — exchanged via client_credentials
-//   SHOPIFY_API_VERSION            optional, defaults to 2025-01
+//   SHOPIFY_API_VERSION            optional, defaults to 2026-07
 
 import 'dotenv/config'
 import { createClient, ShopifyError } from './lib/shopify-client.js'
@@ -86,7 +86,7 @@ async function main() {
   const accessToken = process.env.SHOPIFY_ADMIN_ACCESS_TOKEN
   const clientId = process.env.SHOPIFY_ADMIN_CLIENT_ID
   const clientSecret = process.env.SHOPIFY_ADMIN_CLIENT_SECRET
-  const apiVersion = process.env.SHOPIFY_API_VERSION || '2025-01'
+  const apiVersion = process.env.SHOPIFY_API_VERSION || '2026-07'
 
   if (!shopDomain) {
     console.error('✗ Missing SHOPIFY_SHOP_DOMAIN. Copy .env.example to .env and fill it in.')

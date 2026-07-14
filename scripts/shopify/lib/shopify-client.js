@@ -4,7 +4,7 @@
 //   2. client_credentials grant (clientId + clientSecret from Dev Dashboard app)
 //      → exchanges on first use for a 24h admin API token
 
-const DEFAULT_API_VERSION = '2025-01'
+const DEFAULT_API_VERSION = '2026-07'
 
 export class ShopifyError extends Error {
   constructor(message, { errors, userErrors, status } = {}) {

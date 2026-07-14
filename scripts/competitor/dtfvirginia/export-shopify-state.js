@@ -22,7 +22,7 @@ async function main() {
     accessToken: process.env.SHOPIFY_ADMIN_ACCESS_TOKEN,
     clientId: process.env.SHOPIFY_ADMIN_CLIENT_ID,
     clientSecret: process.env.SHOPIFY_ADMIN_CLIENT_SECRET,
-    apiVersion: process.env.SHOPIFY_API_VERSION || '2025-01',
+    apiVersion: process.env.SHOPIFY_API_VERSION || '2026-07',
     verbose: flags.verbose,
   })
   const shop = await client.probe()

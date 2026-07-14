@@ -1,6 +1,7 @@
 import crypto from "node:crypto";
 import http from "node:http";
-import { URL } from "node:url";
+import { URL, fileURLToPath } from "node:url";
+import { writeFileSync } from "node:fs";
 
 const SHOP = process.env.SHOPIFY_SHOP || "zm1evm-rd.myshopify.com";
 const CLIENT_ID = process.env.SHOPIFY_APP_CLIENT_ID;
@@ -84,12 +85,17 @@ const server = http.createServer(async (req, res) => {
     }
 
     const token = await exchangeCode(code);
-    console.log("\nAdmin API access token captured:");
-    console.log(token.access_token);
+    // Never print the full token to stdout/logs. Write it to a 0600 .env.local
+    // and show only a masked preview so it can't be shoulder-surfed or captured
+    // in terminal scrollback / CI logs.
+    const tok = String(token.access_token || "");
+    const masked = tok.length > 8 ? `${tok.slice(0, 4)}…${tok.slice(-4)}` : "(short)";
+    const outPath = fileURLToPath(new URL("../../.env.local", import.meta.url));
+    writeFileSync(outPath, `SHOPIFY_ADMIN_ACCESS_TOKEN=${tok}\n`, { mode: 0o600, flag: "a" });
+    console.log(`\nAdmin API access token captured: ${masked} (${tok.length} chars)`);
+    console.log(`Written to ${outPath} (mode 0600) — do not commit this file.`);
     console.log("\nGranted scopes:");
     console.log(token.scope);
-    console.log("\nNext command:");
-    console.log("SHOPIFY_ADMIN_ACCESS_TOKEN='<paste-token-here>' npm run catalog:media:upload");
 
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end("<h1>Shopify Admin token captured</h1><p>You can return to Codex.</p>");

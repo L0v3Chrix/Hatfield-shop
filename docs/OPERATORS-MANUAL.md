@@ -89,7 +89,7 @@ Test order without touching a card: `node scripts/shopify/qa-test-order.mjs [--v
 - [x] All ACTIVE products have media + SEO in Shopify
 - [x] Site dark while payments in test mode
 - [ ] **Chrix: end-to-end human test order in test mode** (upload on PDP → checkout with 4242 card) — the sign-off gate
-- [ ] **Chrix: shipping rates** (only "Express $32.00" exists — set real rates in Settings → Shipping)
+- [x] Shipping options (2026-07-13): Flat Rate $10 (7-10 business days), Express $32 (next day), in-store pickup at Oaks Plaza, 311 George Kostas Drive, Logan WV ("ready in 2-4 days" — adjust in Settings → Shipping → Local pickup if needed). Accidental $0 free-shipping rate deleted; weight condition that hid the $10 rate removed.
 - [ ] Chrix: payments test mode OFF → tell Claude → indexing flip (§5)
 - [ ] Chrix: delete test orders #1001–#1007; rotate the May-exposed admin token; git push local commits
 - [ ] Jessie: real product photos (drop-in replacements); branding-pack copy review

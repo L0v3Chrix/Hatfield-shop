@@ -2687,5 +2687,86 @@
       "status": "ready"
     }
   ],
-  "warnings": []
+  "warnings": [
+    {
+      "issue": "stale-derivative",
+      "file": "22-glitter-dtf-transfer-builder-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "42-and-22-sublimation-gangsheet-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "42-gang-sheet-builder-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "46-gang-sheet-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "add-driver-port-24-wide-or-larger-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "bella-canvas-3001-unisex-jersey-tee-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-dtf-transfers-by-size-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-flouresent-dtf-transfers-by-size-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-glitter-dtf-transfer-by-size-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custom-sublimation-transfers-by-size-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "custome-22-gang-sheet-builder-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "digital-factory-12-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "dtf-gang-sheets-30-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "fluorescent-dtf-printing-bold-bright-stunning-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "next-level-3600-cotton-crew-t-shirt-card.webp"
+    },
+    {
+      "issue": "stale-derivative",
+      "file": "perforated-window-vinyl-window-perf-graphics-card.webp"
+    }
+  ]
 }

@@ -127,6 +127,30 @@ for (const [handle, needles] of Object.entries(OFFER.offerCopyRequired ?? {})) {
   check('every buyable PDP has offer-summary prose', missing.length === 0, missing.slice(0, 5).join(', '))
 }
 
+// Q5e — card/collection images stay light (senior-audit 2026-07-13: a 6.3MB JPG
+// was served in a card slot). Every image referenced by the shop + collection
+// pages must be under the cap, so a heavy original can never sneak back in.
+{
+  const MAX_CARD_BYTES = Number(process.env.CARD_IMAGE_MAX_BYTES || 500 * 1024)
+  const pages = [join(PS, 'shop', 'index.html'), ...readdirSync(join(PS, 'collections')).filter((f) => f.endsWith('.html')).map((f) => join(PS, 'collections', f))]
+  const offenders = []
+  const seen = new Set()
+  for (const page of pages) {
+    if (!existsSync(page)) continue
+    const html = readFileSync(page, 'utf8')
+    for (const m of html.matchAll(/src="(\/assets\/shopify-images\/[^"]+)"/g)) {
+      const rel = m[1]
+      if (seen.has(rel)) continue
+      seen.add(rel)
+      const abs = join(PS, rel)
+      if (!existsSync(abs)) continue
+      const bytes = statSync(abs).size
+      if (bytes > MAX_CARD_BYTES) offenders.push(`${rel} (${Math.round(bytes / 1024)}KB)`)
+    }
+  }
+  check(`card/collection images under ${Math.round(MAX_CARD_BYTES / 1024)}KB`, offenders.length === 0, offenders.slice(0, 4).join(', '))
+}
+
 // Q5d — the lazy boilerplate template is banned from product copy (owner, 2026-07-13:
 // "rewrite every product with the information that the user needs")
 {

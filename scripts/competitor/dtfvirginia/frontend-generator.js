@@ -1,5 +1,6 @@
-import { mkdirSync, writeFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import {
   buildApprovalState,
@@ -222,6 +223,10 @@ export function writeFrontendArtifacts(frontendCatalog, { outputDir, siteUrl = D
 }
 
 export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) {
+  if (String(product.handle ?? '') === 'custom-gang-sheet') {
+    const builders = loadKixxlBuilders()
+    if (builders) return renderCustomGangSheetPage(product, builders, { siteUrl })
+  }
   if (product.internalProxy) return renderInternalProxyProductPage(product, { siteUrl })
   const category = categorizeProduct(product)
   const image = resolveProductImages(product).hero
@@ -372,6 +377,197 @@ export function renderProductPage(product, { siteUrl = DEFAULT_SITE_URL } = {}) 
               cta.removeAttribute('aria-disabled');
             }
           });
+        })();
+      </script>`,
+  })
+}
+
+const KIXXL_BUILDERS_PATH = join(
+  dirname(fileURLToPath(import.meta.url)), '..', '..',
+  'shopify', 'config', 'kixxl-builders.json',
+)
+const GANGIFY_BASE = 'https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder'
+const KIXXL_FAMILY_ORDER = ['dtf-22', 'dtf-46', 'glitter-22', 'glow-22', 'sublimation-24']
+
+// Regenerate the data file with scripts/shopify/derive-kixxl-builders.mjs after
+// any Kixxl builder product/price change on Shopify.
+let kixxlBuildersCache
+function loadKixxlBuilders() {
+  if (kixxlBuildersCache !== undefined) return kixxlBuildersCache
+  kixxlBuildersCache = existsSync(KIXXL_BUILDERS_PATH)
+    ? JSON.parse(readFileSync(KIXXL_BUILDERS_PATH, 'utf8'))
+    : null
+  return kixxlBuildersCache
+}
+
+function gangifyDeepLink(family, size) {
+  return `${GANGIFY_BASE}?variant=${size.variant}&price=${size.price}&store=zm1evm-rd.myshopify.com&product=${family.product}&quantity=1&locale=en`
+}
+
+// The custom-gang-sheet PDP is the routing page for gang sheets: pick a fixed
+// sheet size up front and open the Kixxl builder locked to that exact variant,
+// or hand the layout to the shop via the direct-buy sheet PDPs.
+function renderCustomGangSheetPage(product, builders, { siteUrl = DEFAULT_SITE_URL } = {}) {
+  const image = resolveProductImages(product).hero
+  const families = KIXXL_FAMILY_ORDER.filter((key) => builders[key]?.sizes?.length)
+  const cheapest = families
+    .flatMap((key) => builders[key].sizes.map((size) => Number(size.price)))
+    .reduce((min, price) => Math.min(min, price), Infinity)
+  const totalSizes = families
+    .reduce((sum, key) => sum + new Set(builders[key].sizes.map((size) => size.length)).size, 0)
+  const defaultFamily = builders[families[0]]
+  const defaultSize = defaultFamily.sizes[0]
+  const familyOptions = families.map((key, index) => `<option value="${escapeHtml(key)}"${index === 0 ? ' selected' : ''}>${escapeHtml(builders[key].label)}</option>`).join('')
+  const defaultLengthOptions = [...new Set(defaultFamily.sizes.map((size) => size.length))]
+    .map((length, index) => `<option value="${length}"${index === 0 ? ' selected' : ''}>${defaultFamily.widthInches}&quot; x ${length}&quot;</option>`).join('')
+  const ladderRows = ['dtf-22', 'dtf-46'].filter((key) => builders[key]).map((key) => {
+    const family = builders[key]
+    return family.sizes.map((size) => `
+            <tr>
+              <td>${escapeHtml(family.label)}</td>
+              <td>${escapeHtml(size.label)}</td>
+              <td>$${escapeHtml(size.price)}</td>
+              <td><a class="quote-button table-link" href="${escapeHtml(gangifyDeepLink(family, size))}">Open builder</a></td>
+            </tr>`).join('')
+  }).join('')
+  const specialtyRows = ['glitter-22', 'glow-22', 'sublimation-24'].filter((key) => builders[key]).map((key) => {
+    const family = builders[key]
+    const lengths = [...new Set(family.sizes.map((size) => size.length))]
+    const fromPrice = family.sizes.reduce((min, size) => Math.min(min, Number(size.price)), Infinity)
+    return `
+            <tr>
+              <td>${escapeHtml(family.label)}</td>
+              <td>${family.widthInches}&quot; wide, ${lengths[0]}&quot; to ${lengths[lengths.length - 1]}&quot; long</td>
+              <td>From $${fromPrice.toFixed(2)}</td>
+              <td><a class="quote-button table-link" href="#gs-picker">Pick a size above</a></td>
+            </tr>`
+  }).join('')
+  const weBuildCards = families.map((key) => {
+    const family = builders[key]
+    return `<a class="family-card" href="${escapeHtml(family.sheetProduct)}"><img src="${escapeHtml(image.src)}" width="300" height="300" alt="" loading="lazy" decoding="async"><strong>${escapeHtml(family.label)}</strong><small>Pick a length, upload one image, add to cart — we lay out the sheet.</small></a>`
+  }).join('\n              ')
+  const buildersJson = JSON.stringify(builders).replaceAll('<', '\\u003c')
+  return renderShell({
+    seo: product.seo,
+    siteUrl,
+    body: `
+      <main class="seo-page product-page">
+        ${breadcrumb([{ label: 'Shop', url: '/shop' }, { label: product.title }])}
+        <section class="product-hero">
+          <div>
+            <p class="eyebrow">Gang sheet builders · Logan, WV production</p>
+            <h1>${escapeHtml(product.title)}</h1>
+            <p class="lede">${escapeHtml(product.copy.shortDescription)}</p>
+            ${buildOfferSummary(product) ? `<p class="offer-summary">${escapeHtml(buildOfferSummary(product))}</p>` : ''}
+            <div class="status-strip" aria-label="Ordering path">
+              <span class="route-chip route-builder">Customize in builder</span>
+              <span>From $${cheapest.toFixed(2)}</span>
+              <span>${totalSizes} sheet sizes</span>
+              <span>Fixed sizes — no rolling sheets</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn primary" href="#gs-picker">Pick your sheet size</a>
+              <a class="btn secondary" href="#we-build-it">We can lay it out</a>
+            </div>
+          </div>
+          <div class="purchase-panel" id="gs-picker">
+            <img src="${escapeHtml(image.src)}" width="900" height="900" alt="${escapeHtml(image.alt)}" loading="eager" decoding="async">
+            <span class="price" id="gs-price">$${escapeHtml(defaultSize.price)}</span>
+            <p>Pick the sheet type and length first. The builder opens locked to that exact size and price — place your images, then add it to the cart.</p>
+            <label class="variant-select"><span>Sheet type</span><select id="gs-type">${familyOptions}</select></label>
+            <label class="variant-select" id="gs-color-wrap" hidden><span>Glitter color</span><select id="gs-color"></select></label>
+            <label class="variant-select"><span>Sheet size</span><select id="gs-length">${defaultLengthOptions}</select></label>
+            <a class="btn primary feature-cta" id="gs-open" href="/gang-sheet-builder">Open builder — ${defaultFamily.widthInches}&quot; x ${defaultSize.length}&quot;</a>
+            <div class="approval-list">
+              ${['Sheet is the exact size you pick', 'Price fixed before the builder opens', 'Checkout direct through Shopify'].map((label) => `<span>${escapeHtml(label)}</span>`).join('')}
+            </div>
+          </div>
+        </section>
+        <section class="merchandising-band">
+          <article>
+            <p class="eyebrow">Product details</p>
+            <h2>Two ways to get a gang sheet.</h2>
+            ${buildOfferSummary(product) ? `<p class="offer-summary">${escapeHtml(buildOfferSummary(product))}</p>` : ''}
+            ${product.copy.bodyHtml}
+          </article>
+          <aside class="notes-panel">
+            <p class="eyebrow">How the builder route works</p>
+            <ul>
+              <li><strong>Pick the length.</strong> Choose a sheet type and size on this page — the price is set right here.</li>
+              <li><strong>Place your images.</strong> The builder opens at that exact sheet size; upload artwork and arrange it.</li>
+              <li><strong>Add it to the cart.</strong> The cart line carries the size and price you picked — nothing recalculates.</li>
+            </ul>
+          </aside>
+        </section>
+        <section class="merch-family-band" id="we-build-it">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Skip the builder</p>
+              <h2>We build the gang sheet for you.</h2>
+            </div>
+          </div>
+          <p class="variant-limit-note">Not into arranging a sheet yourself? Pick a width below, choose the length on that page, upload one image, and add it to the cart — the shop lays out the gang sheet for you at the flat sheet price.</p>
+          <div class="family-grid">
+              ${weBuildCards}
+          </div>
+        </section>
+        <section class="link-band" aria-label="Related resources"><a href="/shop">Shop all products</a><a href="/gang-sheet-builder">Gang sheet builder</a><a href="/guides">Pressing guide</a><a href="/contact">Talk to the shop</a></section>
+        <section class="variant-band" id="variants">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Options and pricing</p>
+              <h2>Every sheet size, priced up front.</h2>
+            </div>
+            <strong>${totalSizes} sizes</strong>
+          </div>
+          <p class="variant-limit-note">Builder sheets run $0.60 over the flat sheet price. Every link opens the builder locked to that exact size.</p>
+          <div class="table-wrap"><table><thead><tr><th>Sheet type</th><th>Size</th><th>Price</th><th>Builder</th></tr></thead><tbody>${ladderRows}${specialtyRows}</tbody></table></div>
+        </section>
+      </main>
+      <script type="application/json" id="kixxl-builders-data">${buildersJson}</script>
+      <script>
+        (function(){
+          // Base kept separate from '?variant=' so roundtrip's gangify-URL
+          // scanner never sees a parameterless literal URL in this script.
+          var GB = '${GANGIFY_BASE}';
+          var data = JSON.parse(document.getElementById('kixxl-builders-data').textContent);
+          var typeSelect = document.getElementById('gs-type');
+          var colorWrap = document.getElementById('gs-color-wrap');
+          var colorSelect = document.getElementById('gs-color');
+          var lengthSelect = document.getElementById('gs-length');
+          var price = document.getElementById('gs-price');
+          var open = document.getElementById('gs-open');
+          if (!typeSelect || !lengthSelect || !open) return;
+          function family(){ return data[typeSelect.value]; }
+          function fillLengths(){
+            var seen = {};
+            lengthSelect.innerHTML = family().sizes.filter(function(s){
+              if (seen[s.length]) return false; seen[s.length] = true; return true;
+            }).map(function(s){
+              return '<option value="' + s.length + '">' + family().widthInches + '&quot; x ' + s.length + '&quot;</option>';
+            }).join('');
+          }
+          function fillColors(){
+            if (!family().hasColors) { colorWrap.hidden = true; return; }
+            var seen = {};
+            colorSelect.innerHTML = family().sizes.filter(function(s){
+              if (!s.color || seen[s.color]) return false; seen[s.color] = true; return true;
+            }).map(function(s){ return '<option value="' + s.color + '">' + s.color + '</option>'; }).join('');
+            colorWrap.hidden = false;
+          }
+          function sync(){
+            var length = Number(lengthSelect.value);
+            var color = family().hasColors ? colorSelect.value : null;
+            var size = family().sizes.find(function(s){ return s.length === length && (!color || s.color === color); });
+            if (!size) return;
+            price.textContent = '$' + size.price;
+            open.href = GB + '?variant=' + size.variant + '&price=' + size.price + '&store=zm1evm-rd.myshopify.com&product=' + family().product + '&quantity=1&locale=en';
+            open.textContent = 'Open builder — ' + family().widthInches + '" x ' + length + '"';
+          }
+          typeSelect.addEventListener('change', function(){ fillColors(); fillLengths(); sync(); });
+          if (colorSelect) colorSelect.addEventListener('change', sync);
+          lengthSelect.addEventListener('change', sync);
+          fillColors(); sync();
         })();
       </script>`,
   })

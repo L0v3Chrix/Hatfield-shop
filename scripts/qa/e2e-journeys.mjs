@@ -92,7 +92,9 @@ async function classify(page) {
     if (!cta) return { kind: 'none' }
     if (cta.tagName === 'A') {
       const href = cta.getAttribute('href') || ''
-      if (href.includes('gang-sheet-builder')) return { kind: 'builder', href }
+      // Size-picker pages rewrite the CTA to a Kixxl deep link on load —
+      // an apps/gangify href is still the builder route.
+      if (href.includes('gang-sheet-builder') || href.includes('apps/gangify')) return { kind: 'builder', href }
       return { kind: 'quote', href }
     }
     return { kind: 'direct' }
@@ -225,7 +227,27 @@ async function journeyStatic(browser, product, kind, href) {
   watchErrors(page, errors)
   try {
     if (kind === 'builder') {
-      if (!href.includes('gang-sheet-builder')) throw new Error(`builder CTA href: ${href}`)
+      if (!href.includes('gang-sheet-builder') && !href.includes('apps/gangify')) throw new Error(`builder CTA href: ${href}`)
+      if (product.handle === 'custom-gang-sheet') {
+        // Size-first routing page: the picker must offer real sizes, the CTA
+        // must deep-link an exact Kixxl variant, and the "we build it for you"
+        // path must point at the direct-buy sheet PDPs.
+        await page.goto(`${BASE}/products/${product.handle}`, { waitUntil: 'domcontentloaded' })
+        await page.waitForTimeout(600)
+        const picker = await page.evaluate(() => ({
+          lengthOptions: document.querySelectorAll('#gs-length option').length,
+          typeOptions: document.querySelectorAll('#gs-type option').length,
+          openHref: document.getElementById('gs-open')?.getAttribute('href') || '',
+          sheet22: Boolean(document.querySelector('a[href*="/products/dtf-22-sheet"]')),
+          sheet46: Boolean(document.querySelector('a[href*="/products/dtf-46-sheet"]')),
+        }))
+        if (picker.typeOptions < 5) throw new Error(`sheet-type options: ${picker.typeOptions}`)
+        if (picker.lengthOptions < 2) throw new Error(`length options: ${picker.lengthOptions}`)
+        if (!/apps\/gangify\/builder\?variant=\d+&price=[\d.]+/.test(picker.openHref)) {
+          throw new Error(`picker CTA is not a variant deep link: ${picker.openHref}`)
+        }
+        if (!picker.sheet22 || !picker.sheet46) throw new Error('missing we-build-it links to dtf-22-sheet / dtf-46-sheet')
+      }
     } else {
       if (!href.includes('/contact')) throw new Error(`quote CTA href: ${href}`)
       await page.goto(`${BASE}${href}`, { waitUntil: 'domcontentloaded' })

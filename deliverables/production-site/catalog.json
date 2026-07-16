@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-14T21:49:17.970Z",
+    "generated_at": "2026-07-16T20:00:21.257Z",
     "source": "dtfva-catalog-plus-shopify-launch-catalog",
     "product_count": 85,
     "public_product_count": 43,
@@ -41870,24 +41870,24 @@
       ],
       "copy": {
         "status": "launch-ready",
-        "shortDescription": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout, your sheet.",
-        "bodyHtml": "<p>The button on this page opens the gang sheet builder. Pick a sheet size, then arrange your designs across it — mix sizes, mix artwork, pack it as tight as you like. The builder totals your sheet as you go, and checkout happens right inside it.</p>\n<p>Builder sheets run $0.60 over the flat sheet price. If your job doesn't fit the fixed sheet sizes — odd dimensions, bulk runs, or a layout you'd rather hand off — the contact form still gets you a setup plan and a firm price before anything prints. Prefer to talk it through? Call (304) 688-9970.</p>\n<p>Either way these are standard DTF, warm-peel transfers — press, wait a few seconds, peel while warm — and finished sheets ship nationwide or wait for pickup in Logan, West Virginia.</p>",
+        "shortDescription": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens locked to that exact size and price.",
+        "bodyHtml": "<p><strong>Build it yourself.</strong> Pick a sheet type and length on this page — 22\" or 46\" DTF from $12.60, glitter from $12.60, glow from $18.60, or 24\" sublimation from $9.10 — and the builder opens at exactly that size. Arrange your designs across the sheet: mix sizes, mix artwork, pack it as tight as you like. The size and price you picked are what land in the cart; we don't do rolling sheets or auto-calculated pricing.</p>\n<p><strong>Or let us build it.</strong> Pick a sheet width below, choose the length on that product page, upload one image, and add it to the cart — the shop lays out the gang sheet for you at the flat sheet price. Builder sheets run $0.60 over flat; if your job doesn't fit the fixed sizes, the contact form gets you a firm price before anything prints. Prefer to talk it through? Call (304) 688-9970.</p>\n<p>Standard DTF sheets are warm peel — press, wait a few seconds, peel while warm. Glitter and glow are cold peel. Finished sheets ship nationwide or wait for pickup in Logan, West Virginia.</p>",
         "sourceTextReferenceLength": 0,
         "approvalTags": []
       },
-      "offerCopy": "Lay the sheet out yourself in the gang sheet builder for $0.60 over the flat sheet price; jobs the fixed sheet sizes can't handle can still be quoted per job through the contact form.",
+      "offerCopy": "Pick the sheet length first — the builder opens locked to that size for $0.60 over the flat sheet price. Or pick a width and length, upload one image, and the shop lays the sheet out for you.",
       "forceDirectBuy": false,
       "notes": [],
       "cardNote": "",
       "seo": {
         "title": "Custom Gang Sheet | Hatfield McCoy DTF",
-        "description": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout…",
+        "description": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens lock…",
         "canonicalUrl": "https://www.hatfieldmccoydtf.com/products/custom-gang-sheet",
         "robots": "noindex, nofollow",
         "openGraph": {
           "type": "product",
           "title": "Custom Gang Sheet | Hatfield McCoy DTF",
-          "description": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout…",
+          "description": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens lock…",
           "url": "https://www.hatfieldmccoydtf.com/products/custom-gang-sheet",
           "siteName": "Hatfield McCoy DTF"
         },
@@ -41895,7 +41895,7 @@
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Custom Gang Sheet",
-          "description": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout…",
+          "description": "A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens lock…",
           "brand": {
             "@type": "Brand",
             "name": "Hatfield McCoy DTF"

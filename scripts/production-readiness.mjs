@@ -185,6 +185,9 @@ function buildProductionPreview() {
   copyFileSync(join(ROOT, 'deliverables', 'prototype', 'assets', 'images', 'favicon.png'), join(PRODUCTION_DIR, 'assets', 'images', 'favicon.png'))
   mkdirSync(join(PRODUCTION_DIR, 'data'), { recursive: true })
   copyFileSync(join(ROOT, 'deliverables', 'prototype', 'data', 'config.json'), join(PRODUCTION_DIR, 'data', 'config.json'))
+  // Kixxl builder size/variant map — feeds the /gang-sheet-builder size picker
+  // and the custom-gang-sheet PDP (regenerate: scripts/shopify/derive-kixxl-builders.mjs).
+  copyFileSync(join(__dirname, 'shopify', 'config', 'kixxl-builders.json'), join(PRODUCTION_DIR, 'data', 'kixxl-builders.json'))
   // Owner-action tracking (formerly "pending confirmations") is internal only.
   mkdirSync(REPORT_DIR, { recursive: true })
   writeFileSync(join(REPORT_DIR, 'owner-actions.json'), JSON.stringify(PENDING_CONFIRMATIONS, null, 2) + '\n')

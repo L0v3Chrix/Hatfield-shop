@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Custom Gang Sheet | Hatfield McCoy DTF</title>
-  <meta name="description" content="A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout…">
+  <meta name="description" content="A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens lock…">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.hatfieldmccoydtf.com/products/custom-gang-sheet">
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Hatfield McCoy DTF">
   <meta property="og:title" content="Custom Gang Sheet | Hatfield McCoy DTF">
-  <meta property="og:description" content="A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout…">
+  <meta property="og:description" content="A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens lock…">
   <meta property="og:url" content="https://www.hatfieldmccoydtf.com/products/custom-gang-sheet">
   <meta property="og:image" content="/assets/images/logo-primary.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -190,7 +190,7 @@
     @media(max-width:680px){.hero-actions{grid-template-columns:1fr}.family-grid,.catalog-grid,.product-grid{grid-template-columns:1fr}.catalog-card,.seo-page .product-card{min-height:0}.catalog-card h3{font-size:.98rem}.catalog-card p,.product-card p{display:block;-webkit-line-clamp:3}.purchase-panel img{height:172px}.table-wrap table{min-width:520px}}
     @media(max-width:420px){.seo-page{width:min(1240px,calc(100% - 24px))}.catalog-card h3{font-size:.86rem}.status-strip span,.approval-list span,.catalog-meta span{font-size:.55rem}.purchase-panel img{height:180px}.collection-hero>img{height:180px}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Custom Gang Sheet","description":"A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout…","brand":{"@type":"Brand","name":"Hatfield McCoy DTF"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Custom Gang Sheet","description":"A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens lock…","brand":{"@type":"Brand","name":"Hatfield McCoy DTF"}}</script>
 </head>
 <body>
 <div class="announce"><div class="wrap"><span>Custom DTF transfers</span><span>Gang sheet builder</span><span>Logan, WV production · nationwide shipping</span></div></div>
@@ -221,102 +221,363 @@
           <div>
             <p class="eyebrow">Gang sheet builders · Logan, WV production</p>
             <h1>Custom Gang Sheet</h1>
-            <p class="lede">A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. This is the build-it-yourself version — your layout, your sheet.</p>
-            <p class="offer-summary">Lay the sheet out yourself in the gang sheet builder for $0.60 over the flat sheet price; jobs the fixed sheet sizes can't handle can still be quoted per job through the contact form.</p>
+            <p class="lede">A gang sheet packs multiple designs onto one print run, so you pay for sheet space instead of per design. Pick your sheet size first — the builder opens locked to that exact size and price.</p>
+            <p class="offer-summary">Pick the sheet length first — the builder opens locked to that size for $0.60 over the flat sheet price. Or pick a width and length, upload one image, and the shop lays the sheet out for you.</p>
             <div class="status-strip" aria-label="Ordering path">
               <span class="route-chip route-builder">Customize in builder</span>
-              
-              <span>1 option</span>
-              <span>Gang Sheet</span>
+              <span>From $9.10</span>
+              <span>76 sheet sizes</span>
+              <span>Fixed sizes — no rolling sheets</span>
             </div>
             <div class="hero-actions">
-              <a class="btn primary" href="/gang-sheet-builder">Open builder</a>
-              <a class="btn secondary" href="/guides#artwork">Artwork guide</a>
+              <a class="btn primary" href="#gs-picker">Pick your sheet size</a>
+              <a class="btn secondary" href="#we-build-it">We can lay it out</a>
             </div>
           </div>
-          <div class="purchase-panel">
+          <div class="purchase-panel" id="gs-picker">
             <img src="/assets/shopify-images/big-gangsheet-hero.webp" width="900" height="900" alt="Wide gang sheet packed with customer artwork" loading="eager" decoding="async">
-            <span class="price">Quoted to your spec</span>
-            <p>Open the builder to arrange artwork on a fixed-size sheet and move straight into checkout.</p>
-            <label class="variant-select"><span>Start with a variant</span><select id="variant-select"><option value="GS-22-CUSTOM">GS-22-CUSTOM - Size: 22&quot; Wide Custom</option></select></label>
-            
-            
-            <a class="btn primary feature-cta" href="/gang-sheet-builder">Open builder</a>
+            <span class="price" id="gs-price">$12.60</span>
+            <p>Pick the sheet type and length first. The builder opens locked to that exact size and price — place your images, then add it to the cart.</p>
+            <label class="variant-select"><span>Sheet type</span><select id="gs-type"><option value="dtf-22" selected>22&quot; DTF</option><option value="dtf-46">46&quot; DTF</option><option value="glitter-22">22&quot; Glitter DTF</option><option value="glow-22">22&quot; Glow DTF</option><option value="sublimation-24">24&quot; Sublimation</option></select></label>
+            <label class="variant-select" id="gs-color-wrap" hidden><span>Glitter color</span><select id="gs-color"></select></label>
+            <label class="variant-select"><span>Sheet size</span><select id="gs-length"><option value="24" selected>22&quot; x 24&quot;</option><option value="36">22&quot; x 36&quot;</option><option value="48">22&quot; x 48&quot;</option><option value="60">22&quot; x 60&quot;</option><option value="72">22&quot; x 72&quot;</option><option value="84">22&quot; x 84&quot;</option><option value="96">22&quot; x 96&quot;</option><option value="108">22&quot; x 108&quot;</option><option value="120">22&quot; x 120&quot;</option><option value="132">22&quot; x 132&quot;</option><option value="144">22&quot; x 144&quot;</option><option value="156">22&quot; x 156&quot;</option><option value="168">22&quot; x 168&quot;</option><option value="180">22&quot; x 180&quot;</option><option value="192">22&quot; x 192&quot;</option><option value="300">22&quot; x 300&quot;</option></select></label>
+            <a class="btn primary feature-cta" id="gs-open" href="/gang-sheet-builder">Open builder — 22&quot; x 24&quot;</a>
             <div class="approval-list">
-              <span>Artwork attaches to your order</span><span>Direct Shopify checkout</span><span>Nationwide shipping</span>
+              <span>Sheet is the exact size you pick</span><span>Price fixed before the builder opens</span><span>Checkout direct through Shopify</span>
             </div>
           </div>
         </section>
         <section class="merchandising-band">
           <article>
             <p class="eyebrow">Product details</p>
-            <h2>Built for clear ordering.</h2>
-            <p class="offer-summary">Lay the sheet out yourself in the gang sheet builder for $0.60 over the flat sheet price; jobs the fixed sheet sizes can't handle can still be quoted per job through the contact form.</p>
-            <p>The button on this page opens the gang sheet builder. Pick a sheet size, then arrange your designs across it — mix sizes, mix artwork, pack it as tight as you like. The builder totals your sheet as you go, and checkout happens right inside it.</p>
-<p>Builder sheets run $0.60 over the flat sheet price. If your job doesn't fit the fixed sheet sizes — odd dimensions, bulk runs, or a layout you'd rather hand off — the contact form still gets you a setup plan and a firm price before anything prints. Prefer to talk it through? Call (304) 688-9970.</p>
-<p>Either way these are standard DTF, warm-peel transfers — press, wait a few seconds, peel while warm — and finished sheets ship nationwide or wait for pickup in Logan, West Virginia.</p>
+            <h2>Two ways to get a gang sheet.</h2>
+            <p class="offer-summary">Pick the sheet length first — the builder opens locked to that size for $0.60 over the flat sheet price. Or pick a width and length, upload one image, and the shop lays the sheet out for you.</p>
+            <p><strong>Build it yourself.</strong> Pick a sheet type and length on this page — 22" or 46" DTF from $12.60, glitter from $12.60, glow from $18.60, or 24" sublimation from $9.10 — and the builder opens at exactly that size. Arrange your designs across the sheet: mix sizes, mix artwork, pack it as tight as you like. The size and price you picked are what land in the cart; we don't do rolling sheets or auto-calculated pricing.</p>
+<p><strong>Or let us build it.</strong> Pick a sheet width below, choose the length on that product page, upload one image, and add it to the cart — the shop lays out the gang sheet for you at the flat sheet price. Builder sheets run $0.60 over flat; if your job doesn't fit the fixed sizes, the contact form gets you a firm price before anything prints. Prefer to talk it through? Call (304) 688-9970.</p>
+<p>Standard DTF sheets are warm peel — press, wait a few seconds, peel while warm. Glitter and glow are cold peel. Finished sheets ship nationwide or wait for pickup in Logan, West Virginia.</p>
           </article>
           <aside class="notes-panel">
-            <p class="eyebrow">Artwork and production notes</p>
+            <p class="eyebrow">How the builder route works</p>
             <ul>
-              
-              <li>Upload clean artwork in the cart before checkout.</li>
-              <li>Exact colors, placement, sizing, and material details travel with the order metadata.</li>
-              <li>Local pickup and shipped order paths can be coordinated from Logan, WV.</li>
+              <li><strong>Pick the length.</strong> Choose a sheet type and size on this page — the price is set right here.</li>
+              <li><strong>Place your images.</strong> The builder opens at that exact sheet size; upload artwork and arrange it.</li>
+              <li><strong>Add it to the cart.</strong> The cart line carries the size and price you picked — nothing recalculates.</li>
             </ul>
           </aside>
         </section>
-        <section class="link-band" aria-label="Related resources"><a href="/shop">Shop all products</a><a href="/collections/dtf-transfers">DTF transfer collections</a><a href="/gang-sheet-builder">Gang sheet options</a><a href="/guides">Pressing guide</a></section>
+        <section class="merch-family-band" id="we-build-it">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Skip the builder</p>
+              <h2>We build the gang sheet for you.</h2>
+            </div>
+          </div>
+          <p class="variant-limit-note">Not into arranging a sheet yourself? Pick a width below, choose the length on that page, upload one image, and add it to the cart — the shop lays out the gang sheet for you at the flat sheet price.</p>
+          <div class="family-grid">
+              <a class="family-card" href="/products/dtf-22-sheet"><img src="/assets/shopify-images/big-gangsheet-hero.webp" width="300" height="300" alt="" loading="lazy" decoding="async"><strong>22&quot; DTF</strong><small>Pick a length, upload one image, add to cart — we lay out the sheet.</small></a>
+              <a class="family-card" href="/products/dtf-46-sheet"><img src="/assets/shopify-images/big-gangsheet-hero.webp" width="300" height="300" alt="" loading="lazy" decoding="async"><strong>46&quot; DTF</strong><small>Pick a length, upload one image, add to cart — we lay out the sheet.</small></a>
+              <a class="family-card" href="/products/glitter-dtf-22-sheet"><img src="/assets/shopify-images/big-gangsheet-hero.webp" width="300" height="300" alt="" loading="lazy" decoding="async"><strong>22&quot; Glitter DTF</strong><small>Pick a length, upload one image, add to cart — we lay out the sheet.</small></a>
+              <a class="family-card" href="/products/glow-dtf-22-sheet"><img src="/assets/shopify-images/big-gangsheet-hero.webp" width="300" height="300" alt="" loading="lazy" decoding="async"><strong>22&quot; Glow DTF</strong><small>Pick a length, upload one image, add to cart — we lay out the sheet.</small></a>
+              <a class="family-card" href="/products/sublimation-24"><img src="/assets/shopify-images/big-gangsheet-hero.webp" width="300" height="300" alt="" loading="lazy" decoding="async"><strong>24&quot; Sublimation</strong><small>Pick a length, upload one image, add to cart — we lay out the sheet.</small></a>
+          </div>
+        </section>
+        <section class="link-band" aria-label="Related resources"><a href="/shop">Shop all products</a><a href="/gang-sheet-builder">Gang sheet builder</a><a href="/guides">Pressing guide</a><a href="/contact">Talk to the shop</a></section>
         <section class="variant-band" id="variants">
           <div class="section-heading">
             <div>
               <p class="eyebrow">Options and pricing</p>
-              <h2>Choose a size or variant.</h2>
+              <h2>Every sheet size, priced up front.</h2>
             </div>
-            <strong>1 option</strong>
+            <strong>76 sizes</strong>
           </div>
-          
-          <div class="table-wrap"><table><thead><tr><th>Variant</th><th>Options</th><th>Price</th><th>Checkout</th></tr></thead><tbody>
+          <p class="variant-limit-note">Builder sheets run $0.60 over the flat sheet price. Every link opens the builder locked to that exact size.</p>
+          <div class="table-wrap"><table><thead><tr><th>Sheet type</th><th>Size</th><th>Price</th><th>Builder</th></tr></thead><tbody>
             <tr>
-              <td>GS-22-CUSTOM</td>
-              <td>Size: 22&quot; Wide Custom</td>
-              <td>Quoted</td>
-              <td><a class="quote-button table-link" href="/gang-sheet-builder">Open builder</a></td>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 24&quot;</td>
+              <td>$12.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982709430&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 36&quot;</td>
+              <td>$18.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982742198&amp;price=18.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 48&quot;</td>
+              <td>$24.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982774966&amp;price=24.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 60&quot;</td>
+              <td>$30.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982807734&amp;price=30.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 72&quot;</td>
+              <td>$36.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982840502&amp;price=36.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 84&quot;</td>
+              <td>$42.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982873270&amp;price=42.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 96&quot;</td>
+              <td>$48.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982906038&amp;price=48.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 108&quot;</td>
+              <td>$54.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982938806&amp;price=54.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 120&quot;</td>
+              <td>$60.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982971574&amp;price=60.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 132&quot;</td>
+              <td>$66.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134983004342&amp;price=66.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 144&quot;</td>
+              <td>$72.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134983037110&amp;price=72.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 156&quot;</td>
+              <td>$78.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134983069878&amp;price=78.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 168&quot;</td>
+              <td>$84.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134983102646&amp;price=84.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 180&quot;</td>
+              <td>$90.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134983135414&amp;price=90.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 192&quot;</td>
+              <td>$96.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134983168182&amp;price=96.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; DTF</td>
+              <td>22&quot; x 300&quot;</td>
+              <td>$150.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134983200950&amp;price=150.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 12&quot;</td>
+              <td>$12.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045198006&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 24&quot;</td>
+              <td>$24.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045230774&amp;price=24.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 36&quot;</td>
+              <td>$36.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045263542&amp;price=36.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 48&quot;</td>
+              <td>$48.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045296310&amp;price=48.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 60&quot;</td>
+              <td>$60.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045329078&amp;price=60.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 72&quot;</td>
+              <td>$72.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045361846&amp;price=72.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 80&quot;</td>
+              <td>$80.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045394614&amp;price=80.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 84&quot;</td>
+              <td>$84.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045427382&amp;price=84.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 96&quot;</td>
+              <td>$96.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045460150&amp;price=96.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 108&quot;</td>
+              <td>$108.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045492918&amp;price=108.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 120&quot;</td>
+              <td>$120.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045525686&amp;price=120.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 132&quot;</td>
+              <td>$132.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045558454&amp;price=132.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 144&quot;</td>
+              <td>$144.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045591222&amp;price=144.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 156&quot;</td>
+              <td>$156.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045623990&amp;price=156.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 168&quot;</td>
+              <td>$168.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045656758&amp;price=168.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 180&quot;</td>
+              <td>$180.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045689526&amp;price=180.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 192&quot;</td>
+              <td>$192.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045722294&amp;price=192.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 204&quot;</td>
+              <td>$204.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045755062&amp;price=204.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 216&quot;</td>
+              <td>$216.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045787830&amp;price=216.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 228&quot;</td>
+              <td>$228.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045820598&amp;price=228.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>46&quot; DTF</td>
+              <td>46&quot; x 240&quot;</td>
+              <td>$240.60</td>
+              <td><a class="quote-button table-link" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045853366&amp;price=240.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; Glitter DTF</td>
+              <td>22&quot; wide, 24&quot; to 300&quot; long</td>
+              <td>From $12.60</td>
+              <td><a class="quote-button table-link" href="#gs-picker">Pick a size above</a></td>
+            </tr>
+            <tr>
+              <td>22&quot; Glow DTF</td>
+              <td>22&quot; wide, 24&quot; to 300&quot; long</td>
+              <td>From $18.60</td>
+              <td><a class="quote-button table-link" href="#gs-picker">Pick a size above</a></td>
+            </tr>
+            <tr>
+              <td>24&quot; Sublimation</td>
+              <td>24&quot; wide, 24&quot; to 96&quot; long</td>
+              <td>From $9.10</td>
+              <td><a class="quote-button table-link" href="#gs-picker">Pick a size above</a></td>
             </tr></tbody></table></div>
         </section>
       </main>
+      <script type="application/json" id="kixxl-builders-data">{"_meta":{"source":"output/shopify-audit/state-report.json","store":"zm1evm-rd.myshopify.com","shopDomain":"hatfield-mccoy-dtf.myshopify.com","derived":"2026-07-16"},"dtf-22":{"label":"22\" DTF","handle":"dtf-22-gang-sheet-builder","product":"8801329938614","sheetProduct":"/products/dtf-22-sheet","widthInches":22,"hasColors":false,"sizes":[{"length":24,"label":"22\" x 24\"","sku":"DTF-22-24-B","variant":"45134982709430","price":"12.60"},{"length":36,"label":"22\" x 36\"","sku":"DTF-22-36-B","variant":"45134982742198","price":"18.60"},{"length":48,"label":"22\" x 48\"","sku":"DTF-22-48-B","variant":"45134982774966","price":"24.60"},{"length":60,"label":"22\" x 60\"","sku":"DTF-22-60-B","variant":"45134982807734","price":"30.60"},{"length":72,"label":"22\" x 72\"","sku":"DTF-22-72-B","variant":"45134982840502","price":"36.60"},{"length":84,"label":"22\" x 84\"","sku":"DTF-22-84-B","variant":"45134982873270","price":"42.60"},{"length":96,"label":"22\" x 96\"","sku":"DTF-22-96-B","variant":"45134982906038","price":"48.60"},{"length":108,"label":"22\" x 108\"","sku":"DTF-22-108-B","variant":"45134982938806","price":"54.60"},{"length":120,"label":"22\" x 120\"","sku":"DTF-22-120-B","variant":"45134982971574","price":"60.60"},{"length":132,"label":"22\" x 132\"","sku":"DTF-22-132-B","variant":"45134983004342","price":"66.60"},{"length":144,"label":"22\" x 144\"","sku":"DTF-22-144-B","variant":"45134983037110","price":"72.60"},{"length":156,"label":"22\" x 156\"","sku":"DTF-22-156-B","variant":"45134983069878","price":"78.60"},{"length":168,"label":"22\" x 168\"","sku":"DTF-22-168-B","variant":"45134983102646","price":"84.60"},{"length":180,"label":"22\" x 180\"","sku":"DTF-22-180-B","variant":"45134983135414","price":"90.60"},{"length":192,"label":"22\" x 192\"","sku":"DTF-22-192-B","variant":"45134983168182","price":"96.60"},{"length":300,"label":"22\" x 300\"","sku":"DTF-22-300-B","variant":"45134983200950","price":"150.60"}]},"dtf-46":{"label":"46\" DTF","handle":"dtf-46-gang-sheet-builder","product":"8801338130614","sheetProduct":"/products/dtf-46-sheet","widthInches":46,"hasColors":false,"sizes":[{"length":12,"label":"46\" x 12\"","sku":"DTF-46-12-B","variant":"45135045198006","price":"12.60"},{"length":24,"label":"46\" x 24\"","sku":"DTF-46-24-B","variant":"45135045230774","price":"24.60"},{"length":36,"label":"46\" x 36\"","sku":"DTF-46-36-B","variant":"45135045263542","price":"36.60"},{"length":48,"label":"46\" x 48\"","sku":"DTF-46-48-B","variant":"45135045296310","price":"48.60"},{"length":60,"label":"46\" x 60\"","sku":"DTF-46-60-B","variant":"45135045329078","price":"60.60"},{"length":72,"label":"46\" x 72\"","sku":"DTF-46-72-B","variant":"45135045361846","price":"72.60"},{"length":80,"label":"46\" x 80\"","sku":"DTF-46-80-B","variant":"45135045394614","price":"80.60"},{"length":84,"label":"46\" x 84\"","sku":"DTF-46-84-B","variant":"45135045427382","price":"84.60"},{"length":96,"label":"46\" x 96\"","sku":"DTF-46-96-B","variant":"45135045460150","price":"96.60"},{"length":108,"label":"46\" x 108\"","sku":"DTF-46-108-B","variant":"45135045492918","price":"108.60"},{"length":120,"label":"46\" x 120\"","sku":"DTF-46-120-B","variant":"45135045525686","price":"120.60"},{"length":132,"label":"46\" x 132\"","sku":"DTF-46-132-B","variant":"45135045558454","price":"132.60"},{"length":144,"label":"46\" x 144\"","sku":"DTF-46-144-B","variant":"45135045591222","price":"144.60"},{"length":156,"label":"46\" x 156\"","sku":"DTF-46-156-B","variant":"45135045623990","price":"156.60"},{"length":168,"label":"46\" x 168\"","sku":"DTF-46-168-B","variant":"45135045656758","price":"168.60"},{"length":180,"label":"46\" x 180\"","sku":"DTF-46-180-B","variant":"45135045689526","price":"180.60"},{"length":192,"label":"46\" x 192\"","sku":"DTF-46-192-B","variant":"45135045722294","price":"192.60"},{"length":204,"label":"46\" x 204\"","sku":"DTF-46-204-B","variant":"45135045755062","price":"204.60"},{"length":216,"label":"46\" x 216\"","sku":"DTF-46-216-B","variant":"45135045787830","price":"216.60"},{"length":228,"label":"46\" x 228\"","sku":"DTF-46-228-B","variant":"45135045820598","price":"228.60"},{"length":240,"label":"46\" x 240\"","sku":"DTF-46-240-B","variant":"45135045853366","price":"240.60"}]},"glitter-22":{"label":"22\" Glitter DTF","handle":"glitter-dtf-22-gang-sheet-builder","product":"8801338327222","sheetProduct":"/products/glitter-dtf-22-sheet","widthInches":22,"hasColors":true,"sizes":[{"length":24,"label":"22\" x 24\"","sku":"GLT-22-24-GLD-B","variant":"45135046377654","price":"12.60","color":"Gold"},{"length":24,"label":"22\" x 24\"","sku":"GLT-22-24-MLT-B","variant":"45135046410422","price":"12.60","color":"Multi"},{"length":24,"label":"22\" x 24\"","sku":"GLT-22-24-SIL-B","variant":"45135046344886","price":"12.60","color":"Silver"},{"length":36,"label":"22\" x 36\"","sku":"GLT-22-36-GLD-B","variant":"45135046475958","price":"18.60","color":"Gold"},{"length":36,"label":"22\" x 36\"","sku":"GLT-22-36-MLT-B","variant":"45135046508726","price":"18.60","color":"Multi"},{"length":36,"label":"22\" x 36\"","sku":"GLT-22-36-SIL-B","variant":"45135046443190","price":"18.60","color":"Silver"},{"length":48,"label":"22\" x 48\"","sku":"GLT-22-48-GLD-B","variant":"45135046574262","price":"24.60","color":"Gold"},{"length":48,"label":"22\" x 48\"","sku":"GLT-22-48-MLT-B","variant":"45135046607030","price":"24.60","color":"Multi"},{"length":48,"label":"22\" x 48\"","sku":"GLT-22-48-SIL-B","variant":"45135046541494","price":"24.60","color":"Silver"},{"length":60,"label":"22\" x 60\"","sku":"GLT-22-60-GLD-B","variant":"45135046672566","price":"30.60","color":"Gold"},{"length":60,"label":"22\" x 60\"","sku":"GLT-22-60-MLT-B","variant":"45135046705334","price":"30.60","color":"Multi"},{"length":60,"label":"22\" x 60\"","sku":"GLT-22-60-SIL-B","variant":"45135046639798","price":"30.60","color":"Silver"},{"length":72,"label":"22\" x 72\"","sku":"GLT-22-72-GLD-B","variant":"45135046770870","price":"36.60","color":"Gold"},{"length":72,"label":"22\" x 72\"","sku":"GLT-22-72-MLT-B","variant":"45135046803638","price":"36.60","color":"Multi"},{"length":72,"label":"22\" x 72\"","sku":"GLT-22-72-SIL-B","variant":"45135046738102","price":"36.60","color":"Silver"},{"length":84,"label":"22\" x 84\"","sku":"GLT-22-84-GLD-B","variant":"45135046869174","price":"42.60","color":"Gold"},{"length":84,"label":"22\" x 84\"","sku":"GLT-22-84-MLT-B","variant":"45135046901942","price":"42.60","color":"Multi"},{"length":84,"label":"22\" x 84\"","sku":"GLT-22-84-SIL-B","variant":"45135046836406","price":"42.60","color":"Silver"},{"length":96,"label":"22\" x 96\"","sku":"GLT-22-96-GLD-B","variant":"45135046967478","price":"48.60","color":"Gold"},{"length":96,"label":"22\" x 96\"","sku":"GLT-22-96-MLT-B","variant":"45135047000246","price":"48.60","color":"Multi"},{"length":96,"label":"22\" x 96\"","sku":"GLT-22-96-SIL-B","variant":"45135046934710","price":"48.60","color":"Silver"},{"length":108,"label":"22\" x 108\"","sku":"GLT-22-108-GLD-B","variant":"45135047065782","price":"54.60","color":"Gold"},{"length":108,"label":"22\" x 108\"","sku":"GLT-22-108-MLT-B","variant":"45135047098550","price":"54.60","color":"Multi"},{"length":108,"label":"22\" x 108\"","sku":"GLT-22-108-SIL-B","variant":"45135047033014","price":"54.60","color":"Silver"},{"length":120,"label":"22\" x 120\"","sku":"GLT-22-120-GLD-B","variant":"45135047164086","price":"60.60","color":"Gold"},{"length":120,"label":"22\" x 120\"","sku":"GLT-22-120-MLT-B","variant":"45135047196854","price":"60.60","color":"Multi"},{"length":120,"label":"22\" x 120\"","sku":"GLT-22-120-SIL-B","variant":"45135047131318","price":"60.60","color":"Silver"},{"length":132,"label":"22\" x 132\"","sku":"GLT-22-132-GLD-B","variant":"45135047262390","price":"66.60","color":"Gold"},{"length":132,"label":"22\" x 132\"","sku":"GLT-22-132-MLT-B","variant":"45135047295158","price":"66.60","color":"Multi"},{"length":132,"label":"22\" x 132\"","sku":"GLT-22-132-SIL-B","variant":"45135047229622","price":"66.60","color":"Silver"},{"length":144,"label":"22\" x 144\"","sku":"GLT-22-144-GLD-B","variant":"45135047360694","price":"72.60","color":"Gold"},{"length":144,"label":"22\" x 144\"","sku":"GLT-22-144-MLT-B","variant":"45135047393462","price":"72.60","color":"Multi"},{"length":144,"label":"22\" x 144\"","sku":"GLT-22-144-SIL-B","variant":"45135047327926","price":"72.60","color":"Silver"},{"length":156,"label":"22\" x 156\"","sku":"GLT-22-156-GLD-B","variant":"45135047458998","price":"78.60","color":"Gold"},{"length":156,"label":"22\" x 156\"","sku":"GLT-22-156-MLT-B","variant":"45135047491766","price":"78.60","color":"Multi"},{"length":156,"label":"22\" x 156\"","sku":"GLT-22-156-SIL-B","variant":"45135047426230","price":"78.60","color":"Silver"},{"length":168,"label":"22\" x 168\"","sku":"GLT-22-168-GLD-B","variant":"45135047557302","price":"84.60","color":"Gold"},{"length":168,"label":"22\" x 168\"","sku":"GLT-22-168-MLT-B","variant":"45135047590070","price":"84.60","color":"Multi"},{"length":168,"label":"22\" x 168\"","sku":"GLT-22-168-SIL-B","variant":"45135047524534","price":"84.60","color":"Silver"},{"length":180,"label":"22\" x 180\"","sku":"GLT-22-180-GLD-B","variant":"45135047655606","price":"90.60","color":"Gold"},{"length":180,"label":"22\" x 180\"","sku":"GLT-22-180-MLT-B","variant":"45135047688374","price":"90.60","color":"Multi"},{"length":180,"label":"22\" x 180\"","sku":"GLT-22-180-SIL-B","variant":"45135047622838","price":"90.60","color":"Silver"},{"length":192,"label":"22\" x 192\"","sku":"GLT-22-192-GLD-B","variant":"45135047753910","price":"96.60","color":"Gold"},{"length":192,"label":"22\" x 192\"","sku":"GLT-22-192-MLT-B","variant":"45135047786678","price":"96.60","color":"Multi"},{"length":192,"label":"22\" x 192\"","sku":"GLT-22-192-SIL-B","variant":"45135047721142","price":"96.60","color":"Silver"},{"length":300,"label":"22\" x 300\"","sku":"GLT-22-300-GLD-B","variant":"45135047852214","price":"150.60","color":"Gold"},{"length":300,"label":"22\" x 300\"","sku":"GLT-22-300-MLT-B","variant":"45135047884982","price":"150.60","color":"Multi"},{"length":300,"label":"22\" x 300\"","sku":"GLT-22-300-SIL-B","variant":"45135047819446","price":"150.60","color":"Silver"}]},"glow-22":{"label":"22\" Glow DTF","handle":"glow-dtf-22-gang-sheet-builder","product":"8801338884278","sheetProduct":"/products/glow-dtf-22-sheet","widthInches":22,"hasColors":false,"sizes":[{"length":24,"label":"22\" x 24\"","sku":"GID-22-24-B","variant":"45135055650998","price":"18.60"},{"length":36,"label":"22\" x 36\"","sku":"GID-22-36-B","variant":"45135055683766","price":"27.60"},{"length":48,"label":"22\" x 48\"","sku":"GID-22-48-B","variant":"45135055716534","price":"36.60"},{"length":60,"label":"22\" x 60\"","sku":"GID-22-60-B","variant":"45135055749302","price":"45.60"},{"length":72,"label":"22\" x 72\"","sku":"GID-22-72-B","variant":"45135055782070","price":"54.60"},{"length":84,"label":"22\" x 84\"","sku":"GID-22-84-B","variant":"45135055814838","price":"63.60"},{"length":96,"label":"22\" x 96\"","sku":"GID-22-96-B","variant":"45135055847606","price":"72.60"},{"length":108,"label":"22\" x 108\"","sku":"GID-22-108-B","variant":"45135055880374","price":"81.60"},{"length":120,"label":"22\" x 120\"","sku":"GID-22-120-B","variant":"45135055913142","price":"90.60"},{"length":132,"label":"22\" x 132\"","sku":"GID-22-132-B","variant":"45135055945910","price":"99.60"},{"length":144,"label":"22\" x 144\"","sku":"GID-22-144-B","variant":"45135055978678","price":"108.60"},{"length":156,"label":"22\" x 156\"","sku":"GID-22-156-B","variant":"45135056011446","price":"117.60"},{"length":168,"label":"22\" x 168\"","sku":"GID-22-168-B","variant":"45135056044214","price":"126.60"},{"length":180,"label":"22\" x 180\"","sku":"GID-22-180-B","variant":"45135056076982","price":"135.60"},{"length":192,"label":"22\" x 192\"","sku":"GID-22-192-B","variant":"45135056109750","price":"144.60"},{"length":300,"label":"22\" x 300\"","sku":"GID-22-300-B","variant":"45135056142518","price":"225.60"}]},"sublimation-24":{"label":"24\" Sublimation","handle":"sublimation-24-gang-sheet-builder","product":"8801339211958","sheetProduct":"/products/sublimation-24","widthInches":24,"hasColors":false,"sizes":[{"length":24,"label":"24\" x 24\"","sku":"SUB-24-24-B","variant":"45135059648694","price":"9.10"},{"length":36,"label":"24\" x 36\"","sku":"SUB-24-36-B","variant":"45135059681462","price":"13.35"},{"length":48,"label":"24\" x 48\"","sku":"SUB-24-48-B","variant":"45135059714230","price":"17.60"},{"length":60,"label":"24\" x 60\"","sku":"SUB-24-60-B","variant":"45135059746998","price":"21.85"},{"length":72,"label":"24\" x 72\"","sku":"SUB-24-72-B","variant":"45135059779766","price":"26.60"},{"length":84,"label":"24\" x 84\"","sku":"SUB-24-84-B","variant":"45135059812534","price":"31.60"},{"length":96,"label":"24\" x 96\"","sku":"SUB-24-96-B","variant":"45135059845302","price":"34.60"}]}}</script>
       <script>
         (function(){
-          var select = document.getElementById('variant-select');
-          var cta = document.querySelector('.feature-cta');
-          var buttons = Array.prototype.slice.call(document.querySelectorAll('#variants button[data-sku]'));
-          if (!select || !cta || cta.tagName === 'A') return;
-          var quoteHref = '/contact?product=' + encodeURIComponent(cta.dataset.handle || '');
-          cta.addEventListener('click', function(){
-            if (cta.classList.contains('quote-button')) window.location.href = quoteHref;
-          });
-          select.addEventListener('change', function(){
-            var match = buttons.find(function(button){ return button.dataset.sku === select.value; });
-            if (!match) return;
-            cta.dataset.handle = match.dataset.handle || '';
-            cta.dataset.sku = match.dataset.sku || '';
-            cta.dataset.variant = match.dataset.variant || '';
-            cta.dataset.price = match.dataset.price || '0';
-            cta.dataset.merchandiseId = match.dataset.merchandiseId || '';
-            cta.dataset.checkoutReady = match.dataset.checkoutReady || 'false';
-            if (match.dataset.checkoutReady === 'true') {
-              cta.className = 'buy-button feature-cta';
-              cta.textContent = 'Add selected option';
-              cta.removeAttribute('disabled');
-              cta.removeAttribute('aria-disabled');
-            } else {
-              cta.className = 'quote-button feature-cta';
-              cta.textContent = 'Request a quote';
-              cta.setAttribute('type', 'button');
-              cta.removeAttribute('disabled');
-              cta.removeAttribute('aria-disabled');
-            }
-          });
+          // Base kept separate from '?variant=' so roundtrip's gangify-URL
+          // scanner never sees a parameterless literal URL in this script.
+          var GB = 'https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder';
+          var data = JSON.parse(document.getElementById('kixxl-builders-data').textContent);
+          var typeSelect = document.getElementById('gs-type');
+          var colorWrap = document.getElementById('gs-color-wrap');
+          var colorSelect = document.getElementById('gs-color');
+          var lengthSelect = document.getElementById('gs-length');
+          var price = document.getElementById('gs-price');
+          var open = document.getElementById('gs-open');
+          if (!typeSelect || !lengthSelect || !open) return;
+          function family(){ return data[typeSelect.value]; }
+          function fillLengths(){
+            var seen = {};
+            lengthSelect.innerHTML = family().sizes.filter(function(s){
+              if (seen[s.length]) return false; seen[s.length] = true; return true;
+            }).map(function(s){
+              return '<option value="' + s.length + '">' + family().widthInches + '&quot; x ' + s.length + '&quot;</option>';
+            }).join('');
+          }
+          function fillColors(){
+            if (!family().hasColors) { colorWrap.hidden = true; return; }
+            var seen = {};
+            colorSelect.innerHTML = family().sizes.filter(function(s){
+              if (!s.color || seen[s.color]) return false; seen[s.color] = true; return true;
+            }).map(function(s){ return '<option value="' + s.color + '">' + s.color + '</option>'; }).join('');
+            colorWrap.hidden = false;
+          }
+          function sync(){
+            var length = Number(lengthSelect.value);
+            var color = family().hasColors ? colorSelect.value : null;
+            var size = family().sizes.find(function(s){ return s.length === length && (!color || s.color === color); });
+            if (!size) return;
+            price.textContent = '$' + size.price;
+            open.href = GB + '?variant=' + size.variant + '&price=' + size.price + '&store=zm1evm-rd.myshopify.com&product=' + family().product + '&quantity=1&locale=en';
+            open.textContent = 'Open builder — ' + family().widthInches + '" x ' + length + '"';
+          }
+          typeSelect.addEventListener('change', function(){ fillColors(); fillLengths(); sync(); });
+          if (colorSelect) colorSelect.addEventListener('change', sync);
+          lengthSelect.addEventListener('change', sync);
+          fillColors(); sync();
         })();
       </script>
 

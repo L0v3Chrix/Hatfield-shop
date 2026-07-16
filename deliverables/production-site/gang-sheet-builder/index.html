@@ -17,6 +17,14 @@
   <link rel="preload" href="/assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .builder-card{display:grid;gap:10px;align-content:start}
+    .builder-card label{display:grid;gap:6px;font-weight:900;text-transform:uppercase;font-size:.72rem;color:rgba(255,255,255,.72)}
+    .builder-card select{width:100%;min-height:44px;border:1px solid rgba(255,255,255,.18);background:#11111b;color:#fff;border-radius:6px;padding:0 10px;font:inherit}
+    .builder-card .builder-price{font-family:Anton,Impact,sans-serif;font-size:1.4rem;color:#39FF14}
+    .builder-card .builder-price small{display:block;font-family:inherit;font-size:.76rem;color:rgba(255,255,255,.62);font-weight:400;letter-spacing:.02em}
+    .builder-card .btn{justify-content:center;text-align:center}
+  </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Gang Sheet Builder | Hatfield McCoy DTF","description":"Builder-first gang sheet ordering route for uploading artwork, choosing a fixed-size sheet, and preparing Shopify checkout.","url":"https://www.hatfieldmccoydtf.com/gang-sheet-builder","publisher":{"@type":"Organization","name":"Hatfield McCoy DTF","url":"https://www.hatfieldmccoydtf.com","logo":"https://www.hatfieldmccoydtf.com/assets/images/logo-primary.png"}}</script>
 
   <style>
@@ -50,33 +58,112 @@
   <main id="main-content" class="wrap page-hero">
     <span class="eyebrow">Live gang sheet ordering</span>
     <h1>Launch the Shopify-connected builder for the sheet you need.</h1>
-    <p class="lede">Each button opens the gang sheet builder with the sheet size, price, and product already set — upload artwork, arrange the sheet, and move straight to checkout.</p>
+    <p class="lede">Pick your sheet type and length first — the builder opens locked to that exact sheet size and price. Your sheet is the size you pick; pricing is fixed per size, never auto-calculated.</p>
     <div class="builder-layout">
       <section class="panel builder-canvas">
-        <div class="cta-row"><a class="btn primary" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982709430&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Build 22&quot; DTF sheet</a><a class="btn secondary" href="#live-builders">Choose another sheet</a></div>
-        <div class="canvas-box"><div><img src="/assets/shopify-images/car-gang-sheet-card.webp" width="900" height="900" alt="DTF gang sheet layout with vehicle graphics" loading="lazy" decoding="async"><h3>Builder opens in Shopify</h3><p>Choose a sheet family below. The builder opens with the right product and starting size already selected — upload artwork and arrange your sheet from there.</p></div></div>
+        <div class="cta-row"><a class="btn primary" href="#live-builders">Pick your sheet size</a><a class="btn secondary" href="/products/custom-gang-sheet">Want us to lay it out?</a></div>
+        <div class="canvas-box"><div><img src="/assets/shopify-images/car-gang-sheet-card.webp" width="900" height="900" alt="DTF gang sheet layout with vehicle graphics" loading="lazy" decoding="async"><h3>Builder opens in Shopify</h3><p>Choose a sheet family and length below. The builder opens with that exact sheet size and price already set — upload artwork and arrange your sheet from there.</p></div></div>
         <div class="cta-row"><a class="btn lime" href="/contact">Need artwork help?</a><a class="btn secondary" href="/guides#artwork">Prep checklist</a></div>
       </section>
       <aside class="panel">
         <h2>Build path</h2>
         <div class="steps">
-          <div class="step"><span class="num">01</span><div><h3>Upload art</h3><p>Send production-ready artwork, place it on a fixed-size sheet, and keep the design tied to checkout.</p></div></div>
-          <div class="step"><span class="num">02</span><div><h3>Lay out sheet</h3><p>Show printable area, spacing, duplicates, and sheet dimensions.</p></div></div>
-          <div class="step"><span class="num">03</span><div><h3>Approve order</h3><p>Review the layout, confirm the order details, and continue when the item is checkout-ready.</p></div></div>
+          <div class="step"><span class="num">01</span><div><h3>Pick the length</h3><p>Choose your sheet type and length below. That size is your canvas — the price is fixed before the builder opens.</p></div></div>
+          <div class="step"><span class="num">02</span><div><h3>Place your images</h3><p>Upload artwork and arrange it across the sheet you picked — mix designs, duplicate, pack it tight.</p></div></div>
+          <div class="step"><span class="num">03</span><div><h3>Add to cart</h3><p>Review the layout, add the sheet to the cart, and check out — the cart line matches the size you picked.</p></div></div>
         </div>
       </aside>
     </div>
     <section class="section" id="live-builders">
-      <div class="section-head"><h2>Live builder routes</h2><p>Start with the closest sheet type. The builder can handle artwork upload and layout after the Shopify route opens.</p></div>
+      <div class="section-head"><h2>Pick your sheet, pick your length</h2><p>Choose the length before the builder opens. The builder canvas and price are locked to the size you pick — no rolling sheets, no auto-calculated pricing.</p></div>
       <div class="product-grid">
-        <a class="product-card" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982709430&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en"><div><span class="kicker">DTF</span><h3>22&quot; DTF gang sheet</h3><p>Standard 22-inch DTF builder route for everyday transfer layouts.</p></div><span class="price">From $12.60</span></a>
-        <a class="product-card" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045198006&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en"><div><span class="kicker">DTF</span><h3>46&quot; DTF gang sheet</h3><p>Wide-format builder route for larger sheets and heavier production runs.</p></div><span class="price">From $12.60</span></a>
-        <a class="product-card" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135046344886&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338327222&amp;quantity=1&amp;locale=en"><div><span class="kicker">Specialty</span><h3>Glitter DTF builder</h3><p>Glitter transfer route for specialty artwork and standout apparel jobs. Cold peel: let transfers cool fully before peeling.</p></div><span class="price">From $12.60</span></a>
-        <a class="product-card" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135055650998&amp;price=18.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338884278&amp;quantity=1&amp;locale=en"><div><span class="kicker">Specialty</span><h3>Glow DTF builder</h3><p>Glow transfer route for high-impact specialty sheets. Cold peel: let transfers cool fully before peeling.</p></div><span class="price">From $18.60</span></a>
-        <a class="product-card" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135059648694&amp;price=9.10&amp;store=zm1evm-rd.myshopify.com&amp;product=8801339211958&amp;quantity=1&amp;locale=en"><div><span class="kicker">Sublimation</span><h3>24&quot; sublimation builder</h3><p>Sublimation gang sheet route for approved sublimation artwork.</p></div><span class="price">From $9.10</span></a>
+        <div class="product-card builder-card" data-family="dtf-22">
+          <div><span class="kicker">DTF</span><h3>22&quot; DTF gang sheet</h3><p>Standard 22-inch DTF builder route for everyday transfer layouts.</p></div>
+          <label>Sheet length <select data-role="length" hidden></select></label>
+          <span class="price builder-price" data-role="price">From $12.60<small>22&quot; wide, warm peel</small></span>
+          <a class="btn primary" data-role="open" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45134982709430&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801329938614&amp;quantity=1&amp;locale=en">Open builder</a>
+        </div>
+        <div class="product-card builder-card" data-family="dtf-46">
+          <div><span class="kicker">DTF</span><h3>46&quot; DTF gang sheet</h3><p>Wide-format builder route for larger sheets and heavier production runs.</p></div>
+          <label>Sheet length <select data-role="length" hidden></select></label>
+          <span class="price builder-price" data-role="price">From $12.60<small>46&quot; wide, warm peel</small></span>
+          <a class="btn primary" data-role="open" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135045198006&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338130614&amp;quantity=1&amp;locale=en">Open builder</a>
+        </div>
+        <div class="product-card builder-card" data-family="glitter-22">
+          <div><span class="kicker">Specialty</span><h3>Glitter DTF builder</h3><p>Glitter transfer route for specialty artwork and standout apparel jobs. Cold peel: let transfers cool fully before peeling.</p></div>
+          <label>Glitter color <select data-role="color" hidden></select></label>
+          <label>Sheet length <select data-role="length" hidden></select></label>
+          <span class="price builder-price" data-role="price">From $12.60<small>22&quot; wide, cold peel</small></span>
+          <a class="btn primary" data-role="open" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135046344886&amp;price=12.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338327222&amp;quantity=1&amp;locale=en">Open builder</a>
+        </div>
+        <div class="product-card builder-card" data-family="glow-22">
+          <div><span class="kicker">Specialty</span><h3>Glow DTF builder</h3><p>Glow transfer route for high-impact specialty sheets. Cold peel: let transfers cool fully before peeling.</p></div>
+          <label>Sheet length <select data-role="length" hidden></select></label>
+          <span class="price builder-price" data-role="price">From $18.60<small>22&quot; wide, cold peel</small></span>
+          <a class="btn primary" data-role="open" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135055650998&amp;price=18.60&amp;store=zm1evm-rd.myshopify.com&amp;product=8801338884278&amp;quantity=1&amp;locale=en">Open builder</a>
+        </div>
+        <div class="product-card builder-card" data-family="sublimation-24">
+          <div><span class="kicker">Sublimation</span><h3>24&quot; sublimation builder</h3><p>Sublimation gang sheet route for approved sublimation artwork.</p></div>
+          <label>Sheet length <select data-role="length" hidden></select></label>
+          <span class="price builder-price" data-role="price">From $9.10<small>24&quot; wide</small></span>
+          <a class="btn primary" data-role="open" href="https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder?variant=45135059648694&amp;price=9.10&amp;store=zm1evm-rd.myshopify.com&amp;product=8801339211958&amp;quantity=1&amp;locale=en">Open builder</a>
+        </div>
       </div>
+      <p class="lede">Rather have us lay the sheet out for you? <a href="/products/custom-gang-sheet">Pick a width and length and upload one image</a> — the shop builds the gang sheet.</p>
     </section>
   </main>
+<script id="builder-size-picker">
+  (function () {
+    // Size data lives in /data/kixxl-builders.json (regenerate with
+    // scripts/shopify/derive-kixxl-builders.mjs). The static hrefs above are the
+    // smallest size per family, so the page still works if this fetch fails.
+    var STORE = 'zm1evm-rd.myshopify.com';
+    var BASE = 'https://hatfield-mccoy-dtf.myshopify.com/apps/gangify/builder';
+    fetch('/data/kixxl-builders.json').then(function (r) { return r.json(); }).then(function (data) {
+      document.querySelectorAll('.builder-card[data-family]').forEach(function (card) {
+        var family = data[card.getAttribute('data-family')];
+        if (!family || !family.sizes || !family.sizes.length) return;
+        var lengthSelect = card.querySelector('select[data-role="length"]');
+        var colorSelect = card.querySelector('select[data-role="color"]');
+        var price = card.querySelector('[data-role="price"]');
+        var open = card.querySelector('a[data-role="open"]');
+        if (!lengthSelect || !open) return;
+        var lengths = [];
+        family.sizes.forEach(function (s) { if (lengths.indexOf(s.length) < 0) lengths.push(s.length); });
+        lengthSelect.innerHTML = lengths.map(function (l) {
+          return '<option value="' + l + '">' + family.widthInches + '&quot; x ' + l + '&quot;</option>';
+        }).join('');
+        if (colorSelect && family.hasColors) {
+          var colors = [];
+          family.sizes.forEach(function (s) { if (s.color && colors.indexOf(s.color) < 0) colors.push(s.color); });
+          colorSelect.innerHTML = colors.map(function (c) { return '<option value="' + c + '">' + c + '</option>'; }).join('');
+          colorSelect.hidden = false;
+          if (colorSelect.parentElement) colorSelect.parentElement.hidden = false;
+        }
+        function sync() {
+          var length = Number(lengthSelect.value);
+          var color = colorSelect && !colorSelect.hidden ? colorSelect.value : null;
+          var size = null;
+          for (var i = 0; i < family.sizes.length; i++) {
+            var s = family.sizes[i];
+            if (s.length === length && (!color || s.color === color)) { size = s; break; }
+          }
+          if (!size) return;
+          open.href = BASE + '?variant=' + size.variant + '&price=' + size.price +
+            '&store=' + STORE + '&product=' + family.product + '&quantity=1&locale=en';
+          var note = price.querySelector('small');
+          price.textContent = '$' + size.price;
+          if (note) { note.textContent = family.widthInches + '" x ' + length + '" sheet'; price.appendChild(note); }
+          open.textContent = 'Open builder — ' + family.widthInches + '" x ' + length + '"';
+        }
+        lengthSelect.hidden = false;
+        lengthSelect.addEventListener('change', sync);
+        if (colorSelect) colorSelect.addEventListener('change', sync);
+        sync();
+      });
+    }).catch(function () { /* static smallest-size links remain usable */ });
+  })();
+</script>
 <script id="mobile-menu-normalizer">
   (function() {
     var button = document.querySelector('.mobile-menu-toggle');

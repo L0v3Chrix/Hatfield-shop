@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T21:49:32.926Z",
+  "generatedAt": "2026-07-16T20:00:33.088Z",
   "endpointHost": "zm1evm-rd.myshopify.com",
   "visibility": [
     {
@@ -39,12 +39,6 @@
       "sampleVariant": "gid://shopify/ProductVariant/45134982709430"
     },
     {
-      "handle": "dtf-46-gang-sheet-builder",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45135045198006"
-    },
-    {
       "handle": "glitter-dtf-22-gang-sheet-builder",
       "visible": true,
       "availableForSale": true,
@@ -63,22 +57,10 @@
       "sampleVariant": "gid://shopify/ProductVariant/45135059648694"
     },
     {
-      "handle": "dtfva-custom-dtf-transfers-by-size-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145019973814"
-    },
-    {
       "handle": "dtfva-america-s-250th-anniversary-patch-1-inch-circle",
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45145028198582"
-    },
-    {
-      "handle": "dtfva-uv-printed-custom-leather-hat-patches",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145028264118"
     },
     {
       "handle": "dtfva-uv-printed-custom-leather-patches",
@@ -91,24 +73,6 @@
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45145032753334"
-    },
-    {
-      "handle": "dtfva-custom-dtf-transfers-by-size",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145033769142"
-    },
-    {
-      "handle": "dtfva-uv-printed-custom-tpu-patches-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145041993910"
-    },
-    {
-      "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145042256054"
     },
     {
       "handle": "dtfva-brand-starter-pack",
@@ -127,24 +91,6 @@
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45145042944182"
-    },
-    {
-      "handle": "dtfva-custom-glitter-dtf-transfer-by-size-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145043009718"
-    },
-    {
-      "handle": "dtfva-custom-sublimation-transfers-by-size-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145049301174"
-    },
-    {
-      "handle": "dtfva-9-color-dtf-transfers-by-size-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145053036726"
     },
     {
       "handle": "dtfva-custom-sublimation-transfers-by-size",
@@ -231,88 +177,10 @@
       "sampleVariant": "gid://shopify/ProductVariant/45145078956214"
     },
     {
-      "handle": "dtfva-party-banners-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145079677110"
-    },
-    {
       "handle": "dtfva-party-banners",
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45250599387318"
-    },
-    {
-      "handle": "dtfva-uv-dtf-transfer-by-size-189",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145080692918"
-    },
-    {
-      "handle": "dtfva-uv-printed-custom-leather-hat-patches-7",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145089048758"
-    },
-    {
-      "handle": "dtfva-photo-magnets-4",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145094029494"
-    },
-    {
-      "handle": "dtfva-car-magnets-2",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145094160566"
-    },
-    {
-      "handle": "dtfva-business-magnets-2",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145094389942"
-    },
-    {
-      "handle": "dtfva-perforated-window-vinyl-window-perf-graphics-3",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145094750390"
-    },
-    {
-      "handle": "dtfva-custom-window-graphics-2",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145096028342"
-    },
-    {
-      "handle": "dtfva-window-clings-6",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145096421558"
-    },
-    {
-      "handle": "dtfva-truck-magnets-1",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145098617014"
-    },
-    {
-      "handle": "dtfva-indoor-floor-graphics-4",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145098748086"
-    },
-    {
-      "handle": "dtfva-custom-posters-3",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145099075766"
-    },
-    {
-      "handle": "dtfva-uv-printed-custom-tpu-patches-84",
-      "visible": true,
-      "availableForSale": true,
-      "sampleVariant": "gid://shopify/ProductVariant/45145099337910"
     },
     {
       "handle": "dtfva-indoor-floor-graphics",

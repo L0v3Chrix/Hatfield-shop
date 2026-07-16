@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T21:49:22.828Z",
+  "generatedAt": "2026-07-16T20:16:58.886Z",
   "shop": {
     "name": "Hatfield Mccoy DTF",
     "domain": "zm1evm-rd.myshopify.com",
@@ -13,10 +13,10 @@
     "products": 93,
     "byStatus": {
       "DRAFT": 18,
-      "ACTIVE": 68,
-      "ARCHIVED": 7
+      "ACTIVE": 47,
+      "ARCHIVED": 28
     },
-    "collections": 45,
+    "collections": 46,
     "publications": [
       "Online Store",
       "Point of Sale",
@@ -80,7 +80,8 @@
       "dtfva-spangle-transfers",
       "dtfva-specialty-transfers",
       "dtfva-custom-stickers-promotional-items",
-      "dtfva-uv-dtf-transfers"
+      "dtfva-uv-dtf-transfers",
+      "shop-catalog"
     ],
     "parityState": {
       "file": "output/competitor/dtfvirginia/shopify-state.json",
@@ -179,7 +180,9 @@
       "status": "ACTIVE",
       "vendor": "Hatfield McCoy DTF",
       "productType": "DTF Transfer",
-      "tags": [],
+      "tags": [
+        "catalog"
+      ],
       "seo": {
         "title": "DTF 22\" Sheet | Hatfield McCoy DTF",
         "description": "Order DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
@@ -270,7 +273,8 @@
       ],
       "variantsTruncated": false,
       "collections": [
-        "dtf-transfers"
+        "dtf-transfers",
+        "shop-catalog"
       ],
       "publications": [
         "Hatfield Mccoy Dtf Headless",
@@ -285,7 +289,9 @@
       "status": "ACTIVE",
       "vendor": "Hatfield McCoy DTF",
       "productType": "DTF Transfer",
-      "tags": [],
+      "tags": [
+        "catalog"
+      ],
       "seo": {
         "title": "DTF 46\" Sheet | Hatfield McCoy DTF",
         "description": "Order DTF 46\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
@@ -401,7 +407,8 @@
       ],
       "variantsTruncated": false,
       "collections": [
-        "dtf-transfers"
+        "dtf-transfers",
+        "shop-catalog"
       ],
       "publications": [
         "Hatfield Mccoy Dtf Headless",
@@ -416,7 +423,9 @@
       "status": "ACTIVE",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Glitter DTF Transfer",
-      "tags": [],
+      "tags": [
+        "catalog"
+      ],
       "seo": {
         "title": "Glitter DTF 22\" Sheet | Hatfield McCoy DTF",
         "description": "Order Glitter DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
@@ -667,7 +676,8 @@
       ],
       "variantsTruncated": false,
       "collections": [
-        "glitter-dtf"
+        "glitter-dtf",
+        "shop-catalog"
       ],
       "publications": [
         "Hatfield Mccoy Dtf Headless",
@@ -682,7 +692,9 @@
       "status": "ACTIVE",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Glow DTF Transfer",
-      "tags": [],
+      "tags": [
+        "catalog"
+      ],
       "seo": {
         "title": "Glow DTF 22\" Sheet | Hatfield McCoy DTF",
         "description": "Order Glow DTF 22\" Sheet from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
@@ -773,7 +785,8 @@
       ],
       "variantsTruncated": false,
       "collections": [
-        "glow-dtf"
+        "glow-dtf",
+        "shop-catalog"
       ],
       "publications": [
         "Hatfield Mccoy Dtf Headless",
@@ -788,7 +801,9 @@
       "status": "ACTIVE",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Sublimation Transfer",
-      "tags": [],
+      "tags": [
+        "catalog"
+      ],
       "seo": {
         "title": "Sublimation 24\" | Hatfield McCoy DTF",
         "description": "Order Sublimation 24\" from Hatfield McCoy DTF. Upload artwork with your order and check out directly. Printed in Logan, WV."
@@ -834,7 +849,8 @@
       ],
       "variantsTruncated": false,
       "collections": [
-        "sublimation"
+        "sublimation",
+        "shop-catalog"
       ],
       "publications": [
         "Hatfield Mccoy Dtf Headless",
@@ -1919,7 +1935,7 @@
       "id": "gid://shopify/Product/8804436181174",
       "handle": "dtfva-custom-dtf-transfers-by-size-1",
       "title": "Custom DTF Transfers by Size",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -2438,11 +2454,7 @@
       ],
       "variantsTruncated": true,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436213942",
@@ -2452,6 +2464,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -2472,7 +2485,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -2483,7 +2498,7 @@
       "id": "gid://shopify/Product/8804436246710",
       "handle": "dtfva-uv-printed-custom-leather-hat-patches",
       "title": "UV-Printed Custom Leather Hat Patches",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -2518,11 +2533,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436279478",
@@ -2532,6 +2543,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -2555,7 +2567,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -2570,6 +2584,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -2733,7 +2748,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -2744,7 +2761,7 @@
       "id": "gid://shopify/Product/8804436345014",
       "handle": "dtfva-custom-dtf-transfers-by-size",
       "title": "Custom DTF Transfers by Size",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -3263,17 +3280,13 @@
       ],
       "variantsTruncated": true,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436377782",
       "handle": "dtfva-uv-printed-custom-tpu-patches-1",
       "title": "UV-Printed Custom TPU Patches",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -3328,17 +3341,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436410550",
       "handle": "dtfva-custom-fluorescent-dtf-transfers-by-size-1",
       "title": "Custom Fluorescent DTF Transfers by Size",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -3437,11 +3446,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436443318",
@@ -3451,6 +3456,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -3470,7 +3476,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -3485,6 +3493,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -3504,7 +3513,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -3519,6 +3530,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -3538,7 +3550,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -3549,7 +3563,7 @@
       "id": "gid://shopify/Product/8804436541622",
       "handle": "dtfva-custom-glitter-dtf-transfer-by-size-1",
       "title": "Custom Glitter DTF Transfer by Size",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -4068,17 +4082,13 @@
       ],
       "variantsTruncated": true,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436574390",
       "handle": "dtfva-custom-sublimation-transfers-by-size-1",
       "title": "Custom Sublimation Transfers by Size",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -4597,17 +4607,13 @@
       ],
       "variantsTruncated": true,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436607158",
       "handle": "dtfva-9-color-dtf-transfers-by-size-1",
       "title": "9 Color DTF Transfers By Size",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -4816,11 +4822,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804436639926",
@@ -4830,6 +4832,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "pricing-needs-review",
         "source-dtf-virginia",
@@ -4954,7 +4957,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -4969,6 +4974,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -5052,7 +5058,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -5067,6 +5075,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -5150,7 +5159,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -5640,6 +5651,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "pricing-needs-review",
         "source-dtf-virginia"
@@ -5703,7 +5715,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -5718,6 +5732,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -6032,7 +6047,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -6047,6 +6064,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia"
       ],
@@ -6259,7 +6277,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -6274,6 +6294,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia"
       ],
@@ -6556,7 +6577,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -6571,6 +6594,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -6685,7 +6709,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -6700,6 +6726,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -7114,7 +7141,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -7129,6 +7158,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -7383,7 +7413,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -7398,6 +7430,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -7912,7 +7945,9 @@
         }
       ],
       "variantsTruncated": true,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -7927,6 +7962,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "fulfillment-needs-review",
         "needs-fulfillment-review",
@@ -8151,7 +8187,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -8166,6 +8204,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia"
       ],
@@ -8303,7 +8342,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -8446,6 +8487,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -8564,7 +8606,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -8575,7 +8619,7 @@
       "id": "gid://shopify/Product/8804437491894",
       "handle": "dtfva-party-banners-1",
       "title": "Party Banners",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -8691,11 +8735,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437524662",
@@ -8705,6 +8745,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -8728,7 +8769,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -8739,7 +8782,7 @@
       "id": "gid://shopify/Product/8804437557430",
       "handle": "dtfva-uv-dtf-transfer-by-size-189",
       "title": "UV DTF Transfer By Size",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -9286,17 +9329,13 @@
       ],
       "variantsTruncated": true,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437655734",
       "handle": "dtfva-uv-printed-custom-leather-hat-patches-7",
       "title": "UV-Printed Custom Leather Hat Patches",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -9816,17 +9855,13 @@
       ],
       "variantsTruncated": true,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437721270",
       "handle": "dtfva-photo-magnets-4",
       "title": "Photo Magnets",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -9861,17 +9896,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437754038",
       "handle": "dtfva-car-magnets-2",
       "title": "Car Magnets",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -9921,17 +9952,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437786806",
       "handle": "dtfva-business-magnets-2",
       "title": "Business Magnets",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -9997,17 +10024,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437819574",
       "handle": "dtfva-perforated-window-vinyl-window-perf-graphics-3",
       "title": "Perforated Window Vinyl (Window Perf Graphics)",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -10065,17 +10088,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437885110",
       "handle": "dtfva-custom-window-graphics-2",
       "title": "Custom Window Graphics",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -10143,17 +10162,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437917878",
       "handle": "dtfva-window-clings-6",
       "title": "Window Clings",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -10276,17 +10291,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804437983414",
       "handle": "dtfva-truck-magnets-1",
       "title": "Truck Magnets",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -10321,17 +10332,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438016182",
       "handle": "dtfva-indoor-floor-graphics-4",
       "title": "Indoor Floor Graphics",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -10394,17 +10401,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438048950",
       "handle": "dtfva-custom-posters-3",
       "title": "Custom Posters",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -10458,17 +10461,13 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438081718",
       "handle": "dtfva-uv-printed-custom-tpu-patches-84",
       "title": "UV-Printed Custom TPU Patches",
-      "status": "ACTIVE",
+      "status": "ARCHIVED",
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
@@ -10984,11 +10983,7 @@
       ],
       "variantsTruncated": false,
       "collections": [],
-      "publications": [
-        "Microsoft Copilot",
-        "Online Store",
-        "Hatfield Mccoy Dtf Headless"
-      ]
+      "publications": []
     },
     {
       "id": "gid://shopify/Product/8804438114486",
@@ -11262,6 +11257,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11350,7 +11346,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11365,6 +11363,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11448,7 +11447,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11463,6 +11464,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11556,7 +11558,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11571,6 +11575,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11659,7 +11664,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11674,6 +11681,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11697,7 +11705,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11712,6 +11722,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11735,7 +11746,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11750,6 +11763,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11773,7 +11787,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11788,6 +11804,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -11816,7 +11833,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11831,6 +11850,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia"
       ],
@@ -11848,7 +11868,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -11863,6 +11885,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-apparel-printing",
@@ -12027,7 +12050,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -12042,6 +12067,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-apparel-printing",
@@ -12129,7 +12155,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -12242,6 +12270,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "pricing-needs-review",
         "source-dtf-virginia",
@@ -12756,7 +12785,9 @@
         }
       ],
       "variantsTruncated": true,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -12771,6 +12802,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -12799,7 +12831,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -12943,6 +12977,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Gang Sheet",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-gang-sheet"
@@ -13001,7 +13036,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -13549,6 +13586,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia",
         "source-tag-artwork-services"
@@ -13567,7 +13605,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -13582,6 +13622,7 @@
       "vendor": "Hatfield McCoy DTF",
       "productType": "Custom Print Product",
       "tags": [
+        "catalog",
         "competitor-parity",
         "source-dtf-virginia"
       ],
@@ -13599,7 +13640,9 @@
         }
       ],
       "variantsTruncated": false,
-      "collections": [],
+      "collections": [
+        "shop-catalog"
+      ],
       "publications": [
         "Microsoft Copilot",
         "Online Store",
@@ -14088,6 +14131,13 @@
       "handle": "dtfva-uv-dtf-transfers",
       "title": "UV DTF Transfers – Decals & Stickers",
       "productsCount": 0,
+      "hasImage": false
+    },
+    {
+      "id": "gid://shopify/Collection/387313238198",
+      "handle": "shop-catalog",
+      "title": "Shop",
+      "productsCount": 42,
       "hasImage": false
     }
   ],

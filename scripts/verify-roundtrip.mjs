@@ -100,7 +100,9 @@ else check('robots.txt allows crawling in launched mode', /User-agent: \*\s*\nAl
 // 5. Builder launch URLs intact with populated params
 const builderHtml = readFileSync(join(PS, 'gang-sheet-builder', 'index.html'), 'utf8')
 const gangifyUrls = builderHtml.match(/https:\/\/[^"']*apps\/gangify\/builder\?[^"']*/g) ?? []
-check('gang-sheet-builder page carries 6 builder launch URLs', gangifyUrls.length === 6,
+// One static smallest-size launch URL per family card (the hero CTA now scrolls
+// to the size picker instead of deep-linking a size).
+check('gang-sheet-builder page carries 5 builder launch URLs', gangifyUrls.length === 5,
   `found ${gangifyUrls.length}`)
 const badUrls = gangifyUrls.filter((raw) => {
   const params = new URL(raw.replace(/&amp;/g, '&')).searchParams

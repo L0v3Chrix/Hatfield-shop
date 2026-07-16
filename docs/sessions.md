@@ -99,3 +99,26 @@ All: 50/50 unit tests, gate LOCAL_READY, 48/48 journeys green post-deploy.
 
 ### Next Session
 Owner sign-off gate unchanged: human test order (phone+desktop), test-order cleanup, token rotation, git push, payments off-test → indexing flip.
+
+## Session: 2026-07-16
+
+### Accomplished
+- Length-first gang sheet ordering shipped (owner request, customer waiting): /gang-sheet-builder and /products/custom-gang-sheet now let buyers pick sheet type + length BEFORE the Kixxl builder opens; every launch URL deep-links the exact fixed-size variant (flat + $0.60).
+- New data layer: scripts/shopify/config/kixxl-builders.json (canonical) derived from the state audit by scripts/shopify/derive-kixxl-builders.mjs (--check verifies price ladders); production-readiness copies it to production-site/data/ for the builder page's fetch.
+- custom-gang-sheet PDP rebuilt as a generator special case (frontend-generator.js renderCustomGangSheetPage): picker + full 22"/46" price ladder table + "we build it for you" cards linking the 5 direct-buy sheet PDPs; core-copy.json rewritten for the two paths.
+- Found + fixed: dtf-46-gang-sheet-builder was DRAFT on Shopify (live 46" tile was a dead purchase path) — re-activated/published via publish-kixxl-product.js.
+- QA: journeys classify() accepts apps/gangify CTAs; new custom-gang-sheet picker assertions; roundtrip expects 5 builder-page launch URLs. qa:gate green; post-deploy qa:journeys 48/48 on production.
+
+### Decisions Made
+- Kixxl stays in fixed-variant ("regular") mode — verified in the live Gangify payload; no rolling sheets, matching owner's distrust of Kixxl's calculation.
+- No Shopify surgery on the custom-gang-sheet product (stays DRAFT $0 placeholder); the static PDP does the routing, checkout flows through the 5 Kixxl builder products or direct-buy sheets.
+- "We build it for you" path routes to existing direct-buy PDPs rather than duplicating width/length variants on custom-gang-sheet.
+
+### Blockers/Issues
+- gang-sheet-builder page source is deliverables/brand-design-pack/gang-sheet-builder.html — production:prepare WIPES production-site and rebuilds (first edit went to the generated copy and was lost; re-applied to the true source).
+- Local qa:journeys vs npx serve fails all upload journeys (/api/* 404s — serverless functions only exist on Vercel); use the deployed URL for the real gate.
+
+### Next Session
+- Owner: hands-on order through the new length-first flow + "sign-off" (definition of done).
+- Confirm inside Kixxl that changing size mid-build re-prices to the matching fixed variant (spot-check on a real order).
+- Owner sign-off gate unchanged: human test order, test-order cleanup, token rotation, payments off-test → indexing flip.

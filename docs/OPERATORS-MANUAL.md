@@ -28,6 +28,14 @@ Every change follows this or it doesn't ship:
 2. Customer uploads multiple files (Kixxl allows up to 1GB), arranges the sheet, Add to Cart → Shopify cart/checkout.
 3. The order line carries Kixxl's design payload: `_actual_gang_sheet` (print-ready sheet), `sheet_preview`, edit links, DPI/overlap flags.
 
+### Path C — Local pickup orders (live since 2026-07-15; first real pickup #1008 completed)
+Shopify handles pickup natively — no code of ours creates orders. What happens:
+1. Customer picks "Pickup" at checkout → order is created with NO shipping address and NO shipping charge; delivery method = Pickup at oaks plaza.
+2. Shopify auto-sends the **order confirmation email** (order #, items, total paid) — the pickup instructions inside it say "Your order confirmation email is your receipt — show it at the counter."
+3. **Counter workflow for Jessie:** admin (or POS) → order → **Mark as ready for pickup** when printed → Shopify auto-emails the customer "Your order is ready" (second proof-of-payment email). At the counter: customer shows either email → verify the order # and PAID status in admin → **Mark as picked up** (closes the order).
+4. Pickup orders appear in admin filtered by delivery method "Local pickup"; the artwork manifest webhook fires for them like any order.
+Optional (admin UI only, not API-editable): Settings → Notifications → Order confirmation, to add louder "show this at the counter" wording directly in the email template. The default template already shows the pickup section with our instructions, so this is cosmetic.
+
 ### Where fulfillment finds the artwork (every order)
 - **Order line item properties** (both paths, visible in Shopify admin on the order).
 - **`fulfillment.artwork_manifest` metafield** on the order — a JSON manifest written seconds after every order by the webhook (`ORDERS_CREATE` → `https://production-site-flax.vercel.app/api/shopify-order-artwork-sync`). Covers both direct uploads AND Kixxl sheets. Do **not** repoint this webhook at www.hatfieldmccoydtf.com — Shopify refuses callbacks on the shop's own domains.

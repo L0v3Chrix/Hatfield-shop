@@ -122,3 +122,6 @@ Owner sign-off gate unchanged: human test order (phone+desktop), test-order clea
 - Owner: hands-on order through the new length-first flow + "sign-off" (definition of done).
 - Confirm inside Kixxl that changing size mid-build re-prices to the matching fixed variant (spot-check on a real order).
 - Owner sign-off gate unchanged: human test order, test-order cleanup, token rotation, payments off-test → indexing flip.
+
+## Session: 2026-07-17 (later) — shop consolidation shipped
+5 category group cards live (DTF & Specialty Transfers, Window Graphics, Custom Sports Balls, Custom Apparel, Stickers/Patches/Labels): /shop 43 → 14 display units. Item→option→qty→price→cart on each card; quote members swap CTA; members keep PDPs; owner edits groups via catalog-edits shopGroups. QA: 51/51 journeys prod (incl. group buy w/ qty math to Shopify checkout), Q5f gate checks, group-aware roundtrip. Live-site protocol followed: gate → local preview serve + full journeys → promote → prod journeys + screenshots.

@@ -69,7 +69,7 @@
   "shopify": {
     "store_domain": "hatfield-mccoy-dtf.myshopify.com",
     "storefront_api_version": "2026-07",
-    "storefront_access_token": "__SHOPIFY_STOREFRONT_PUBLIC_TOKEN__",
+    "storefront_access_token": "32676f1e870cefcd61d96ac577400dbf",
     "comment": "Public Storefront API token only. Do not place Admin API tokens or private Storefront tokens in this static config."
   }
 }

@@ -1,13 +1,9 @@
 {
-  "generatedAt": "2026-07-16T20:00:34.707Z",
+  "generatedAt": "2026-07-20T17:37:34.667Z",
   "gate": "LOCAL_READY",
   "local": [
     {
       "name": "unit + generator tests",
-      "ok": true
-    },
-    {
-      "name": "production build",
       "ok": true
     },
     {

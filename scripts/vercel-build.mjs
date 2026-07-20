@@ -19,8 +19,12 @@ if (!existsSync(SOURCE_DIR)) {
   throw new Error(`Missing built storefront at ${SOURCE_DIR}`)
 }
 
+// Defense-in-depth (outage 2026-07-16: a deploy served the literal placeholder
+// and killed checkout for every customer): the committed config now carries the
+// real public Storefront token, so a build that skips injection still ships a
+// working checkout. Env injection below remains the override when present.
 if (!storefrontToken || /^__.+__$/.test(storefrontToken)) {
-  throw new Error('Missing SHOPIFY_STOREFRONT_PUBLIC_TOKEN (or SHOPIFY_STOREFRONT_ACCESS_TOKEN) for deploy-time config injection.')
+  console.warn('[vercel-build] no SHOPIFY_STOREFRONT_PUBLIC_TOKEN in env — keeping the committed config token.')
 }
 
 mkdirSync(PUBLIC_DIR, { recursive: true })
@@ -33,7 +37,7 @@ config.site = {
 }
 config.shopify = {
   ...config.shopify,
-  storefront_access_token: storefrontToken,
+  ...(storefrontToken && !/^__.+__$/.test(storefrontToken) ? { storefront_access_token: storefrontToken } : {}),
 }
 
 writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2) + '\n')

@@ -1,8 +1,18 @@
 # Hatfield McCoy DTF — Operator's Manual
 
-Last updated: 2026-07-13. The one document for how the store works, how to change it, and how to launch/rollback. Written for Chrix (and future maintainers).
+Last updated: 2026-07-17. THE SITE IS LIVE WITH PAYING CUSTOMERS — see §0 before changing anything. The one document for how the store works, how to change it, and how to launch/rollback. Written for Chrix (and future maintainers).
 
 ---
+
+## 0. LIVE-SITE PROTOCOL (site has active customers as of 2026-07-16)
+
+Every change follows this or it doesn't ship:
+1. **Never test payments on prod** — journeys stop at the Shopify checkout page; no card entry; no test orders without flagging the owner first.
+2. **Preview first for checkout-path changes** (cart.js, config, generator purchase-panel, api/): `npx vercel deploy` (no --prod) → run `npm run qa:journeys -- --base <preview-url>` → only then promote (push or --prod).
+3. **Post-deploy canary is mandatory and instant:** `npm run qa:journeys` Pass 0a fetches /data/config.json and probes the Storefront API — it hard-fails in seconds if checkout is dead. Run it after EVERY deploy, whoever/whatever deployed.
+4. **Checkout-outage lesson (2026-07-16):** a deploy shipped the literal `__SHOPIFY_STOREFRONT_PUBLIC_TOKEN__` placeholder → every cartCreate 401'd → no customer could check out for ~20h (reported as "pickup broken"). Fixes now in place: the committed config carries the real public Storefront token (public-by-design; env still overrides when present), vercel-build warns instead of relying on env, and the canary exists. If checkout ever fails again: `curl https://www.hatfieldmccoydtf.com/data/config.json` and check the token first.
+5. **Rollback beats debugging on prod:** `npx vercel rollback` to the last deployment that passed journeys.
+6. Multiple people/sessions deploy to this project. Deploy = CLI `npx vercel deploy --prod` from REPO ROOT only (never from inside production-site/), or push to main. Either way, run the canary after.
 
 ## 1. How a customer orders (two paths)
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T20:00:33.088Z",
+  "generatedAt": "2026-07-20T17:37:32.183Z",
   "endpointHost": "zm1evm-rd.myshopify.com",
   "visibility": [
     {
@@ -37,6 +37,12 @@
       "visible": true,
       "availableForSale": true,
       "sampleVariant": "gid://shopify/ProductVariant/45134982709430"
+    },
+    {
+      "handle": "dtf-46-gang-sheet-builder",
+      "visible": true,
+      "availableForSale": true,
+      "sampleVariant": "gid://shopify/ProductVariant/45135045198006"
     },
     {
       "handle": "glitter-dtf-22-gang-sheet-builder",

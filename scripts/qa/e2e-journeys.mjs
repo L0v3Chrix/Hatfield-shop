@@ -265,6 +265,34 @@ async function journeyStatic(browser, product, kind, href) {
 
 const browser = await chromium.launch({ headless: true })
 try {
+  // Pass 0a — checkout-config canary (outage 2026-07-16: a deploy shipped the
+  // literal __PLACEHOLDER__ Storefront token; every cartCreate 401'd and no
+  // customer could check out). Fail in seconds, before anything else runs.
+  {
+    const res = await fetch(`${BASE}/data/config.json`, { cache: 'no-store' })
+    const cfg = res.ok ? await res.json() : null
+    const tok = cfg?.shopify?.storefront_access_token || ''
+    const domain = cfg?.shopify?.store_domain || ''
+    const version = cfg?.shopify?.storefront_api_version || ''
+    let ok = Boolean(res.ok && tok && !/^__.+__$/.test(tok) && domain)
+    let detail = ok ? `token ${tok.slice(0, 6)}… v${version}` : `config broken (token: ${tok.slice(0, 12) || 'missing'})`
+    if (ok) {
+      const probe = await fetch(`https://${domain}/api/${version}/graphql.json`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': tok },
+        body: JSON.stringify({ query: '{shop{name}}' }),
+      })
+      ok = probe.status === 200
+      if (!ok) detail = `storefront API returned ${probe.status} — CHECKOUT IS DOWN`
+    }
+    record('(site)', 'checkout-config', ok, detail)
+    if (!ok) {
+      console.error('\nFATAL: checkout config canary failed — aborting suite, fix this first.')
+      await browser.close()
+      process.exit(1)
+    }
+  }
+
   // Pass 0 — global surfaces.
   {
     const errors = []

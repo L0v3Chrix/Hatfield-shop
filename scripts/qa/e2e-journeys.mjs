@@ -353,6 +353,95 @@ try {
     await journeyPreUpload(browser, entry.product)
   }
 
+  // Shop group cards (owner consolidation 2026-07-17): item+variant+qty on
+  // /shop must produce a correct cart line and reach Shopify checkout.
+  {
+    const errors = []
+    const context = await browser.newContext({ viewport: { width: 1440, height: 1200 } })
+    const page = await context.newPage()
+    watchErrors(page, errors)
+    try {
+      await page.goto(`${BASE}/shop`, { waitUntil: 'domcontentloaded' })
+      await page.waitForTimeout(900)
+      const groupCount = await page.locator('.catalog-card--group').count()
+      if (groupCount < 1) throw new Error('no group cards on /shop')
+      const sports = page.locator('.catalog-card--group', { hasText: 'Sports Balls' }).first()
+      if (!(await sports.count())) throw new Error('sports group card missing')
+      // pick member #2 (baseballs) -> variant select rebuilds, details link follows
+      await sports.locator('.group-item-select').selectOption({ index: 1 })
+      await page.waitForTimeout(300)
+      const detailsHref = await sports.locator('.group-details-link').getAttribute('href')
+      if (!/dtfva-custom-baseballs/.test(detailsHref || '')) throw new Error(`details link did not follow item: ${detailsHref}`)
+      const optionLabels = await sports.locator('.group-variant-select option').allTextContents()
+      if (!optionLabels.some((label) => /\$/.test(label))) throw new Error('variant options carry no prices')
+      // Set of 3 + qty 2 -> $127.98 and correct datasets
+      await sports.locator('.group-variant-select').selectOption({ index: 1 })
+      await sports.locator('.group-qty-btn[data-step="1"]').click()
+      await page.waitForTimeout(250)
+      const priceText = (await sports.locator('.group-price').textContent() || '').trim()
+      if (priceText !== '$127.98') throw new Error(`price math wrong: ${priceText} (expected $127.98)`)
+      const ds = await sports.locator('.group-add').evaluate((el) => ({ ...el.dataset }))
+      if (ds.sku !== 'DTFVA-CUSTOM_BASEBALLS-SET_OF_3') throw new Error(`sku dataset wrong: ${ds.sku}`)
+      if (!/^gid:\/\/shopify\/ProductVariant\//.test(ds.merchandiseId || '')) throw new Error('merchandiseId missing on group add')
+      // add -> drawer line qty 2, needs artwork -> upload -> checkout reached
+      await sports.locator('.group-add').click()
+      await page.waitForTimeout(700)
+      const state = await drawerState(page)
+      if (state.rowCount !== 1) throw new Error(`expected 1 cart line, got ${state.rowCount}`)
+      if (!/needs artwork/i.test(state.firstRowBadge)) throw new Error(`badge: ${state.firstRowBadge}`)
+      const lineQty = await page.locator('#cart-items .cart-item .qty-input').first().inputValue()
+      if (lineQty !== '2') throw new Error(`cart line qty ${lineQty}, expected 2`)
+      await uploadInCartLine(page)
+      const checkoutUrl = await clickCheckoutExpectShopify(page)
+      if (errors.length) throw new Error(errors[0])
+      record('(shop)', 'group-card-buy', true, `baseballs set-of-3 x2 reached ${new URL(checkoutUrl).host}`)
+    } catch (error) {
+      await page.screenshot({ path: join(SHOT_DIR, 'fail-group-card.png') }).catch(() => {})
+      record('(shop)', 'group-card-buy', false, `${error.message}${errors.length ? ` | ${errors[0]}` : ''}`)
+    } finally {
+      await context.close()
+    }
+  }
+  // Group card quote member + search/tab filtering
+  {
+    const errors = []
+    const context = await browser.newContext({ viewport: { width: 1440, height: 1200 } })
+    const page = await context.newPage()
+    watchErrors(page, errors)
+    try {
+      await page.goto(`${BASE}/shop`, { waitUntil: 'domcontentloaded' })
+      await page.waitForTimeout(900)
+      const apparel = page.locator('.catalog-card--group', { hasText: 'Custom Apparel' }).first()
+      if (!(await apparel.count())) throw new Error('apparel group card missing')
+      const labels = await apparel.locator('.group-item-select option').allTextContents()
+      const quoteIndex = labels.findIndex((label) => /next level/i.test(label))
+      if (quoteIndex < 0) throw new Error('quote member (Next Level) not in apparel dropdown')
+      await apparel.locator('.group-item-select').selectOption({ index: quoteIndex })
+      await page.waitForTimeout(300)
+      const linkVisible = await apparel.locator('.group-cta-link').isVisible()
+      const addHidden = await apparel.locator('.group-add').isHidden()
+      const linkHref = await apparel.locator('.group-cta-link').getAttribute('href')
+      if (!linkVisible || !addHidden) throw new Error('quote member did not swap CTA to quote link')
+      if (!/\/contact\?product=/.test(linkHref || '')) throw new Error(`quote link href: ${linkHref}`)
+      // search + tab filtering treat the group as one unit
+      await page.fill('#catalog-search', 'hockey')
+      await page.waitForTimeout(250)
+      const sportsVisible = await page.locator('.catalog-card--group', { hasText: 'Sports Balls' }).first().isVisible()
+      if (!sportsVisible) throw new Error('search "hockey" hid the sports group card')
+      await page.fill('#catalog-search', 'glitter dtf sheet zzz-no-match-in-sports')
+      await page.waitForTimeout(250)
+      const sportsHidden = await page.locator('.catalog-card--group', { hasText: 'Sports Balls' }).first().isHidden()
+      if (!sportsHidden) throw new Error('non-matching search left sports group visible')
+      if (errors.length) throw new Error(errors[0])
+      record('(shop)', 'group-card-routes', true, 'quote swap + search filtering OK')
+    } catch (error) {
+      await page.screenshot({ path: join(SHOT_DIR, 'fail-group-routes.png') }).catch(() => {})
+      record('(shop)', 'group-card-routes', false, `${error.message}${errors.length ? ` | ${errors[0]}` : ''}`)
+    } finally {
+      await context.close()
+    }
+  }
+
   for (const entry of builders) await journeyStatic(browser, entry.product, 'builder', entry.href)
   for (const entry of quotes) await journeyStatic(browser, entry.product, 'quote', entry.href)
 } finally {

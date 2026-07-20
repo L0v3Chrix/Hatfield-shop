@@ -135,10 +135,13 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
     }
   }))
 
+  const groups = buildShopGroups(normalized.shopGroups ?? [], products)
+
   return {
     meta: {
       generated_at: new Date().toISOString(),
       source: normalized.meta?.source ?? 'dtfvirginia.com',
+      shop_group_count: groups.length,
       product_count: products.length,
       public_product_count: publicStorefrontProducts(products).length,
       internal_proxy_product_count: products.filter((product) => product.internalProxy).length,
@@ -150,7 +153,64 @@ export function buildFrontendCatalog(normalized, { shopifyState = null } = {}) {
     products,
     collections,
     pages,
+    groups,
   }
+}
+
+// Owner-configured shop consolidation (catalog-edits.json shopGroups): one card
+// per group on /shop with item + variant selectors. Members keep their PDPs.
+// A member is dropped (warn) when it isn't a live public product in THIS build —
+// core (non-dtfva) members only exist in the production build. A group with
+// fewer than 2 surviving members dissolves back to individual cards.
+function buildShopGroups(shopGroups, products) {
+  const byHandle = new Map(products.map((product) => [product.handle, product]))
+  const groups = []
+  for (const group of shopGroups) {
+    const members = []
+    for (const handle of group.members ?? []) {
+      const product = byHandle.get(handle)
+      if (!product || product.publicVisible === false || product.internalProxy) {
+        console.warn(`[shop-groups] ${group.id}: dropping member ${handle} (not a live public product in this build)`)
+        continue
+      }
+      const buyableVariants = product.variants
+        .filter((variant) => variant.checkoutEnabled && variant.merchandiseId && variantDisplayPrice(variant) !== null)
+        .map((variant) => ({
+          sku: variant.sku,
+          title: variant.title || variant.sku,
+          label: `${variant.title || variant.sku} — $${variantDisplayPrice(variant)}`,
+          price: variantDisplayPrice(variant),
+          merchandiseId: variant.merchandiseId,
+        }))
+      const route = buyerRoute(product)
+      if (route === 'order-online' && buyableVariants.length === 0) {
+        console.warn(`[shop-groups] ${group.id}: dropping member ${handle} (order-online but zero buyable variants)`)
+        continue
+      }
+      members.push({
+        handle: product.handle,
+        title: product.title,
+        url: product.url,
+        route,
+        variantCount: product.variants.length,
+        variants: route === 'order-online' ? buyableVariants : [],
+      })
+    }
+    if (members.length < 2) {
+      if ((group.members ?? []).length) console.warn(`[shop-groups] ${group.id}: dissolved (${members.length} surviving member)`)
+      continue
+    }
+    const imageProduct = byHandle.get(group.imageHandle) ?? byHandle.get(members[0].handle)
+    groups.push({
+      id: group.id,
+      title: group.title,
+      blurb: group.blurb ?? '',
+      category: group.category,
+      image: imageProduct ? resolveProductImages(imageProduct).card : { src: DEFAULT_IMAGE, alt: group.title },
+      members,
+    })
+  }
+  return groups
 }
 
 function readShopifyProducts(shopifyState) {
@@ -710,9 +770,19 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
     urlPath: '/shop',
     indexable: false,
   })
-  const categories = buildShopCategories(frontendCatalog.products)
+  // Owner consolidation (Jessie, 2026-07-15): grouped members render as ONE
+  // card with item/variant selectors; a pseudo display-unit per group keeps the
+  // family tabs counting what the customer actually sees.
+  const groups = frontendCatalog.groups ?? []
+  const groupedHandles = new Set(groups.flatMap((group) => group.members.map((member) => member.handle)))
+  const groupAtHandle = new Map(groups.map((group) => [group.members[0].handle, group]))
+  const displayUnits = [
+    ...frontendCatalog.products.filter((product) => !groupedHandles.has(product.handle)),
+    ...groups.map((group) => ({ shopCategory: group.category, title: group.title, handle: group.id, productType: '', variants: [] })),
+  ]
+  const categories = buildShopCategories(displayUnits)
   const categoryTabs = [
-    ['all', 'All products', frontendCatalog.products.length],
+    ['all', 'All products', displayUnits.length],
     ...categories.map((category) => [category.id, category.label, category.products.length]),
   ].map(([id, label, count], index) => `<button class="filter-tab${index === 0 ? ' active' : ''}" type="button" data-filter="${escapeHtml(id)}">${escapeHtml(label)} <span>${count}</span></button>`).join('')
   const collectionLinks = frontendCatalog.collections.slice(0, 10).map((collection) => `
@@ -738,7 +808,13 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
             <small>${escapeHtml(FAMILY_TAGLINES[category.id] ?? 'Custom print work from Logan, WV')}</small>
           </a>`
   }).join('')
-  const cards = frontendCatalog.products.map((product) => productCardMarkup(product, { className: 'catalog-card' })).join('')
+  const cards = frontendCatalog.products.map((product) => {
+    if (groupedHandles.has(product.handle)) {
+      const group = groupAtHandle.get(product.handle)
+      return group ? groupCardMarkup(group) : ''
+    }
+    return productCardMarkup(product, { className: 'catalog-card' })
+  }).join('')
   return renderShell({
     seo,
     siteUrl,
@@ -753,7 +829,7 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
             <div class="hero-actions"><a class="btn primary" href="/gang-sheet-builder">Build a gang sheet</a><a class="btn secondary" href="/guides#artwork">Artwork guide</a></div>
           </div>
           <div class="shop-stats" aria-label="Catalog status">
-            <strong>${frontendCatalog.products.length}</strong><span>Products</span>
+            <strong>${displayUnits.length}</strong><span>Product lines</span>
             <strong>${frontendCatalog.collections.length}</strong><span>Collections</span>
             <strong>${frontendCatalog.meta.variant_count}</strong><span>Variants</span>
           </div>
@@ -818,8 +894,130 @@ export function renderShopPage(frontendCatalog, { siteUrl = DEFAULT_SITE_URL } =
           window.addEventListener('hashchange', applyHashFamily);
           applyHashFamily();
         })();
+        (function(){
+          // Group cards: item select -> option select -> qty -> add. All lookups
+          // are card-scoped (no ids) so multiple group cards coexist.
+          document.querySelectorAll('.catalog-card--group').forEach(function(card){
+            try {
+              var data = JSON.parse(card.querySelector('.group-data').textContent);
+              var itemSel = card.querySelector('.group-item-select');
+              var varWrap = card.querySelector('.group-variant-wrap');
+              var varSel = card.querySelector('.group-variant-select');
+              var buyRow = card.querySelector('.group-buy-row');
+              var qtyIn = card.querySelector('.group-qty-input');
+              var price = card.querySelector('.group-price');
+              var add = card.querySelector('.group-add');
+              var link = card.querySelector('.group-cta-link');
+              var details = card.querySelector('.group-details-link');
+              function member(){ return data.members[itemSel.selectedIndex] || data.members[0]; }
+              function modeOf(m){
+                if (m.route !== 'order-online') return 'quote';
+                if (m.variantCount > 60) return 'oversized';
+                return 'direct';
+              }
+              function fillVariants(m){
+                varSel.innerHTML = m.variants.map(function(v, i){
+                  return '<option value="' + v.sku + '"' + (i === 0 ? ' selected' : '') + '>' + v.label + '</option>';
+                }).join('');
+              }
+              function sync(){
+                var m = member();
+                var mode = modeOf(m);
+                details.href = m.url;
+                var direct = mode === 'direct';
+                varWrap.hidden = !direct;
+                buyRow.hidden = !direct;
+                add.hidden = !direct;
+                link.hidden = direct;
+                if (!direct) {
+                  link.href = mode === 'quote' ? '/contact?product=' + encodeURIComponent(m.handle) : m.url;
+                  link.textContent = mode === 'quote' ? 'Request a quote' : 'Pick your size on the product page';
+                  return;
+                }
+                var v = m.variants[varSel.selectedIndex] || m.variants[0];
+                if (!v) { add.disabled = true; return; }
+                add.disabled = false;
+                add.dataset.handle = m.handle;
+                add.dataset.sku = v.sku;
+                add.dataset.name = m.title;
+                add.dataset.variant = v.title;
+                add.dataset.price = v.price;
+                add.dataset.merchandiseId = v.merchandiseId;
+                add.dataset.checkoutReady = 'true';
+                add.dataset.requiresArtwork = 'true';
+                var qty = Math.max(1, Math.floor(Number(qtyIn.value) || 1));
+                qtyIn.value = String(qty);
+                price.textContent = '$' + (Number(v.price) * qty).toFixed(2);
+              }
+              itemSel.addEventListener('change', function(){ fillVariants(member()); sync(); });
+              varSel.addEventListener('change', sync);
+              qtyIn.addEventListener('change', sync);
+              card.querySelectorAll('.group-qty-btn').forEach(function(button){
+                button.addEventListener('click', function(){
+                  qtyIn.value = String(Math.max(1, Math.floor(Number(qtyIn.value) || 1) + Number(button.dataset.step)));
+                  sync();
+                });
+              });
+              fillVariants(member());
+              sync();
+            } catch (error) {
+              var addButton = card.querySelector('.group-add');
+              if (addButton) addButton.disabled = true;
+              console.error('[shop-group] card init failed', error);
+            }
+          });
+        })();
       </script>`,
   })
+}
+
+// A grouped member renders in one of three modes; the inline script applies the
+// same rules on selection. >60 buyable variants = the 177-size DTF ladder —
+// a select that long is worse UX than the PDP it links to.
+function groupMemberMode(member) {
+  if (member.route !== 'order-online') return 'quote'
+  if (member.variantCount > 60) return 'oversized'
+  return 'direct'
+}
+
+function groupCardMarkup(group) {
+  const searchText = [group.title, ...group.members.flatMap((member) => [member.title, member.handle])].join(' ').toLowerCase()
+  const first = group.members[0]
+  const firstMode = groupMemberMode(first)
+  const firstVariant = first.variants[0]
+  const memberOptions = group.members
+    .map((member, index) => `<option value="${escapeHtml(member.handle)}"${index === 0 ? ' selected' : ''}>${escapeHtml(member.title)}</option>`)
+    .join('')
+  const variantOptions = first.variants
+    .map((variant, index) => `<option value="${escapeHtml(variant.sku)}"${index === 0 ? ' selected' : ''}>${escapeHtml(variant.label)}</option>`)
+    .join('')
+  const blobJson = JSON.stringify({ members: group.members }).replace(/</g, '\\u003c')
+  const direct = firstMode === 'direct'
+  const linkHref = firstMode === 'quote' ? `/contact?product=${encodeURIComponent(first.handle)}` : first.url
+  const linkText = firstMode === 'quote' ? 'Request a quote' : 'Pick your size on the product page'
+  return `
+          <article class="catalog-card catalog-card--group" data-category="${escapeHtml(group.category)}" data-title="${escapeHtml(searchText)}">
+            <script type="application/json" class="group-data">${blobJson}</script>
+            <img src="${escapeHtml(group.image.src)}" width="900" height="900" alt="${escapeHtml(group.image.alt)}" loading="lazy" decoding="async">
+            <div class="catalog-card-body">
+              <em>${escapeHtml(FAMILY_LABELS[group.category] ?? 'Shop')}</em>
+              <h3>${escapeHtml(group.title)}</h3>
+              <p class="group-blurb">${escapeHtml(group.blurb)}</p>
+              <label class="variant-select group-field"><span>Item</span><select class="group-item-select" aria-label="Choose an item">${memberOptions}</select></label>
+              <label class="variant-select group-field group-variant-wrap"${direct ? '' : ' hidden'}><span>Option</span><select class="group-variant-select" aria-label="Choose an option">${variantOptions}</select></label>
+              <div class="group-buy-row"${direct ? '' : ' hidden'}>
+                <div class="group-qty" role="group" aria-label="Quantity">
+                  <button type="button" class="group-qty-btn" data-step="-1" aria-label="Decrease quantity">&minus;</button>
+                  <input class="group-qty-input" type="number" min="1" step="1" value="1" inputmode="numeric" aria-label="Quantity">
+                  <button type="button" class="group-qty-btn" data-step="1" aria-label="Increase quantity">+</button>
+                </div>
+                <strong class="group-price" aria-live="polite">${direct && firstVariant ? `$${escapeHtml(firstVariant.price)}` : ''}</strong>
+              </div>
+              <button class="buy-button group-add" type="button"${direct ? '' : ' hidden'} data-handle="${escapeHtml(first.handle)}" data-sku="${escapeHtml(firstVariant?.sku ?? '')}" data-name="${escapeHtml(first.title)}" data-variant="${escapeHtml(firstVariant?.title ?? '')}" data-price="${escapeHtml(firstVariant?.price ?? '')}" data-merchandise-id="${escapeHtml(firstVariant?.merchandiseId ?? '')}" data-checkout-ready="true" data-requires-artwork="true">Add to cart</button>
+              <a class="quote-button group-cta-link"${direct ? ' hidden' : ''} href="${escapeHtml(linkHref)}">${escapeHtml(linkText)}</a>
+              <a class="group-details-link" href="${escapeHtml(first.url)}">View full details &rarr;</a>
+            </div>
+          </article>`
 }
 
 export function renderProductIndexPage(products, { siteUrl = DEFAULT_SITE_URL } = {}) {
@@ -1006,7 +1204,8 @@ ${mobileMenuScript()}
       attributes.push({ key: 'Artwork file URL', value: pdpArtwork.url });
       attributes.push({ key: 'Artwork upload URL', value: pdpArtwork.url });
     }
-    var qtyInput = document.getElementById('pdp-qty');
+    var groupCard = button.closest('.catalog-card--group');
+    var qtyInput = groupCard ? groupCard.querySelector('.group-qty-input') : document.getElementById('pdp-qty');
     var qty = qtyInput ? Math.max(1, Math.floor(Number(qtyInput.value) || 1)) : 1;
     window.Cart.add({
       sku: button.dataset.sku,
@@ -1182,6 +1381,22 @@ function pageCss() {
     .catalog-card{display:grid;grid-template-rows:156px 1fr;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.026));transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
     .catalog-card:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 24px 70px rgba(233,30,140,.18),0 0 36px rgba(0,229,255,.10)}
     .catalog-card[hidden]{display:none}
+    .catalog-card--group{cursor:default;grid-column:span 2;grid-template-rows:190px 1fr}
+    .catalog-card--group:hover{transform:none}
+    .catalog-card--group img{height:190px}
+    .catalog-card--group .catalog-card-body{grid-template-rows:auto;align-content:start;gap:9px}
+    .catalog-card--group .group-blurb{margin:0;color:var(--soft);font-size:.86rem;line-height:1.4}
+    .group-field select{width:100%;min-height:44px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;padding:8px 10px;font-weight:800}
+    .group-buy-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .group-buy-row[hidden]{display:none}
+    .group-qty{display:flex;align-items:center;gap:6px}
+    .group-qty-btn{width:40px;min-height:40px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);border-radius:8px;font-weight:950;font-size:1.05rem;cursor:pointer}
+    .group-qty-input{width:56px;min-height:40px;text-align:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);border-radius:8px;font-weight:900}
+    .group-price{color:var(--lime);font-family:Anton,Impact,sans-serif;font-size:1.3rem}
+    .group-add{min-height:46px}
+    .group-cta-link{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border:1px solid rgba(0,229,255,.5);border-radius:6px;color:#aef0ff;font-weight:950;text-transform:uppercase;font-size:.8rem;text-decoration:none;padding:0 12px}
+    .group-cta-link[hidden]{display:none}
+    .group-details-link{color:var(--cyan);font-weight:900;font-size:.84rem;text-decoration:none}
     .catalog-card img{width:100%;height:156px;aspect-ratio:1/1;object-fit:contain;object-position:center;padding:10px;background:radial-gradient(circle at 50% 32%,rgba(255,255,255,.08),transparent 48%),var(--bg-3);position:static;filter:none;opacity:1}
     .catalog-card-body{display:grid;grid-template-rows:auto auto 1fr auto;gap:8px;padding:14px}
     .catalog-card h3{margin:0;font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:1.2rem;line-height:1.04;letter-spacing:0}
@@ -1281,7 +1496,7 @@ function pageCss() {
     .support-nav .wrap{display:grid;width:min(1240px,calc(100% - 40px));grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
     .mini-link{justify-content:center;text-align:center;white-space:normal}
     @media(max-width:1100px){.wrap{width:min(1240px,calc(100% - 28px))}.nav-link{min-width:0;justify-content:center;padding:0 8px;overflow-wrap:anywhere}.mini-link{justify-content:center;white-space:normal}}
-    @media(max-width:900px){.primary-nav,.support-nav{display:none!important}.top-nav{min-height:58px;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;padding:7px 0}.brand{order:2;justify-self:center;max-width:100%;gap:6px;white-space:nowrap}.brand img{width:28px;height:28px}.mobile-menu-toggle{order:1;justify-self:start;display:inline-flex;width:44px;min-width:44px;min-height:44px;padding:0;gap:0;border-color:rgba(0,229,255,.58);background:rgba(0,229,255,.1)}.mobile-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hamburger-lines{width:21px;height:15px}.hamburger-lines::before{top:5px}.nav-actions{order:3;justify-self:end;gap:0}.nav-actions .btn:not(.cart-btn){display:none}.cart-btn{min-height:44px;min-width:44px;width:44px;padding-inline:0;gap:0;border-radius:999px}.cart-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mobile-menu{z-index:21;padding:12px 14px 16px;background:linear-gradient(180deg,rgba(10,12,18,.985),rgba(10,12,18,.965));box-shadow:0 28px 72px rgba(0,0,0,.58)}.seo-page{width:min(1240px,calc(100% - 28px));padding:12px 0 40px}.breadcrumbs{gap:6px;font-size:.76rem;margin-bottom:12px}.shop-tools,.collection-strip,.shop-hero,.merchandising-band,.order-path-band{grid-template-columns:1fr}.product-hero,.shop-hero,.collection-hero{grid-template-columns:1fr;gap:10px;padding:8px 0 12px}.shop-page .shop-stats{display:none}.filter-tabs,.collection-subnav,.collection-links,.link-band{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.filter-tabs::-webkit-scrollbar,.collection-subnav::-webkit-scrollbar,.collection-links::-webkit-scrollbar,.link-band::-webkit-scrollbar{display:none}.filter-tab{flex:0 0 auto;min-height:44px;font-size:.68rem}.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.hero-actions .btn{flex:none;min-height:40px;padding-inline:12px}.status-strip,.approval-list,.catalog-meta{gap:6px;margin-top:10px}.status-strip span,.approval-list span,.catalog-meta span{min-height:24px;padding:0 8px;font-size:.58rem}.merch-family-band{padding:12px;margin-top:14px}.merch-family-band .section-heading{display:flex;align-items:start;justify-content:space-between;flex-direction:row;gap:10px;margin-bottom:10px}.merch-family-band .section-heading h2{font-size:1.24rem;line-height:1.08}.merch-family-band .eyebrow{display:none}.family-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.family-card{min-height:186px;align-content:start;gap:7px;padding:10px}.family-card img{height:88px;aspect-ratio:1/1;object-fit:contain}.family-card strong{font-size:.92rem;line-height:1.1}.family-card small{display:block;font-size:.74rem;line-height:1.3}.order-path-band{gap:10px}.order-path-band article{padding:14px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}.catalog-card{grid-template-rows:112px 1fr}.catalog-card img{height:112px;padding:10px}.catalog-card-body{padding:10px;gap:7px}.catalog-card h3{font-size:.92rem;line-height:1.08}.catalog-card p{display:none}.catalog-meta .option-count{display:none}.purchase-panel{position:static;display:flex;flex-direction:column;padding:12px;gap:8px}.purchase-panel .price{order:1;font-size:1.48rem}.purchase-panel p{order:2;margin:0}.purchase-panel img{order:3;height:188px;padding:10px}.variant-select{order:4}.feature-cta{order:5}.approval-list{order:6}.collection-links a,.link-band a{flex:0 0 auto}.collection-strip{padding:12px}.section-heading{align-items:start;flex-direction:column;gap:10px}.seo-page h1{font-size:clamp(1.72rem,7.4vw,2.18rem);line-height:1.08;letter-spacing:.01em;overflow-wrap:break-word}.seo-page .lede{font-size:.94rem;line-height:1.45}.content-band,.variant-band,.link-band{margin-top:16px}.table-wrap{border:1px solid var(--line);border-radius:8px}.table-wrap table{min-width:540px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.seo-page .product-card{grid-template-rows:112px 1fr;min-height:0}.seo-page .product-card img{height:112px;padding:10px}.product-card p{display:none}.collection-hero>img{height:196px;padding:10px}}
+    @media(max-width:900px){.primary-nav,.support-nav{display:none!important}.top-nav{min-height:58px;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;padding:7px 0}.brand{order:2;justify-self:center;max-width:100%;gap:6px;white-space:nowrap}.brand img{width:28px;height:28px}.mobile-menu-toggle{order:1;justify-self:start;display:inline-flex;width:44px;min-width:44px;min-height:44px;padding:0;gap:0;border-color:rgba(0,229,255,.58);background:rgba(0,229,255,.1)}.mobile-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hamburger-lines{width:21px;height:15px}.hamburger-lines::before{top:5px}.nav-actions{order:3;justify-self:end;gap:0}.nav-actions .btn:not(.cart-btn){display:none}.cart-btn{min-height:44px;min-width:44px;width:44px;padding-inline:0;gap:0;border-radius:999px}.cart-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mobile-menu{z-index:21;padding:12px 14px 16px;background:linear-gradient(180deg,rgba(10,12,18,.985),rgba(10,12,18,.965));box-shadow:0 28px 72px rgba(0,0,0,.58)}.seo-page{width:min(1240px,calc(100% - 28px));padding:12px 0 40px}.breadcrumbs{gap:6px;font-size:.76rem;margin-bottom:12px}.shop-tools,.collection-strip,.shop-hero,.merchandising-band,.order-path-band{grid-template-columns:1fr}.product-hero,.shop-hero,.collection-hero{grid-template-columns:1fr;gap:10px;padding:8px 0 12px}.shop-page .shop-stats{display:none}.filter-tabs,.collection-subnav,.collection-links,.link-band{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.filter-tabs::-webkit-scrollbar,.collection-subnav::-webkit-scrollbar,.collection-links::-webkit-scrollbar,.link-band::-webkit-scrollbar{display:none}.filter-tab{flex:0 0 auto;min-height:44px;font-size:.68rem}.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.hero-actions .btn{flex:none;min-height:40px;padding-inline:12px}.status-strip,.approval-list,.catalog-meta{gap:6px;margin-top:10px}.status-strip span,.approval-list span,.catalog-meta span{min-height:24px;padding:0 8px;font-size:.58rem}.merch-family-band{padding:12px;margin-top:14px}.merch-family-band .section-heading{display:flex;align-items:start;justify-content:space-between;flex-direction:row;gap:10px;margin-bottom:10px}.merch-family-band .section-heading h2{font-size:1.24rem;line-height:1.08}.merch-family-band .eyebrow{display:none}.family-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.family-card{min-height:186px;align-content:start;gap:7px;padding:10px}.family-card img{height:88px;aspect-ratio:1/1;object-fit:contain}.family-card strong{font-size:.92rem;line-height:1.1}.family-card small{display:block;font-size:.74rem;line-height:1.3}.order-path-band{gap:10px}.order-path-band article{padding:14px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}.catalog-card{grid-template-rows:112px 1fr}.catalog-card img{height:112px;padding:10px}.catalog-card-body{padding:10px;gap:7px}.catalog-card h3{font-size:.92rem;line-height:1.08}.catalog-card p{display:none}.catalog-card--group{grid-column:1/-1;grid-template-rows:150px 1fr}.catalog-card--group img{height:150px}.catalog-card--group p.group-blurb{display:block}.catalog-meta .option-count{display:none}.purchase-panel{position:static;display:flex;flex-direction:column;padding:12px;gap:8px}.purchase-panel .price{order:1;font-size:1.48rem}.purchase-panel p{order:2;margin:0}.purchase-panel img{order:3;height:188px;padding:10px}.variant-select{order:4}.feature-cta{order:5}.approval-list{order:6}.collection-links a,.link-band a{flex:0 0 auto}.collection-strip{padding:12px}.section-heading{align-items:start;flex-direction:column;gap:10px}.seo-page h1{font-size:clamp(1.72rem,7.4vw,2.18rem);line-height:1.08;letter-spacing:.01em;overflow-wrap:break-word}.seo-page .lede{font-size:.94rem;line-height:1.45}.content-band,.variant-band,.link-band{margin-top:16px}.table-wrap{border:1px solid var(--line);border-radius:8px}.table-wrap table{min-width:540px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.seo-page .product-card{grid-template-rows:112px 1fr;min-height:0}.seo-page .product-card img{height:112px;padding:10px}.product-card p{display:none}.collection-hero>img{height:196px;padding:10px}}
     @media(max-width:680px){.hero-actions{grid-template-columns:1fr}.family-grid,.catalog-grid,.product-grid{grid-template-columns:1fr}.catalog-card,.seo-page .product-card{min-height:0}.catalog-card h3{font-size:.98rem}.catalog-card p,.product-card p{display:block;-webkit-line-clamp:3}.purchase-panel img{height:172px}.table-wrap table{min-width:520px}}
     @media(max-width:420px){.seo-page{width:min(1240px,calc(100% - 24px))}.catalog-card h3{font-size:.86rem}.status-strip span,.approval-list span,.catalog-meta span{font-size:.55rem}.purchase-panel img{height:180px}.collection-hero>img{height:180px}}
   `
@@ -1314,8 +1529,13 @@ const FAMILY_LABELS = {
 }
 
 function categorizeProduct(product) {
+  // Shop group cards carry an explicit owner-chosen category.
+  if (product.shopCategory) return { id: product.shopCategory, label: FAMILY_LABELS[product.shopCategory] }
   const text = `${product.title} ${product.productType} ${product.handle}`.toLowerCase()
   if (isBuilderProduct(product)) return { id: 'builders', label: FAMILY_LABELS.builders }
+  // Sports gear first: "UV-Printed Softballs" would otherwise trip the /uv/
+  // stickers test (only the 4 ball/puck products match this in the catalog).
+  if (/balls?\b|pucks?\b/.test(text)) return { id: 'promo', label: FAMILY_LABELS.promo }
   if (/uv|sticker|decal|label|patch/.test(text)) return { id: 'stickers', label: FAMILY_LABELS.stickers }
   if (/shirt|tee|hoodie|sweatshirt|apparel|hat/.test(text)) return { id: 'apparel', label: FAMILY_LABELS.apparel }
   if (/banner|sign|window|floor|magnet|vinyl|graphics/.test(text)) return { id: 'signage', label: FAMILY_LABELS.signage }

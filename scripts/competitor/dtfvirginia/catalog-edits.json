@@ -893,5 +893,86 @@
     "dtfva-upload-3d-puff-transfers": "3D Puff Transfer",
     "dtfva-custom-dtf-transfers-by-size-virginia": "DTF Transfer",
     "dtfva-dye-cut-stickers": "Die-Cut Stickers"
-  }
+  },
+  "shopGroups": [
+    {
+      "id": "dtf-transfers-group",
+      "title": "DTF & Specialty Transfers",
+      "category": "transfers",
+      "blurb": "Every transfer we print \u2014 standard DTF, glitter, glow, fluorescent, sublimation, and 3D puff. Pick the type, pick a size, upload your art.",
+      "imageHandle": "dtf-22-sheet",
+      "members": [
+        "dtf-22-sheet",
+        "dtf-46-sheet",
+        "glitter-dtf-22-sheet",
+        "glow-dtf-22-sheet",
+        "sublimation-24",
+        "dtfva-custom-dtf-transfers-by-size-virginia",
+        "dtfva-custom-dtf-gang-sheets-30-inches",
+        "dtfva-custom-glitter-dtf-transfer-by-size",
+        "dtfva-custom-fluorescent-dtf-transfers-by-size",
+        "dtfva-custom-sublimation-transfers-by-size",
+        "dtfva-sublimation-gang-sheets-bulk-printing",
+        "dtfva-upload-3d-puff-transfers"
+      ]
+    },
+    {
+      "id": "window-graphics-group",
+      "title": "Window Graphics",
+      "category": "signage",
+      "blurb": "Clings, printed graphics, and see-through perforated vinyl for storefront glass \u2014 sized to your window.",
+      "imageHandle": "dtfva-window-clings",
+      "members": [
+        "dtfva-window-clings",
+        "dtfva-custom-window-graphics",
+        "dtfva-perforated-window-vinyl"
+      ]
+    },
+    {
+      "id": "sports-balls-group",
+      "title": "Custom Sports Balls",
+      "category": "promo",
+      "blurb": "Softballs, baseballs, hockey pucks, and pickleballs \u2014 UV-printed with your photos, names, or logos.",
+      "imageHandle": "dtfva-custom-baseballs",
+      "members": [
+        "dtfva-custom-softballs",
+        "dtfva-custom-baseballs",
+        "dtfva-custom-hockey-pucks",
+        "dtfva-custom-pickleballs"
+      ]
+    },
+    {
+      "id": "apparel-group",
+      "title": "Custom Apparel",
+      "category": "apparel",
+      "blurb": "Blank tees ready for your transfer, plus premium brands quoted per job. 5-7 day lead time on all apparel.",
+      "imageHandle": "dtfva-gildan-64000",
+      "members": [
+        "dtfva-gildan-64000",
+        "dtfva-bella-canvas-3001",
+        "dtfva-custom-los-angeles-apparel-1865gd-garment-dye-sleeveless-tee",
+        "dtfva-next-level-3600",
+        "dtfva-custom-shaka-wear-drop-shoulder-cropped-t-shirt-premium-blank",
+        "dtfva-custom-shaka-wear-max-heavyweight-short-sleeve-t-shirt-premium-blank",
+        "dtfva-custom-american-apparel-unisex-reflex-fleece-crewneck-sweatshirt-rf496",
+        "dtfva-custom-american-apparel-unisex-heavyweight-cotton-long-sleeve-t-shirt",
+        "dtfva-custom-heavy-fleece-hoodie-sweatshirt-retail-blank"
+      ]
+    },
+    {
+      "id": "stickers-patches-group",
+      "title": "Stickers, Patches & Labels",
+      "category": "stickers",
+      "blurb": "Die-cut sticker packs, UV DTF decals for hard surfaces, leather and TPU hat patches, and woven labels.",
+      "imageHandle": "dtfva-dye-cut-stickers",
+      "members": [
+        "dtfva-dye-cut-stickers",
+        "dtfva-uv-dtf-transfer-by-size",
+        "dtfva-uv-printed-custom-leather-patches",
+        "dtfva-uv-printed-custom-tpu-patches",
+        "dtfva-custom-woven-labels",
+        "dtfva-america-s-250th-anniversary-patch-1-inch-circle"
+      ]
+    }
+  ]
 }

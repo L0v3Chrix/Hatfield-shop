@@ -281,6 +281,7 @@ function buildFullStorefrontNormalizedCatalog() {
     products: [...productsByHandle.values()],
     collections: [...collectionsByHandle.values()],
     pages: normalized.pages ?? [],
+    shopGroups: normalized.shopGroups ?? [],
     validationErrors: [],
   }
 }

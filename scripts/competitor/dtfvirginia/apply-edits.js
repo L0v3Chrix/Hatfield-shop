@@ -95,7 +95,7 @@ export function applyCatalogEdits(normalized, edits) {
     return product
   })
 
-  return { ...normalized, products, appliedEdits: { version: edits.version, source: edits.source } }
+  return { ...normalized, shopGroups: edits.shopGroups ?? [], products, appliedEdits: { version: edits.version, source: edits.source } }
 }
 
 export function validateEdits(normalized, edits) {
@@ -117,6 +117,28 @@ export function validateEdits(normalized, edits) {
   for (const handle of referencedHandles) {
     if (!handles.has(handle)) problems.push(`edits reference unknown handle: ${handle}`)
     if (!handle.startsWith('dtfva-')) problems.push(`edits may only touch dtfva- products, got: ${handle}`)
+  }
+
+  const FAMILY_IDS = new Set(['transfers', 'builders', 'stickers', 'apparel', 'signage', 'promo', 'services'])
+  const groupIds = new Set()
+  const groupedHandles = new Set()
+  for (const group of edits.shopGroups ?? []) {
+    if (!/^[a-z0-9-]+$/.test(group.id ?? '')) problems.push(`shopGroup id invalid: ${group.id}`)
+    if (groupIds.has(group.id)) problems.push(`shopGroup id duplicated: ${group.id}`)
+    groupIds.add(group.id)
+    if (!group.title) problems.push(`shopGroup ${group.id}: missing title`)
+    if (!FAMILY_IDS.has(group.category)) problems.push(`shopGroup ${group.id}: unknown category ${group.category}`)
+    if ((group.members ?? []).length < 2) problems.push(`shopGroup ${group.id}: needs at least 2 members`)
+    for (const member of group.members ?? []) {
+      if (groupedHandles.has(member)) problems.push(`handle in two shopGroups: ${member}`)
+      groupedHandles.add(member)
+      // Core (non-dtfva) members only exist in the production build — validate
+      // existence for dtfva handles, allow core ones through.
+      if (member.startsWith('dtfva-') && !handles.has(member)) problems.push(`shopGroup ${group.id}: unknown member ${member}`)
+    }
+    if (group.imageHandle && !(group.members ?? []).includes(group.imageHandle)) {
+      problems.push(`shopGroup ${group.id}: imageHandle must be a member`)
+    }
   }
 
   for (const removal of edits.removals ?? []) {

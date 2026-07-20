@@ -151,6 +151,44 @@ for (const [handle, needles] of Object.entries(OFFER.offerCopyRequired ?? {})) {
   check(`card/collection images under ${Math.round(MAX_CARD_BYTES / 1024)}KB`, offenders.length === 0, offenders.slice(0, 4).join(', '))
 }
 
+// Q5f — shop group consolidation (owner, 2026-07-15): each configured group
+// renders exactly one card, grouped members never render standalone cards,
+// member PDPs stay live, and every merchandiseId in group blobs is real.
+{
+  const shopHtml = readFileSync(join(PS, 'shop', 'index.html'), 'utf8')
+  const groupBlobs = [...shopHtml.matchAll(/class="group-data">(.*?)<\/script>/gs)].map((m) => JSON.parse(m[1].replaceAll('\\u003c', '<')))
+  const configured = EDITS.shopGroups ?? []
+  check('shop renders one card per configured group', groupBlobs.length === configured.length, `${groupBlobs.length} cards vs ${configured.length} configured`)
+  const blobHandles = new Set(groupBlobs.flatMap((blob) => blob.members.map((member) => member.handle)))
+  const missingMembers = []
+  const standaloneLeaks = []
+  const deadPdps = []
+  const badMerch = []
+  for (const group of configured) {
+    for (const handle of group.members) {
+      // Core members exist only in production builds; dtfva members must be in a blob.
+      if (handle.startsWith('dtfva-') && !blobHandles.has(handle)) missingMembers.push(handle)
+      if (shopHtml.includes(`<a class="catalog-card" href="/products/${handle}"`)) standaloneLeaks.push(handle)
+      if (blobHandles.has(handle) && !existsSync(join(PS, 'products', handle, 'index.html'))) deadPdps.push(handle)
+    }
+  }
+  for (const blob of groupBlobs) {
+    for (const member of blob.members) {
+      for (const variant of member.variants ?? []) {
+        const stateGid = stateVariantBySku.get(variant.sku)
+        if (!variant.merchandiseId || stateGid !== variant.merchandiseId) badMerch.push(`${variant.sku}: blob ${variant.merchandiseId} != state ${stateGid ?? 'missing'}`)
+      }
+    }
+  }
+  check('every dtfva group member is inside a group blob', missingMembers.length === 0, missingMembers.slice(0, 4).join(', '))
+  check('no grouped member renders a standalone shop card', standaloneLeaks.length === 0, standaloneLeaks.slice(0, 4).join(', '))
+  check('every grouped member keeps a live PDP', deadPdps.length === 0, deadPdps.slice(0, 4).join(', '))
+  check('group blob merchandiseIds match shopify-state', badMerch.length === 0, badMerch.slice(0, 3).join(' | '))
+  const pickleball = groupBlobs.flatMap((blob) => blob.members).find((member) => member.handle === 'dtfva-custom-pickleballs')
+  const setOfSix = pickleball?.variants.find((variant) => variant.sku === 'DTFVA-CUSTOM_PICKLEBALLS-SET_OF_6')
+  check('group card carries offer-sheet pricing (pickleballs set of 6 @ $68.99)', setOfSix?.price === '68.99', JSON.stringify(setOfSix ?? null))
+}
+
 // Q5d — the lazy boilerplate template is banned from product copy (owner, 2026-07-13:
 // "rewrite every product with the information that the user needs")
 {

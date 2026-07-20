@@ -49,7 +49,7 @@ The public site (www.hatfieldmccoydtf.com) is a static storefront + serverless A
 
 ## 3. Changing prices / products (the only sanctioned way)
 
-Edit **`scripts/competitor/dtfvirginia/catalog-edits.json`** (removals, retitles, variant restructures, per-SKU priceOverrides, PDP notes, directBuy list, and the copy layer: `copyOverrides` = per-product `{shortDescription, bodyHtml}`, `offerCopy` = the one-sentence pricing offer shown in the lime block). Core non-dtfva products (dtf-22-sheet etc.) take the same copy shape from **`scripts/shopify/config/core-copy.json`**. Then:
+Edit **`scripts/competitor/dtfvirginia/catalog-edits.json`** (removals, retitles, variant restructures, per-SKU priceOverrides, PDP notes, directBuy list, `shopGroups` = the consolidated /shop category cards (move a handle between groups by editing its members array), and the copy layer: `copyOverrides` = per-product `{shortDescription, bodyHtml}`, `offerCopy` = the one-sentence pricing offer shown in the lime block). Core non-dtfva products (dtf-22-sheet etc.) take the same copy shape from **`scripts/shopify/config/core-copy.json`**. Then:
 ```bash
 node scripts/competitor/dtfvirginia/apply-edits.js --write     # sync Shopify-side artifacts
 node scripts/shopify/offer-sheet-sync.mjs --execute            # statuses/restructures/builder upcharge (dry-run first without --execute)

@@ -38,9 +38,15 @@ function walkHtml(dir, out = []) {
 const shopHtml = readFileSync(join(PS, 'shop', 'index.html'), 'utf8')
 const overrideEntries = Object.entries(HANDLE_IMAGE_OVERRIDES)
   .filter(([handle]) => existsSync(join(PS, 'products', handle, 'index.html')))
-const missingOverrides = overrideEntries.filter(([, img]) => !shopHtml.includes(img.src))
+// Grouped members (catalog-edits shopGroups, owner consolidation 2026-07-15)
+// render inside ONE group card — their curated card image intentionally does
+// not appear on /shop. They still must match on their own PDP (checked below).
+const EDITS_FOR_GROUPS = JSON.parse(readFileSync(join(ROOT, 'scripts', 'competitor', 'dtfvirginia', 'catalog-edits.json'), 'utf8'))
+const groupedShopHandles = new Set((EDITS_FOR_GROUPS.shopGroups ?? []).flatMap((group) => group.members))
+const shopCardEntries = overrideEntries.filter(([handle]) => !groupedShopHandles.has(handle))
+const missingOverrides = shopCardEntries.filter(([, img]) => !shopHtml.includes(img.src))
 check(
-  `shop page renders all ${overrideEntries.length} curated card overrides`,
+  `shop page renders all ${shopCardEntries.length} curated card overrides (non-grouped)`,
   missingOverrides.length === 0,
   missingOverrides.map(([h]) => h).join(', ')
 )
